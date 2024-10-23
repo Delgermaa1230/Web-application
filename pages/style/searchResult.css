@@ -1,0 +1,62 @@
+body{
+    padding: 0;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --ariinUngu: #FEF4E4;
+    --undsenUngu: #FF9B00;
+    --saaral: #E6E6E6;
+    --todsaaral: #BFBFBF;
+    --height: 25px;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+.filterMenu ul{
+    list-style: none;
+    padding: 0;
+    color: black;
+}
+.filterMenu ul li{
+    display: inline-block;
+    position: relative;
+
+}
+
+.filterMenu ul li a{
+    display: block;
+    padding: 5px 10px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    background-color: transparent;
+    border: solid 1px ;
+    border-color: var(--todsaaral);
+    font-size: large;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.filterMenu ul li ul.dropdown li{
+    display: block;
+}
+
+.filterMenu ul li ul.dropdown{
+    padding: 10px 30px;
+    background: #FEF4E4;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+.filterMenu ul li a:hover{
+    background: var(--ariinUngu);
+}
+.filterMenu ul li:hover ul.dropdown{
+    display: block;
+}
