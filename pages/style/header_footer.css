@@ -1,18 +1,22 @@
-body{
-    padding: 0;
-    margin: 0px;
+*{
+    margin:0;
+    padding:0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
-:root{
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+:root {
     --color-background: #FEF4E4;
     --color-primary: #FF9B00;
-    --color-text: #E6E6E6;
+    --color-light-grey: #E6E6E6;
     --color-grey: #bfbfbf;
-    --color-light-grey: #efefef;
-    --color-text: #000000;
-    --color-button-text: #ffffff;
-    --base: 8px;
+    --color-black: #000000;
+    --color-white: #ffffff;
 }
 
 
@@ -25,13 +29,11 @@ ul{
     font-weight: bold;
 }
 
-
 /**header**/
 
 input{
     border: none ;
 }
-
 
 .header{
     display: flex;

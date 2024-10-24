@@ -9,23 +9,34 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
+
 :root {
     --color-background: #FEF4E4;
     --color-primary: #FF9B00;
-    --color-text: #E6E6E6;
+    --color-light-grey: #E6E6E6;
     --color-grey: #bfbfbf;
-    --color-text: #000000;
-    --color-button-text: #ffffff;
+    --color-black: #000000;
+    --color-white: #ffffff;
 }
 
 header {
+    background-color: #bfbfbf;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+header h1 {
+    color: var(--color-primary);
 }
 
 .header-1box {
@@ -34,11 +45,12 @@ h1 {
     align-items: center;
 
 }
+
 .main {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction:row-reverse;
     justify-content:space-between;
-    margin: calc(var(--size-base)*8);
+    margin: 1rem 5rem;
 }
 
 .information-column {
@@ -46,6 +58,7 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     max-width: 744px;
+    margin: 0.5rem 0.5rem 0 0;
 }
 
 .teacher-sticky-box {
@@ -55,31 +68,30 @@ h1 {
 
 .subjects-tags ul {
     display: flex;
-    row-gap: 4rem;
+    flex-wrap: wrap;
 }
 
 .subjects-tags ul li {
-    margin-right: 1rem;
+    margin: 0.5rem 0.5rem 0 0;
     padding: 0.5em;
     font-size: 0.9rem;
     border-radius: 20cap;
     background-color: var(--color-background);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--color-primary);
 }
 
 .teaching-location ul {
     display: flex;
-    row-gap: 4rem;
 }
 
 .teaching-location ul li {
-    margin-right: 1rem;
+    margin: 0.5rem 0.5rem 0 0;
     padding: 0.5em;
     font-size: 0.9rem;
     border-radius: 20cap;
     background-color: var(--color-background);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--color-primary);
 }
 
