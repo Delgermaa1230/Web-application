@@ -1,15 +1,22 @@
-body{
-    padding: 0;
-    margin: 0;
+*{
+    margin:0;
+    padding:0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
-:root{
-    --ariinUngu: #FEF4E4;
-    --undsenUngu: #FF9B00;
-    --saaral: #E6E6E6;
-    --todsaaral: #BFBFBF;
-    --base: 8px;
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: #FEF4E4;
+    --color-primary: #FF9B00;
+    --color-light-grey: #E6E6E6;
+    --color-grey: #bfbfbf;
+    --color-black: #000000;
+    --color-white: #ffffff;
 }
 
 
