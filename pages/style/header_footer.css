@@ -1,6 +1,6 @@
 body{
     padding: 0;
-    margin: 0px;
+    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -22,13 +22,11 @@ ul{
     font-weight: bold;
 }
 
-
 /**header**/
 
 input{
     border: none ;
 }
-
 
 .header{
     display: flex;
@@ -132,10 +130,8 @@ footer {
 .footer {
     display: flex;
     justify-content: space-around;
-    max-width: 1200px;
     margin: 0 auto;
     padding: var(--base);
-    flex-wrap: wrap;
 }
 
 .footer ul {
