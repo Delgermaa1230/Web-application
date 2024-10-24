@@ -80,19 +80,7 @@ header nav a{
     
 }
 
-@media (max-width: 768px) {
-    header {
-        justify-content: center;
-        align-items: space-between;
-        padding: 1.5rem 2rem;
-        flex-wrap: wrap;
-    }
 
-    footer ul { 
-        flex-direction: column;
-    }
-    
-}
 /* footer style */
 
 footer {
@@ -144,4 +132,24 @@ footer a{
 
 footer ul li #social-icons li a {
     color: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        align-items: space-between;
+        padding: 1.5rem 2rem;
+        flex-wrap: wrap;
+    }
+    header nav {
+        margin-top: 0.5rem;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    footer ul { 
+        flex-direction: column;
+        justify-content: center;
+    }
 }
