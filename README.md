@@ -1,2 +1,2 @@
 # Web-application
-Assignments of Web-Application class
+github page at: https://delgermaa1230.github.io/Web-application/
