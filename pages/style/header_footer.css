@@ -2,16 +2,19 @@ body{
     padding: 0;
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
     --ariinUngu: #FEF4E4;
     --undsenUngu: #FF9B00;
     --saaral: #E6E6E6;
     --todsaaral: #BFBFBF;
-    --height: 25px;
+    --base: 8px;
 }
 
 
 a{
-    text-decoration: none;
+    text-decoration: base;
     color: black;
 }
 
@@ -23,7 +26,7 @@ ul{
 /**header**/
 
 input{
-    border: 0px solid ;
+    border: none ;
 }
 
 
@@ -34,7 +37,7 @@ input{
     height: 10vh;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: var(--base);
 }
 
 
@@ -44,22 +47,22 @@ input{
     
 }
 .searchBar{
-    margin-left: 30px;
+    margin-left: calc(var(--base)*4);
     display: flex;
     justify-content: left;
     align-items: center;
     width: 15vw;
     background-color: white ;
-    height: var(--height);
-    border-radius: 10px;
-    padding: 5px;
+    height: calc(var(--base)*3);
+    border-radius: var(--base);
+    padding: calc(var(--base)/2);
     border: solid;
-    border-width: 2px;
+    border-width: calc(var(--base)/4);
     border-color: var(--todsaaral);
 }
 
 .searchBox{
-    height: 30px;
+    height: calc(var(--base)*4);
     border: none;
     flex:1;
     background-color: transparent;
@@ -67,13 +70,13 @@ input{
 }
 
 .SearchBarBtn{
-    height: 30px;
+    height: calc(var(--base)*3.3);
     border: none;
     background-color: var(--undsenUngu) ;
-    border-radius: 10px;
+    border-radius: var(--base);
     color: white;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: var(--base);
+    padding-right: var(--base);
 
 }
 
@@ -86,11 +89,11 @@ input{
 .hButton{
     border: none;
     border-style: none;
-    height: 30px;
-    border-radius: 15px;
-    padding: 0 10px;
+    height: calc(var(--base)*4);
+    border-radius: calc(var(--base)*2);
+    padding: 0 var(--base);
     background-color: #E6E6E6;
-    margin-right: 10px;
+    margin-right: calc(var(--base)*2);
     font-weight: bold;
     align-items: center;
 }
@@ -104,11 +107,11 @@ input{
     display:flex;
     flex-direction: row;
     align-items: center;
-    height: 30px;
+    height: calc(var(--base)*4);
 }
 
 .logo{
-    font-size: 40px;
+    font-size: calc(var(--base)*5);
     text-decoration: none;
     color: #FF9B00;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -119,8 +122,9 @@ input{
 
 /**footer**/
 footer {
+    margin-top: calc(var(--base)*8);
     background-color: #fef7e6; /* Light beige color */
-    padding: 10px 0;
+    padding: var(--base) 0;
     text-align: center;
     border-top: 1px solid #e7e7e7;
 }
@@ -130,7 +134,7 @@ footer {
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
+    padding: var(--base);
     flex-wrap: wrap;
 }
 
@@ -140,18 +144,18 @@ footer {
 }
 
 .footer li {
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin-bottom: var(--base);
+    font-size: calc(var(--base)*2);
 }
 
 .footer li ul {
     padding-left: 0;
-    margin-top: 5px;
+    margin-top: calc(var(--base)/2);
 }
 
 .footer li ul li {
-    font-size: 14px;
-    margin-bottom: 5px;
+    font-size: calc(var(--base)*2);
+    margin-bottom: calc(var(--base)/2);
 }
 
 .footer li a {
@@ -165,8 +169,8 @@ footer {
 }
 
 .footer li a i {
-    font-size: 20px;
-    margin-right: 8px;
+    font-size: calc(var(--base)*3);
+    margin-right: var(--base);
 }
 
 .footer li a:hover i {
@@ -176,7 +180,7 @@ footer {
 .footer h3 {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: var(--base);
 }
 
 .footer .social-icons a {
@@ -186,7 +190,7 @@ footer {
 }
 
 .footer .social-icons a i {
-    margin-right: 8px;
+    margin-right: var(--base);
     font-size: 18px;
 }
 

@@ -2,12 +2,17 @@ body{
     padding: 0;
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+:root{
     --ariinUngu: #FEF4E4;
     --undsenUngu: #FF9B00;
     --saaral: #E6E6E6;
     --todsaaral: #BFBFBF;
-    --height: 25px;
+    --base: 8px;
 }
+
 
 
 *{
@@ -16,10 +21,15 @@ body{
 
 }
 
+/*body*/
+
+/*menu*/
+
 .filterMenu ul{
     list-style: none;
-    padding: 0;
+    padding: rem;
     color: black;
+    display: solid;
 }
 .filterMenu ul li{
     display: inline-block;
@@ -29,7 +39,7 @@ body{
 
 .filterMenu ul li a{
     display: block;
-    padding: 5px 10px;
+    padding: calc(var(--base)/2) var(--base);
     color: black;
     text-decoration: none;
     text-align: center;
@@ -38,8 +48,8 @@ body{
     border: solid 1px ;
     border-color: var(--todsaaral);
     font-size: large;
-    border-radius: 15px;
-    margin-right: 20px;
+    border-radius: calc(var(--base)*2);
+    margin-right: var(--base);
 }
 
 .filterMenu ul li ul.dropdown li{
@@ -47,7 +57,8 @@ body{
 }
 
 .filterMenu ul li ul.dropdown{
-    padding: 10px 30px;
+    border-radius: calc(var(--base)*2);
+    padding: var(--base) var(--base);
     background: #FEF4E4;
     position: absolute;
     z-index: 999;
@@ -59,4 +70,103 @@ body{
 }
 .filterMenu ul li:hover ul.dropdown{
     display: block;
+}
+
+/*search result*/
+
+.tutorSearchResult{
+    width: 100%;
+    margin-top: calc(var(--base)*4);
+    display: grid;
+    gap: calc(var(--base)*6);
+    grid-template-columns: auto auto auto auto;
+}
+
+.mainContent{
+    padding: 0 calc(var(--base)*10);    
+}
+
+.tutorCard {
+    width: 100%;
+    background-color: #fff;
+    border-radius: calc(var(--base)*2);
+    box-shadow: 0 calc(var(--base)/2) calc(var(--base)*2) rgba(0, 0, 0, 0.1);
+    padding: calc(var(--base)*2);
+    text-align: center;
+    position: relative;
+}
+
+.tutorCard .tutorImage {
+    position: relative;
+}
+
+.tutorCard .tutorImage {
+    width: 100%;
+    padding-top: 100%; 
+    position: relative;
+    border: solid;
+    border-radius: calc(var(--base)*2);
+}
+
+
+.tutorCard .favBtn {
+    position: absolute;
+    top: var(--base);
+    right: var(--base);
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.tutorCard .NameRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin: var(--base) 0;
+}
+
+.tutorCard .NameRating .rating{
+    color: #ff9b00;
+}
+.tutorCard .rating i {
+    margin-right: 5px;
+}
+
+.tutorCard p {
+    color: #666;
+    font-size: calc(var(--base)*2);
+    margin-top: var(--base);
+}
+
+
+.pagination {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin-top: calc(var(--base)*6);
+    padding: 0;
+}
+.pagination input[type="radio"] {
+    display: none;
+}
+.pagination label {
+    display: inline-block;
+    width: calc(var(--base)*5);
+    height: calc(var(--base)*5);
+    line-height: calc(var(--base)*5);
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f7ede1;
+    color: black;
+    font-size: 20px;
+    margin: calc(var(--base)/2);
+    cursor: pointer;
+}
+/* Style for active radio button */
+.pagination input[type="radio"]:checked + label {
+    background-color: #ff9800;
+    color: white;
 }
