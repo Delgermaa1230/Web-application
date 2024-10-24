@@ -1,13 +1,15 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style: none;
     text-decoration: none;
     font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -21,6 +23,7 @@
     --color-black: #000000;
     --color-white: #ffffff;
     --color-dark-grey: #413D3D;
+    font-size: 16px;
 }
 
 header {
@@ -69,7 +72,7 @@ header nav {
     gap: 1rem;
 }
 
-header nav a{
+header nav a {
     background-color: var(--color-light-grey);
     padding: 0.5rem 1rem;
     /* border: solid var(--color-grey) 1px; */
@@ -77,7 +80,13 @@ header nav a{
     color: var(--color-black);
     font-weight: 600;
     font-size: 0.9rem;
-    
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+header nav a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 
@@ -107,7 +116,7 @@ footer ul li ul {
 footer ul li ul li {
     font-weight: 400;
     font-size: 0.8rem;
-    color:var(--color-dark-grey)
+    color: var(--color-dark-grey)
 }
 
 footer ul li h4 {
@@ -126,7 +135,7 @@ footer ul li #social-icons li {
     width: 2.1rem;
 }
 
-footer a{
+footer a {
     color: var(--color-dark-grey);
 }
 
@@ -141,15 +150,21 @@ footer ul li #social-icons li a {
         padding: 1.5rem 2rem;
         flex-wrap: wrap;
     }
+
     header nav {
         margin-top: 0.5rem;
     }
-    
+
 }
 
 @media (max-width: 400px) {
-    footer ul { 
+    footer ul {
         flex-direction: column;
         justify-content: center;
     }
+    :root{
+        font-size: 10px;
+    }
 }
+
+@media (max-width: 500px) {}
