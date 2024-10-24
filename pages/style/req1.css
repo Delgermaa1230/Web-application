@@ -1,0 +1,28 @@
+
+:root {
+    --color-background: #FEF4E4;
+    --color-primary: #FF9B00;
+    --color-text: #E6E6E6;
+    --color-grey: #bfbfbf;
+    --color-light-grey: #efefef;
+    --color-text: #000000;
+    --color-button-text: #ffffff;
+}
+
+h1{
+    font-size: 3rem;
+}
+.Main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 5rem;
+}
+.zaavar{
+    width: 40vw;
+
+}   
+
+.medeelel-avah{
+    width: 40vw;
+}

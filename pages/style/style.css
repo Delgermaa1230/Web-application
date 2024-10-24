@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+:root {
+    --color-background: #FEF4E4;
+    --color-primary: #FF9B00;
+    --color-text: #E6E6E6;
+    --color-grey: #bfbfbf;
+    --color-text: #000000;
+    --color-button-text: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.header-1box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-between;
+    margin: calc(var(--size-base)*8);
+}
+
+.information-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 744px;
+}
+
+.teacher-sticky-box {
+    margin: var(--size-base);
+
+}
+
+.subjects-tags ul {
+    display: flex;
+    row-gap: 4rem;
+}
+
+.subjects-tags ul li {
+    margin-right: 1rem;
+    padding: 0.5em;
+    font-size: 0.9rem;
+    border-radius: 20cap;
+    background-color: var(--color-background);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.teaching-location ul {
+    display: flex;
+    row-gap: 4rem;
+}
+
+.teaching-location ul li {
+    margin-right: 1rem;
+    padding: 0.5em;
+    font-size: 0.9rem;
+    border-radius: 20cap;
+    background-color: var(--color-background);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+footer {
+    padding: 2rem;
+    background-color: var(--color-background);
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+footer ul #contact-list ul {
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul .list-header {
+    font-weight: 600;
+}
+
+footer ul li ul li {
+    font-weight: 400;
+}
