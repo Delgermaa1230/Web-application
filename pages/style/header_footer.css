@@ -121,7 +121,7 @@ input{
 /**footer**/
 footer {
     margin-top: calc(var(--base)*8);
-    background-color: #fef7e6; /* Light beige color */
+    background-color: #fef7e6; 
     padding: var(--base) 0;
     text-align: center;
     border-top: 1px solid #e7e7e7;
