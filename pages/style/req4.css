@@ -33,6 +33,11 @@ h3{
     color: var(--color-button-text);
 }
 
+
+.button:hover{
+    cursor: pointer;
+}
+
 .taniltsuulga{
     display: flex;
     flex-direction: column;
