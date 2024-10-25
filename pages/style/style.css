@@ -10,15 +10,13 @@
     box-sizing: border-box;
 }
 
-body {
-    background: linear-gradient(191deg, rgba(254,244,228,0.572) 70%, rgba(255,255,255,1) 100%);
-}
-
+/* element үүдийн хэмжээ */
 p, span b{
     font-size: 1rem;
     /* letter-spacing: 0.01rem; */
 }
 
+/* Хувьсагчид тодорхойлолт */
 :root {
     --color-background: #FEF4E4;
     --color-primary: #FF9B00;
@@ -27,6 +25,11 @@ p, span b{
     --color-black: #000;
     --color-white: #fff;
     --color-dark-grey: #413D3D;
+}
+
+/* Уусалттай backgournd */
+body {
+    background: linear-gradient(191deg, rgba(254,244,228,0.4) 60%, rgba(255,255,255,1) 100%);
 }
 
 h1 {
@@ -45,6 +48,7 @@ h2 {
     gap: 2rem;
 }
 
+/* Багшийн ерөнхий мэдээллийг агуулж буй хайрцаг */
 .teacher-sticky-box {
     position: sticky;
     top: 2rem;
@@ -95,8 +99,7 @@ h2 {
     padding: 0 2rem;
 }
 
-/* button design */
-
+/* Чухал товчлууруудын дизайн */
 .important-button {
     padding: 1rem;
     margin: auto;
@@ -121,6 +124,7 @@ h2 {
     font-size: 1rem;
 }
 
+/* Хичээлийн мэдээллийг агуулах хайрцаг */
 .information-column {
     display: flex;
     flex-direction: column;
@@ -202,6 +206,7 @@ h2 {
     padding-left: 2.2rem;
 }
 
+/* responsive */
 @media (max-width: 700px) {
     .main {
         flex-direction: column;
@@ -215,5 +220,23 @@ h2 {
     .teacher-sticky-box {
         position: relative;
         justify-self: center;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    
+    :root {
+        --color-background: #1c1c1c; 
+        --color-primary: #FFA726; 
+        --color-light-grey: #363535; 
+        --color-grey: #757575; 
+        --color-black: #ffffff; 
+        --color-white: #121111; 
+        --color-dark-grey: #c3bfbf; 
+    }
+
+    body {
+        background: rgba(0, 0, 0, 0.9);
     }
 }

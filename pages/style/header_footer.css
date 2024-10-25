@@ -4,7 +4,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style: none;
     text-decoration: none;
-    font-size: 16px;
 }
 
 *,
@@ -162,7 +161,7 @@ footer ul li #social-icons li {
 
 footer a {
     color: var(--color-dark-grey);
-    transition-duration: 0.3s;
+    transition-duration: 0.3s ;
 }
 
 footer a:hover {
