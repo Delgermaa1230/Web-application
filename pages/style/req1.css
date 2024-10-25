@@ -12,12 +12,24 @@
 h1{
     font-size: 3rem;
 }
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 1.5rem;
+}
 .Main{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 5rem;
 }
+
+
+@media (min-width: 600px) {
+    .Main { grid-template-columns: auto auto; }
+}
+   
 
 .button{
     background-color: var(--color-primary);
@@ -26,10 +38,17 @@ h1{
     padding: 0.5rem 1rem;
     color: var(--color-button-text);
 }
-.zaavar{
-    width: 40vw;
 
+.zaavar li{
+    list-style: circle;
+    font-size: 1.5rem;
 }   
+
+.zaavar{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
 
 .placeholder{
     border-radius: 1rem;
@@ -41,7 +60,7 @@ h1{
     flex-direction: column;
 }
 .medeelel-avah{
-    width: 40vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;

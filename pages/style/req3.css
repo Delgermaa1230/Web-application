@@ -14,12 +14,15 @@ h1{
 }
 .Main{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 5rem;
     min-height: 30rem;
 }
-
+@media (min-width: 600px) {
+    .Main { grid-template-columns: repeat(2,1fr); }
+}
+    
 .button{
     background-color: var(--color-primary);
     border: none;
@@ -32,7 +35,7 @@ h1{
     cursor: pointer;
 }
 .SelectClass{
-    width: 40vw;
+    width: 45vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -51,7 +54,7 @@ h1{
     flex-direction: row;
 }
 .medeelel-avah{
-    width: 40vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
