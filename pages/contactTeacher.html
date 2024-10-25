@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Numteach</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/header_footer.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
     <header>
-       <nav>
-        <button><a href="teachInfo.html">Буцах</a></button>
-        <a href="#"><i class="fa fa-question"></i></a>
-        <a href="req1.html">Багш болох</a>
-        <a href="#"><i class="fa fa-user"></i></a>
-       </nav>
+        <a href="teachInfo.html">Буцах</a>
+        <nav>
+            <a href="#"><i class="fa fa-question"></i></a>
+            <!-- <a href="req1.html">Багш болох</a> -->
+            <a href="#"><i class="fa fa-user"></i></a>
+        </nav>
     </header>
     <div class="main">
-        <div>
-            <div class="student-number">
-                <p>Суралцагчид</p>
-                <span>0-50</span>
-            </div>
-            <img src="" alt="teacher">
-            <h2>Г.Дэлгэрмаа</h2>
-            <div>
-                <span><b>5</b></span>
-                <span><i class="fa fa-star"></i></span>
-                <p>(67 санал)</p>
-            </div>
-            <div class="basic-info-about-teacher">
-                <p>Төлбөр</p>
-                <span>10'000₮/цаг</span>
-            </div>
+        <div cass="sticky-part-wrapper">
+            <section class="teacher-sticky-box">
+                <div class="student-number">
+                    <p>Суралцагчид</p>
+                    <span><b>0-50</b></span>
+                </div>
+                <div class="image"><img src="../imgs/img1.png" alt="teacher"></div>
+                <h2>Г.Дэлгэрмаа</h2>
+                <div class="rating">
+                    <span><b>5</b></span>
+                    <span><i class="fa fa-star"></i></span>
+                    <p>(67 санал)</p>
+                </div>
+                <div class="wage">
+                    <p>Төлбөр</p>
+                    <span>10'000₮/цаг</span>
+                </div>
+            </section>
         </div>
         <div>
             <div>
                 <p>Цаг сонгох</p>
             </div>
             <form action="">
-                <label for="message"><p>Таны мессеж</label>
+                <label for="message">
+                    <p>Таны мессеж
+                </label>
                 <textarea type="text" id="message" name="message"></textarea>
-                <label for="phone"><p>Утас</p></label>
+                <label for="phone">
+                    <p>Утас</p>
+                </label>
                 <input type="tel" id="phone" name="phone">
                 <br>
                 <br>
@@ -75,4 +84,5 @@
         </ul>
     </footer>
 </body>
+
 </html>
