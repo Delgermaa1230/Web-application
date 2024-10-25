@@ -1,11 +1,11 @@
-body{
+body {
     padding: 0;
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
-:root{
+:root {
     --ariinUngu: #FEF4E4;
     --undsenUngu: #FF9B00;
     --saaral: #E6E6E6;
@@ -15,7 +15,7 @@ body{
 
 
 
-*{
+* {
     padding: 0;
     margin: 0;
 
@@ -25,19 +25,20 @@ body{
 
 /*menu*/
 
-.filterMenu ul{
+.filterMenu ul {
     list-style: none;
     padding: rem;
     color: black;
     display: solid;
 }
-.filterMenu ul li{
+
+.filterMenu ul li {
     display: inline-block;
     position: relative;
 
 }
 
-.filterMenu ul li a{
+.filterMenu ul li a {
     display: block;
     padding: calc(var(--base)/2) var(--base);
     color: black;
@@ -45,18 +46,18 @@ body{
     text-align: center;
     font-size: 20px;
     background-color: transparent;
-    border: solid 1px ;
+    border: solid 1px;
     border-color: var(--todsaaral);
     font-size: large;
     border-radius: calc(var(--base)*2);
     margin-right: var(--base);
 }
 
-.filterMenu ul li ul.dropdown li{
+.filterMenu ul li ul.dropdown li {
     display: block;
 }
 
-.filterMenu ul li ul.dropdown{
+.filterMenu ul li ul.dropdown {
     border-radius: calc(var(--base)*2);
     padding: var(--base) var(--base);
     background: #FEF4E4;
@@ -65,16 +66,17 @@ body{
     display: none;
 }
 
-.filterMenu ul li a:hover{
+.filterMenu ul li a:hover {
     background: var(--ariinUngu);
 }
-.filterMenu ul li:hover ul.dropdown{
+
+.filterMenu ul li:hover ul.dropdown {
     display: block;
 }
 
 /*search result*/
 
-.tutorSearchResult{
+.tutorSearchResult {
     width: 100%;
     margin-top: calc(var(--base)*4);
     display: grid;
@@ -83,20 +85,31 @@ body{
 }
 
 @media (min-width: 400px) {
-    .tutorSearchResult { grid-template-columns: repeat(1,1fr); }
-}
-@media (min-width: 600px) {
-    .tutorSearchResult { grid-template-columns: repeat(2,1fr); }
-}
-@media (min-width: 800px) {
-    .tutorSearchResult { grid-template-columns: repeat(3,1fr); }
-}
-@media (min-width: 1100px) {
-.tutorSearchResult { grid-template-columns: repeat(4,1fr); }
+    .tutorSearchResult {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
-.mainContent{
-    padding: 0 calc(var(--base)*10);    
+@media (min-width: 600px) {
+    .tutorSearchResult {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 800px) {
+    .tutorSearchResult {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1100px) {
+    .tutorSearchResult {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.mainContent {
+    padding: 0 calc(var(--base)*10);
 }
 
 .tutorCard {
@@ -117,7 +130,7 @@ body{
 
 .tutorCard .tutorImage {
     width: 100%;
-    padding-top: 100%; 
+    padding-top: 100%;
     position: relative;
     border: solid;
     border-radius: calc(var(--base)*2);
@@ -143,9 +156,10 @@ body{
     margin: var(--base) 0;
 }
 
-.tutorCard .NameRating .rating{
+.tutorCard .NameRating .rating {
     color: #ff9b00;
 }
+
 .tutorCard .rating i {
     margin-right: 5px;
 }
@@ -164,9 +178,11 @@ body{
     margin-top: calc(var(--base)*6);
     padding: 0;
 }
+
 .pagination input[type="radio"] {
     display: none;
 }
+
 .pagination label {
     display: inline-block;
     width: calc(var(--base)*5);
@@ -180,8 +196,15 @@ body{
     margin: calc(var(--base)/2);
     cursor: pointer;
 }
+
 /* Style for active radio button */
-.pagination input[type="radio"]:checked + label {
+.pagination input[type="radio"]:checked+label {
     background-color: #ff9800;
     color: white;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 13px;
+    }
 }

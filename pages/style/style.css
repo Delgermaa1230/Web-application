@@ -10,13 +10,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(191deg, rgba(254,244,228,0.572) 70%, rgba(255,255,255,1) 100%);
+}
+
 p, span b{
     font-size: 1rem;
     /* letter-spacing: 0.01rem; */
-}
-
-body {
-    background: linear-gradient(191deg, rgba(254,244,228,0.572) 70%, rgba(255,255,255,1) 100%);
 }
 
 :root {
@@ -95,12 +95,19 @@ h2 {
     padding: 0 2rem;
 }
 
-.teacher-sticky-box button {
+/* button design */
+
+.important-button {
     padding: 1rem;
     margin: auto;
     border-radius: 1rem;
     border: none;
     background-color: var(--color-primary);
+    transition-duration: 0.3s;
+}
+
+.important-button:hover {
+    transform: scale(1.02);
 }
 
 .teacher-sticky-box h2 {
@@ -157,9 +164,9 @@ h2 {
     padding: 0.5em 1rem;
     font-size: 0.75rem;
     border-radius: 40cap;
-    background-color: var(--color-background);
+    background-color: var(--color-light-grey);
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-black);
 }
 
 .information-column section {
@@ -168,6 +175,31 @@ h2 {
 
 .information-column section h2 {
     margin-bottom: 1rem;
+}
+
+.comment {
+    border: solid var(--color-grey) 0.09rem;
+    border-radius: 2rem;
+    padding: 2rem 1rem;
+}
+
+.comment-owner {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.comment-owner img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.comment p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+    padding-left: 2.2rem;
 }
 
 @media (max-width: 700px) {
