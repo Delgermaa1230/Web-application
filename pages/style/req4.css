@@ -12,12 +12,18 @@
 h1{
     font-size: 3rem;
 }
-.Main{
+.main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding: 5rem;
+    min-height: 30rem;
 }
+
+h3{
+    font-size: 1.5rem;
+}
+
 
 .button{
     background-color: var(--color-primary);
@@ -26,37 +32,25 @@ h1{
     padding: 0.5rem 1rem;
     color: var(--color-button-text);
 }
-.zaavar{
-    width: 40vw;
 
-}   
 
-.placeholder{
-    border-radius: 1rem;
-    border: none;
+.button:hover{
+    cursor: pointer;
 }
 
-.phContainer{
+.taniltsuulga{
     display: flex;
     flex-direction: column;
-}
-.medeelel-avah{
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
+    row-gap: 1rem;
     justify-content: center;
-    padding: 3rem;
-    background-color: var(--color-background);
-    border-radius: 2rem;
-    row-gap: 1.5rem;
-}
-
-.upload-pic-cont{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-.uploadProfile{
-    height: 1rem;
-    width: 1rem;
+
+.taniltsuulgaPh{
+    height: 10rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--color-background);
+    width: 100%;
+
 }

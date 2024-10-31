@@ -9,99 +9,84 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/header_footer.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/req4.css">
 
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="rightHeader">
-            <a href="" class="logo">Numteach</a>
-
-            <form action="">
-                <div class="searchBar">
-                    <input type="text" placeholder="Хичээл хайх" class="searchBox">
-                    <button type="submit" class="SearchBarBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+    <header>
+        <div class="header-first-box">
+            <a href="../index.html">
+                <h1>Numteach</h1>
+            </a>
+            <form id="" action="" name="">
+                <input type="text" placeholder="Хайлт хийх...">
+                <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-
         </div>
-
-        <nav class="leftHeader">
-            <button class="hButton"><i class="fa-solid fa-question"></i></button>
-            <button class="hButton"><i class="fa-regular fa-heart"></i></button>
-            <button class="hButton">Багш болох</button>
-            <button class="hButton"><i class="fa-solid fa-user"></i></button>
+        <nav>
+            <a href="#"><i class="fa fa-question"></i></a>
+            <a href="req1.html">Багш болох</a>
+            <a href="#"><i class="fa fa-user"></i></a>
         </nav>
+    </header>
 
-    </header><br>
-
-    <div>
+    <div class="main">
         <section>
-            <H2>Та юу бичвэл зүгээр вэ?</H2>
-            <p>сурталчилгаа
-                Голч дүн
-                Амжилт
-                Хобби</p>
-
-
+            <H3>Та юу бичвэл зүгээр вэ?</H3>
+            <ul>
+                <li>сурталчилгаа</li>
+                <li>Голч дүн</li>
+                <li>Амжилт</li>
+                <li>Хобби</li>
+            </ul>
+            
 
         </section>
 
         <section>
+            <div class="taniltsuulga">
             <h3> Өөрийн танилцуулгаа оруулна уу(12-с дээш үг) </h3>
-            <input type="text" placeholder=" Өөрийн танилцуулгаа оруулна уу(12-с дээш үг) ">
-
-            <button>
-                Буцах
-            </button>
-            <button>
-                Үргэлжлүүлэх
-            </button>
+            <input type="text" placeholder="" class="taniltsuulgaPh">
+            <div>
+                    
+                <button class="button">
+                    Буцах
+                </button>
+                <button class="button">
+                    Үргэлжлүүлэх
+                </button>
+            </div>
+            </div>
         </section>
     </div>
 
-
-
-
     <footer>
-        <div class="footer">
-            <ul>
-                <li>
-                    <h3>Help</h3>
+        <ul>
+            <li>
+                <h4>Тусламж</h4>
+                <ul>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Заавар</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>Холбогдох</4>
                     <ul>
-                        <li><a href="holboh">FAQ</a></li>
-                        <li><a href="holboh">Support</a></li>
-                        <li><a href="holboh">Guides</a></li>
+                        <li>Утас:<a href="tel:+97688888811">+976 88 888811</a></li>
+                        <li>Мэйл:<a href="mailto: example@teach.com">example@teach.com</a></li>
                     </ul>
-                </li>
-            </ul>
-
-            <ul>
-                <li>
-                    <h3>Contact info:</h3>
-                    <ul>
-                        <li>Phone: <a href="tel:+97688888811">+976 88 888811</a></li>
-                        <li>Email: <a href="mailto:example@teach.com">example@teach.com</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul>
-                <li>
-                    <h3>Follow us:</h3>
-                    <ul class="social-icons">
-                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
-                                Instagram</a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank"><i
-                                    class="fa-brands fa-square-facebook"></i> Facebook</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+            </li>
+            <li>
+                <h4>Холбоосууд</h4>
+                <ul id="social-icons">
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+            </li>
+        </ul>
     </footer>
-
 </body>
 
 </html>

@@ -17,6 +17,7 @@ h1{
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding: 5rem;
+    min-height: 30rem;
 }
 
 .button{
@@ -25,6 +26,10 @@ h1{
     border-radius: 2rem;
     padding: 0.5rem 1rem;
     color: var(--color-button-text);
+}
+
+.button:hover{
+    cursor: pointer;
 }
 .zaavar{
     width: 40vw;
@@ -49,6 +54,7 @@ h1{
     background-color: var(--color-background);
     border-radius: 2rem;
     row-gap: 1.5rem;
+
 }
 
 .upload-pic-cont{

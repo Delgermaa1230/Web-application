@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>huselt3</title>
     <link rel="stylesheet" href="style/header_footer.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/req3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,96 +14,71 @@
 
 <body>
 
-    <header class="header">
-        <div class="rightHeader">
-            <a href="" class="logo">Numteach</a>
-
-            <form action="">
-                <div class="searchBar">
-                    <input type="text" placeholder="Хичээл хайх" class="searchBox">
-                    <button type="submit" class="SearchBarBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+    <header>
+        <div class="header-first-box">
+            <a href="../index.html">
+                <h1>Numteach</h1>
+            </a>
+            <form id="" action="" name="">
+                <input type="text" placeholder="Хайлт хийх...">
+                <button type="submit"><i class="fa fa-search"></i></button>
             </form>
+        </div>
+        <nav>
+            <a href="#"><i class="fa fa-question"></i></a>
+            <a href="req1.html">Багш болох</a>
+            <a href="#"><i class="fa fa-user"></i></a>
+        </nav>
+    </header>
 
+
+    <div class="Main">
+        <div class="medeelel-avah">
+            <h2>Өөрийн мэдээлэл оруулах</h2>
+            <!--havsargah-->
+            <div class="phContainer">
+                <button class="button">хавсаргах</button>
+                <input type="text" placeholder="Comp100" class="placeholder">
+            </div>
+            <!--next button-->
+            <button class="button">Үргэлжлүүлэх</button>
         </div>
 
-        <nav class="leftHeader">
-            <button class="hButton"><i class="fa-solid fa-question"></i></button>
-            <button class="hButton"><i class="fa-regular fa-heart"></i></button>
-            <button class="hButton">Багш болох</button>
-            <button class="hButton"><i class="fa-solid fa-user"></i></button>
-        </nav>
+        
+        <div class="SelectClass">
+            <h2> Та багш болсоноор</h2>
+            <input type="text" placeholder="" class="bigPH">
+            <button class="button">Үргэлжлүүлэх</button>
+        </div>
 
-    </header><br>
-
-    <div>
-
-        <section>
-            <H2>Таны сонгосон хичээл </H2>
-            <p>Өөрийн авсан дүнг хавсаргана уу</p>
-            <button>Илгээсэн </button>
-            <p>comp100</p>
-            <button>Хавсаргах</button>
-            <p>comp100</p>
-            <button>Хавсаргах</button>
-            <p>comp100</p>
-
-
-        </section>
-
-        <section>
-            <h3>Заах хичээлээ сонгоно уу </h3>
-            <button>Заах хичээлээ сонгоно уу</button>
-
-            <button>
-                Буцах
-            </button>
-            <button>
-                Үргэлжлүүлэх
-            </button>
-        </section>
     </div>
 
 
-
-
     <footer>
-        <div class="footer">
-            <ul>
-                <li>
-                    <h3>Help</h3>
+        <ul>
+            <li>
+                <h4>Тусламж</h4>
+                <ul>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Заавар</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>Холбогдох</4>
                     <ul>
-                        <li><a href="holboh">FAQ</a></li>
-                        <li><a href="holboh">Support</a></li>
-                        <li><a href="holboh">Guides</a></li>
+                        <li>Утас:<a href="tel:+97688888811">+976 88 888811</a></li>
+                        <li>Мэйл:<a href="mailto: example@teach.com">example@teach.com</a></li>
                     </ul>
-                </li>
-            </ul>
-
-            <ul>
-                <li>
-                    <h3>Contact info:</h3>
-                    <ul>
-                        <li>Phone: <a href="tel:+97688888811">+976 88 888811</a></li>
-                        <li>Email: <a href="mailto:example@teach.com">example@teach.com</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul>
-                <li>
-                    <h3>Follow us:</h3>
-                    <ul class="social-icons">
-                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
-                                Instagram</a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank"><i
-                                    class="fa-brands fa-square-facebook"></i> Facebook</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+            </li>
+            <li>
+                <h4>Холбоосууд</h4>
+                <ul id="social-icons">
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+            </li>
+        </ul>
     </footer>
 
 </body>
-
 </html>

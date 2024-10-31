@@ -1,6 +1,6 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style: none;
     text-decoration: none;
@@ -9,100 +9,242 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
+
+/* element үүдийн хэмжээ */
+p, span b{
+    font-size: 1rem;
+    /* letter-spacing: 0.01rem; */
+    color: var(--color-black);
+}
+
+/* Хувьсагчид тодорхойлолт */
 :root {
     --color-background: #FEF4E4;
     --color-primary: #FF9B00;
-    --color-text: #E6E6E6;
+    --color-light-grey: #E6E6E6;
     --color-grey: #bfbfbf;
-    --color-text: #000000;
-    --color-button-text: #ffffff;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-dark-grey: #413D3D;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Уусалттай backgournd */
+body {
+    background: linear-gradient(191deg, rgba(254,244,228,0.4) 60%, rgba(255,255,255,1) 100%);
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    color:var(--color-black);
 }
 
-.header-1box {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
+h2 {
+    font-size: 1.5rem;
+    color: var(--color-black);
 }
+
 .main {
     display: flex;
     flex-direction: row-reverse;
-    justify-content:space-between;
-    margin: calc(var(--size-base)*8);
+    justify-content: center;
+    margin: 0.5rem 2rem;
+    gap: 2rem;
 }
 
+/* Багшийн ерөнхий мэдээллийг агуулж буй хайрцаг */
+.teacher-sticky-box {
+    position: sticky;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    margin-top: 0.5;
+    border-radius: 2rem;
+    padding: 1rem;
+    height: fit-content;
+    gap: 0.6rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.teacher-sticky-box .student-number {
+    display: flex;
+    margin: 1rem;
+    gap: 0.5rem;
+}
+
+.teacher-sticky-box .student-number p, span {
+    font-size: 0.9rem;
+    color: var(--color-black);
+}
+
+.teacher-sticky-box .image {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 2rem;
+}
+
+.teacher-sticky-box div img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 10%;
+}
+
+.teacher-sticky-box .rating {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.teacher-sticky-box .wage {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 0 2rem;
+}
+
+/* Чухал товчлууруудын дизайн */
+.important-button {
+    padding: 1rem;
+    margin: auto;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--color-primary);
+    transition-duration: 0.3s;
+}
+
+.important-button:hover {
+    transform: scale(1.02);
+}
+
+.teacher-sticky-box h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.teacher-sticky-box button a {
+    color: var(--color-white);
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+/* Хичээлийн мэдээллийг агуулах хайрцаг */
 .information-column {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     max-width: 744px;
+    margin: 0.5rem 0.5rem 0 0;
+    color: var(--color-black)
 }
 
-.teacher-sticky-box {
-    margin: var(--size-base);
-
+.subjects-tags {
+    margin-bottom: 2rem;
 }
 
 .subjects-tags ul {
     display: flex;
-    row-gap: 4rem;
+    flex-wrap: wrap;
 }
 
 .subjects-tags ul li {
-    margin-right: 1rem;
-    padding: 0.5em;
-    font-size: 0.9rem;
-    border-radius: 20cap;
+    margin: 0.5rem 0.5rem 0 0;
+    padding: 0.5em 1rem;
+    font-size: 0.75rem;
+    border-radius: 40cap;
     background-color: var(--color-background);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--color-primary);
+}
+
+.information-column h1 {
+    margin-bottom: 2rem;
+    color: var(--color-black)
+}
+
+.teaching-location {
+    margin-bottom: 2rem;
 }
 
 .teaching-location ul {
     display: flex;
-    row-gap: 4rem;
 }
 
 .teaching-location ul li {
-    margin-right: 1rem;
-    padding: 0.5em;
+    margin: 0.5rem 0.5rem 0 0;
+    padding: 0.5em 1rem;
+    font-size: 0.75rem;
+    border-radius: 40cap;
+    background-color: var(--color-light-grey);
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.information-column section {
+    margin-bottom: 2rem;
+}
+
+.information-column section h2 {
+    margin-bottom: 1rem;
+    color:var(--color-black);
+}
+
+.comment {
+    border: solid var(--color-grey) 0.09rem;
+    border-radius: 2rem;
+    padding: 2rem 1rem;
+}
+
+.comment-owner {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.comment-owner img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.comment p {
     font-size: 0.9rem;
-    border-radius: 20cap;
-    background-color: var(--color-background);
-    font-weight: 600;
-    color: var(--color-primary);
-}
-
-footer {
-    padding: 2rem;
-    background-color: var(--color-background);
-}
-
-footer ul {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-footer ul #contact-list ul {
-    display: flex;
-    flex-direction: column;
-}
-
-footer ul .list-header {
-    font-weight: 600;
-}
-
-footer ul li ul li {
     font-weight: 400;
+    letter-spacing: 0.01rem;
+    padding-left: 2.2rem;
+    color: var(--color-black);
 }
+
+/* responsive */
+@media (max-width: 700px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sticky-part-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .teacher-sticky-box {
+        position: relative;
+        justify-self: center;
+    }
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+    
+    :root {
+        --color-background: #1c1c1c; 
+        --color-primary: #FFA726; 
+        --color-light-grey: #363535; 
+        --color-grey: #454343; 
+        --color-black: hsl(0, 0%, 100%); 
+        --color-white: #121111; 
+        --color-dark-grey: #b9b9b9; 
+    }
+
+    body {
+        background: rgba(35, 34, 34, 0.9);
+    }
+} */

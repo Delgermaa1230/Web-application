@@ -14,27 +14,22 @@
 
 <body>
 
-    <header class="header">
-        <div class="rightHeader">
-            <a href="" class="logo">Numteach</a>
-
-            <form action="">
-                <div class="searchBar">
-                    <input type="text" placeholder="Хичээл хайх" class="searchBox">
-                    <button type="submit" class="SearchBarBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+    <header>
+        <div class="header-first-box">
+            <a href="../index.html">
+                <h1>Numteach</h1>
+            </a>
+            <form id="" action="" name="">
+                <input type="text" placeholder="Хайлт хийх...">
+                <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-
         </div>
-
-        <nav class="leftHeader">
-            <button class="hButton"><i class="fa-solid fa-question"></i></button>
-            <button class="hButton"><i class="fa-regular fa-heart"></i></button>
-            <button class="hButton">Багш болох</button>
-            <button class="hButton"><i class="fa-solid fa-user"></i></button>
+        <nav>
+            <a href="#"><i class="fa fa-question"></i></a>
+            <a href="req1.html">Багш болох</a>
+            <a href="#"><i class="fa fa-user"></i></a>
         </nav>
-
-    </header><br>
+    </header>
 
 
     <div class="Main">
@@ -50,64 +45,74 @@
         </div>
 
         <div class="medeelel-avah">
-            <button>
-                Хавсаргах
-            </button>
-            <h3>Өөрийн мэдээлэл оруулах</h3>
-            <label for="text">aa</label>
-            <input type="text" placeholder="">
-            <label for="text">aa</label>
-            <input type="text" placeholder="">
-            <label for="text">aa</label>
-            <input type="text" placeholder="">
-            <label for="text">aa</label>
-            <input type="text" placeholder="">
-            <label for="text">aa</label>
-            <input type="text" placeholder="">
-    
-            <button>
+            <h2>Өөрийн мэдээлэл оруулах</h2>
+            <!--upload pics-->
+            <div class="upload-pic-cont">
+                <img src="web-applications" alt="" class="uploadProfile">
+                <div style="display: flex;flex-direction: column; justify-content: center; row-gap: 1rem;">
+                    <p>ПРОФАЙЛ ЗУРАГ НЬ 300x300 БАЙХ </p>
+                    <button class="button">Хавсаргах</button>
+                </div>
+                
+
+            </div>
+            <!--place holder-->
+            <div class="phContainer">
+                <label for="text">Овог</label>
+                <input type="text" placeholder="" class="placeholder">
+            </div>
+
+            <div class="phContainer">
+                <label for="text">нэр</label>
+                <input type="text" placeholder="" class="placeholder">
+            </div>
+
+            <div class="phContainer">
+                <label for="text">салбар сургууль</label>
+                <input type="text" placeholder="" class="placeholder">
+            </div>
+
+            <div class="phContainer">
+                <label for="text">Мэйл хаяг</label>
+                <input type="text" placeholder="" class="placeholder">
+            </div>
+
+            <div class="phContainer">
+                <label for="text">Утасний дугаар</label>
+                <input type="text" placeholder="" class="placeholder">
+            </div>
+            <!--next button-->
+            <button class="button">
                 Үргэлжлүүлэх
             </button>
         </div>
-        
     </div>
 
 
     <footer>
-        <div class="footer">
-            <ul>
-                <li>
-                    <h3>Help</h3>
+        <ul>
+            <li>
+                <h4>Тусламж</h4>
+                <ul>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Заавар</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>Холбогдох</4>
                     <ul>
-                        <li><a href="holboh">FAQ</a></li>
-                        <li><a href="holboh">Support</a></li>
-                        <li><a href="holboh">Guides</a></li>
+                        <li>Утас:<a href="tel:+97688888811">+976 88 888811</a></li>
+                        <li>Мэйл:<a href="mailto: example@teach.com">example@teach.com</a></li>
                     </ul>
-                </li>
-            </ul>
-
-            <ul>
-                <li>
-                    <h3>Contact info:</h3>
-                    <ul>
-                        <li>Phone: <a href="tel:+97688888811">+976 88 888811</a></li>
-                        <li>Email: <a href="mailto:example@teach.com">example@teach.com</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul>
-                <li>
-                    <h3>Follow us:</h3>
-                    <ul class="social-icons">
-                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>
-                                Instagram</a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank"><i
-                                    class="fa-brands fa-square-facebook"></i> Facebook</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+            </li>
+            <li>
+                <h4>Холбоосууд</h4>
+                <ul id="social-icons">
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+            </li>
+        </ul>
     </footer>
 
 </body>

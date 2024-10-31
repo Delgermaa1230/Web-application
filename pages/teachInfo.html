@@ -7,15 +7,27 @@
     <title>Numteach</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/header_footer.css">
 </head>
 
 <body>
     <header>
-        <div class="header-1box">
-            <h1>Numteach</h1>
-            <form action="">
-                <input type="text">
-                <button type="submit"><i class="fa fa-search"></i></button>
+        <div class="header-first-box">
+            <a href="../index.html">
+                <h1>Numteach</h1>
+            </a>
+            <form id="" action="" name="">
+                <input type="text" placeholder="Хайлт хийх...">
+                <button type="submit">
+
+                    <!-- inline SVG -->
+                    <div class="search-icon">
+                        <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11" r="8" stroke="white" stroke-width="4" fill="none" />
+                            <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="4" />
+                        </svg>
+                    </div>
+                </button>
             </form>
         </div>
         <nav>
@@ -25,24 +37,26 @@
         </nav>
     </header>
     <div class="main">
-        <section class="teacher-sticky-box">
-            <div class="student-number">
-                <p>Суралцагчид</p>
-                <span>0-50</span>
-            </div>
-            <img src="" alt="teacher">
-            <h2>Г.Дэлгэрмаа</h2>
-            <div>
-                <span><b>5</b></span>
-                <span><i class="fa fa-star"></i></span>
-                <p>(67 санал)</p>
-            </div>
-            <div class="basic-info-about-teacher">
-                <p>Төлбөр</p>
-                <span>10'000₮/цаг</span>
-            </div>
-            <button><a href="contact.html">Холбогдох</a></button>
-        </section>
+        <div cass="sticky-part-wrapper">
+            <section class="teacher-sticky-box">
+                <div class="student-number">
+                    <p>Суралцагчид</p>
+                    <span><b>0-50</b></span>
+                </div>
+                <div class="image"><img src="../imgs/img1.png" alt="teacher"></div>
+                <h2>Г.Дэлгэрмаа</h2>
+                <div class="rating">
+                    <span><b>5</b></span>
+                    <span><i class="fa fa-star"></i></span>
+                    <p>(67 санал)</p>
+                </div>
+                <div class="wage">
+                    <p>Төлбөр</p>
+                    <span>10'000₮/цаг</span>
+                </div>
+                <button class="important-button"><a href="contact.html">Холбогдох</a></button>
+            </section>
+        </div>
         <section class="information-column">
             <div class="subjects-tags">
                 <ul>
@@ -58,7 +72,7 @@
                     <li>Online</li>
                 </ul>
             </div>
-            <section>
+            <section class="about-lesson-box">
                 <h2>Багшийн тухай</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam tenetur omnis, a consequatur
                     similique quam beatae nostrum vero iste tempora minima id quaerat atque, ipsa optio cupiditate
@@ -69,7 +83,7 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium mollitia consectetur
                     error praesentium iusto voluptates, placeat repellendus vel laboriosam.</p>
             </section>
-            <section>
+            <section class="about-lesson-box">
                 <h2>Хичээлийн тухай</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam tenetur omnis, a consequatur
                     similique quam beatae nostrum vero iste tempora minima id quaerat atque, ipsa optio cupiditate
@@ -80,46 +94,56 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium mollitia consectetur
                     error praesentium iusto voluptates, placeat repellendus vel laboriosam.</p>
             </section>
-            <section>
+            <section class="available-schedule-box">
                 <h2>Боломжит цаг</h2>
                 <div>
-                    <p>div table</p>
+                    <p></p>
                 </div>
             </section>
-            <section>
+            <section class="comment-box">
                 <h2>Сэтгэгдэл</h2>
-                <section>
-                    <img src="" alt="user">
-                    <h3>Бурмаа Төмөр</h3>
+                <section class="comment">
+                    <div class="comment-owner">
+                        <img src="/imgs/img1.png" alt="user">
+                        <h3>Нямаа Батпүрэв</h3>
+                    </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium, veritatis eius ducimus
                         dolorem explicabo cumque tempora eveniet culpa illum molestias, odit alias aliquam nulla ea
                         optio nihil laudantium porro!</p>
                 </section>
-                <section>
-                    <img src="" alt="user">
-                    <h3>Нямаа Батпүрэв</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem quasi odit est quisquam ex repellat
+                <section class="comment">
+                    <div class="comment-owner">
+                        <img src="/imgs/img1.png" alt="user">
+                        <h3>Нямаа Батпүрэв</h3>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem quasi odit est quisquam ex
+                        repellat
                         quos quod optio cupiditate similique? Doloremque est tenetur hic neque?</p>
+
                 </section>
             </section>
         </section>
     </div>
+
     <footer>
         <ul>
-            <li class="list-header">Help
+            <li>
+                <h4>Тусламж</h4>
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Заавар</a></li>
                 </ul>
             </li>
-            <li class="list-header" id="contact-list">Contact
-                <ul>
-                    <li>Phone: <a href="tel:+97688888811">+976 88 888811</a></li>
-                    <li>Email: <a href="mailto: example@teach.com">example@teach.com</a></li>
-                </ul>
+            <li>
+                <h4>Холбогдох</4>
+                    <ul>
+                        <li>Утас:<a href="tel:+97688888811">+976 88 888811</a></li>
+                        <li>Мэйл:<a href="mailto: example@teach.com">example@teach.com</a></li>
+                    </ul>
             </li>
-            <li class="list-header">Follow us:
-                <ul>
+            <li>
+                <h4>Холбоосууд</h4>
+                <ul id="social-icons">
                     <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                     <li><a href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                 </ul>
