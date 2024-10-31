@@ -14,6 +14,7 @@
 p, span b{
     font-size: 1rem;
     /* letter-spacing: 0.01rem; */
+    color: var(--color-black);
 }
 
 /* Хувьсагчид тодорхойлолт */
@@ -34,10 +35,12 @@ body {
 
 h1 {
     font-size: 2rem;
+    color:var(--color-black);
 }
 
 h2 {
     font-size: 1.5rem;
+    color: var(--color-black);
 }
 
 .main {
@@ -72,6 +75,7 @@ h2 {
 
 .teacher-sticky-box .student-number p, span {
     font-size: 0.9rem;
+    color: var(--color-black);
 }
 
 .teacher-sticky-box .image {
@@ -130,6 +134,7 @@ h2 {
     flex-direction: column;
     max-width: 744px;
     margin: 0.5rem 0.5rem 0 0;
+    color: var(--color-black)
 }
 
 .subjects-tags {
@@ -153,6 +158,7 @@ h2 {
 
 .information-column h1 {
     margin-bottom: 2rem;
+    color: var(--color-black)
 }
 
 .teaching-location {
@@ -179,6 +185,7 @@ h2 {
 
 .information-column section h2 {
     margin-bottom: 1rem;
+    color:var(--color-black);
 }
 
 .comment {
@@ -204,6 +211,7 @@ h2 {
     font-weight: 400;
     letter-spacing: 0.01rem;
     padding-left: 2.2rem;
+    color: var(--color-black);
 }
 
 /* responsive */
@@ -224,19 +232,19 @@ h2 {
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     
     :root {
         --color-background: #1c1c1c; 
         --color-primary: #FFA726; 
         --color-light-grey: #363535; 
-        --color-grey: #757575; 
-        --color-black: #ffffff; 
+        --color-grey: #454343; 
+        --color-black: hsl(0, 0%, 100%); 
         --color-white: #121111; 
-        --color-dark-grey: #c3bfbf; 
+        --color-dark-grey: #b9b9b9; 
     }
 
     body {
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(35, 34, 34, 0.9);
     }
-}
+} */
