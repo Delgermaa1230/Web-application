@@ -46,13 +46,11 @@ h2 {
 
 .main {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     margin: 0.5rem 2rem;
     gap: 2rem;
 }
-
-/* Багшийн ерөнхий мэдээллийг агуулж буй хайрцаг */
 .teacher-sticky-box {
     position: sticky;
     top: 2rem;
@@ -109,7 +107,16 @@ h2 {
     padding: 0 2rem;
 }
 
-/* Чухал товчлууруудын дизайн */
+form input {
+    border: none;
+    background-color: transparent;
+    width: 10rem;
+}
+
+ form input::placeholder{
+    font-size: 0.9rem;
+}
+
 .important-button {
     padding: 1rem;
     margin: auto;
@@ -123,104 +130,12 @@ h2 {
     transform: scale(1.02);
 }
 
-.teacher-sticky-box h2 {
-    display: flex;
-    justify-content: center;
-}
-
 .important-button a {
     color: var(--color-white);
     font-weight: 800;
     font-size: 1rem;
 }
 
-/* Хичээлийн мэдээллийг агуулах хайрцаг */
-.information-column {
-    display: flex;
-    flex-direction: column;
-    max-width: 744px;
-    margin: 0.5rem 0.5rem 0 0;
-    color: var(--color-black)
-}
-
-.subjects-tags {
-    margin-bottom: 2rem;
-}
-
-.subjects-tags ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.subjects-tags ul li {
-    margin: 0.5rem 0.5rem 0 0;
-    padding: 0.5em 1rem;
-    font-size: 0.75rem;
-    border-radius: 40cap;
-    background-color: var(--color-background);
-    font-weight: 700;
-    color: var(--color-primary);
-}
-
-.information-column h1 {
-    margin-bottom: 2rem;
-    color: var(--color-black)
-}
-
-.teaching-location {
-    margin-bottom: 2rem;
-}
-
-.teaching-location ul {
-    display: flex;
-}
-
-.teaching-location ul li {
-    margin: 0.5rem 0.5rem 0 0;
-    padding: 0.5em 1rem;
-    font-size: 0.75rem;
-    border-radius: 40cap;
-    background-color: var(--color-light-grey);
-    font-weight: 700;
-    color: var(--color-black);
-}
-
-.information-column section {
-    margin-bottom: 2rem;
-}
-
-.information-column section h2 {
-    margin-bottom: 1rem;
-    color:var(--color-black);
-}
-
-.comment {
-    border: solid var(--color-grey) 0.09rem;
-    border-radius: 2rem;
-    padding: 2rem 1rem;
-}
-
-.comment-owner {
-    display: flex;
-    justify-content: flex-start;
-    gap: 0.5rem;
-}
-
-.comment-owner img {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-}
-
-.comment-box p {
-    font-size: 0.9rem;
-    font-weight: 400;
-    letter-spacing: 0.01rem;
-    padding-left: 2.2rem;
-    color: var(--color-black);
-}
-
-/* responsive */
 @media (max-width: 700px) {
     .main {
         flex-direction: column;

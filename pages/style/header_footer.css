@@ -80,6 +80,7 @@ header h1:hover {
     font-size: 1rem;
 }
 
+
 header nav {
     display: flex;
     flex-direction: row;
@@ -102,7 +103,7 @@ header a {
     background-color: transparent;
 }
 
-header nav a:hover {
+header a:hover {
     background-color: var(--color-primary);
     color: var(--color-white);
 }
