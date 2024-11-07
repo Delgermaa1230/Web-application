@@ -157,7 +157,7 @@ form input {
     
     :root {
         --color-background: #1c1c1c; 
-        --color-primary: #FFA726; 
+        --color-primary: #ff990031; 
         --color-light-grey: #363535; 
         --color-grey: #454343; 
         --color-black: hsl(0, 0%, 100%); 
