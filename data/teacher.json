@@ -1,0 +1,88 @@
+{
+    "teachers": [
+        {
+            "firstname": "John",
+            "lastname": "Doe",
+            "rating": 4.5,
+            "rating_people_numbers": 120,
+            "brief_description": "Experienced math teacher with a passion for helping students understand complex concepts.",
+            "lessons": [
+                "Algebra",
+                "Geometry",
+                "Calculus"
+            ],
+            "hour_wage": 30,
+            "students_number": 25
+        },
+        {
+            "firstname": "Jane",
+            "lastname": "Smith",
+            "rating": 4.8,
+            "rating_people_numbers": 200,
+            "brief_description": "Dedicated science teacher who encourages curiosity and hands-on learning.",
+            "lessons": [
+                "Biology",
+                "Chemistry",
+                "Physics"
+            ],
+            "hour_wage": 35,
+            "students_number": 30
+        },
+        {
+            "firstname": "Emily",
+            "lastname": "Johnson",
+            "rating": 4.2,
+            "rating_people_numbers": 80,
+            "brief_description": "Creative arts teacher with a focus on developing students' artistic skills.",
+            "lessons": [
+                "Painting",
+                "Sculpture",
+                "Photography"
+            ],
+            "hour_wage": 28,
+            "students_number": 20
+        },
+        {
+            "firstname": "Michael",
+            "lastname": "Brown",
+            "rating": 4.7,
+            "rating_people_numbers": 150,
+            "brief_description": "Passionate history teacher who brings the past to life through engaging storytelling.",
+            "lessons": [
+                "World History",
+                "American History",
+                "Civics"
+            ],
+            "hour_wage": 32,
+            "students_number": 28
+        },
+        {
+            "firstname": "Sarah",
+            "lastname": "Davis",
+            "rating": 4.9,
+            "rating_people_numbers": 250,
+            "brief_description": "Innovative language teacher who fosters a love for literature and communication.",
+            "lessons": [
+                "English Literature",
+                "Creative Writing",
+                "Public Speaking"
+            ],
+            "hour_wage": 38,
+            "students_number": 35
+        },
+        {
+            "firstname": "David",
+            "lastname": "Wilson",
+            "rating": 4.3,
+            "rating_people_numbers": 90,
+            "brief_description": "Enthusiastic physical education teacher promoting health and fitness.",
+            "lessons": [
+                "Physical Education",
+                "Health Education",
+                "Sports Coaching"
+            ],
+            "hour_wage": 30,
+            "students_number": 25
+        }
+    ]
+}

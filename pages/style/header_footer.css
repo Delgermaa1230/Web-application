@@ -4,7 +4,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style: none;
     text-decoration: none;
-    font-size: 16px;
 }
 
 *,
@@ -37,6 +36,12 @@ header {
 header h1 {
     color: var(--color-primary);
     font-size: 1.8rem;
+    transition-duration:0.3s ;
+    cursor: pointer;
+}
+
+header h1:hover {
+    letter-spacing: 0.05rem;
 }
 
 .header-first-box {
@@ -56,6 +61,11 @@ header h1 {
 .header-first-box form input {
     border: none;
     background-color: transparent;
+    width: 10rem;
+}
+
+.header-first-box form input::placeholder{
+    font-size: 0.9rem;
 }
 
 .header-first-box form button {
@@ -66,13 +76,18 @@ header h1 {
     border-radius: 20cap;
 }
 
+.header-first-box form button a {
+    font-size: 1rem;
+}
+
+
 header nav {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-header nav a {
+header a {
     background-color: var(--color-light-grey);
     padding: 0.5rem 1rem;
     /* border: solid var(--color-grey) 1px; */
@@ -84,7 +99,11 @@ header nav a {
     cursor: pointer;
 }
 
-header nav a:hover {
+.header-first-box a {
+    background-color: transparent;
+}
+
+header a:hover {
     background-color: var(--color-primary);
     color: var(--color-white);
 }
@@ -115,7 +134,13 @@ footer ul li ul {
 
 footer ul li ul li {
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--color-dark-grey)
+}
+
+footer ul li ul li a{
+    font-weight: 400;
+    font-size: 0.9rem;
     color: var(--color-dark-grey)
 }
 
@@ -137,24 +162,34 @@ footer ul li #social-icons li {
 
 footer a {
     color: var(--color-dark-grey);
+    transition-duration: 0.3s ;
+}
+
+footer a:hover {
+    color: var(--color-primary);
 }
 
 footer ul li #social-icons li a {
     color: white;
+    transition-duration: 0.3s;
+}
+
+footer ul li #social-icons li a:hover{
+    transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
     header {
         justify-content: center;
         align-items: space-between;
-        padding: 1.5rem 2rem;
+        padding: 1rem;
         flex-wrap: wrap;
+        gap: 1rem;
     }
 
-    header nav {
-        margin-top: 0.5rem;
+    .header-first-box form input {
+        width: 6rem;
     }
-
 }
 
 @media (max-width: 400px) {
@@ -162,8 +197,14 @@ footer ul li #social-icons li a {
         flex-direction: column;
         justify-content: center;
     }
-    :root{
-        font-size: 10px;
+
+    :root {
+        font-size: 13px;
+    }
+
+    footer ul li #social-icons {
+        flex-direction: row;
+        justify-content: flex-start;
     }
 }
 
