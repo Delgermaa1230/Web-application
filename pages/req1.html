@@ -10,6 +10,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--javascript-->
+    <script>
+
+        class teacherInfoInt{
+            name;
+
+        }
+        function request(){
+             let url = "https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY="
+            
+             fetch(url)
+
+            .then(Response=>{
+                if(!responce.ok) throw Error (responce.statusText)
+                return responce.json()
+            } )
+
+            .then(data=> {
+                const images = document.createElement("div")
+                for (let i = 0; i < data.lenght; i++){
+                    const img = document.createElement("img")
+                    img.src = data[i].url
+                    images.appendChild
+                }
+            })
+
+            .catch(Error=> console.log(error))
+
+        }
+    </script>
 </head>
 
 <body>
