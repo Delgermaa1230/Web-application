@@ -153,7 +153,7 @@ form input {
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     
     :root {
         --color-background: #1c1c1c; 
@@ -168,4 +168,4 @@ form input {
     body {
         background: rgba(35, 34, 34, 0.9);
     }
-}
+} */
