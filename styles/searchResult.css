@@ -170,6 +170,11 @@ body {
     margin-top: var(--base);
 }
 
+.tutorImage img {
+    width: 100%;
+    object-fit: contain;
+}
+
 
 .pagination {
     display: flex;
