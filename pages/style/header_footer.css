@@ -14,7 +14,7 @@
 
 /* header style */
 
-:root {
+/* :root {
     --color-background: #FEF4E4;
     --color-primary: #FF9B00;
     --color-light-grey: #E6E6E6;
@@ -23,7 +23,7 @@
     --color-white: #ffffff;
     --color-dark-grey: #413D3D;
     font-size: 16px;
-}
+} */
 
 header {
     display: flex;
