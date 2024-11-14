@@ -155,5 +155,5 @@ h2 {
 }
 
 .tutorCard p{
-    padding: var(--base-padding);
+    /* padding:; */
 }

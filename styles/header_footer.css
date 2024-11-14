@@ -1,3 +1,5 @@
+@import url(/styles/global.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -34,9 +36,9 @@ header {
 }
 
 header h1 {
-    color: var(--color-primary);
-    font-size: 1.8rem;
-    transition-duration:0.3s ;
+    color: var(--base-color-orange);
+    font-size: var(--base-h1-font-size);
+    transition: var(--base-transition);
     cursor: pointer;
 }
 
@@ -48,54 +50,52 @@ header h1:hover {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
+    gap: var(--base-size-x4);
 }
 
 .header-first-box form {
-    /* background-color: var(--color-light-grey); */
-    border-radius: 10cap;
-    border: solid var(--color-light-grey) 2px;
-    padding: 0.2rem 0.3rem 0.2rem 1rem;
+    border-radius: var(--base-border-radius-x4);
+    border: solid var(--base-color-grey) 2px;
+    padding: var(--base-padding-even);
 }
 
 .header-first-box form input {
     border: none;
     background-color: transparent;
-    width: 10rem;
+    width: calc(var(--base-size-x2)*13);
 }
 
 .header-first-box form input::placeholder{
-    font-size: 0.9rem;
+    font-size: var(--base-caption-font-size);
 }
 
 .header-first-box form button {
     border: none;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 0.3rem 0.55rem 0.45rem 0.6rem;
+    background-color: var(--base-color-orange);
+    color: var(--base-color-white);
+    padding: var(--base-size) calc(var(--base-size)*1.5);
     border-radius: 20cap;
 }
 
 .header-first-box form button a {
-    font-size: 1rem;
+    font-size: var(--base-button-small-font-size);
 }
 
 
 header nav {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: var(--base-size-x2);
 }
 
-header a {
-    background-color: var(--color-light-grey);
-    padding: 0.5rem 1rem;
-    /* border: solid var(--color-grey) 1px; */
-    border-radius: 40cap;
-    color: var(--color-black);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition-duration: 0.4s;
+header nav a {
+    background-color: var(--base-color-grey-medium);
+    padding: var(--base-padding);
+    border-radius: var(--base-border-radius-x6);
+    color: var(--base-text-color);
+    font-weight: var(--base-medium-font-weight);
+    font-size: var(--base-button-medium-font-size);
+    transition: var(--base-transition);
     cursor: pointer;
 }
 
@@ -103,9 +103,14 @@ header a {
     background-color: transparent;
 }
 
+header nav a:hover {
+    background-color: var(--base-color-orange);
+    color: var(--base-background-color);
+}
+
 header .back:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--base-color-orange);
+    color: var(--base-background-color);
 }
 
 
@@ -113,7 +118,7 @@ header .back:hover {
 
 footer {
     padding: 2rem;
-    background-color: var(--color-background);
+    background-color: var(--base-background-color-orange);
 }
 
 footer ul {
@@ -133,19 +138,19 @@ footer ul li ul {
 }
 
 footer ul li ul li {
-    font-weight: 400;
-    font-size: 0.9rem;
+    font-weight: var(--base-regular-font-weight);
+    font-size: var(--base-caption-font-size);
     color: var(--color-dark-grey)
 }
 
 footer ul li ul li a{
-    font-weight: 400;
-    font-size: 0.9rem;
+    font-weight: var(--base-regular-font-weight);
+    font-size: var(--base-caption-font-size);
     color: var(--color-dark-grey)
 }
 
 footer ul li h4 {
-    font-size: 0.9rem;
+    font-size: var(--base-caption-font-size);
 }
 
 footer ul li #social-icons {
@@ -153,8 +158,8 @@ footer ul li #social-icons {
 }
 
 footer ul li #social-icons li {
-    font-size: 1.1rem;
-    background-color: var(--color-dark-grey);
+    font-size: var(--base-h4-font-size);
+    background-color: var(--base-color-dark-grey);
     padding: 0.3rem 0.5rem;
     border-radius: 30%;
     width: 2.1rem;
