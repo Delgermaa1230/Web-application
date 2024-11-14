@@ -1,0 +1,103 @@
+.home1 {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.home1 h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.home1 input[type="text"] {
+    padding: 0.5rem 1rem;
+    background-color: #fef4e4;
+    height: 6.25rem;
+    width: 38.3125rem;
+    border-radius: 50px;
+}
+.home1 input[placeholder="Хайх"]{
+    background-color: #FF9B00;
+    height: 4.8125rem;
+    width: 9.625rem;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    font-size: large;
+    margin-left: 80px;
+}
+
+.subjects-tags ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.subjects-tags li {
+    background-color: #fca61f;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.subjects-tags li:hover {
+    background-color: #ffba53;
+}
+
+/* Tutors Section */
+section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin: 2rem 0 1rem;
+}
+
+.tutorCard {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.tutorImage img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.tutorImage .favBtn {
+    background: none;
+    border: none;
+    color: #fca61f;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+}
+
+.NameRating h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.rating {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.rating .fa-star {
+    color: #fca61f;
+}
+
+.tutorCard p {
+    font-size: 0.9rem;
+    color: #555;
+}
