@@ -3,6 +3,8 @@
 
 *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 body {
     background: linear-gradient(191deg, var(--base-background-color) 20%, var(--base-color-light-orange) 90%);
@@ -46,6 +48,7 @@ body {
     background-color: var(--base-background-color-shadow);
 }
 
+
 form {
     justify-content: space-between;
     padding: var(--base-padding);
@@ -57,6 +60,11 @@ form {
 input {
     border: none;
     background-color: transparent;
+    padding: var(--base-padding)
+}
+
+input:focus {
+    outline: none;
 }
 
 input::placeholder{
@@ -66,11 +74,18 @@ input::placeholder{
 button {
     border: none;
     background-color: var(--base-color-orange);
-    color: var(--color-white);
+    color: var(--base-color-white);
     padding: var(--base-padding);
     border-radius: var(--base-border-radius-x3);
     font-size: var(--base-button-large-font-size);
     font-weight: var(--base-medium-font-weight);
+    transition: var(--base-transition);
+}
+
+button:hover {
+    transform: scale(1.05);
+    font-size: var(--base-button-large-font-size);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .common-lessons-nav {
@@ -86,12 +101,14 @@ button {
 .common-lessons-nav a {
     color: var(--base-text-color);
     border-radius: var(--base-border-radius-x3);
-    border: solid 1px var(--base-color-grey);
-    padding: var(--base-padding)
+    border: solid 0.3px var(--base-color-grey);
+    padding: var(--base-padding);
+    transition: var(--base-transition);
 }
 
 .common-lessons-nav a:hover {
     background-color: var(--base-background-color);
+    border: solid 0.3px var(--base-color-white);
 }
 
 .container{
@@ -100,8 +117,9 @@ button {
 }
 
 .tutors-box {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 100%;
     justify-content: space-between;
     align-items: stretch;
     gap: var(--base-size-x3);
@@ -109,8 +127,8 @@ button {
 }
 
 .tutors-box a{
-    width: auto;
-    max-width: 30%;
+    width: 100%;
+    height: 100%;
     color: var(--base-text-color);
 }
 
@@ -124,7 +142,7 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: var(--base-padding);
+    padding: 0 var(--base-size-x2);
 }
 
 h2 {
@@ -134,10 +152,9 @@ h2 {
 
 .tutorImage {
     width: 100%;
-    height: auto;
     overflow: hidden;
     position: relative;
-    border-radius: var(--base-border-radius-x4);
+    border-radius: var(--base-border-radius-x6);
 }
 
 .tutorImage img {
@@ -155,5 +172,14 @@ h2 {
 }
 
 .tutorCard p{
-    padding:0 var(--base-size);
+    padding:0 var(--base-size-x2);
+    font-size: var(--base-caption-font-size);
+}
+
+.tutorCard i {
+    color: rgb(255, 208, 0);
+}
+
+#starsNumber {
+    font-weight: var(--base-bold-font-weight);
 }

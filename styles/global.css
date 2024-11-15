@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --base-size: 8px;
     --base-size-x1: var(--base-size);
@@ -13,7 +15,7 @@
     --base-color-white: #fff;
     --base-color-black: #121212;
     --base-color-dark-grey: #413D3D;
-    --base-color-grey: #a6a6a6;
+    --base-color-grey: #b2b1b1;
     --base-color-grey-medium: #d9d9d9;
     --base-color-grey-light: #f3f3f3;
     --base-color-orange: #ff9b00;
@@ -56,4 +58,18 @@
     --base-background-color-shadow: #fbb13b14;
     --base-text-color: var(--base-color-black);
     --base-grey-text-color: var(--base-color-dark-grey);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat Alternates", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
