@@ -6,7 +6,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: var(--base-size-x3) var(--base-border-radius-x6);
     flex-wrap: wrap;
 }
 
@@ -15,12 +15,13 @@ header h1 {
     font-size: var(--base-h1-font-size);
     transition: var(--base-transition);
     cursor: pointer;
+    padding: var(--base-padding);
 }
 
 header h1:hover {
-    letter-spacing: 0.03rem;
+    padding-top:calc(var(--base-size)*0.8);
+    padding-bottom:calc(var(--base-size)*1.2);
 }
-
 .header-first-box {
     display: flex;
     justify-content: flex-start;

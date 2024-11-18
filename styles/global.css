@@ -51,7 +51,6 @@
     --base-thin-font-weight: 200;
     --base-transition: all 0.4s ease;
     --base-padding: var(--base-size) var(--base-size-x2);
-    --base-padding-2x: var(--base-size-x2) var(--base-size-4x);
     --base-padding-even: var(--base-size);
     --base-background-color: var(--base-color-white);
     --base-background-color-orange: var(--base-color-light-orange);
