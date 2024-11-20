@@ -59,63 +59,6 @@
         <section class="container">
             <h2>Санал болгох багш нар</h2>
             <div class="tutors-box" id="topTeachers">
-                <a href="/pages/teachInfo.html">
-                    <section class="tutorCard">
-                        <div class="tutorImage"><img src="/imgs/img1.png" alt="fe"></div>
-                        <div class="tutorInfo">
-                            <h3>Б.Батжаргал</h3>
-                            <p class="tutorReviews">
-                                <i class="fa fa-star"></i>
-                                <span id="starsNumber">5</span>
-                                <span id="reviewsNumber">
-                                    (15 санал)
-                                </span>
-                            </p>
-                        </div>
-                        <p class="tutorDescription">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, voluptate. Hello this my
-                            teacher.
-                        </p>
-                    </section>
-                </a>
-                <a href="/pages/teachInfo.html">
-                    <section class="tutorCard">
-                        <div class="tutorImage"><img src="/imgs/img3.jpg" alt="imf"></div>
-                        <div class="tutorInfo">
-                            <h3>Б.Батжаргал</h3>
-                            <p class="tutorReviews">
-                                <i class="fa fa-star"></i>
-                                <span id="starsNumber">5</span>
-                                <span id="reviewsNumber">
-                                    (15 санал)
-                                </span>
-                            </p>
-                        </div>
-                        <p class="tutorDescription">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, voluptate. Hello this my
-                            teacher.
-                        </p>
-                    </section>
-                </a>
-                <a href="/pages/teachInfo.html">
-                    <section class="tutorCard">
-                        <div class="tutorImage"><img src="/imgs/img2.jpg" alt="waf"></div>
-                        <div class="tutorInfo">
-                            <h3>Б.Батжаргал</h3>
-                            <p class="tutorReviews">
-                                <i class="fa fa-star"></i>
-                                <span id="starsNumber">5</span>
-                                <span id="reviewsNumber">
-                                    (15 санал)
-                                </span>
-                            </p>
-                        </div>
-                        <p class="tutorDescription">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, voluptate. Hello this my
-                            teacher.
-                        </p>
-                    </section>
-                </a>
             </div>
         </section>
         <script>
@@ -124,6 +67,7 @@
                     {
                         "id": 1,
                         "firstName": "Дэлгэрмаа",
+                        "firsLetterOflastName": "Г",
                         "lastName": "Галбаяр",
                         "age": "20",
                         "gender": "F",
@@ -131,7 +75,7 @@
                         "numberOfRatings": 10,
                         "email": "galbayardelgermaa@gmail.com",
                         "phone": "89234723",
-                        "image": "../imgs/img1.png",
+                        "image": "../imgs/img3.jpg",
                         "description": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
                         "lessons": [
                             "Математик", "Алгоритм", "Программчлалын хэл Си"
@@ -140,6 +84,7 @@
                     {
                         "id": 2,
                         "firstName": "Номин",
+                        "firsLetterOflastName": "Т",
                         "lastName": "Төмөрбаатар",
                         "age": "28",
                         "gender": "F",
@@ -156,6 +101,7 @@
                     {
                         "id": 3,
                         "firstName": "Санжид",
+                        "firsLetterOflastName": "М",
                         "lastName": "Мөнх-Эрдэнэ",
                         "age": "32",
                         "gender": "M",
@@ -172,6 +118,7 @@
                     {
                         "id": 4,
                         "firstName": "Түмэнжаргал",
+                        "firsLetterOflastName": "Ц",
                         "lastName": "Цогтгэрэл",
                         "age": "25",
                         "gender": "M",
@@ -188,6 +135,7 @@
                     {
                         "id": 5,
                         "firstName": "Ганбат",
+                        "firsLetterOflastName": "Л",
                         "lastName": "Лхагвасүрэн",
                         "age": "30",
                         "gender": "M",
@@ -204,6 +152,7 @@
                     {
                         "id": 6,
                         "firstName": "Намуунаа",
+                        "firsLetterOflastName": "Ц",
                         "lastName": "Цэрэнбат",
                         "age": "27",
                         "gender": "F",
@@ -218,8 +167,10 @@
                         ]
                     },
                     {
+
                         "id": 7,
                         "firstName": "Билгүүн",
+                        "firsLetterOflastName": "Г",
                         "lastName": "Галбадрах",
                         "age": "34",
                         "gender": "M",
@@ -236,6 +187,7 @@
                     {
                         "id": 8,
                         "firstName": "Мөнгөнзаяа",
+                        "firsLetterOflastName": "Т",
                         "lastName": "Төмөр",
                         "age": "22",
                         "gender": "F",
@@ -252,6 +204,7 @@
                     {
                         "id": 9,
                         "firstName": "Жаргалсайхан",
+                        "firsLetterOflastName": "Б",
                         "lastName": "Батзориг",
                         "age": "29",
                         "gender": "M",
@@ -268,6 +221,7 @@
                     {
                         "id": 10,
                         "firstName": "Цогт-Эрдэнэ",
+                        "firsLetterOflastName": "Г",
                         "lastName": "Чулуунбилэг",
                         "age": "26",
                         "gender": "M",
@@ -293,7 +247,7 @@
                         const bScore = b.ratings * b.numberOfRatings;
                         return bScore - aScore; //buurhaar erembleh
                     })
-                    .slice(0, 3); // 3g n avah
+                    .slice(0, 6); // 3g n avah
             };
 
             const top3Teachers = filterTopTeachers(teachers);
@@ -302,17 +256,18 @@
             const top3TeachersHTMLarray = top3Teachers.map(ft =>
                 `<a href="/pages/teachInfo.html">
                     <section class="tutorCard">
-                        <div class="tutorImage"><img src="${ft.image}" alt="fe"></div>
-                        <div class="tutorInfo">
-                            <h3>${ft.firstName} ${ft.lastName}</h3>
-                            <p class="tutorReviews">
-                                <i class="fa fa-star"></i>
-                                <span id="starsNumber">${ft.ratings}</span>
-                                <span id="reviewsNumber">
-                                    (${ft.numberOfRatings} санал)
-                                </span>
-                            </p>
+                        <div class="tutorImage">
+                            <img src="${ft.image}" alt="fe">
+                                
                         </div>
+                        <h3>${ft.firsLetterOflastName}. ${ft.firstName}</h3>  
+                        <p class="tutorReviews">
+                            <i class="fa fa-star"></i>
+                            <span id="starsNumber">${ft.ratings}</span>
+                            <span id="reviewsNumber">
+                                    (${ft.numberOfRatings} санал)
+                            </span>
+                        </p>
                         <p class="tutorDescription">
                         ${ft.description}
                         </p>

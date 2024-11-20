@@ -1,47 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    list-style: none;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-/* element үүдийн хэмжээ */
-p, span b{
-    font-size: 1rem;
-    /* letter-spacing: 0.01rem; */
-    color: var(--color-black);
-}
-
-/* Хувьсагчид тодорхойлолт */
-:root {
-    --color-background: #FEF4E4;
-    --color-primary: #FF9B00;
-    --color-light-grey: #E6E6E6;
-    --color-grey: #bfbfbf;
-    --color-black: #000000;
-    --color-white: #ffffff;
-    --color-dark-grey: #413D3D;
-}
-
 /* Уусалттай backgournd */
 body {
-    background: linear-gradient(191deg, rgba(254,244,228,0.4) 60%, rgba(255,255,255,1) 100%);
-}
-
-h1 {
-    font-size: 2rem;
-    color:var(--color-black);
+    background: linear-gradient(191deg, var(--base-background-color) 20%, var(--base-color-light-orange) 90%);
 }
 
 h2 {
     font-size: 1.5rem;
-    color: var(--color-black);
+    color: var(--base-text-color);
 }
 
 .main {
@@ -49,62 +13,64 @@ h2 {
     flex-direction: row;
     justify-content: center;
     margin: 0.5rem 2rem;
-    gap: 2rem;
+    gap: var(--base-size-x4);
 }
+
 .teacher-sticky-box {
     position: sticky;
-    top: 2rem;
+    top: var(--base-size-x4);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 2.5rem;
-    margin-top: 0.5;
-    border-radius: 2rem;
-    padding: 1rem;
+    margin-bottom: var(--base-size-x4);
+    margin-top: var(--base-size);
+    border-radius: var(--base-border-radius-x4);
+    padding: var(--base-size-x2);
     height: fit-content;
-    gap: 0.6rem;
+    gap: var(--base-size);
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
 .teacher-sticky-box .student-number {
     display: flex;
-    margin: 1rem;
-    gap: 0.5rem;
+    margin: var(--base-size-x2);
+    gap: var(--base-size);
 }
 
 .teacher-sticky-box .student-number p {
-    font-size: 0.9rem;
-    color: var(--color-black);
+    font-size: var(--base-caption-font-size);
+    color: var(--base-text-color);
 }
 
 .teacher-sticky-box .student-number span {
-    font-size: 0.10rem;
-    color: var(--color-black);
+    font-size: var(--base-caption-font-size);
+    color: var(--base-text-color);
 }
 
 .teacher-sticky-box .image {
     display: flex;
     justify-content: center;
-    padding: 0.5rem 2rem;
+    padding: var(--base-size) var(--base-size-x4);
 }
 
 .teacher-sticky-box div img {
-    width: 15rem;
-    height: 15rem;
-    border-radius: 10%;
+    width: calc(var(--base-size-x2)*15);
+    height: calc(var(--base-size-x2)*15);
+    border-radius: var(--base-border-radius-x6);
+    object-fit: cover;
 }
 
 .teacher-sticky-box .rating {
     display: flex;
     justify-content: center;
-    gap: 0.3rem;
+    gap: var(--base-size);
 }
 
 .teacher-sticky-box .wage {
     display: flex;
     justify-content: center;
-    gap: 4rem;
-    padding: 0 2rem;
+    gap: var(--base-size-x4);
+    padding: 0 var(--base-size-x4);
 }
 
 form input {

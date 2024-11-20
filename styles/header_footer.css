@@ -22,6 +22,7 @@ header h1:hover {
     padding-top:calc(var(--base-size)*0.8);
     padding-bottom:calc(var(--base-size)*1.2);
 }
+
 .header-first-box {
     display: flex;
     justify-content: flex-start;
@@ -70,14 +71,13 @@ header h1:hover {
     font-size: var(--base-button-small-font-size);
 }
 
-
 header nav {
     display: flex;
     flex-direction: row;
     gap: var(--base-size-x2);
 }
 
-header nav a {
+header .back, nav a {
     background-color: var(--base-color-grey-light);
     padding: var(--base-padding);
     border-radius: var(--base-border-radius-x6);
@@ -87,6 +87,7 @@ header nav a {
     transition: var(--base-transition);
     cursor: pointer;
 }
+
 
 .header-first-box a {
     background-color: transparent;

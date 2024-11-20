@@ -17,8 +17,8 @@ h2 {
 .main {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    margin: var(--base-size-x2);
+    justify-content: space-between;
+    margin: var(--base-size-x3) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
     gap: var(--base-size-x4);
 }
 
@@ -111,7 +111,7 @@ h2 {
 .information-column {
     display: flex;
     flex-direction: column;
-    max-width: calc(var(--base-size-x2)*46);
+    width: auto;
     margin: var(--base-size) var(--base-size) 0 0;
     color: var(--color-black)
 }
