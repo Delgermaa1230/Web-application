@@ -301,23 +301,23 @@
 
             const top3TeachersHTMLarray = top3Teachers.map(ft =>
                 `<a href="/pages/teachInfo.html">
-    <section class="tutorCard">
-      <div class="tutorImage"><img src="${ft.image}" alt="fe"></div>
-      <div class="tutorInfo">
-        <h3>${ft.firstName} ${ft.lastName}</h3>
-        <p class="tutorReviews">
-          <i class="fa fa-star"></i>
-          <span id="starsNumber">${ft.ratings}</span>
-          <span id="reviewsNumber">
-            (${ft.numberOfRatings} санал)
-          </span>
-        </p>
-      </div>
-      <p class="tutorDescription">
-        ${ft.description}
-      </p>
-    </section>
-  </a>`
+                    <section class="tutorCard">
+                        <div class="tutorImage"><img src="${ft.image}" alt="fe"></div>
+                        <div class="tutorInfo">
+                            <h3>${ft.firstName} ${ft.lastName}</h3>
+                            <p class="tutorReviews">
+                                <i class="fa fa-star"></i>
+                                <span id="starsNumber">${ft.ratings}</span>
+                                <span id="reviewsNumber">
+                                    (${ft.numberOfRatings} санал)
+                                </span>
+                            </p>
+                        </div>
+                        <p class="tutorDescription">
+                        ${ft.description}
+                        </p>
+                    </section>
+                </a>`
             );
 
             const top3TeachersHTML = top3TeachersHTMLarray.reduce((prev, cur) => prev + cur);
