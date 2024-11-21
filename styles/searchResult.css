@@ -145,14 +145,27 @@ h2{
 
 .tutorCard h3 {
     font-size: var(--base-h4-font-size);
-    padding:0 var(--base-size-x2);
 }
 
+
 .tutorCard p{
-    padding:0 var(--base-size-x2);
+    padding:0 1rem;
     font-size: var(--base-caption-font-size);
 }
 
+.tutorTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+}
+
+.tutorTitle p{
+    font-size: 0.8rem;
+    padding: 0;
+}
 
 .tutorCard i {
     color: rgb(255, 208, 0);

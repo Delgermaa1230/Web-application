@@ -16,18 +16,18 @@ h2{
     font-size: 3rem;
 }
 h3{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
-.Main{
+.main{
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 5rem;
 }
 
-
 @media (min-width: 600px) {
-    .Main { grid-template-columns: auto auto; }
+    .main { grid-template-columns: 50% 40%; 
+            justify-content: space-between;}
     .zaavar { width: 100%;}
 }
    
@@ -78,6 +78,8 @@ h3{
     align-items: center;
 }
 .uploadProfile{
-    height: 1rem;
-    width: 1rem;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 20%;
+    margin-right: 1rem;
 }
