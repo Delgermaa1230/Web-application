@@ -1,0 +1,157 @@
+.profile {
+    display: flex;
+    gap: calc(var(--base-size)*4);
+    padding: calc(var(--base-size)*4);
+    flex-wrap: wrap;
+    
+}
+
+.medeelel {
+    background-color: var(--base-background-color-orange);
+    border-radius: calc(var(--base-size)*2);
+    padding: calc(var(--base-size)*3);
+    width: calc(var(--base-size)*50);
+    text-align:left;
+    margin-left: calc(var(--base-size)*9);
+}
+
+.medeelel {
+    display: flex;
+    flex-direction: column;
+}
+.medeelel .zurag{
+    text-align: center;
+}
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--base-border-radius-x6);
+    margin-bottom:calc(var(--base-size)*2);
+    
+}
+
+.medeelel p{
+    margin: 0.5rem 0;  
+    font-weight: bold;   
+}
+
+.highlight1{
+    align-items: center; 
+    display: inline-block;
+    background-color:#fff;
+    display: inline-block;
+    width: 200px; 
+    padding: calc(var(--base-size)*0.7); 
+    text-align: center; 
+    font-size: 12px;
+    margin-left: calc(var(--base-size)*12);
+}
+
+.highlight2{
+    align-items: center; 
+    display: inline-block;
+    background-color:#fff;
+    display: inline-block;
+    width: 200px; 
+    padding: calc(var(--base-size)*0.7); 
+    text-align: center; 
+    font-size: 12px;
+    margin-left: calc(var(--base-size)*13);
+}
+
+.highlight3{
+    align-items: center; 
+    display: inline-block;
+    background-color:#fff;
+    display: inline-block;
+    width: 200px; 
+    padding: calc(var(--base-size)*0.7); 
+    text-align: center; 
+    font-size: 12px;
+    margin-left: calc(var(--base-size)*5.5);
+}
+
+.highlight4{
+    align-items: center; 
+    display: inline-block;
+    background-color:#fff;
+    display: inline-block;
+    width: 200px; 
+    padding: calc(var(--base-size)*0.7); 
+    text-align: center; 
+    font-size: 12px;
+    margin-left: calc(var(--base-size)*6);
+}
+
+/*sudalsan, sudalj bui*/
+
+.sudaljbui h2, .sudalsan h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sudaljbui{
+    background-color: var(--base-background-color-orange);
+    border-radius: calc(var(--base-size)*2);
+    padding: calc(var(--base-size)*3);
+    width: calc(var(--base-size)*50);
+    text-align:left;
+    margin-left: calc(var(--base-size)*10);
+}
+
+.sudalsan{
+    background-color: var(--base-background-color-orange);
+    border-radius: calc(var(--base-size)*2);
+    padding: calc(var(--base-size)*3);
+    width: calc(var(--base-size)*50);
+    text-align:left;
+}
+
+.sudaljbui p, .sudalsan p{
+    margin: 1rem 0;
+    margin-top: calc(var(--base-size)*3);
+}
+
+/* Actions section styling */
+.actions {
+    display: flex;
+    justify-content: space-between; /* 3 картын хооронд зай жигд хуваана */
+    background-color: #fff; /* Фоны өнгө */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Зөөлөн сүүдэр */
+    padding: 20px;
+}
+
+.action-card:hover {
+    transform: translateY(-5px); /* Хулганы заагуур дээр хөдлөх үед дээшлүүлнэ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Сүүдрийг нэмэгдүүлнэ */
+}
+
+.action-card{
+    text-align: center;
+    height: 180px;
+    width: 300px;
+    margin: 0 100px;
+    border-radius: 50px;
+    background-color: var(--base-background-color-orange);;
+}
+
+.action-card button{
+    background-color: #ff9b00;
+    margin-top: 50px;
+    height: 40px;
+    width: 160px;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.action-card p{
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+
