@@ -1,0 +1,137 @@
+/* Уусалттай backgournd */
+body {
+    background: linear-gradient(191deg, var(--base-background-color) 20%, var(--base-color-light-orange) 90%);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--base-text-color);
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0.5rem 2rem;
+    gap: var(--base-size-x4);
+}
+
+.teacher-sticky-box {
+    position: sticky;
+    top: var(--base-size-x4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: var(--base-size-x4);
+    margin-top: var(--base-size);
+    border-radius: var(--base-border-radius-x4);
+    padding: var(--base-size-x2);
+    height: fit-content;
+    gap: var(--base-size);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.teacher-sticky-box .student-number {
+    display: flex;
+    margin: var(--base-size-x2);
+    gap: var(--base-size);
+}
+
+.teacher-sticky-box .student-number p {
+    font-size: var(--base-caption-font-size);
+    color: var(--base-text-color);
+}
+
+.teacher-sticky-box .student-number span {
+    font-size: var(--base-caption-font-size);
+    color: var(--base-text-color);
+}
+
+.teacher-sticky-box .image {
+    display: flex;
+    justify-content: center;
+    padding: var(--base-size) var(--base-size-x4);
+}
+
+.teacher-sticky-box div img {
+    width: calc(var(--base-size-x2)*15);
+    height: calc(var(--base-size-x2)*15);
+    border-radius: var(--base-border-radius-x6);
+    object-fit: cover;
+}
+
+.teacher-sticky-box .rating {
+    display: flex;
+    justify-content: center;
+    gap: var(--base-size);
+}
+
+.teacher-sticky-box .wage {
+    display: flex;
+    justify-content: center;
+    gap: var(--base-size-x4);
+    padding: 0 var(--base-size-x4);
+}
+
+form input {
+    border: none;
+    background-color: transparent;
+    width: 10rem;
+}
+
+ form input::placeholder{
+    font-size: 0.9rem;
+}
+
+.important-button {
+    padding: 1rem;
+    margin: auto;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--color-primary);
+    transition-duration: 0.3s;
+}
+
+.important-button:hover {
+    transform: scale(1.02);
+}
+
+.important-button a {
+    color: var(--color-white);
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sticky-part-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .teacher-sticky-box {
+        position: relative;
+        justify-self: center;
+    }
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+    
+    :root {
+        --color-background: #1c1c1c; 
+        --color-primary: #ff990031; 
+        --color-light-grey: #363535; 
+        --color-grey: #454343; 
+        --color-black: hsl(0, 0%, 100%); 
+        --color-white: #121111; 
+        --color-dark-grey: #b9b9b9; 
+    }
+
+    body {
+        background: rgba(35, 34, 34, 0.9);
+    }
+} */

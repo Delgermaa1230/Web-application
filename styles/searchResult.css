@@ -1,0 +1,223 @@
+body {
+    padding: 0;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+:root {
+    --color-background: #FEF4E4;
+    --color-primary: #FF9B00;
+    --color-light-grey: #E6E6E6;
+    --color-grey: #bfbfbf;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-dark-grey: #413D3D;
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+/*body*/
+
+/*menu*/
+
+.filterMenu ul {
+    list-style: none;
+    padding: 1rem;
+    color: var(--color-black);
+    display: solid;
+}
+
+.filterMenu ul li {
+    display: inline-block;
+    position: relative;
+
+}
+
+.filterMenu ul li a {
+    display: block;
+    padding: 0.25rem 0.5rem;
+    color: var(--color-black);
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    background-color: transparent;
+    border: solid 1px;
+    border-color: var(--todsaaral);
+    font-size: large;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+}
+
+.filterMenu ul li ul.dropdown li {
+    display: block;
+}
+
+.filterMenu ul li ul.dropdown {
+    border-radius: 1rem;
+    padding: 0.5rem 0.5rem;
+    background: #FEF4E4;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+.filterMenu ul li a:hover {
+    background: var(--color-background);
+}
+
+.filterMenu ul li:hover ul.dropdown {
+    display: block;
+}
+
+.Sliderwrapper{
+    position: relative;
+    width: 100%;
+    background-color: var(--color-background) ;
+}
+
+/*search result*/
+
+.tutorSearchResult {
+    width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: auto auto auto auto;
+}
+
+@media (min-width: 400px) {
+    .tutorSearchResult {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 600px) {
+    .tutorSearchResult {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 800px) {
+    .tutorSearchResult {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1100px) {
+    .tutorSearchResult {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.mainContent {
+    padding: 0 5rem;
+}
+
+.tutorCard {
+    min-width: 200px;
+    max-width: 300PX;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.tutorCard .tutorImage {
+    position: relative;
+}
+
+.tutorCard .tutorImage {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    border: solid;
+    border-radius: 1rem;
+}
+
+
+.tutorCard .favBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.tutorCard .NameRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin: 0.5rem 0;
+}
+
+.tutorCard .NameRating .rating {
+    color: #ff9b00;
+}
+
+.tutorCard .rating i {
+    margin-left: 5px;
+}
+
+.tutorCard p {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.tutorImage img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.pagination {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 0;
+}
+
+.pagination input[type="radio"] {
+    display: none;
+}
+
+.pagination label {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f7ede1;
+    color: black;
+    font-size: 20px;
+    margin: 0.25rem;
+    cursor: pointer;
+}
+
+/* Style for active radio button */
+.pagination input[type="radio"]:checked+label {
+    background-color: #ff9800;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 13px;
+    }
+}

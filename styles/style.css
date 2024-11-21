@@ -1,0 +1,230 @@
+/* style for teachinfo.html */
+/* Уусалттай backgournd */
+body {
+    background: linear-gradient(191deg, var(--base-background-color) 20%, var(--base-color-light-orange) 90%);
+}
+
+h1 {
+    font-size: var(--base-h1-font-size);
+    color:var(--base-color-black);
+}
+
+h2 {
+    font-size: var(--base-h2-font-size);
+    color: var(--base-color-black);
+}
+
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: var(--base-size-x3) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
+    gap: var(--base-size-x4);
+}
+
+/* Багшийн ерөнхий мэдээллийг агуулж буй хайрцаг */
+.teacher-sticky-box {
+    position: sticky;
+    top: var(--base-size-x4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: var(--base-size-x4);
+    margin-top: var(--base-size);
+    border-radius: var(--base-border-radius-x4);
+    padding: var(--base-size-x2);
+    height: fit-content;
+    gap: var(--base-size);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.teacher-sticky-box .student-number {
+    display: flex;
+    margin: var(--base-size-x2);
+    gap: var(--base-size);
+}
+
+.teacher-sticky-box .student-number p {
+    font-size: var(--base-caption-font-size);
+    color: var(--base-text-color);
+}
+
+.teacher-sticky-box .student-number span {
+    font-size: var(--base-caption-font-size);
+    color: var(--base-text-color);
+}
+
+.teacher-sticky-box .image {
+    display: flex;
+    justify-content: center;
+    padding: var(--base-size) var(--base-size-x4);
+}
+
+.teacher-sticky-box div img {
+    width: calc(var(--base-size-x2)*15);
+    height: calc(var(--base-size-x2)*15);
+    border-radius: var(--base-border-radius-x6);
+    object-fit: cover;
+}
+
+.teacher-sticky-box .rating {
+    display: flex;
+    justify-content: center;
+    gap: var(--base-size);
+}
+
+.teacher-sticky-box .wage {
+    display: flex;
+    justify-content: center;
+    gap: var(--base-size-x4);
+    padding: 0 var(--base-size-x4);
+}
+
+/* Чухал товчлууруудын дизайн */
+.important-button {
+    padding: var(--base-size-x2);
+    margin: auto;
+    border-radius: var(--base-border-radius-x2);
+    border: none;
+    background-color: var(--base-color-orange);
+    transition: var(--base-transition);
+}
+
+.important-button:hover {
+    transform: scale(1.01);
+}
+
+.important-button a {
+    color: var(--base-color-white);
+    font-weight: var(--base-heavy-font-weight);
+    font-size:var(--base-body-font-size);
+}
+
+.teacher-sticky-box h2 {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Хичээлийн мэдээллийг агуулах хайрцаг */
+.information-column {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: var(--base-size) var(--base-size) 0 0;
+    color: var(--color-black)
+}
+
+.subjects-tags {
+    margin-bottom: var(--base-size-x4);
+}
+
+.subjects-tags ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subjects-tags ul li {
+    margin: var(--base-size) var(--base-size) 0 0;
+    padding: var(--base-padding);
+    font-size: var(--base-small-font-size);
+    border-radius: var(--base-border-radius-x3);
+    background-color: var(--base-color-light-orange);
+    font-weight: var(--base-bold-font-weight);
+    color: var(--base-color-orange);
+}
+
+.information-column h1 {
+    margin-bottom: var(--base-size-x4);
+    color: var(--base-text-color)
+}
+
+.teaching-location {
+    margin-bottom: var(--base-size-x4);
+}
+
+.teaching-location ul {
+    display: flex;
+}
+
+.teaching-location ul li {
+    margin: var(--base-size) var(--base-size) 0 0;
+    padding: var(--base-padding);
+    font-size: var(--base-small-font-size);
+    border-radius: var(--base-border-radius-x3);
+    background-color: var(--base-color-grey-medium);
+    font-weight: var(--base-bold-font-weight);
+    color: var(--base-text-color);
+}
+
+.information-column section {
+    margin-bottom: var(--base-size-x4);
+}
+
+.information-column section h2 {
+    margin-bottom: var(--base-size-x2);
+    color:var(--base-text-color);
+}
+
+.comment {
+    /* border: solid var(--base-color-grey) 0.5px;
+    border-radius: 2rem; */
+    padding: var(--base-size-x4) var(--base-size-x2);
+}
+
+.comment-owner {
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--base-size);
+}
+
+.comment-owner img {
+    width: var(--base-size-x4);
+    height: var(--base-size-x4);
+    border-radius: var(--base-border-radius-x6);
+    object-fit: cover;
+}
+
+.comment-box p {
+    font-size: var(--base-caption-font-size);
+    font-weight: var(--base-regular-font-weight);
+    letter-spacing: 0.01rem;
+    padding-left: var(--base-border-radius-x5);
+    color: var(--base-text-color);
+}
+
+/* responsive */
+@media (max-width: 700px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sticky-part-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .teacher-sticky-box {
+        position: relative;
+        justify-self: center;
+    }
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+    
+    :root {
+        --color-background: #1c1c1c; 
+        --color-primary: #c4a77b94; 
+        --color-light-grey: #363535; 
+        --color-grey: #454343; 
+        --color-black: hsl(0, 0%, 100%); 
+        --color-white: #121111; 
+        --color-dark-grey: #b9b9b9; 
+    }
+
+    body {
+        background: rgba(35, 34, 34, 0.9);
+    }
+} */

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --base-size: 8px;
+    --base-size-x1: var(--base-size);
+    --base-size-x2: calc(var(--base-size)*2);
+    --base-size-x3: calc(var(--base-size)*3);
+    --base-size-x4: calc(var(--base-size)*4);
+    --base-size-x5: calc(var(--base-size)*5);
+    --base-size-x6: calc(var(--base-size)*6);
+    --base-size-x7: calc(var(--base-size)*7);
+    --base-size-x8: calc(var(--base-size)*8);
+    --base-size-x9: calc(var(--base-size)*9);
+    --base-size-x10: calc(var(--base-size)*10);
+    --base-color-white: #fff;
+    --base-color-black: #121212;
+    --base-color-dark-grey: #413D3D;
+    --base-color-grey: #b2b1b1;
+    --base-color-grey-medium: #d9d9d9;
+    --base-color-grey-light: #f3f3f3;
+    --base-color-orange: #ff9b00;
+    --base-color-light-orange: #FEF4E4;
+    --base-color-system-success: #5bca8d;
+    --base-color-system-success-light: #f2fbf6;
+    --base-color-system-warning: #ff3636;
+    --base-font-family: ;
+    --base-h1-font-size: 40px;
+    --base-h2-font-size: 26px;
+    --base-h3-font-size: 24px;
+    --base-h4-font-size: 20px;
+    --base-h5-font-size: 18px;
+    --base-h6-font-size: 16px;
+    --base-body-font-size: 16px;
+    --base-caption-font-size: 14px;
+    --base-small-font-size: 12px;
+    --base-tiny-font-size: 10px;
+    --base-button-xlarge-font-size: var(--base-body-font-size);
+    --base-button-large-font-size: var(--base-body-font-size);
+    --base-button-medium-font-size: var(--base-caption-font-size);
+    --base-button-small-font-size: var(--base-small-font-size);
+    --base-border-radius: var(--base-size);
+    --base-border-radius-x2: calc(var(--base-border-radius)*2);
+    --base-border-radius-x3: calc(var(--base-border-radius)*3);
+    --base-border-radius-x4: calc(var(--base-border-radius)*4);
+    --base-border-radius-x5: calc(var(--base-border-radius)*5);
+    --base-border-radius-x6: calc(var(--base-border-radius)*6);
+    --base-heavy-font-weight: 800;
+    --base-bold-font-weight: bold;
+    --base-medium-font-weight: 600;
+    --base-regular-font-weight: normal;
+    --base-thin-font-weight: 200;
+    --base-transition: all 0.4s ease;
+    --base-padding: var(--base-size) var(--base-size-x2);
+    --base-padding-even: var(--base-size);
+    --base-background-color: var(--base-color-white);
+    --base-background-color-orange: var(--base-color-light-orange);
+    --base-background-color-shadow: #fbb13b14;
+    --base-text-color: var(--base-color-black);
+    --base-grey-text-color: var(--base-color-dark-grey);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat Alternates", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}

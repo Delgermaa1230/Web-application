@@ -1,0 +1,207 @@
+@import url(/styles/global.css);
+
+/* header style */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--base-size-x3) var(--base-border-radius-x6);
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: var(--base-color-orange);
+    font-size: var(--base-h1-font-size);
+    transition: var(--base-transition);
+    cursor: pointer;
+    padding: var(--base-padding);
+}
+
+header h1:hover {
+    padding-top:calc(var(--base-size)*0.8);
+    padding-bottom:calc(var(--base-size)*1.2);
+}
+
+.header-first-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--base-size-x4);
+}
+
+.header-first-box form {
+    border-radius: var(--base-border-radius-x4);
+    padding: var(--base-padding-even);
+    background-color: var(--base-color-grey-light);
+    border: solid var(--base-color-grey-light) 1px;
+    transition: var(--base-transition)
+}
+
+.header-first-box form:hover {
+    border: solid var(--base-color-grey) 1px;
+    background-color: transparent;
+}
+
+.header-first-box form input {
+    border: none;
+    background-color: transparent;
+    width: calc(var(--base-size-x2)*13);
+    padding: var(--base-padding);
+}
+
+.header-first-box form input:focus {
+    outline: none;
+}
+
+
+.header-first-box form input::placeholder{
+    font-size: var(--base-caption-font-size);
+}
+
+.header-first-box form button {
+    border: none;
+    background-color: var(--base-color-orange);
+    color: var(--base-color-white);
+    padding: var(--base-size) calc(var(--base-size)*1.5);
+    border-radius: 20cap;
+}
+
+.header-first-box form button a {
+    font-size: var(--base-button-small-font-size);
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    gap: var(--base-size-x2);
+}
+
+header .back, nav a {
+    background-color: var(--base-color-grey-light);
+    padding: var(--base-padding);
+    border-radius: var(--base-border-radius-x6);
+    color: var(--base-text-color);
+    font-weight: var(--base-medium-font-weight);
+    font-size: var(--base-button-medium-font-size);
+    transition: var(--base-transition);
+    cursor: pointer;
+}
+
+
+.header-first-box a {
+    background-color: transparent;
+}
+
+header nav a:hover {
+    background-color: var(--base-color-orange);
+    color: var(--base-background-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+header .back:hover {
+    background-color: var(--base-color-orange);
+    color: var(--base-background-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+
+/* footer style */
+
+footer {
+    padding: 2rem;
+    background-color: var(--base-background-color-orange);
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+footer ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul li ul {
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul li ul li {
+    font-weight: var(--base-regular-font-weight);
+    font-size: var(--base-caption-font-size);
+    color: var(--color-dark-grey)
+}
+
+footer ul li ul li a{
+    font-weight: var(--base-regular-font-weight);
+    font-size: var(--base-caption-font-size);
+    color: var(--color-dark-grey)
+}
+
+footer ul li h4 {
+    font-size: var(--base-caption-font-size);
+}
+
+footer ul li #social-icons {
+    flex-direction: row;
+}
+
+footer ul li #social-icons li {
+    font-size: var(--base-h4-font-size);
+    padding: var(--base-padding);
+}
+
+footer a {
+    color: var(--base-grey-text-color);
+    transition-duration: 0.3s ;
+}
+
+footer a:hover {
+    color: var(--base-color-orange);
+}
+
+footer ul li #social-icons li a {
+    color: var(--base-color-black);
+    transition: var(--base-transition);
+    font-size: var(--base-button-xlarge-font-size);
+    font-weight: var(--base-heavy-font-weight);
+}
+
+footer ul li #social-icons li a:hover{
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        align-items: space-between;
+        padding: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .header-first-box form input {
+        width: 6rem;
+    }
+}
+
+@media (max-width: 400px) {
+    footer ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    :root {
+        font-size: 13px;
+    }
+
+    footer ul li #social-icons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 500px) {}

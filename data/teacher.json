@@ -1,88 +1,164 @@
 {
-    "teachers": [
-        {
-            "firstname": "John",
-            "lastname": "Doe",
-            "rating": 4.5,
-            "rating_people_numbers": 120,
-            "brief_description": "Experienced math teacher with a passion for helping students understand complex concepts.",
-            "lessons": [
-                "Algebra",
-                "Geometry",
-                "Calculus"
-            ],
-            "hour_wage": 30,
-            "students_number": 25
-        },
-        {
-            "firstname": "Jane",
-            "lastname": "Smith",
-            "rating": 4.8,
-            "rating_people_numbers": 200,
-            "brief_description": "Dedicated science teacher who encourages curiosity and hands-on learning.",
-            "lessons": [
-                "Biology",
-                "Chemistry",
-                "Physics"
-            ],
-            "hour_wage": 35,
-            "students_number": 30
-        },
-        {
-            "firstname": "Emily",
-            "lastname": "Johnson",
-            "rating": 4.2,
-            "rating_people_numbers": 80,
-            "brief_description": "Creative arts teacher with a focus on developing students' artistic skills.",
-            "lessons": [
-                "Painting",
-                "Sculpture",
-                "Photography"
-            ],
-            "hour_wage": 28,
-            "students_number": 20
-        },
-        {
-            "firstname": "Michael",
-            "lastname": "Brown",
-            "rating": 4.7,
-            "rating_people_numbers": 150,
-            "brief_description": "Passionate history teacher who brings the past to life through engaging storytelling.",
-            "lessons": [
-                "World History",
-                "American History",
-                "Civics"
-            ],
-            "hour_wage": 32,
-            "students_number": 28
-        },
-        {
-            "firstname": "Sarah",
-            "lastname": "Davis",
-            "rating": 4.9,
-            "rating_people_numbers": 250,
-            "brief_description": "Innovative language teacher who fosters a love for literature and communication.",
-            "lessons": [
-                "English Literature",
-                "Creative Writing",
-                "Public Speaking"
-            ],
-            "hour_wage": 38,
-            "students_number": 35
-        },
-        {
-            "firstname": "David",
-            "lastname": "Wilson",
-            "rating": 4.3,
-            "rating_people_numbers": 90,
-            "brief_description": "Enthusiastic physical education teacher promoting health and fitness.",
-            "lessons": [
-                "Physical Education",
-                "Health Education",
-                "Sports Coaching"
-            ],
-            "hour_wage": 30,
-            "students_number": 25
-        }
-    ]
+  "teachers": [
+    {
+      "id": 1,
+      "firstName": "Дэлгэрмаа",
+      "lastName": "Галбаяр",
+      "age": "20",
+      "gender": "F",
+      "ratings": 5,
+      "numberOfRatings": 10,
+      "email": "galbayardelgermaa@gmail.com",
+      "phone": "89234723",
+      "image": "../imgs/img1.png",
+      "description": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
+      "lessons": [
+        "Математик", "Алгоритм", "Программчлалын хэл Си"
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "Номин",
+      "lastName": "Төмөрбаатар",
+      "age": "28",
+      "gender": "F",
+      "ratings": 4,
+      "numberOfRatings": 15,
+      "email": "nomintomor@gmail.com",
+      "phone": "89345567",
+      "image": "../imgs/img2.png",
+      "description": "Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл.",
+      "lessons": [
+        "Физик", "Хөдөлгөөнт механик", "Эрчим хүчний систем"
+      ]
+    },
+    {
+      "id": 3,
+      "firstName": "Санжид",
+      "lastName": "Мөнх-Эрдэнэ",
+      "age": "32",
+      "gender": "M",
+      "ratings": 3,
+      "numberOfRatings": 20,
+      "email": "sanjidmunkh@gmail.com",
+      "phone": "89234764",
+      "image": "../imgs/img3.png",
+      "description": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээлийг сайн заадаг.",
+      "lessons": [
+        "Математик", "Статистик", "Төрөл бүрийн тооцоолол"
+      ]
+    },
+    {
+      "id": 4,
+      "firstName": "Түмэнжаргал",
+      "lastName": "Цогтгэрэл",
+      "age": "25",
+      "gender": "M",
+      "ratings": 5,
+      "numberOfRatings": 8,
+      "email": "tumenjargal@gmail.com",
+      "phone": "89385623",
+      "image": "../imgs/img4.png",
+      "description": "Би инженерчлэлийн багшаар ажиллахыг хүсдэг. Хэрэглээний математик заах дуртай.",
+      "lessons": [
+        "Хэрэглээний математик", "Математик ба эдийн засаг"
+      ]
+    },
+    {
+      "id": 5,
+      "firstName": "Ганбат",
+      "lastName": "Лхагвасүрэн",
+      "age": "30",
+      "gender": "M",
+      "ratings": 4,
+      "numberOfRatings": 12,
+      "email": "ganbatlhagvasuren@gmail.com",
+      "phone": "89452374",
+      "image": "../imgs/img5.png",
+      "description": "Программчлалын багш, веб хөгжүүлэлтийн чиглэлээр туршлагатай.",
+      "lessons": [
+        "Веб хөгжүүлэлт", "Программчлал"
+      ]
+    },
+    {
+      "id": 6,
+      "firstName": "Намуунаа",
+      "lastName": "Цэрэнбат",
+      "age": "27",
+      "gender": "F",
+      "ratings": 5,
+      "numberOfRatings": 10,
+      "email": "namuunaatseren@gmail.com",
+      "phone": "89562347",
+      "image": "../imgs/img6.png",
+      "description": "Интернет маркетингийн чиглэлээр багшилж байна. Сошиал медиа хэрэглээг заадаг.",
+      "lessons": [
+        "Интернет маркетинг", "Сошиал медиа"
+      ]
+    },
+    {
+      "id": 7,
+      "firstName": "Билгүүн",
+      "lastName": "Галбадрах",
+      "age": "34",
+      "gender": "M",
+      "ratings": 4,
+      "numberOfRatings": 14,
+      "email": "bilguungalbadrah@gmail.com",
+      "phone": "89673452",
+      "image": "../imgs/img7.png",
+      "description": "Би компьютерийн системийн багш. Системийн архитектурын хичээл заадаг.",
+      "lessons": [
+        "Системийн архитектур", "Компьютерийн сүлжээ"
+      ]
+    },
+    {
+      "id": 8,
+      "firstName": "Мөнгөнзаяа",
+      "lastName": "Төмөр",
+      "age": "22",
+      "gender": "F",
+      "ratings": 4,
+      "numberOfRatings": 9,
+      "email": "mongonzayaatomer@gmail.com",
+      "phone": "89745263",
+      "image": "../imgs/img8.png",
+      "description": "Би математик, физикийн хичээлүүдийг сонирхдог. Студентуудтай харилцахад хичээл заахдаа таатай байдаг.",
+      "lessons": [
+        "Математик", "Физик"
+      ]
+    },
+    {
+      "id": 9,
+      "firstName": "Жаргалсайхан",
+      "lastName": "Батзориг",
+      "age": "29",
+      "gender": "M",
+      "ratings": 5,
+      "numberOfRatings": 16,
+      "email": "jargalsaihanbatzor@gmail.com",
+      "phone": "89983412",
+      "image": "../imgs/img9.png",
+      "description": "Би мэдээллийн технологи, програмчлалын багш. Студентуудын амжилтанд тустай байхын тулд сайн сургалт явуулдаг.",
+      "lessons": [
+        "Програмчлал", "Мэдээллийн технологи"
+      ]
+    },
+    {
+      "id": 10,
+      "firstName": "Цогт-Эрдэнэ",
+      "lastName": "Чулуунбилэг",
+      "age": "26",
+      "gender": "M",
+      "ratings": 4,
+      "numberOfRatings": 13,
+      "email": "tsogt-erdene@gmail.com",
+      "phone": "89273568",
+      "image": "../imgs/img10.png",
+      "description": "Математик, физик, инженерийн чиглэлээр багшилдаг. Шинжлэх ухааны аргачлал дээр анхаардаг.",
+      "lessons": [
+        "Математик", "Физик", "Инженерийн математик"
+      ]
+    }
+  ]
 }

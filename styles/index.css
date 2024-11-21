@@ -1,0 +1,203 @@
+@import url(/styles/global.css);
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(191deg, var(--base-background-color) 20%, var(--base-color-light-orange) 90%);
+}
+
+.main {
+    margin: var(--base-size-x2) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--base-size-x8);
+    padding-bottom: var(--base-size-x10);
+}
+
+.main h1 {
+    font-size: var(--base-h1-font-size);
+    text-align: center;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.center {
+    border-radius: 0 0 var(--base-border-radius-x6) var(--base-border-radius-x6);
+    background: linear-gradient(191deg, var(--base-background-color) 30%, var(--base-color-light-orange) 62%);
+    width: 100%;
+}
+
+.searchBox {
+    border-radius: var(--base-border-radius-x6);
+    border: none;
+    padding: var(--base-size-x2);
+    background-color: var(--base-background-color-shadow);
+}
+
+
+form {
+    justify-content: space-between;
+    padding: var(--base-padding);
+    border-radius: var(--base-border-radius-x4);
+    border: none;
+    background-color: var(--base-color-light-orange);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;}
+
+input {
+    border: none;
+    background-color: transparent;
+    padding: var(--base-padding)
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder{
+    font-size: var(--base-body-font-size);
+}
+
+button {
+    border: none;
+    background-color: var(--base-color-orange);
+    color: var(--base-color-white);
+    padding: var(--base-padding);
+    border-radius: var(--base-border-radius-x3);
+    font-size: var(--base-button-large-font-size);
+    font-weight: var(--base-medium-font-weight);
+    transition: var(--base-transition);
+}
+
+button:hover {
+    transform: scale(1.05);
+    font-size: var(--base-button-large-font-size);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.common-lessons-nav {
+    padding: var(--base-size-x2);
+    background-color: var(--base-background-color-shadow);
+    border-radius: var(--base-border-radius-x4);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--base-size-x2);
+}
+
+.common-lessons-nav a {
+    color: var(--base-text-color);
+    border-radius: var(--base-border-radius-x3);
+    border: solid 0.3px var(--base-color-grey);
+    padding: var(--base-padding);
+    transition: var(--base-transition);
+}
+
+.common-lessons-nav a:hover {
+    background-color: var(--base-background-color);
+    border: solid 0.3px var(--base-color-white);
+}
+
+.container{
+    margin:var(--base-size-x3) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
+
+}
+
+.tutors-box {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: var(--base-size-x3);
+    flex-wrap: wrap;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.tutors-box a{
+    width: 100%;
+    height: 100%;
+    color: var(--base-text-color);
+    align-items: stretch;
+}
+
+.tutorCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-size);
+    align-items: stretch;
+    height: 100%;
+    width: 100%;
+}
+
+h2 {
+    font-size: var(--base-h2-font-size);
+    margin-bottom: var(--base-size-x3);
+}
+
+.tutorImage {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--base-border-radius-x5);
+    height: 330px;
+}
+
+.tutorImage img {
+    width: 100%;         
+    height: 100%;         
+    object-fit: cover; 
+    transition: var(--base-transition); 
+}   
+
+.tutors-box a:hover {
+    .tutorImage img {
+        scale: 1.05;
+    }
+}
+
+/* .tutorCard h3{
+    font-size: var(--base-h3-font-size);
+    position: absolute;
+    bottom: var(--base-size);
+    left: var(--base-size);
+    padding: var(--base-padding);
+    color: var(--base-color-orange-light);
+    text-shadow: 0.1px 0px 1px var(--base-color-white);
+} */
+
+.tutorCard h3 {
+    font-size: var(--base-h4-font-size);
+    padding:0 var(--base-size-x2);
+}
+
+.tutorCard p{
+    padding:0 var(--base-size-x2);
+    font-size: var(--base-caption-font-size);
+}
+
+.tutorDescription {
+}
+
+.tutorCard i {
+    color: rgb(255, 208, 0);
+}
+
+#starsNumber {
+    font-weight: var(--base-bold-font-weight);
+}
