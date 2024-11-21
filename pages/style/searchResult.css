@@ -6,11 +6,13 @@ body {
 }
 
 :root {
-    --ariinUngu: #FEF4E4;
-    --undsenUngu: #FF9B00;
-    --saaral: #E6E6E6;
-    --todsaaral: #BFBFBF;
-    --base: 8px;
+    --color-background: #FEF4E4;
+    --color-primary: #FF9B00;
+    --color-light-grey: #E6E6E6;
+    --color-grey: #bfbfbf;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-dark-grey: #413D3D;
 }
 
 
@@ -27,8 +29,8 @@ body {
 
 .filterMenu ul {
     list-style: none;
-    padding: rem;
-    color: black;
+    padding: 1rem;
+    color: var(--color-black);
     display: solid;
 }
 
@@ -40,8 +42,8 @@ body {
 
 .filterMenu ul li a {
     display: block;
-    padding: calc(var(--base)/2) var(--base);
-    color: black;
+    padding: 0.25rem 0.5rem;
+    color: var(--color-black);
     text-decoration: none;
     text-align: center;
     font-size: 20px;
@@ -49,8 +51,8 @@ body {
     border: solid 1px;
     border-color: var(--todsaaral);
     font-size: large;
-    border-radius: calc(var(--base)*2);
-    margin-right: var(--base);
+    border-radius: 1rem;
+    margin-right: 0.5rem;
 }
 
 .filterMenu ul li ul.dropdown li {
@@ -58,8 +60,8 @@ body {
 }
 
 .filterMenu ul li ul.dropdown {
-    border-radius: calc(var(--base)*2);
-    padding: var(--base) var(--base);
+    border-radius: 1rem;
+    padding: 0.5rem 0.5rem;
     background: #FEF4E4;
     position: absolute;
     z-index: 999;
@@ -67,20 +69,26 @@ body {
 }
 
 .filterMenu ul li a:hover {
-    background: var(--ariinUngu);
+    background: var(--color-background);
 }
 
 .filterMenu ul li:hover ul.dropdown {
     display: block;
 }
 
+.Sliderwrapper{
+    position: relative;
+    width: 100%;
+    background-color: var(--color-background) ;
+}
+
 /*search result*/
 
 .tutorSearchResult {
     width: 100%;
-    margin-top: calc(var(--base)*4);
+    margin-top: 2rem;
     display: grid;
-    gap: calc(var(--base)*6);
+    gap: 3rem;
     grid-template-columns: auto auto auto auto;
 }
 
@@ -109,7 +117,7 @@ body {
 }
 
 .mainContent {
-    padding: 0 calc(var(--base)*10);
+    padding: 0 5rem;
 }
 
 .tutorCard {
@@ -117,9 +125,9 @@ body {
     max-width: 300PX;
     width: 100%;
     background-color: #fff;
-    border-radius: calc(var(--base)*2);
-    box-shadow: 0 calc(var(--base)/2) calc(var(--base)*2) rgba(0, 0, 0, 0.1);
-    padding: calc(var(--base)*2);
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
     text-align: center;
     position: relative;
 }
@@ -133,14 +141,14 @@ body {
     padding-top: 100%;
     position: relative;
     border: solid;
-    border-radius: calc(var(--base)*2);
+    border-radius: 1rem;
 }
 
 
 .tutorCard .favBtn {
     position: absolute;
-    top: var(--base);
-    right: var(--base);
+    top: 0.5rem;
+    right: 0.5rem;
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -153,7 +161,7 @@ body {
     justify-content: space-between;
     align-items: center;
     color: black;
-    margin: var(--base) 0;
+    margin: 0.5rem 0;
 }
 
 .tutorCard .NameRating .rating {
@@ -161,13 +169,13 @@ body {
 }
 
 .tutorCard .rating i {
-    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .tutorCard p {
     color: #666;
-    font-size: calc(var(--base)*2);
-    margin-top: var(--base);
+    font-size: 1rem;
+    margin-top: 0.5rem;
 }
 
 
@@ -175,7 +183,7 @@ body {
     display: flex;
     list-style-type: none;
     justify-content: center;
-    margin-top: calc(var(--base)*6);
+    margin-top: 3rem;
     padding: 0;
 }
 
@@ -185,15 +193,15 @@ body {
 
 .pagination label {
     display: inline-block;
-    width: calc(var(--base)*5);
-    height: calc(var(--base)*5);
-    line-height: calc(var(--base)*5);
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
     text-align: center;
     border-radius: 50%;
     background-color: #f7ede1;
     color: black;
     font-size: 20px;
-    margin: calc(var(--base)/2);
+    margin: 0.25rem;
     cursor: pointer;
 }
 
