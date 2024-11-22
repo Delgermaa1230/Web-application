@@ -15,9 +15,8 @@ body {
     --color-dark-grey: #413D3D;
 }
 
-* {
-    padding: 0;
-    margin: 0;
+body {
+    background: linear-gradient(191deg, var(--base-background-color) 20%, var(--base-color-light-orange) 90%);
 }
 
 a{
@@ -94,6 +93,7 @@ h2{
     padding: 1rem 5rem;
     margin-bottom: 3rem;
 }
+
 .tutors-box {
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -121,12 +121,18 @@ h2{
     height: 100%;
     width: 100%;
 }
+
+h2 {
+    font-size: var(--base-h2-font-size);
+    margin-bottom: var(--base-size-x3);
+}
+
 .tutorImage {
     width: 100%;
     overflow: hidden;
     position: relative;
     border-radius: var(--base-border-radius-x5);
-    height: 330px;
+    height: 300px;
 }
 
 .tutorImage img {
@@ -142,29 +148,27 @@ h2{
     }
 }
 
+/* .tutorCard h3{
+    font-size: var(--base-h3-font-size);
+    position: absolute;
+    bottom: var(--base-size);
+    left: var(--base-size);
+    padding: var(--base-padding);
+    color: var(--base-color-orange-light);
+    text-shadow: 0.1px 0px 1px var(--base-color-white);
+} */
 
 .tutorCard h3 {
     font-size: var(--base-h4-font-size);
+    padding:0 var(--base-size-x2);
 }
 
-
 .tutorCard p{
-    padding:0 1rem;
+    padding:0 var(--base-size-x2);
     font-size: var(--base-caption-font-size);
 }
 
-.tutorTitle{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.5rem;
-    padding: 0 1rem;
-}
-
-.tutorTitle p{
-    font-size: 0.8rem;
-    padding: 0;
+.tutorDescription {
 }
 
 .tutorCard i {
@@ -173,4 +177,20 @@ h2{
 
 #starsNumber {
     font-weight: var(--base-bold-font-weight);
+}
+
+@media (max-width: 900px) {
+    .tutors-box {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .tutors-box {
+        display: grid;
+        grid-template-columns: 98%;
+        grid-template-rows: auto;
+    }
 }

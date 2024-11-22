@@ -132,7 +132,7 @@
                         "numberOfRatings": 8,
                         "email": "tumenjargal@gmail.com",
                         "phone": "89385623",
-                        "image": "../imgs/img4.png",
+                        "image": "../imgs/img10.png",
                         "description": "Би инженерчлэлийн багшаар ажиллахыг хүсдэг. Хэрэглээний математик заах дуртай.",
                         "lessons": [
                             "Хэрэглээний математик", "Математик ба эдийн засаг"
@@ -149,7 +149,7 @@
                         "numberOfRatings": 12,
                         "email": "ganbatlhagvasuren@gmail.com",
                         "phone": "89452374",
-                        "image": "../imgs/img5.png",
+                        "image": "../imgs/img7.png",
                         "description": "Программчлалын багш, веб хөгжүүлэлтийн чиглэлээр туршлагатай.",
                         "lessons": [
                             "Веб хөгжүүлэлт", "Программчлал"
@@ -166,7 +166,7 @@
                         "numberOfRatings": 10,
                         "email": "namuunaatseren@gmail.com",
                         "phone": "89562347",
-                        "image": "../imgs/img6.png",
+                        "image": "../imgs/img3.png",
                         "description": "Интернет маркетингийн чиглэлээр багшилж байна. Сошиал медиа хэрэглээг заадаг.",
                         "lessons": [
                             "Интернет маркетинг", "Сошиал медиа"
@@ -201,7 +201,7 @@
                         "numberOfRatings": 9,
                         "email": "mongonzayaatomer@gmail.com",
                         "phone": "89745263",
-                        "image": "../imgs/img8.png",
+                        "image": "../imgs/img3.png",
                         "description": "Би математик, физикийн хичээлүүдийг сонирхдог. Студентуудтай харилцахад хичээл заахдаа таатай байдаг.",
                         "lessons": [
                             "Математик", "Физик"
@@ -252,8 +252,7 @@
                         const aScore = a.ratings * a.numberOfRatings;
                         const bScore = b.ratings * b.numberOfRatings;
                         return bScore - aScore; //buurhaar erembleh
-                    })
-                    .slice(0, 6); // 3g n avah
+                    }); // bugdiign erembleh
             };
 
             const top3Teachers = filterTopTeachers(teachers);
