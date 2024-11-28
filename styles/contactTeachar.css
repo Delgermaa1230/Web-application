@@ -1,6 +1,6 @@
 /* Уусалттай backgournd */
 body {
-    background: linear-gradient(191deg, var(--base-background-color) 20%, var(--base-color-light-orange) 90%);
+    background: linear-gradient(191deg, var(--base-background-color) 40%, var(--base-color-light-orange) 60%);
 }
 
 h2 {
@@ -73,34 +73,31 @@ h2 {
     padding: 0 var(--base-size-x4);
 }
 
-form input {
-    border: none;
-    background-color: transparent;
-    width: 10rem;
-}
-
- form input::placeholder{
-    font-size: 0.9rem;
+.teacher-sticky-box h2 {
+    display: flex;
+    justify-content: center;
 }
 
 .important-button {
-    padding: 1rem;
+    padding: var(--base-size-x2);
     margin: auto;
-    border-radius: 1rem;
+    border-radius: var(--base-border-radius-x2);
     border: none;
-    background-color: var(--color-primary);
-    transition-duration: 0.3s;
+    background-color: var(--base-color-orange);
+    transition: var(--base-transition);
 }
 
 .important-button:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .important-button a {
-    color: var(--color-white);
-    font-weight: 800;
-    font-size: 1rem;
+    color: var(--base-color-white);
+    font-weight: var(--base-heavy-font-weight);
+    font-size:var(--base-body-font-size);
 }
+
+
 
 @media (max-width: 700px) {
     .main {

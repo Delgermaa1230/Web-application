@@ -130,3 +130,324 @@
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numteach - Хайлтын Үр Дүн</title>
+    <link rel="stylesheet" href="/styles/header_footer.css">
+    <link rel="stylesheet" href="/styles/searchResult.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <div class="header-first-box">
+            <a href="../index.html">
+                <h1>Numteach</h1>
+            </a>
+            <form id="" action="" name="">
+                <input type="text" placeholder="Хайлт хийх...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <nav>
+            <a href="#"><i class="fa fa-question"></i></a>
+            <a href="req1.html">Багш болох</a>
+            <a href="#"><i class="fa fa-user"></i></a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <!--filter-->
+        <section class="filterMenu">
+            <h2>COMP100 Хайлтын Үр Дүн</h2><br>
+            <ul>
+                <li>
+                    <a href="#" class="Filterbtn">Онлайн</a>
+                </li>
+                <li>
+                    <a href="#" class="Filterbtn">Танхим</a>
+                </li>
+                <li>
+                    <a href="#" class="Filterbtn">Үнэлгээ</a>
+                    <ul class="dropdown">
+                        <li><a href="">Bronze</a></li>
+                        <li><a href="">Silver</a></li>
+                        <li><a href="">Gold</a></li>
+                        <li><a href="">Diamond</a></li>
+                        <li><a href="">Platinum</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="Filterbtn">Үнэ</a>
+                    <ul class="dropdown">
+                        <li><input type="text" placeholder="Доод үнэ" class="price"></li>
+                        <li><input type="text" placeholder="Дээд үнэ" class="price"></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- search result-->
+        <section class="container">
+            <div class="tutors-box" id="topTeachers">
+            </div>
+        </section>
+        <script>
+            const teachersData = {
+                "teachers": [
+                    {
+                        "id": 1,
+                        "firstName": "Дэлгэрмаа",
+                        "firsLetterOflastName": "Г",
+                        "lastName": "Галбаяр",
+                        "age": "20",
+                        "gender": "F",
+                        "ratings": 5,
+                        "numberOfRatings": 10,
+                        "email": "galbayardelgermaa@gmail.com",
+                        "phone": "89234723",
+                        "image": "../imgs/img3.jpg",
+                        "description": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
+                        "lessons": [
+                            "Математик", "Алгоритм", "Программчлалын хэл Си"
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "firstName": "Номин",
+                        "firsLetterOflastName": "Т",
+                        "lastName": "Төмөрбаатар",
+                        "age": "28",
+                        "gender": "F",
+                        "ratings": 4,
+                        "numberOfRatings": 15,
+                        "email": "nomintomor@gmail.com",
+                        "phone": "89345567",
+                        "image": "../imgs/img1.png",
+                        "description": "Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл.",
+                        "lessons": [
+                            "Физик", "Хөдөлгөөнт механик", "Эрчим хүчний систем"
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "firstName": "Санжид",
+                        "firsLetterOflastName": "М",
+                        "lastName": "Мөнх-Эрдэнэ",
+                        "age": "32",
+                        "gender": "M",
+                        "ratings": 3,
+                        "numberOfRatings": 20,
+                        "email": "sanjidmunkh@gmail.com",
+                        "phone": "89234764",
+                        "image": "../imgs/img2.jpg",
+                        "description": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээлийг сайн заадаг.",
+                        "lessons": [
+                            "Математик", "Статистик", "Төрөл бүрийн тооцоолол"
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "firstName": "Түмэнжаргал",
+                        "firsLetterOflastName": "Ц",
+                        "lastName": "Цогтгэрэл",
+                        "age": "25",
+                        "gender": "M",
+                        "ratings": 5,
+                        "numberOfRatings": 8,
+                        "email": "tumenjargal@gmail.com",
+                        "phone": "89385623",
+                        "image": "../imgs/img10.png",
+                        "description": "Би инженерчлэлийн багшаар ажиллахыг хүсдэг. Хэрэглээний математик заах дуртай.",
+                        "lessons": [
+                            "Хэрэглээний математик", "Математик ба эдийн засаг"
+                        ]
+                    },
+                    {
+                        "id": 5,
+                        "firstName": "Ганбат",
+                        "firsLetterOflastName": "Л",
+                        "lastName": "Лхагвасүрэн",
+                        "age": "30",
+                        "gender": "M",
+                        "ratings": 4,
+                        "numberOfRatings": 12,
+                        "email": "ganbatlhagvasuren@gmail.com",
+                        "phone": "89452374",
+                        "image": "../imgs/img7.png",
+                        "description": "Программчлалын багш, веб хөгжүүлэлтийн чиглэлээр туршлагатай.",
+                        "lessons": [
+                            "Веб хөгжүүлэлт", "Программчлал"
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "firstName": "Намуунаа",
+                        "firsLetterOflastName": "Ц",
+                        "lastName": "Цэрэнбат",
+                        "age": "27",
+                        "gender": "F",
+                        "ratings": 5,
+                        "numberOfRatings": 10,
+                        "email": "namuunaatseren@gmail.com",
+                        "phone": "89562347",
+                        "image": "../imgs/img3.png",
+                        "description": "Интернет маркетингийн чиглэлээр багшилж байна. Сошиал медиа хэрэглээг заадаг.",
+                        "lessons": [
+                            "Интернет маркетинг", "Сошиал медиа"
+                        ]
+                    },
+                    {
+
+                        "id": 7,
+                        "firstName": "Билгүүн",
+                        "firsLetterOflastName": "Г",
+                        "lastName": "Галбадрах",
+                        "age": "34",
+                        "gender": "M",
+                        "ratings": 4,
+                        "numberOfRatings": 14,
+                        "email": "bilguungalbadrah@gmail.com",
+                        "phone": "89673452",
+                        "image": "../imgs/img7.png",
+                        "description": "Би компьютерийн системийн багш. Системийн архитектурын хичээл заадаг.",
+                        "lessons": [
+                            "Системийн архитектур", "Компьютерийн сүлжээ"
+                        ]
+                    },
+                    {
+                        "id": 8,
+                        "firstName": "Мөнгөнзаяа",
+                        "firsLetterOflastName": "Т",
+                        "lastName": "Төмөр",
+                        "age": "22",
+                        "gender": "F",
+                        "ratings": 4,
+                        "numberOfRatings": 9,
+                        "email": "mongonzayaatomer@gmail.com",
+                        "phone": "89745263",
+                        "image": "../imgs/img3.png",
+                        "description": "Би математик, физикийн хичээлүүдийг сонирхдог. Студентуудтай харилцахад хичээл заахдаа таатай байдаг.",
+                        "lessons": [
+                            "Математик", "Физик"
+                        ]
+                    },
+                    {
+                        "id": 9,
+                        "firstName": "Жаргалсайхан",
+                        "firsLetterOflastName": "Б",
+                        "lastName": "Батзориг",
+                        "age": "29",
+                        "gender": "M",
+                        "ratings": 5,
+                        "numberOfRatings": 16,
+                        "email": "jargalsaihanbatzor@gmail.com",
+                        "phone": "89983412",
+                        "image": "../imgs/img3.png",
+                        "description": "Би мэдээллийн технологи, програмчлалын багш. Студентуудын амжилтанд тустай байхын тулд сайн сургалт явуулдаг.",
+                        "lessons": [
+                            "Програмчлал", "Мэдээллийн технологи"
+                        ]
+                    },
+                    {
+                        "id": 10,
+                        "firstName": "Цогт-Эрдэнэ",
+                        "firsLetterOflastName": "Г",
+                        "lastName": "Чулуунбилэг",
+                        "age": "26",
+                        "gender": "M",
+                        "ratings": 4,
+                        "numberOfRatings": 13,
+                        "email": "tsogt-erdene@gmail.com",
+                        "phone": "89273568",
+                        "image": "../imgs/img10.png",
+                        "description": "Математик, физик, инженерийн чиглэлээр багшилдаг. Шинжлэх ухааны аргачлал дээр анхаардаг.",
+                        "lessons": [
+                            "Математик", "Физик", "Инженерийн математик"
+                        ]
+                    }
+                ]
+            }
+
+            const teachers = teachersData.teachers;
+
+            const filterTopTeachers = (teachers) => {
+                return teachers
+                    .sort((a, b) => {
+                        const aScore = a.ratings * a.numberOfRatings;
+                        const bScore = b.ratings * b.numberOfRatings;
+                        return bScore - aScore; //buurhaar erembleh
+                    }); // bugdiign erembleh
+            };
+
+            const top3Teachers = filterTopTeachers(teachers);
+            console.log(top3Teachers);
+
+            const top3TeachersHTMLarray = top3Teachers.map(ft =>
+                `<a href="/pages/teachInfo.html">
+                    <section class="tutorCard">
+                        <div class="tutorImage">
+                            <img src="${ft.image}" alt="fe">
+                                
+                        </div>
+                        <h3>${ft.firsLetterOflastName}. ${ft.firstName}</h3>  
+                        <p class="tutorReviews">
+                            <i class="fa fa-star"></i>
+                            <span id="starsNumber">${ft.ratings}</span>
+                            <span id="reviewsNumber">
+                                    (${ft.numberOfRatings} санал)
+                            </span>
+                        </p>
+                        <p class="tutorDescription">
+                        ${ft.description}
+                        </p>
+                    </section>
+                </a>`
+            );
+
+            const top3TeachersHTML = top3TeachersHTMLarray.reduce((prev, cur) => prev + cur);
+            console.log(top3TeachersHTML);
+            document.getElementById("topTeachers").innerHTML = top3TeachersHTML;
+
+
+        </script>
+    </div>
+
+    <footer>
+        <ul>
+            <li>
+                <h4>Тусламж</h4>
+                <ul>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Заавар</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>Холбогдох</4>
+                    <ul>
+                        <li>Утас:<a href="tel:+97688888811">+976 88 888811</a></li>
+                        <li>Мэйл:<a href="mailto: example@teach.com">example@teach.com</a></li>
+                    </ul>
+            </li>
+            <li>
+                <h4>Холбоосууд</h4>
+                <ul id="social-icons">
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js"></script>
+
+</body>
+
+</html>
