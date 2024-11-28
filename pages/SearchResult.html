@@ -37,31 +37,61 @@
         <section class="filterMenu">
             <h2>COMP100 Хайлтын Үр Дүн</h2><br>
             <ul>
-                <li>
-                    <a href="#" class="Filterbtn">Онлайн</a>
-                </li>
-                <li>
-                    <a href="#" class="Filterbtn">Танхим</a>
-                </li>
-                <li>
-                    <a href="#" class="Filterbtn">Үнэлгээ</a>
-                    <ul class="dropdown">
-                        <li><a href="">1</a></li>
-                        <li><a href="">2</a></li>
-                        <li><a href="">3</a></li>
-                        <li><a href="">4</a></li>
-                        <li><a href="">5</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="Filterbtn">Үнэ</a>
-                    <ul class="dropdown">
-                        <li><input type="text" placeholder="Доод үнэ" class="price"></li>
-                        <li><input type="text" placeholder="Дээд үнэ" class="price"></li>
-                    </ul>
-                </li>
+              <li>
+                <a href="#" class="Filterbtn" onclick="toggleDropdown(event, 'online')">Онлайн</a>
+              </li>
+              <li>
+                <a href="#" class="Filterbtn" onclick="toggleDropdown(event, 'classroom')">Танхим</a>
+              </li>
+              <li>
+                <a href="#" class="Filterbtn" onclick="toggleDropdown(event, 'rating')">Үнэлгээ</a>
+                <ul class="dropdown" id="rating">
+                  <li><a href=""> 1 </a></li>
+                  <li><a href=""> 2 </a></li>
+                  <li><a href=""> 3 </a></li>
+                  <li><a href=""> 4 </a></li>
+                  <li><a href=""> 5 </a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="Filterbtn" onclick="toggleDropdown(event, 'price')">Үнэ</a>
+                <ul class="dropdown" id="price">
+                  <li><input type="text" placeholder="Доод үнэ" class="price"></li>
+                  <li><input type="text" placeholder="Дээд үнэ" class="price"></li>
+                </ul>
+              </li>
             </ul>
-        </section>
+          </section>
+
+
+        <script>
+            function toggleDropdown(event, id) {
+                event.preventDefault();
+                const dropdown = document.getElementById(id);
+                dropdown.classList.toggle('show');
+
+                // Close other dropdowns
+                const allDropdowns = document.querySelectorAll('.dropdown');
+                allDropdowns.forEach(d => {
+                    if (d !== dropdown && d.classList.contains('show')) {
+                        d.classList.remove('show');
+                    }
+                });
+            }
+
+            // Close the dropdown if clicked outside
+            window.onclick = function (event) {
+                if (!event.target.matches('.Filterbtn')) {
+                    const dropdowns = document.getElementsByClassName('dropdown');
+                    for (let i = 0; i < dropdowns.length; i++) {
+                        const openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
 
         <!-- search result-->
         <section class="container">

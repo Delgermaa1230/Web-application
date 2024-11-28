@@ -30,19 +30,18 @@ h2{
 
 
 /*filter*/
-.filterMenu{
+.filterMenu {
     padding: 1rem 5rem;
 }
+
 .filterMenu ul {
     list-style: none;
     color: var(--color-black);
-    display: solid;
 }
 
 .filterMenu ul li {
     display: inline-block;
     position: relative;
-
 }
 
 .filterMenu ul li a {
@@ -58,33 +57,44 @@ h2{
     font-size: large;
     border-radius: 1rem;
     margin-right: 0.5rem;
+    width: 100%;
 }
+
+.filterMenu ul li a:hover{
+
+}
+.filterMenu ul li ul.dropdown {
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: var(--color-background);
+    position: absolute;
+    z-index: 999;
+    display: none; /* Default hidden */
+    margin-top: 0.5rem;
+}
+
+
 
 .filterMenu ul li ul.dropdown li {
     display: block;
     margin-top: 0.5rem;
 }
 
-.filterMenu ul li ul.dropdown {
-    border-radius: 1rem;
-    padding: 0.5rem 0.5rem;
-    background: #FEF4E4;
-    position: absolute;
-    z-index: 999;
-    display: none;
-
-}
 
 .filterMenu ul li a:hover {
     background: var(--color-background);
+    border-color: var(--color-background);
+    box-shadow: #000000 0.1rem 0.1rem 0.3rem;
+    transition: 0.3s;
 }
 
-.filterMenu ul li:hover ul.dropdown {
+.price {
+    width: 100%;
+}
+
+/* When dropdown is active */
+.filterMenu ul li ul.dropdown.show {
     display: block;
-}
-
-.price{
-    width: 3rem;
 }
 
 
