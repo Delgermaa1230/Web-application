@@ -10,6 +10,108 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="../js/searchResult/SR-APP.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-first-box">
+            <a href="../index.html">
+                <h1>Numteach</h1>
+            </a>
+            <form id="" action="" name="">
+                <input type="text" placeholder="Хайлт хийх...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <nav>
+            <a href="#"><i class="fa fa-question"></i></a>
+            <a href="req1.html">Багш болох</a>
+            <a href="#"><i class="fa fa-user"></i></a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <!--filter-->
+        <section class="filterMenu">
+            <h2>COMP100 Хайлтын Үр Дүн</h2><br>
+            <ul>
+                <li>
+                    <a href="#" class="Filterbtn">Онлайн</a>
+                </li>
+                <li>
+                    <a href="#" class="Filterbtn">Танхим</a>
+                </li>
+                <li>
+                    <a href="#" class="Filterbtn">Үнэлгээ</a>
+                    <ul class="dropdown">
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="Filterbtn">Үнэ</a>
+                    <ul class="dropdown">
+                        <li><input type="text" placeholder="Доод үнэ" class="price"></li>
+                        <li><input type="text" placeholder="Дээд үнэ" class="price"></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- search result-->
+        <section class="container">
+            <div class="tutors-box" id="tutors">
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <ul>
+            <li>
+                <h4>Тусламж</h4>
+                <ul>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Заавар</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>Холбогдох</4>
+                    <ul>
+                        <li>Утас:<a href="tel:+97688888811">+976 88 888811</a></li>
+                        <li>Мэйл:<a href="mailto: example@teach.com">example@teach.com</a></li>
+                    </ul>
+            </li>
+            <li>
+                <h4>Холбоосууд</h4>
+                <ul id="social-icons">
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numteach - Хайлтын Үр Дүн</title>
+    <link rel="stylesheet" href="/styles/header_footer.css">
+    <link rel="stylesheet" href="/styles/searchResult.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
