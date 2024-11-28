@@ -59,9 +59,6 @@ h2{
     width: 100%;
 }
 
-.filterMenu ul li a:hover{
-
-}
 .filterMenu ul li ul.dropdown {
     border-radius: 1rem;
     padding: 0.5rem;
@@ -178,8 +175,6 @@ h2 {
     font-size: var(--base-caption-font-size);
 }
 
-.tutorDescription {
-}
 
 .tutorCard i {
     color: rgb(255, 208, 0);

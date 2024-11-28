@@ -7,6 +7,8 @@
     <title>Numteach - Хайлтын Үр Дүн</title>
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="/styles/searchResult.css">
+    <link rel="icon" type="image/png" href="/imgs/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -54,10 +56,21 @@
                 </ul>
               </li>
               <li>
-                <a href="#" class="Filterbtn" onclick="toggleDropdown(event, 'price')">Үнэ</a>
-                <ul class="dropdown" id="price">
-                  <li><input type="text" placeholder="Доод үнэ" class="price"></li>
-                  <li><input type="text" placeholder="Дээд үнэ" class="price"></li>
+                <a href="#" class="Filterbtn" onclick="toggleDropdown(event, 'minPrice')">Доод үнэ</a>
+                <ul class="dropdown" id="minPrice">
+                    <li><a href="">10'000</a></li>
+                    <li><a href="">20'000</a></li>
+                    <li><a href="">30'000</a></li>
+                    <li><a href="">40'000</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="Filterbtn" onclick="toggleDropdown(event, 'maxPrice')">Дээд үнэ</a>
+                <ul class="dropdown" id="maxPrice">
+                    <li><a href="">20'000</a></li>
+                    <li><a href="">30'000</a></li>
+                    <li><a href="">40'000</a></li>
+                    <li><a href="">50'000</a></li>
                 </ul>
               </li>
             </ul>

@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>huselt5</title>
+    <title>huselt1 </title>
     <link rel="stylesheet" href="/styles/header_footer.css">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="icon" type="image/png" href="/imgs/favicon.png">
+    <link rel="stylesheet" href="/styles/req1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
 
     <header>
         <div class="header-first-box">
@@ -27,37 +27,37 @@
         </div>
         <nav>
             <a href="#"><i class="fa fa-question"></i></a>
-            <a href="req1.html">Багш болох</a>
             <a href="#"><i class="fa fa-user"></i></a>
         </nav>
     </header>
 
 
-    <div>
+    <section class="main">
+        <div class="medeelel-avah">
+            <h1>Бүртгэл үүсгэх</h1>
 
-        <section>
-            <H2> Өөрийн заах боломжит цагаа сонгоно уу </H2>
-            <p>Цаг сонгох</p>
-            <button>aa</button>
-            <button>aa</button>
-            <button>aa</button>
-            <button>aa</button>
-            <button>aa</button>
-            <button>aa</button>
-            <button>aa</button>
-            <button>aa</button>
-            <button>aa</button>
-            <button>aa</button>
-            <button>aa</button>
-            <button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button><button>aa</button>
-            <button>
-                Буцах
-            </button>
-            <button>
+            <!--place holder-->
+            <div class="phContainer">
+                <input type="text" placeholder="Мэйл хаяг" class="placeholder">
+            </div>
+
+            <!--next button-->
+            <button class="button" id="nextBtn">
                 Үргэлжлүүлэх
             </button>
-        </section>
-    </div>
+
+            <script>
+                document.getElementById("nextBtn").onclick = function(){
+                    location.href = "./req2.html"
+                }
+            </script>
+            <div class="mailCont">
+                <a href=""><img src="../imgs/favicon.png" alt="" class="icon"></a>
+                <a href=""><img src="../imgs/favicon.png" alt="" class="icon"></a>
+                <a href=""><img src="../imgs/favicon.png" alt="" class="icon"></a>
+            </div>
+        </div>
+    </section>
 
 
     <footer>

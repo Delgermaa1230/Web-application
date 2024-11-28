@@ -1,4 +1,3 @@
-
 :root {
     --color-background: #FEF4E4;
     --color-primary: #FF9B00;
@@ -10,25 +9,14 @@
 }
 
 h1{
-    font-size: 3rem;
-}
-h2{
-    font-size: 3rem;
-}
-h3{
-    font-size: 1.2rem;
-}
-.main{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 5rem;
+    font-size: 1.7rem;
 }
 
-@media (min-width: 600px) {
-    .main { grid-template-columns: 50% 40%; 
-            justify-content: space-between;}
-    .zaavar { width: 100%;}
+.main{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+    margin-top: 3rem;
 }
    
 
@@ -36,50 +24,55 @@ h3{
     background-color: var(--color-primary);
     border: none;
     border-radius: 2rem;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     color: var(--color-button-text);
+    width: 100%;
+    font-weight: bold;
+}
+button:hover{
+    cursor: pointer;
 }
 
-.zaavar li{
-    list-style: circle;
-    font-size: 1.5rem;
-}   
-
-.zaavar{
-    display: flex;
-    flex-direction: column;
-    margin-left: 3rem;
-}
-
-.placeholder{
-    border-radius: 1rem;
-    border: none;
-}
-
-.phContainer{
-    display: flex;
-    flex-direction: column;
-}
 .medeelel-avah{
     width: 30vw;
     min-width: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 3rem;
     background-color: var(--color-background);
     border-radius: 2rem;
     row-gap: 1.5rem;
 }
 
-.upload-pic-cont{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.placeholder {
+    border: none;
+    height: 2rem;
 }
-.uploadProfile{
-    height: 10rem;
-    width: 10rem;
-    border-radius: 20%;
-    margin-right: 1rem;
+
+.placeholder:focus {
+    outline: none;
+}
+
+.phContainer{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    justify-content: center;
+    border-radius: 1rem;
+    height: 2.5rem;
+    padding: 1rem;
+    width: 100%;
+}
+.mailCont{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5rem;
+}
+.icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
 }
