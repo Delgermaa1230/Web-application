@@ -57,6 +57,13 @@ export default class tutor {
         </article>`;
     }
 
+    getParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+          ner: params.get("ner"),
+        };
+    }
+
 
 }
 

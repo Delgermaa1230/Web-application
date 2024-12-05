@@ -73,7 +73,7 @@ h2{
 
 .filterMenu ul li ul.dropdown li {
     display: block;
-    margin-top: 0.5rem;
+    margin-top: var(--base-size);
 }
 
 
