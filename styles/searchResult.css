@@ -139,7 +139,7 @@ h2 {
     overflow: hidden;
     position: relative;
     border-radius: var(--base-border-radius-x5);
-    height: 300px;
+    aspect-ratio: 1 / 1;
 }
 
 .tutorImage img {
@@ -155,16 +155,6 @@ h2 {
     }
 }
 
-/* .tutorCard h3{
-    font-size: var(--base-h3-font-size);
-    position: absolute;
-    bottom: var(--base-size);
-    left: var(--base-size);
-    padding: var(--base-padding);
-    color: var(--base-color-orange-light);
-    text-shadow: 0.1px 0px 1px var(--base-color-white);
-} */
-
 .tutorCard h3 {
     font-size: var(--base-h4-font-size);
     padding:0 var(--base-size-x2);
@@ -175,6 +165,13 @@ h2 {
     font-size: var(--base-caption-font-size);
 }
 
+.tutorDescription {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .tutorCard i {
     color: rgb(255, 208, 0);

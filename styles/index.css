@@ -152,7 +152,7 @@ h2 {
     overflow: hidden;
     position: relative;
     border-radius: var(--base-border-radius-x5);
-    height: 300px;
+    aspect-ratio: 1 / 1;
 }
 
 .tutorImage img {
@@ -189,6 +189,11 @@ h2 {
 }
 
 .tutorDescription {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tutorCard i {
