@@ -4,10 +4,6 @@
     margin: 0;
 }
 
-body {
-    background: linear-gradient(191deg, var(--base-background-color) 20%, var(--base-color-light-orange) 90%);
-}
-
 .main {
     margin: var(--base-size-x2) 0;
     display: flex;
@@ -31,6 +27,7 @@ body {
     font-family: "Lobster", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: var(--base-text-color);
 }
 
 .center {
@@ -145,6 +142,7 @@ button:hover {
 h2 {
     font-size: var(--base-h2-font-size);
     margin-bottom: var(--base-size-x3);
+    color: var(--base-text-color);
 }
 
 .tutorImage {

@@ -1,17 +1,22 @@
-/* style for teachinfo.html */
-/* Уусалттай backgournd */
-body {
-    background: linear-gradient(191deg, var(--base-background-color) 20%, var(--base-color-light-orange) 90%);
-}
 
 h1 {
     font-size: var(--base-h1-font-size);
-    color:var(--base-color-black);
+    color:var(--base-text-color);
+}
+
+span, b, p {
+    color: var(--base-text-color);
+    font-size: var(--base-body-font-size);
 }
 
 h2 {
     font-size: var(--base-h2-font-size);
-    color: var(--base-color-black);
+    color: var(--base-text-color);
+}
+
+h3 {
+    font-size: var(--base-h3-font-size);
+    color: var(--base-text-color);
 }
 
 .main {
@@ -210,21 +215,3 @@ h2 {
         justify-self: center;
     }
 }
-
-
-/* @media (prefers-color-scheme: dark) {
-    
-    :root {
-        --color-background: #1c1c1c; 
-        --color-primary: #c4a77b94; 
-        --color-light-grey: #363535; 
-        --color-grey: #454343; 
-        --color-black: hsl(0, 0%, 100%); 
-        --color-white: #121111; 
-        --color-dark-grey: #b9b9b9; 
-    }
-
-    body {
-        background: rgba(35, 34, 34, 0.9);
-    }
-} */
