@@ -1,11 +1,11 @@
-/* Уусалттай backgournd */
-body {
-    background: linear-gradient(191deg, var(--base-background-color) 40%, var(--base-color-light-orange) 60%);
+h2 {
+    font-size: var(--base-h2-font-size);
+    color: var(--base-text-color);
 }
 
-h2 {
-    font-size: 1.5rem;
+span, b, p {
     color: var(--base-text-color);
+    font-size: var(--base-body-font-size);
 }
 
 .main {

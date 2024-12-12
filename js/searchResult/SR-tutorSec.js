@@ -2,7 +2,6 @@ export async function loadData() {
     const result = await fetch("../data/teacher.json");
     const data = await result.json();
     console.log("data", data);
-
     return data.teachers;
 }
 

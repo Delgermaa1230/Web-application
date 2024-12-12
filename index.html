@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/header_footer.css">
     <link rel="stylesheet" href="styles/index.css">
-    <script type="module" src="../js/searchResult/SR-APP.js"></script>
+    <script type="module" src="./js/topteacherFilter.js"></script>
 </head>
 
 <body>
-    <!-- <script src="/js/top3teacherFilter.js"></script> -->
     <header>
         <div class="header-first-box">
             <a href="../index.html">
@@ -59,55 +58,9 @@
         </div>
         <section class="container">
             <h2>Санал болгох багш нар</h2>
-            <div class="tutors-box" id="tutors">
+            <div class="tutors-box" id="topTutors">
             </div>
         </section>
-        <!-- <script>
-            const teachersData = {
-            }
-
-            const teachers = teachersData.teachers;
-
-            const filterTopTeachers = (teachers) => {
-                return teachers
-                    .sort((a, b) => {
-                        const aScore = a.ratings * a.numberOfRatings;
-                        const bScore = b.ratings * b.numberOfRatings;
-                        return bScore - aScore; //buurhaar erembleh
-                    })
-                    .slice(0, 6); // 3g n avah
-            };
-
-            const top3Teachers = filterTopTeachers(teachers);
-            console.log(top3Teachers);
-
-            const top3TeachersHTMLarray = top3Teachers.map(ft =>
-                `<a href="/pages/teachInfo.html">
-                    <section class="tutorCard">
-                        <div class="tutorImage">
-                            <img src="${ft.image}" alt="fe">
-                                
-                        </div>
-                        <h3>${ft.firsLetterOflastName}. ${ft.firstName}</h3>  
-                        <p class="tutorReviews">
-                            <i class="fa fa-star"></i>
-                            <span id="starsNumber">${ft.ratings}</span>
-                            <span id="reviewsNumber">
-                                    (${ft.numberOfRatings} санал)
-                            </span>
-                        </p>
-                        <p class="tutorDescription">
-                        ${ft.description}
-                        </p>
-                    </section>
-                </a>`
-            );
-
-            const top3TeachersHTML = top3TeachersHTMLarray.reduce((prev, cur) => prev + cur);
-            console.log(top3TeachersHTML);
-            document.getElementById("topTeachers").innerHTML = top3TeachersHTML;
-
-        </script> -->
         <div></div>
     </div>
     <footer>

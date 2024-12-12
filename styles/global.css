@@ -54,6 +54,7 @@
     --base-padding-even: var(--base-size);
     --base-background-color: var(--base-color-white);
     --base-background-color-orange: var(--base-color-light-orange);
+    --base-color-shadow: var(--base-color-dark-grey);
     --base-background-color-shadow: #fbb13b14;
     --base-text-color: var(--base-color-black);
     --base-grey-text-color: var(--base-color-dark-grey);
@@ -71,4 +72,20 @@
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, var(--base-background-color) 40%, var(--base-color-light-orange) 70%);
+}
+
+@media (prefers-color-scheme: dark) {
+    
+    :root {  
+        --base-text-color: var(--base-color-white);
+        --base-background-color:var(--base-color-dark-grey);
+        --base-color-light-orange:var(--base-color-dark-grey);
+        --base-color-grey-light:var(--base-color-grey);
+        --base-grey-text-color: var(--base-color-white);
+        --base-color-shadow: var(--base-color-white);
+    }
 }
