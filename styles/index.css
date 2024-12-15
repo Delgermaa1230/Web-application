@@ -66,7 +66,7 @@ input::placeholder{
     font-size: var(--base-body-font-size);
 }
 
-button {
+.important-button {
     border: none;
     background-color: var(--base-color-orange);
     color: var(--base-color-white);
@@ -77,7 +77,7 @@ button {
     transition: var(--base-transition);
 }
 
-button:hover {
+.important-button:hover {
     transform: scale(1.05);
     font-size: var(--base-button-large-font-size);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -108,16 +108,15 @@ button:hover {
 
 .container{
     margin:var(--base-size-x3) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
-
 }
 
 .tutors-box {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 22% 22% 22% 22%;
     grid-template-rows: auto;
     justify-content: space-between;
     align-items: stretch;
-    gap: var(--base-size-x3);
+    gap: var(--base-size-x6);
     flex-wrap: wrap;
     justify-items: stretch;
     align-items: stretch;
@@ -145,11 +144,24 @@ h2 {
     color: var(--base-text-color);
 }
 
+.love {
+    position: absolute;
+    top: var(--base-size-x2);
+    right: var(--base-size-x2);
+    color: var(--base-color-orange);
+    background-color: transparent;
+}
+
+.love i {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border: 1px solid white;
+}
+
 .tutorImage {
     width: 100%;
     overflow: hidden;
     position: relative;
-    border-radius: var(--base-border-radius-x5);
+    border-radius: var(--base-border-radius-x3);
     aspect-ratio: 1 / 1;
 }
 
@@ -165,16 +177,6 @@ h2 {
         scale: 1.05;
     }
 }
-
-/* .tutorCard h3{
-    font-size: var(--base-h3-font-size);
-    position: absolute;
-    bottom: var(--base-size);
-    left: var(--base-size);
-    padding: var(--base-padding);
-    color: var(--base-color-orange-light);
-    text-shadow: 0.1px 0px 1px var(--base-color-white);
-} */
 
 .tutorCard h3 {
     font-size: var(--base-h4-font-size);

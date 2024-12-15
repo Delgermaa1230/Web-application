@@ -2,7 +2,7 @@ import classTutor ,{loadData} from "./searchResult/SR-tutorSec.js";
 
 const tutors = await loadData();
 
-console.log(tutors);
+console.log(tutors[1].lessons);
 
 const filterTopTeachers = (t) => {
   return t
@@ -11,7 +11,7 @@ const filterTopTeachers = (t) => {
       const bScore = b.ratings * b.numberOfRatings;
       return bScore - aScore; //buurhaar erembleh
     })
-    .slice(0, 6); 
+    .slice(0, 8); 
 };
 
 const filteredtutors = filterTopTeachers(tutors);
