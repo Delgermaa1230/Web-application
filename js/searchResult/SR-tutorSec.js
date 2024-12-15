@@ -52,31 +52,7 @@ export default class tutor {
                 </section>
              </a>`;
     }
-
-    rendertutors() {
-        return this
-            .tutor
-            .map(b => (new tutor(b)).render())
-            .reduce((p, c) => p + c);
-    }
-
-    renderall() {
-        console.log("data", this.tutor);
-        return `
-        <article class="tutor">
-            <section>
-                ${this.rendertutors()}
-            <section>
-        </article>`;
-    }
-
-    getParams() {
-        const params = new URLSearchParams(window.location.search);
-        return {
-            ner: params.get("ner"),
-        };
-    }
-
+    
 
 }
 
