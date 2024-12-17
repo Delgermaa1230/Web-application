@@ -1,157 +1,132 @@
-.profile {
-    display: flex;
-    gap: calc(var(--base-size)*4);
-    padding: calc(var(--base-size)*4);
-    flex-wrap: wrap;
-    
+
+:root {
+    --base-size: 8px;
+    --base-size-x1: var(--base-size);
+    --base-size-x2: calc(var(--base-size)*2);
+    --base-size-x3: calc(var(--base-size)*3);
+    --base-size-x4: calc(var(--base-size)*4);
+    --base-size-x5: calc(var(--base-size)*5);
+    --base-size-x6: calc(var(--base-size)*6);
+    --base-size-x7: calc(var(--base-size)*7);
+    --base-size-x8: calc(var(--base-size)*8);
+    --base-size-x9: calc(var(--base-size)*9);
+    --base-size-x10: calc(var(--base-size)*10);
+    --base-color-white: #fff;
+    --base-color-black: #121212;
+    --base-color-dark-grey: #413D3D;
+    --base-color-grey: #6d6d6d;
+    --base-color-grey-medium: #d9d9d9;
+    --base-color-grey-light: #f3f3f3;
+    --base-color-orange: #ff9b00;
+    --base-color-light-orange: #FEF4E4;
+    --base-color-system-success: #5bca8d;
+    --base-color-system-success-light: #f2fbf6;
+    --base-color-system-warning: #ff3636;
+    --base-color-orange-secondary: #FFE2B3;
+    --base-font-family: ;
+    --base-h1-font-size: 40px;
+    --base-h2-font-size: 26px;
+    --base-h3-font-size: 24px;
+    --base-h4-font-size: 20px;
+    --base-h5-font-size: 18px;
+    --base-h6-font-size: 16px;
+    --base-body-font-size: 16px;
+    --base-caption-font-size: 14px;
+    --base-small-font-size: 12px;
+    --base-tiny-font-size: 10px;
+    --base-button-xlarge-font-size: var(--base-body-font-size);
+    --base-button-large-font-size: var(--base-body-font-size);
+    --base-button-medium-font-size: var(--base-caption-font-size);
+    --base-button-small-font-size: var(--base-small-font-size);
+    --base-border-radius: var(--base-size);
+    --base-border-radius-x2: calc(var(--base-border-radius)*2);
+    --base-border-radius-x3: calc(var(--base-border-radius)*3);
+    --base-border-radius-x4: calc(var(--base-border-radius)*4);
+    --base-border-radius-x5: calc(var(--base-border-radius)*5);
+    --base-border-radius-x6: calc(var(--base-border-radius)*6);
+    --base-heavy-font-weight: 800;
+    --base-bold-font-weight: bold;
+    --base-medium-font-weight: 600;
+    --base-regular-font-weight: normal;
+    --base-thin-font-weight: 200;
+    --base-transition: all 0.4s ease;
+    --base-padding: var(--base-size) var(--base-size-x2);
+    --base-padding-even: var(--base-size);
+    --base-background-color: var(--base-color-white);
+    --base-background-color-orange: var(--base-color-light-orange);
+    --base-color-shadow: var(--base-color-dark-grey);
+    --base-background-color-shadow: #fbb13b14;
+    --base-text-color: var(--base-color-black);
+    --base-grey-text-color: var(--base-color-dark-grey);
 }
 
-.medeelel {
-    background-color: var(--base-background-color-orange);
-    border-radius: calc(var(--base-size)*2);
-    padding: calc(var(--base-size)*3);
-    width: calc(var(--base-size)*50);
-    text-align:left;
-    margin-left: calc(var(--base-size)*9);
-}
 
-.medeelel {
+.profile-header{
     display: flex;
     flex-direction: column;
-}
-.medeelel .zurag{
-    text-align: center;
-}
-.profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: var(--base-border-radius-x6);
-    margin-bottom:calc(var(--base-size)*2);
-    
+    height: 35vh;
+    background-image: url("../imgs/painting-mountain-lake-with-mountain-background_188544-9126.png");
+    justify-content: end;
 }
 
-.medeelel p{
-    margin: 0.5rem 0;  
-    font-weight: bold;   
+/* button*/
+.pHBtn{
+    background-color: var(--base-color-white);
+    border: solid ;
+    border-radius: var(--base-size-x3);
+    border-width: 1px;
+    height: fit-content;
+    padding: var(--base-size-x1);
 }
 
-.highlight1{
-    align-items: center; 
-    display: inline-block;
-    background-color:#fff;
-    display: inline-block;
-    width: 200px; 
-    padding: calc(var(--base-size)*0.7); 
-    text-align: center; 
-    font-size: 12px;
-    margin-left: calc(var(--base-size)*12);
+.pHBtn:hover{
+    background-color: var(--base-color-grey-light);
 }
 
-.highlight2{
-    align-items: center; 
-    display: inline-block;
-    background-color:#fff;
-    display: inline-block;
-    width: 200px; 
-    padding: calc(var(--base-size)*0.7); 
-    text-align: center; 
-    font-size: 12px;
-    margin-left: calc(var(--base-size)*13);
+
+.profPicBtn{
+    background-color: var(--base-color-white);
+    border: solid ;
+    border-radius: var(--base-size-x3);
+    height: fit-content;
+    border-width: 1px;
+    padding: var(--base-size-x1);
 }
 
-.highlight3{
-    align-items: center; 
-    display: inline-block;
-    background-color:#fff;
-    display: inline-block;
-    width: 200px; 
-    padding: calc(var(--base-size)*0.7); 
-    text-align: center; 
-    font-size: 12px;
-    margin-left: calc(var(--base-size)*5.5);
+/*PH header*/
+.BGhover{
+    height: 30vh;
 }
 
-.highlight4{
-    align-items: center; 
-    display: inline-block;
-    background-color:#fff;
-    display: inline-block;
-    width: 200px; 
-    padding: calc(var(--base-size)*0.7); 
-    text-align: center; 
-    font-size: 12px;
-    margin-left: calc(var(--base-size)*6);
-}
-
-/*sudalsan, sudalj bui*/
-
-.sudaljbui h2, .sudalsan h2 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.sudaljbui{
-    background-color: var(--base-background-color-orange);
-    border-radius: calc(var(--base-size)*2);
-    padding: calc(var(--base-size)*3);
-    width: calc(var(--base-size)*50);
-    text-align:left;
-    margin-left: calc(var(--base-size)*10);
-}
-
-.sudalsan{
-    background-color: var(--base-background-color-orange);
-    border-radius: calc(var(--base-size)*2);
-    padding: calc(var(--base-size)*3);
-    width: calc(var(--base-size)*50);
-    text-align:left;
-}
-
-.sudaljbui p, .sudalsan p{
-    margin: 1rem 0;
-    margin-top: calc(var(--base-size)*3);
-}
-
-/* Actions section styling */
-.actions {
-    display: flex;
-    justify-content: space-between; /* 3 картын хооронд зай жигд хуваана */
-    background-color: #fff; /* Фоны өнгө */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Зөөлөн сүүдэр */
-    padding: 20px;
-}
-
-.action-card:hover {
-    transform: translateY(-5px); /* Хулганы заагуур дээр хөдлөх үед дээшлүүлнэ */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Сүүдрийг нэмэгдүүлнэ */
-}
-
-.action-card{
-    text-align: center;
-    height: 180px;
-    width: 300px;
-    margin: 0 100px;
-    border-radius: 50px;
-    background-color: var(--base-background-color-orange);;
-}
-
-.action-card button{
-    background-color: #ff9b00;
-    margin-top: 50px;
-    height: 40px;
-    width: 160px;
-    border-radius: 40px;
-    font-weight: bold;
+.BGhover:hover{
+    background-color: #b8b8b832;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: 0.4s;
 }
 
-.action-card p{
-    font-weight: bold;
-    margin-top: 30px;
+.pH-left-info{
+    display: flex;
+    flex-direction: row;
 }
 
 
+.ProfPicCnt{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.ProfPic{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
 
+.Information{
+    background-color: var(--base-color-orange-secondary);
+    height: 40%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--base-size-x1);
+    padding: var(--base-size-x2);
+}
