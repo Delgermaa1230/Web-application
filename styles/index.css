@@ -148,7 +148,7 @@ h2 {
     width: 100%;
     overflow: hidden;
     position: relative;
-    border-radius: var(--base-border-radius-x3);
+    border-radius: var(--base-border-radius-x2);
     aspect-ratio: 1 / 1;
 }
 
