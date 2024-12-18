@@ -37,7 +37,7 @@ export default class tutor {
                             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 20.49l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="rgba(255, 255, 255, 0.5)"></path>
                         </svg></button>
                     </div>
-    t2222222222222222               <h3>${firstLetterOfLastName}. ${this.ner}</h3>
+                    <h3>${firstLetterOfLastName}. ${this.ner}</h3>
                     <p class="tutorReviews">
                         <i class="fa fa-star"></i>
                         <span id="starsNumber">${this.unelgee}</span>
