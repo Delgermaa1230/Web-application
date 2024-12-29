@@ -68,7 +68,7 @@ h3 {
 .teacher-sticky-box div img {
     width: calc(var(--base-size-x2)*15);
     height: calc(var(--base-size-x2)*15);
-    border-radius: var(--base-border-radius-x6);
+    border-radius: var(--base-border-radius-x2);
     object-fit: cover;
 }
 

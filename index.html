@@ -14,7 +14,14 @@
 
 <body>
     <header>
-        <div class="header-first-box">
+        <script>
+            function loveButtonClick(event) {
+                event.stopPropagation(); 
+                event.preventDefault();
+                alert("You loved this!");
+            }
+            </script>
+        <div class="header-first-box"> 
             <a href="../index.html">
                 <h1>Numteach</h1>
             </a>
@@ -33,7 +40,9 @@
             </form> -->
         </div>
         <nav>
+            
             <a href="#"><i class="fa fa-question"></i></a>
+            <a href="/pages/lovedTeachers.html"><i class="fa fa-heart"></i></a>
             <a href="/pages/req1.html">Багш болох</a>
             <a href="/pages/profile.html"><i class="fa fa-user"></i></a>
         </nav>
@@ -46,7 +55,7 @@
             <div class="searchBox">
                 <form id="" action="/pages/SearchResult.html" name="">
                     <input type="text" placeholder="Хайлт хийх..." name="search">
-                    <button type="submit">Хайх</button>
+                    <button class="important-button" type="submit">Хайх</button>
                 </form>
             </div>
             <div class="common-lessons-nav">

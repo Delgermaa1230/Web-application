@@ -13,6 +13,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="module" src="../js/searchResult/SR-APP.js"></script>
+    <script type="module" src="../js/url.js"></script>
 </head>
 
 <body>
@@ -29,6 +30,7 @@
         </div>
         <nav>
             <a href="#"><i class="fa fa-question"></i></a>
+            <a href="./lovedTeachers.html"><i class="fa fa-heart"></i></a>
             <a href="req.html">Багш болох</a>
             <a href="#"><i class="fa fa-user"></i></a>
         </nav>
@@ -61,16 +63,14 @@
                     <li><a href="">10'000</a></li>
                     <li><a href="">20'000</a></li>
                     <li><a href="">30'000</a></li>
-                    <li><a href="">40'000</a></li>
                 </ul>
               </li>
               <li>
                 <a href="#" class="Filterbtn" onclick="toggleDropdown(event, 'maxPrice')">Дээд үнэ</a>
                 <ul class="dropdown" id="maxPrice">
-                    <li><a href="">20'000</a></li>
-                    <li><a href="">30'000</a></li>
                     <li><a href="">40'000</a></li>
                     <li><a href="">50'000</a></li>
+                    <li><a href="">60'000</a></li>
                 </ul>
               </li>
             </ul>
@@ -83,7 +83,6 @@
                 const dropdown = document.getElementById(id);
                 dropdown.classList.toggle('show');
 
-                // Close other dropdowns
                 const allDropdowns = document.querySelectorAll('.dropdown');
                 allDropdowns.forEach(d => {
                     if (d !== dropdown && d.classList.contains('show')) {
@@ -92,7 +91,6 @@
                 });
             }
 
-            // Close the dropdown if clicked outside
             window.onclick = function (event) {
                 if (!event.target.matches('.Filterbtn')) {
                     const dropdowns = document.getElementsByClassName('dropdown');

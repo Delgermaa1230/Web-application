@@ -15,7 +15,7 @@
     --base-color-white: #fff;
     --base-color-black: #121212;
     --base-color-dark-grey: #413D3D;
-    --base-color-grey: #b2b1b1;
+    --base-color-grey: #6d6d6d;
     --base-color-grey-medium: #d9d9d9;
     --base-color-grey-light: #f3f3f3;
     --base-color-orange: #ff9b00;
@@ -76,6 +76,39 @@
 
 body {
     background: linear-gradient(180deg, var(--base-background-color) 40%, var(--base-color-light-orange) 70%);
+}
+
+.important-button {
+    padding: var(--base-size-x2);
+    margin: auto;
+    border-radius: var(--base-border-radius-x2);
+    border: none;
+    background-color: var(--base-color-orange);
+    transition: var(--base-transition);
+}
+
+.important-button:hover {
+    transform: scale(1.01);
+}
+
+.important-button a {
+    color: var(--base-color-white);
+    font-weight: var(--base-heavy-font-weight);
+    font-size:var(--base-body-font-size);
+}
+
+.love {
+    position: absolute;
+    top: var(--base-size-x2);
+    right: var(--base-size-x2);
+    color: var(--base-color-black);
+    background-color: transparent;
+    border: none;
+    transition: var(--base-transition);
+}
+
+.love:hover {
+    scale: 1.1;
 }
 
 @media (prefers-color-scheme: dark) {
