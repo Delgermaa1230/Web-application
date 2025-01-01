@@ -62,70 +62,181 @@
 
 
 .profile-header{
-    display: flex;
-    flex-direction: column;
-    height: 35vh;
-    background-image: url("../imgs/painting-mountain-lake-with-mountain-background_188544-9126.png");
-    justify-content: end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* button*/
-.pHBtn{
-    background-color: var(--base-color-white);
-    border: solid ;
-    border-radius: var(--base-size-x3);
-    border-width: 1px;
-    height: fit-content;
-    padding: var(--base-size-x1);
+/* Profile Picture Container */
+.ProfPicCnt {
+  position: absolute;
+  top: -80px;
+  left: 60px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  z-index: 2;
 }
 
-.pHBtn:hover{
-    background-color: var(--base-color-grey-light);
+.ProfPic {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Camera Icon Button */
+.profPicBtn {
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  background-color: var(--base-color-orange);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: var(--base-size-x2);
+  z-index: 99;
+}
+
+.profPicBtn:hover {
+  filter: brightness(120%);
+  transition: 0.3s;
+}
+
+/* Text Info */
+.text-info {
+  margin-left: 200px;
+  /* Prevent overlap with profile picture */
+}
+
+.text-info h2 {
+  font-size: var(--base-size-x3);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.text-info p {
+  font-size: var(--base-size-x2);
+  color: #555;
+}
+
+/* Buttons */
+.buttonsCont {
+  display: flex;
+  gap: var(--base-size);
+}
+
+.buttonsCont .important-button  {
+  background-color: #fff;
+  color: var(--base-color-black);
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: var(--base-size) var(--base-size-x2);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.pHBtn:hover {
+  background-color: #f0f0f0;
+}
+
+/* main content*/
+.main{
+  display: flex;
+  justify-content: center;
+  padding: var(--base-size-x2) var(--base-size-x4);
+}
+
+.mainCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: var(--base-size-x10);
+  width: 80vw;
+}
+
+.leftCont {
+  width: 100%;
+
+}
+
+.ranksCont {
+  background-color: var(--base-color-secondary-orange);
+  height: 150px;
+  width: 100%;
+  border-radius: var(--base-border-radius-x2);
+}
+
+.PostsCont{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--base-size-x2);
+
+} 
+.post {
+  color: var(--base-color-white);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--base-size-x2);
+  width: 100%;
+  height: 150px;
+  background-color: var(--base-color-blue);
+  border-radius: var(--base-border-radius-x2);
+  padding: var(--base-size-x2) 2rem;
 }
 
 
-.profPicBtn{
-    background-color: var(--base-color-white);
-    border: solid ;
-    border-radius: var(--base-size-x3);
-    height: fit-content;
-    border-width: 1px;
-    padding: var(--base-size-x1);
+.subjects-tags {
+  margin-bottom: var(--base-size-x4);
+  display: flex;
+  align-items: center;
 }
 
-/*PH header*/
-.BGhover{
-    height: 30vh;
+.subjects-tags ul {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.BGhover:hover{
-    background-color: #b8b8b832;
-    cursor: pointer;
-    transition: 0.4s;
+.post .subjects-tags ul li {
+  margin: var(--base-size) var(--base-size) 0 0;
+  padding: var(--base-padding);
+  font-size: var(--base-small-font-size);
+  border-radius: var(--base-border-radius);
+  background-color: var(--base-color-light-orange);
+  font-weight: var(--base-bold-font-weight);
+  color: var(--base-color-blue);
 }
 
-.pH-left-info{
-    display: flex;
-    flex-direction: row;
+.subjects-tags ul li {
+  margin: var(--base-size) var(--base-size) 0 0;
+  padding: var(--base-padding);
+  font-size: var(--base-small-font-size);
+  border-radius: var(--base-border-radius-x2);
+  background-color: var(--base-color-light-orange);
+  font-weight: var(--base-bold-font-weight);
+  color: var(--base-color-orange);
+  box-shadow: 0 0px 8px var(--base-color-grey);
 }
 
-.ProfPicCnt{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-}
-.ProfPic{
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
+.rightCont{
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--base-size-x3);
+  width: 40vw;
+  row-gap: var(--base-size-x4);
 }
 
-.Information{
-    background-color: var(--base-color-orange-secondary);
-    height: 40%;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    padding: var(--base-size-x1);
-    padding: var(--base-size-x2);
+.BioCont{
+  display: flex;
+  padding: var(--base-size-x2);
+  border-radius: var(--base-border-radius-x2);
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--base-size-x2);
+  box-shadow: 0 4px 8px var(--base-color-grey);
 }
+
