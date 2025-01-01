@@ -113,6 +113,7 @@ body {
 
 .buttonsCont .important-button  {
   background-color: #fff;
+  color: var(--base-color-black);
   border: 1px solid #ccc;
   border-radius: 20px;
   padding: var(--base-size) var(--base-size-x2);
@@ -126,13 +127,18 @@ body {
 }
 
 /* main content*/
+.main{
+  display: flex;
+  justify-content: center;
+  padding: var(--base-size-x2) var(--base-size-x4);
+}
 
 .mainCont {
   display: flex;
   flex-direction: row;
-  padding: var(--base-size-x4);
   justify-content: space-between;
   column-gap: var(--base-size-x10);
+  width: 80vw;
 }
 
 .leftCont {
@@ -192,10 +198,11 @@ body {
   margin: var(--base-size) var(--base-size) 0 0;
   padding: var(--base-padding);
   font-size: var(--base-small-font-size);
-  border-radius: var(--base-border-radius);
+  border-radius: var(--base-border-radius-x2);
   background-color: var(--base-color-light-orange);
   font-weight: var(--base-bold-font-weight);
   color: var(--base-color-orange);
+  box-shadow: 0 0px 8px var(--base-color-grey);
 }
 
 .rightCont{
@@ -203,13 +210,13 @@ body {
   flex-direction: column;
   row-gap: var(--base-size-x3);
   width: 40vw;
-  row-gap: var(--base-size-x10);
+  row-gap: var(--base-size-x4);
 }
 
 .BioCont{
   display: flex;
   padding: var(--base-size-x2);
-  border-radius: var(--base-border-radius);
+  border-radius: var(--base-border-radius-x2);
   flex-direction: column;
   align-items: center;
   row-gap: var(--base-size-x2);

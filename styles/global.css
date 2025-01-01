@@ -81,16 +81,20 @@ body {
 }
 
 .important-button {
-    padding: var(--base-size-x2);
-    margin: auto;
-    border-radius: var(--base-border-radius-x2);
     border: none;
     background-color: var(--base-color-orange);
+    color: var(--base-color-white);
+    padding: var(--base-padding);
+    border-radius: var(--base-border-radius-x3);
+    font-size: var(--base-button-large-font-size);
+    font-weight: var(--base-medium-font-weight);
     transition: var(--base-transition);
 }
 
 .important-button:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
+    font-size: var(--base-button-large-font-size);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .important-button a {
