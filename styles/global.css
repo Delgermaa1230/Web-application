@@ -12,13 +12,15 @@
     --base-size-x8: calc(var(--base-size)*8);
     --base-size-x9: calc(var(--base-size)*9);
     --base-size-x10: calc(var(--base-size)*10);
-    --base-color-white: #fff;
+    --base-color-white: #ffffff;
+    --base-color-blue: #0093FF;
     --base-color-black: #121212;
     --base-color-dark-grey: #413D3D;
     --base-color-grey: #6d6d6d;
     --base-color-grey-medium: #d9d9d9;
     --base-color-grey-light: #f3f3f3;
     --base-color-orange: #ff9b00;
+    --base-color-secondary-orange:#ffe1b3;
     --base-color-light-orange: #FEF4E4;
     --base-color-system-success: #5bca8d;
     --base-color-system-success-light: #f2fbf6;
@@ -79,16 +81,20 @@ body {
 }
 
 .important-button {
-    padding: var(--base-size-x2);
-    margin: auto;
-    border-radius: var(--base-border-radius-x2);
     border: none;
     background-color: var(--base-color-orange);
+    color: var(--base-color-white);
+    padding: var(--base-padding);
+    border-radius: var(--base-border-radius-x3);
+    font-size: var(--base-button-large-font-size);
+    font-weight: var(--base-medium-font-weight);
     transition: var(--base-transition);
 }
 
 .important-button:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
+    font-size: var(--base-button-large-font-size);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .important-button a {
@@ -110,7 +116,7 @@ body {
 .love:hover {
     scale: 1.1;
 }
-
+/*
 @media (prefers-color-scheme: dark) {
     
     :root {  
@@ -122,3 +128,4 @@ body {
         --base-color-shadow: var(--base-color-white);
     }
 }
+*/
