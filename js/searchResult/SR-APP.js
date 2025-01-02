@@ -25,12 +25,14 @@ function filterTutors(criteria, category) {
 
     if (category === "all") {
         filteredData = tutorData; 
-    } else if (category === "online" || category === "classroom") {
+    } else if (category === "online" || category === "online") {
+        filteredData = tutorData.filter(tutor => tutor.mode === category);
+    } else if (category === "classroom" || category === "classroom") {
         filteredData = tutorData.filter(tutor => tutor.mode === category);
     } else if (category === "rating") {
         filteredData = tutorData.filter(tutor => tutor.ratings === parseInt(criteria));
     } else if (category === "ranking") {
-        filteredData = tutorData.filter(tutor => tutor.rank === criteria);
+        filteredData = tutorData.filter(tutor => tutor.ranking === criteria);
     } else if (category === "price") {
         const sortedData = tutorData.slice(); // Clone the array
         filteredData = criteria === "Ихээс бага"
