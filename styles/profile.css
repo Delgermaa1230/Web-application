@@ -160,7 +160,8 @@ body {
   flex-direction: column;
   row-gap: var(--base-size-x2);
   width: 100%;
-  min-height: calc(var(--base-size-x10*2));
+  min-height: var(--base-size-x20);
+  max-height: var(--base-size-x25);
   background-color: var(--base-color-blue);
   border-radius: var(--base-border-radius-x2);
   padding: var(--base-size-x2) 2rem;
