@@ -160,7 +160,7 @@ body {
   flex-direction: column;
   row-gap: var(--base-size-x2);
   width: 100%;
-  height: 150px;
+  min-height: calc(var(--base-size-x10*2));
   background-color: var(--base-color-blue);
   border-radius: var(--base-border-radius-x2);
   padding: var(--base-size-x2) 2rem;
@@ -168,7 +168,6 @@ body {
 
 
 .subjects-tags {
-  margin-bottom: var(--base-size-x4);
   display: flex;
   align-items: center;
 }
