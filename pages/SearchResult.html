@@ -41,50 +41,52 @@
             <h2>COMP100 Хайлтын Үр Дүн</h2><br>
             <ul>
                 <li>
-                    <button  id="all" class="Filterbtn">Бүх Зар</button>
+                    <button data-category="all" class="Filterbtn">Бүх Зар</button>
                 </li>
-              <li>
-                <button id="online" class="Filterbtn">Онлайн</button>
-              </li>
-              <li>
-                <button id="classroom" class="Filterbtn">Танхим</button>
-              </li>
-              <li>
-                <button  class="Filterbtn" onclick="toggleDropdown(event, 'rating')">Үнэлгээ</button>
-                <ul class="dropdown" id="rating">
-                  <li><button id="rating" class="Filterbtn"> 1 </button></li>
-                  <li><button id="rating" class="Filterbtn"> 2 </button></li>
-                  <li><button id="rating" class="Filterbtn"> 3 </button></li>
-                  <li><button id="rating" class="Filterbtn"> 4 </button></li>
-                  <li><button id="rating" class="Filterbtn"> 5 </button></li>
-                </ul>
-              </li>
-              <li>
-                <button  class="Filterbtn" onclick="toggleDropdown(event, 'ranking')">Цол</button>
-                <ul class="dropdown" id="ranking">
-                  <li><button id="ranking" class="Filterbtn">Ботго</button></li>
-                  <li><button id="ranking" class="Filterbtn">Тором</button></li>
-                  <li><button id="ranking" class="Filterbtn">Супер Тором</button></li>
-                  <li><button id="ranking" class="Filterbtn">Их багш</button></li>
-                </ul>
-              </li>
-              <li>
-                <button  class="Filterbtn" onclick="toggleDropdown(event, 'Price')">Үнээр эрэмблэх</button>
-                <ul class="dropdown" id="Price">
-                    <li><button id="price" class="Filterbtn">Ихээс бага</button></li>
-                    <li><button id="price" class="Filterbtn">Багаас их</button></li>
-                </ul>
-              </li>
+                <li>
+                    <button data-category="online" class="Filterbtn">Онлайн</button>
+                </li>
+                <li>
+                    <button data-category="classroom" class="Filterbtn">Танхим</button>
+                </li>
+                <li>
+                    <button class="Filterbtn" onclick="toggleDropdown(event, 'rating')">Үнэлгээ</button>
+                    <ul class="dropdown" id="rating">
+                        <li><button data-category="rating" data-criteria="1" class="Filterbtn">1</button></li>
+                        <li><button data-category="rating" data-criteria="2" class="Filterbtn">2</button></li>
+                        <li><button data-category="rating" data-criteria="3" class="Filterbtn">3</button></li>
+                        <li><button data-category="rating" data-criteria="4" class="Filterbtn">4</button></li>
+                        <li><button data-category="rating" data-criteria="5" class="Filterbtn">5</button></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="Filterbtn" onclick="toggleDropdown(event, 'ranking')">Цол</button>
+                    <ul class="dropdown" id="ranking">
+                        <li><button data-category="ranking" data-criteria="Ботго" class="Filterbtn">Ботго</button></li>
+                        <li><button data-category="ranking" data-criteria="Тором" class="Filterbtn">Тором</button></li>
+                        <li><button data-category="ranking" data-criteria="Супер Тором" class="Filterbtn">Супер Тором</button></li>
+                        <li><button data-category="ranking" data-criteria="Их багш" class="Filterbtn">Их багш</button></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="Filterbtn" onclick="toggleDropdown(event, 'price')">Үнээр эрэмблэх</button>
+                    <ul class="dropdown" id="price">
+                        <li><button data-category="price" data-criteria="Ихээс бага" class="Filterbtn">Ихээс бага</button></li>
+                        <li><button data-category="price" data-criteria="Багаас их" class="Filterbtn">Багаас их</button></li>
+                    </ul>
+                </li>
             </ul>
-          </section>
-
-
+        </section>
+    
         <script>
             function toggleDropdown(event, id) {
                 event.preventDefault();
+                event.stopPropagation(); // Prevent event from bubbling up
+            
                 const dropdown = document.getElementById(id);
                 dropdown.classList.toggle('show');
-
+            
+                // Close other dropdowns
                 const allDropdowns = document.querySelectorAll('.dropdown');
                 allDropdowns.forEach(d => {
                     if (d !== dropdown && d.classList.contains('show')) {
@@ -92,18 +94,17 @@
                     }
                 });
             }
-
+            
             window.onclick = function (event) {
-                if (!event.target.matches('.Filterbtn')) {
-                    const dropdowns = document.getElementsByClassName('dropdown');
-                    for (let i = 0; i < dropdowns.length; i++) {
-                        const openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
-                    }
+                if (!event.target.closest('.Filterbtn') && !event.target.closest('.dropdown')) {
+                    const dropdowns = document.querySelectorAll('.dropdown');
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('show');
+                    });
                 }
-            }
+            };
+            
+            
         </script>
 
         <!-- search result-->

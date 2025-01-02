@@ -30,7 +30,7 @@ h2 {
     text-decoration: none;
     text-align: center;
     font-size: var(--base-body-font-size);
-    background-color: transparent;
+    background: var(--base-background-color);
     border: solid 1px;
     border-radius: var(--base-border-radius-x2);
     margin-right: var(--base-size);
@@ -38,10 +38,9 @@ h2 {
     cursor: pointer;
 }
 
-.filterMenu ul li ul.dropdown {
+.dropdown {
     border-radius: var(--base-size-x2);
     padding: var(--base-padding);
-    background: var(--base-color-light-orange);
     position: absolute;
     z-index: 999;
     display: none;
@@ -49,9 +48,7 @@ h2 {
     margin-top: var(--base-size);
 }
 
-
-
-.filterMenu ul li .dropdown li {
+ .dropdown li {
     display: block;
     margin-top: var(--base-size);
 }

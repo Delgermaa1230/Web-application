@@ -6,8 +6,8 @@ const tutorData = await loadData();
 function renderTutors(filteredData) {
     document.getElementById("tutors").innerHTML = ""; // Clear the content
 
-    if (filteredData.length === 0) {
-        const noResultsMessage = `<p>Хайлт олдсонгүй</p>`;
+    if (filteredData.length == 0) {
+        const noResultsMessage = `<p style = "color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">Хайлт олдсонгүй</p>`;
         document.getElementById("tutors").insertAdjacentHTML("beforeend", noResultsMessage);
         return;
     }
@@ -24,7 +24,7 @@ function filterTutors(criteria, category) {
     let filteredData;
 
     if (category === "all") {
-        filteredData = tutorData;
+        filteredData = tutorData; 
     } else if (category === "online" || category === "classroom") {
         filteredData = tutorData.filter(tutor => tutor.mode === category);
     } else if (category === "rating") {
@@ -32,23 +32,25 @@ function filterTutors(criteria, category) {
     } else if (category === "ranking") {
         filteredData = tutorData.filter(tutor => tutor.rank === criteria);
     } else if (category === "price") {
-        if (criteria === "Ихээс бага") {
-            filteredData = tutorData.sort((a, b) => b.price - a.price);
-        } else if (criteria === "Багаас их") {
-            filteredData = tutorData.sort((a, b) => a.price - b.price);
-        }
+        const sortedData = tutorData.slice(); // Clone the array
+        filteredData = criteria === "Ихээс бага"
+            ? sortedData.sort((a, b) => b.price - a.price)
+            : sortedData.sort((a, b) => a.price - b.price);
+    } else {
+        filteredData = []; // Default to empty if category doesn't match
     }
 
     renderTutors(filteredData);
 }
 
-// Event listeners for filter buttons
 
 document.querySelectorAll('.Filterbtn').forEach(button => {
     button.addEventListener("click", () => {
-        const criteria = button.innerText.trim();
-        const category = button.closest("ul").id;
+        const criteria = button.dataset.criteria || button.innerText.trim();
+        const category = button.dataset.category;
 
+        console.log({ criteria, category }); // Debugging
         filterTutors(criteria, category);
     });
 });
+
