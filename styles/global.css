@@ -2,16 +2,31 @@
 
 :root {
     --base-size: 8px;
-    --base-size-x1: var(--base-size);
-    --base-size-x2: calc(var(--base-size)*2);
-    --base-size-x3: calc(var(--base-size)*3);
-    --base-size-x4: calc(var(--base-size)*4);
-    --base-size-x5: calc(var(--base-size)*5);
-    --base-size-x6: calc(var(--base-size)*6);
-    --base-size-x7: calc(var(--base-size)*7);
-    --base-size-x8: calc(var(--base-size)*8);
-    --base-size-x9: calc(var(--base-size)*9);
-    --base-size-x10: calc(var(--base-size)*10);
+    --base-size-x1: var(--base-size); /* 8px */
+    --base-size-x2: calc(var(--base-size)*2); /* 16px */
+    --base-size-x3: calc(var(--base-size)*3); /* 24px */
+    --base-size-x4: calc(var(--base-size)*4); /* 32px */
+    --base-size-x5: calc(var(--base-size)*5); /* 40px */
+    --base-size-x6: calc(var(--base-size)*6); /* 48px */
+    --base-size-x7: calc(var(--base-size)*7); /* 56px */
+    --base-size-x8: calc(var(--base-size)*8); /* 64px */
+    --base-size-x9: calc(var(--base-size)*9); /* 72px */
+    --base-size-x10: calc(var(--base-size)*10); /* 80px */
+    --base-size-x11: calc(var(--base-size)*11); /* 88px */
+    --base-size-x12: calc(var(--base-size)*12); /* 96px */
+    --base-size-x13: calc(var(--base-size)*13); /* 104px */
+    --base-size-x14: calc(var(--base-size)*14); /* 112px */
+    --base-size-x15: calc(var(--base-size)*15); /* 120px */
+    --base-size-x16: calc(var(--base-size)*16); /* 128px */
+    --base-size-x17: calc(var(--base-size)*17); /* 136px */
+    --base-size-x18: calc(var(--base-size)*18); /* 144px */
+    --base-size-x19: calc(var(--base-size)*19); /* 152px */
+    --base-size-x20: calc(var(--base-size)*20); /* 160px */
+    --base-size-x21: calc(var(--base-size)*21); /* 168px */
+    --base-size-x22: calc(var(--base-size)*22); /* 176px */
+    --base-size-x23: calc(var(--base-size)*23); /* 184px */
+    --base-size-x24: calc(var(--base-size)*24); /* 192px */
+    --base-size-x25: calc(var(--base-size)*25); /* 200px */
     --base-color-white: #ffffff;
     --base-color-blue: #0093FF;
     --base-color-black: #121212;
