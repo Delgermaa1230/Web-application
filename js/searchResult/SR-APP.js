@@ -1,34 +1,54 @@
-import tutorSec ,{loadData} from "./SR-tutorSec.js";
+import tutorSec, { loadData } from "./SR-tutorSec.js";
 
 const tutorData = await loadData();
 
-function renderTutors(filteredData){
-    const Tutorhtml = 
-    filteredData
-    .map(td =>(new tutorSec(td)).render())
-    .reduce((p,c)=>p+c);    
+// Render tutors after filtering
+function renderTutors(filteredData) {
+    document.getElementById("tutors").innerHTML = ""; // Clear the content
 
-document.getElementById("tutors").insertAdjacentHTML("beforeend",Tutorhtml);
+    if (filteredData.length === 0) {
+        const noResultsMessage = `<p>Хайлт олдсонгүй</p>`;
+        document.getElementById("tutors").insertAdjacentHTML("beforeend", noResultsMessage);
+        return;
+    }
+
+    const Tutorhtml = filteredData
+        .map(td => (new tutorSec(td)).render())
+        .reduce((p, c) => p + c, ""); // Concatenate all tutor HTML
+
+    document.getElementById("tutors").insertAdjacentHTML("beforeend", Tutorhtml);
 }
 
-renderTutors(tutorData);
-
-function filterTutors(criteria){
+// Function to filter tutors based on criteria
+function filterTutors(criteria, category) {
     let filteredData;
 
-    if(criteria === "all"){
+    if (category === "all") {
         filteredData = tutorData;
-    }else {
-        filteredData = tutorData.filter(tutor => tutor.unelgee === criteria)
+    } else if (category === "online" || category === "classroom") {
+        filteredData = tutorData.filter(tutor => tutor.mode === category);
+    } else if (category === "rating") {
+        filteredData = tutorData.filter(tutor => tutor.ratings === parseInt(criteria));
+    } else if (category === "ranking") {
+        filteredData = tutorData.filter(tutor => tutor.rank === criteria);
+    } else if (category === "price") {
+        if (criteria === "Ихээс бага") {
+            filteredData = tutorData.sort((a, b) => b.price - a.price);
+        } else if (criteria === "Багаас их") {
+            filteredData = tutorData.sort((a, b) => a.price - b.price);
+        }
     }
 
     renderTutors(filteredData);
 }
 
-document.getElementById("all").addEventListener("click", () => filterTutors("all"))
-document.getElementById("1").addEventListener("click", () => filterTutors("1"))
-document.getElementById("2").addEventListener("click", () => filterTutors("2"))
-document.getElementById("3").addEventListener("click", () => filterTutors("3"))
-document.getElementById("4").addEventListener("click", () => filterTutors("4"))
-document.getElementById("5").addEventListener("click", () => filterTutors("5"))
+// Event listeners for filter buttons
 
+document.querySelectorAll('.Filterbtn').forEach(button => {
+    button.addEventListener("click", () => {
+        const criteria = button.innerText.trim();
+        const category = button.closest("ul").id;
+
+        filterTutors(criteria, category);
+    });
+});
