@@ -116,7 +116,20 @@ body {
 .love:hover {
     scale: 1.1;
 }
-/*
+
+.love {
+    position: absolute;
+    top: var(--base-size-x2);
+    right: var(--base-size-x2);
+    color: var(--base-color-black);
+    background-color: transparent;
+    border: none;
+    transition: var(--base-transition);
+}
+
+.love:hover {
+    scale: 1.1;
+}
 @media (prefers-color-scheme: dark) {
     
     :root {  
@@ -128,4 +141,3 @@ body {
         --base-color-shadow: var(--base-color-white);
     }
 }
-*/
