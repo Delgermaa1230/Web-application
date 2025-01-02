@@ -1,11 +1,11 @@
-export async function loadData() {
-    const result = await fetch("../data/teacher.json");
-    const data = await result.json();
-    console.log("data", data);
-    return data.teachers;
-}
-
-export default class tutor {
+class NtTeacher extends HTMLElement {
+    async loadData() {
+        const result = await fetch("../data/teacher.json");
+        const data = await result.json();
+        console.log("data", data);
+        return data.teachers;
+    }
+    
     constructor(bagsh) {
         this.id = bagsh.id;
         this.zurag = bagsh.image;
@@ -17,8 +17,7 @@ export default class tutor {
         this.hicheeluud = bagsh.lessons;
     }
 
-
-    render() {
+    #render() {
         const firstLetterOfLastName = this.ovog.charAt(0);
         return `
             <a href="/pages/teachInfo.html">
@@ -52,8 +51,25 @@ export default class tutor {
                 </section>
              </a>`;
     }
-    
+
+    connectedCallback() {
+        //implementation
+        this.love = this.getAttribute("love") || 0;
+        this.#render();
+    }
+
+    disconnectedCallback() {
+        //implementation
+    }
+
+    attributeChangedCallback(name, oldVal, newVal) {
+        //implementation
+    }
+
+    adoptedCallback() {
+        //implementation
+    }
 
 }
 
-
+window.customElements.define('nt-teacher', NtTeacher);
