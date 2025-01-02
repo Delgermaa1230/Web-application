@@ -23,7 +23,7 @@ h2 {
     position: relative;
 }
 
-.filterMenu ul li a {
+.filterMenu ul li .Filterbtn {
     display: block;
     padding: var(--base-padding);
     color: var(--base-text-color);
@@ -35,6 +35,7 @@ h2 {
     border-radius: var(--base-border-radius-x2);
     margin-right: var(--base-size);
     width: 100%;
+    cursor: pointer;
 }
 
 .filterMenu ul li ul.dropdown {
@@ -50,13 +51,13 @@ h2 {
 
 
 
-.filterMenu ul li ul.dropdown li {
+.filterMenu ul li .dropdown li {
     display: block;
     margin-top: var(--base-size);
 }
 
 
-.filterMenu ul li a:hover {
+.Filterbtn:hover {
     background: var(--base-color-light-orange);
     border-color: var(--base-color-light-orange);
     box-shadow: #000000 0.1rem 0.1rem 0.3rem;
