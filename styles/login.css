@@ -33,7 +33,7 @@ h2 {
     background: linear-gradient(90deg, rgba(255,113,0,1) 0%, rgba(114,121,9,1) 35%, rgba(0,212,255,1) 100%);
     border-radius: var(--base-border-radius-x3);
     padding: var(--base-size-x6);
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
 }
 .login {
     position: absolute;
@@ -45,7 +45,7 @@ h2 {
     background: linear-gradient(90deg, rgba(255,113,0,1) 0%, rgba(114,121,9,1) 35%, rgba(0,212,255,1) 100%);
     border-radius: var(--base-border-radius-x3);
     padding: var(--base-size-x6);
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 .center {
