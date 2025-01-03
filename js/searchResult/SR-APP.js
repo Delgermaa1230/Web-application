@@ -19,6 +19,8 @@ function renderTutors(filteredData) {
     document.getElementById("tutors").insertAdjacentHTML("beforeend", Tutorhtml);
 }
 
+renderTutors(tutorData);
+
 // Function to filter tutors based on criteria
 function filterTutors(criteria, category) {
     let filteredData;
