@@ -50,7 +50,7 @@
                     <button data-category="classroom" class="Filterbtn">Танхим</button>
                 </li>
                 <li>
-                    <button class="Filterbtn" onclick="toggleDropdown(event, 'rating')">Үнэлгээ</button>
+                    <button data-category="all" class="Filterbtn" onclick="toggleDropdown(event, 'rating')">Үнэлгээ</button>
                     <ul class="dropdown" id="rating">
                         <li><button data-category="rating" data-criteria="1" class="Filterbtn">1</button></li>
                         <li><button data-category="rating" data-criteria="2" class="Filterbtn">2</button></li>
@@ -60,8 +60,8 @@
                     </ul>
                 </li>
                 <li>
-                    <button class="Filterbtn" onclick="toggleDropdown(event, 'ranking')">Цол</button>
-                    <ul class="dropdown" id="ranking">
+                    <button data-category="all" class="Filterbtn" onclick="toggleDropdown(event, 'ranking')">Цол</button>
+                    <ul class="dropdown" id="ranking" >
                         <li><button data-category="ranking" data-criteria="Ботго" class="Filterbtn">Ботго</button></li>
                         <li><button data-category="ranking" data-criteria="Тором" class="Filterbtn">Тором</button></li>
                         <li><button data-category="ranking" data-criteria="Супер Тором" class="Filterbtn">Супер Тором</button></li>
@@ -69,8 +69,8 @@
                     </ul>
                 </li>
                 <li>
-                    <button class="Filterbtn" onclick="toggleDropdown(event, 'price')">Үнээр эрэмблэх</button>
-                    <ul class="dropdown" id="price">
+                    <button data-category="all" class="Filterbtn" onclick="toggleDropdown(event, 'price')">Үнээр эрэмблэх</button>
+                    <ul class="dropdown" id="price" >
                         <li><button data-category="price" data-criteria="Ихээс бага" class="Filterbtn">Ихээс бага</button></li>
                         <li><button data-category="price" data-criteria="Багаас их" class="Filterbtn">Багаас их</button></li>
                     </ul>
