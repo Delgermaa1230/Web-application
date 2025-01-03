@@ -33,7 +33,6 @@ function renderLovedTs() {
     const lovedTsHTML = lovedHTMLTs.reduce((prev, cur) => prev + cur, '');
     document.getElementById("lovedTutors").innerHTML = lovedTsHTML;
 
-    // Attach event listeners to love buttons
     document.querySelectorAll(".love").forEach(button => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
