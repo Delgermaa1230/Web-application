@@ -4,6 +4,11 @@ h2 {
     color: var(--base-text-color);
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 .main {
     margin: var(--base-size-x3) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
 }
