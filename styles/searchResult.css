@@ -60,6 +60,27 @@ h2 {
     box-shadow: #000000 0.1rem 0.1rem 0.3rem;
     transition: 0.3s;
 }
+.filterMenu ul li .Filterbutton {
+    display: block;
+    padding: var(--base-padding);
+    color: var(--base-text-color);
+    text-decoration: none;
+    text-align: center;
+    font-size: var(--base-body-font-size);
+    background: var(--base-background-color);
+    border: solid 1px;
+    border-radius: var(--base-border-radius-x2);
+    margin-right: var(--base-size);
+    width: 100%;
+    cursor: pointer;
+}
+
+.Filterbutton:hover {
+    background: var(--base-color-light-orange);
+    border-color: var(--base-color-light-orange);
+    box-shadow: #000000 0.1rem 0.1rem 0.3rem;
+    transition: 0.3s;
+}
 
 .price {
     width: 100%;
