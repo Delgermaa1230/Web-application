@@ -1,15 +1,20 @@
 h2 {
     font-size: var(--base-h2-font-size);
-    margin-bottom: var(--base-size-x3);
     color: var(--base-text-color);
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    align-items: start;
 }
 
 .main {
+    flex: 1;
     margin: var(--base-size-x3) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
 }
 
