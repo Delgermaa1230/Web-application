@@ -136,12 +136,6 @@ body {
     width: 100%;
 }
 
-h2 {
-    font-size: var(--base-h2-font-size);
-    margin-bottom: var(--base-size-x3);
-    color: var(--base-text-color);
-}
-
 .tutorImage {
     width: 100%;
     overflow: hidden;
