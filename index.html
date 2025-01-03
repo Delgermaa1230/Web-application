@@ -15,32 +15,15 @@
 <body>
     <header>
         <script>
-            function loveButtonClick(event) {
-                event.stopPropagation(); 
-                event.preventDefault();
-                alert("You loved this!");
-            }
-            </script>
-        <div class="header-first-box"> 
+        
+        </script>
+        <div class="header-first-box">
             <a href="../index.html">
                 <h1>Numteach</h1>
             </a>
-            <!-- <form id="" action="" name="">
-                <input type="text" placeholder="Хайлт хийх...">
-                <button type="submit">
-
-                    <div class="search-icon">
-                        <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="11" cy="11" r="8" stroke="white" stroke-width="4" fill="none" />
-                       <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="4" />
-                        </svg>
-                    </div>
-                </button>
-            </form> -->
         </div>
         <nav>
-            
+
             <a href="#"><i class="fa fa-question"></i></a>
             <a href="/pages/lovedTeachers.html"><i class="fa fa-heart"></i></a>
             <a href="/pages/login.html">Багш болох</a>
@@ -97,6 +80,15 @@
             </li>
         </ul>
     </footer>
+    <script>
+        document.querySelectorAll(".love").forEach((button) => {
+            button.addEventListener("click", (event) => {
+              event.preventDefault(); 
+              const Tid = event.target.closest(".love").dataset.id; 
+              loveT(Tid);
+            });
+          });
+    </script>
 
 </body>
 
