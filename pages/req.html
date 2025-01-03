@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="header-first-box">
             <a href="../index.html">
@@ -27,117 +26,117 @@
         </div>
         <nav>
             <a href="#"><i class="fa fa-question"></i></a>
+            <a href="./lovedTeachers.html"><i class="fa fa-heart"></i></a>
+            <a href="req.html">Багш болох</a>
             <a href="#"><i class="fa fa-user"></i></a>
         </nav>
     </header>
 
 
-    <section>
-           <div class="form-box">
-               
-               <!------------------- login form -------------------------->
-               <div class="login-container" id="login">
-                <header>Login</header>
-                   <div class="input-box">
-                       <input type="text" class="input-field" placeholder="Username or Email">
-                       <i class="bx bx-user"></i>
-                   </div>
-                   <div class="input-box">
-                       <input type="password" class="input-field" placeholder="Password">
-                       <i class="bx bx-lock-alt"></i>
-                   </div>
-                   <div class="input-box">
-                       <input type="submit" class="submit" value="Sign In">
-                   </div>
-                   <div class="two-col">
-                       <div class="one">
-                           <input type="checkbox" id="login-check">
-                           <label for="login-check"> Remember Me</label>
-                       </div>
-                       <div class="two">
-                           <label><a href="#">Forgot password?</a></label>
-                       </div>
-                   </div>
-                    <div class="top">
-                        <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
-                    </div>
-               </div>
-               <!------------------- registration form -------------------------->
-               <div class="register-container" id="register">
-                <header>Sign Up</header>
-                   <div class="two-forms">
-                       <div class="input-box">
-                           <input type="text" class="input-field" placeholder="Firstname">
-                           <i class="bx bx-user"></i>
-                       </div>
-                       <div class="input-box">
-                           <input type="text" class="input-field" placeholder="Lastname">
-                           <i class="bx bx-user"></i>
-                       </div>
-                   </div>
-                   <div class="input-box">
-                       <input type="text" class="input-field" placeholder="Email">
-                       <i class="bx bx-envelope"></i>
-                   </div>
-                   <div class="input-box">
-                       <input type="password" class="input-field" placeholder="Password">
-                       <i class="bx bx-lock-alt"></i>
-                   </div>
-                   <div class="input-box">
-                       <input type="submit" class="submit" value="Register">
-                   </div>
-                   <div class="two-col">
-                       <div class="one">
-                           <input type="checkbox" id="register-check">
-                           <label for="register-check"> Remember Me</label>
-                       </div>
-                       <div class="two">
-                           <label><a href="#">Terms & conditions</a></label>
-                       </div>
-                   </div>
-                   <div class="top">
-                    <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+    <section class="main">
+        <div class="form-box">
 
+            
+            <!-- login-->
+            <div class="login" id="login">
+                <div class="center">
+                    <h2>Нэвтрэх</h2>
                 </div>
-               </div>
-           </div>
-       </div>   
-       <script>
-          
-          function myMenuFunction() {
-           var i = document.getElementById("navMenu");
-           if(i.className === "nav-menu") {
-               i.className += " responsive";
-           } else {
-               i.className = "nav-menu";
-           }
-          }
-        
-       </script>
-       <script>
-           var a = document.getElementById("loginBtn");
-           var b = document.getElementById("registerBtn");
-           var x = document.getElementById("login");
-           var y = document.getElementById("register");
-           function login() {
-               x.style.left = "4px";
-               y.style.right = "-520px";
-               a.className += " white-btn";
-               b.className = "btn";
-               x.style.opacity = 1;
-               y.style.opacity = 0;
-           }
-           function register() {
-               x.style.left = "-510px";
-               y.style.right = "5px";
-               a.className = "btn";
-               b.className += " white-btn";
-               x.style.opacity = 0;
-               y.style.opacity = 1;
-           }
-       </script>
-       </section>
+                <div class="ph-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Мэйл хаяг" class="placeholder">
+                </div>
+                <div class="ph-container">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" placeholder="Нэвтрэх нууц үг" class="placeholder">
+                </div>
+                <div class="remember-and-terms">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> Сануулах</label>
+                    </div>
+                    <div class="two">
+                        <a href="#">нууц үг сэргээх</a>
+                    </div>
+                </div>
+                <button class="important-button">
+                    Нэвтрэх
+                </button>
+                <div class="center">
+                    <span>
+                        Бүртгэлгүй бол 
+                        <a href="#"  onclick="register()">
+                            энд дарна уу
+                        </a>
+                    </span>
+                </div>
+            </div>
 
+            <!-- register-->
+            <div class="register" id="register">
+                <div class="center">
+                    <h2>Бүртгүүүлэх</h2>
+                </div>
+                <div class="fullName">
+                    <div class="ph-container">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Овог" class="placeholder">
+                    </div>
+                    <div class="ph-container">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Нэр" class="placeholder">
+                    </div>
+                </div>
+                <div class="ph-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Мэйл хаяг" class="placeholder">
+                </div>
+                <div class="ph-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Утасний дугаар" class="placeholder">
+                </div>
+                <div class="ph-container">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" placeholder="Нэвтрэх нууц үг" class="placeholder">
+                </div>
+                <div class="remember-and-terms">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> Сануулах</label>
+                    </div>
+                    <div class="two">
+                        <a href="#" >Үйлчилгээний нөхцөл</a>
+                    </div>
+                </div>
+                <button class="important-button">
+                    Бүртгүүүлэх
+                </button>
+                <div class="center">
+                    <span>
+                        Нэвтрэх бол 
+                        <a href="#"onclick="login()">
+                            энд дарна уу
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <script>    
+            let x = document.getElementById("login");
+            let y = document.getElementById("register");
+
+            function login(){
+                y.style.right = "-700px"
+                x.style.left = "0px"
+            }
+            function register(){
+                x.style.left ="-700px";
+                y.style.right = "0px"
+            }
+        </script>
+
+    </section>
     <footer>
         <ul>
             <li>
