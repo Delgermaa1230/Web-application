@@ -1,29 +1,56 @@
-import classTutor ,{loadData} from "./searchResult/SR-tutorSec.js";
+import classTutor, { loadData } from "./searchResult/SR-tutorSec.js";
 
-const tutors = await loadData();
+async function initialize() {
+    const tutors = await loadData();
+    renderTeachers(tutors);
+}
 
 function getURLParams() {
     const params = new URLSearchParams(window.location.search);
     return {
-        lessons: params.get("lesson") ? params.get("lesson").split(",") : null, 
+        lessons: params.get("lesson") ? params.get("lesson").split(",") : [],
     };
 }
 
-function renderTeachers(teachers) {
-    const lessons = getURLParams();
+console.log(getURLParams());
 
+function renderTeachers(teachers) {
+    const { lessons } = getURLParams();
+
+    // Ensure lessons is an array
+    if (!Array.isArray(lessons)) {
+        console.error("Invalid lessons format:", lessons);
+        return;
+    }
+
+    // Filter teachers based on lessons
     const filteredTeachers = teachers.filter(teacher => {
-        const matchesLessons = lessons
-            ? lessons.some(lesson => teacher.lesson.toLowerCase().includes(lesson.toLowerCase()))
+        return lessons.length
+            ? lessons.some(lesson => teacher.lesson?.toLowerCase().includes(lesson.toLowerCase()))
             : true;
-        return matchesLessons;
     });
 
+    // Check if the container exists
     const container = document.getElementById("tutors");
+    if (!container) {
+        console.error("No element with ID 'tutors' found.");
+        return;
+    }
+
+    // Render the filtered teachers
     container.innerHTML = filteredTeachers
-        .map(t => new classTutor(t).render())
-        .reduce((p,c)=>p+c);
+        .map(t => {
+            try {
+                return new classTutor(t).render();
+            } catch (e) {
+                console.error("Error rendering teacher:", t, e);
+                return "";
+            }
+        })
+        .join("");
+
+    console.log("Rendered teachers:", container.innerHTML);
 }
 
-renderTeachers(tutors);
 
+initialize();

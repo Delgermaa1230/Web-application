@@ -1,10 +1,20 @@
 h2 {
     font-size: var(--base-h2-font-size);
-    margin-bottom: var(--base-size-x3);
     color: var(--base-text-color);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    align-items: start;
+}
+
 .main {
+    flex: 1;
     margin: var(--base-size-x3) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
 }
 
@@ -23,24 +33,24 @@ h2 {
     position: relative;
 }
 
-.filterMenu ul li a {
+.filterMenu ul li .Filterbtn {
     display: block;
     padding: var(--base-padding);
     color: var(--base-text-color);
     text-decoration: none;
     text-align: center;
     font-size: var(--base-body-font-size);
-    background-color: transparent;
+    background: var(--base-background-color);
     border: solid 1px;
     border-radius: var(--base-border-radius-x2);
     margin-right: var(--base-size);
     width: 100%;
+    cursor: pointer;
 }
 
-.filterMenu ul li ul.dropdown {
+.dropdown {
     border-radius: var(--base-size-x2);
     padding: var(--base-padding);
-    background: var(--base-color-light-orange);
     position: absolute;
     z-index: 999;
     display: none;
@@ -48,15 +58,34 @@ h2 {
     margin-top: var(--base-size);
 }
 
-
-
-.filterMenu ul li ul.dropdown li {
+ .dropdown li {
     display: block;
     margin-top: var(--base-size);
 }
 
 
-.filterMenu ul li a:hover {
+.Filterbtn:hover {
+    background: var(--base-color-light-orange);
+    border-color: var(--base-color-light-orange);
+    box-shadow: #000000 0.1rem 0.1rem 0.3rem;
+    transition: 0.3s;
+}
+.filterMenu ul li .Filterbutton {
+    display: block;
+    padding: var(--base-padding);
+    color: var(--base-text-color);
+    text-decoration: none;
+    text-align: center;
+    font-size: var(--base-body-font-size);
+    background: var(--base-background-color);
+    border: solid 1px;
+    border-radius: var(--base-border-radius-x2);
+    margin-right: var(--base-size);
+    width: 100%;
+    cursor: pointer;
+}
+
+.Filterbutton:hover {
     background: var(--base-color-light-orange);
     border-color: var(--base-color-light-orange);
     box-shadow: #000000 0.1rem 0.1rem 0.3rem;
@@ -105,12 +134,6 @@ h2 {
     align-items: stretch;
     height: 100%;
     width: 100%;
-}
-
-h2 {
-    font-size: var(--base-h2-font-size);
-    margin-bottom: var(--base-size-x3);
-    color: var(--base-text-color);
 }
 
 .tutorImage {

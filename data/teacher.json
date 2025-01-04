@@ -13,8 +13,11 @@
       "image": "../imgs/img1.png",
       "description": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
       "lessons": [
-        "Math", "ALgo", "C"
-      ]
+        "Math", "algo", "C"
+      ],
+      "mode": "online",
+      "price": 1000,
+      "ranking": "Ботго"
     },
     {
       "id": 2,
@@ -23,6 +26,7 @@
       "age": "28",
       "gender": "F",
       "ratings": 4,
+      "ranking": "Ботго",
       "numberOfRatings": 15,
       "email": "nomintomor@gmail.com",
       "phone": "89345567",
@@ -30,7 +34,9 @@
       "description": "Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл.",
       "lessons": [
         "Физик", "C", "Эрчим хүчний систем"
-      ]
+      ],
+      "mode": "online",
+      "price": 2000
     },
     {
       "id": 3,
@@ -39,6 +45,7 @@
       "age": "32",
       "gender": "M",
       "ratings": 3,
+      "ranking": "Их багш",
       "numberOfRatings": 20,
       "email": "sanjidmunkh@gmail.com",
       "phone": "89234764",
@@ -46,7 +53,9 @@
       "description": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээлийг сайн заадаг.",
       "lessons": [
         "Math", "Статистик", "Төрөл бүрийн тооцоолол"
-      ]
+      ],
+      "mode": "online",
+      "price": 1000
     },
     {
       "id": 4,
@@ -55,14 +64,16 @@
       "age": "25",
       "gender": "M",
       "ratings": 5,
+      "ranking": "Ботго",
       "numberOfRatings": 8,
       "email": "tumenjargal@gmail.com",
       "phone": "89385623",
       "image": "../imgs/img4.png",
       "description": "Би инженерчлэлийн багшаар ажиллахыг хүсдэг. Хэрэглээний математик заах дуртай.",
       "lessons": [
-        "Math", "Математик ба эдийн засаг"
+        "math", "Математик ба эдийн засаг"
       ]
+      
     },
     {
       "id": 5,
@@ -71,6 +82,7 @@
       "age": "30",
       "gender": "M",
       "ratings": 4,
+      "ranking": "Ботго",
       "numberOfRatings": 12,
       "email": "ganbatlhagvasuren@gmail.com",
       "phone": "89452374",
@@ -87,6 +99,7 @@
       "age": "27",
       "gender": "F",
       "ratings": 5,
+      "ranking": "Тором",
       "numberOfRatings": 10,
       "email": "namuunaatseren@gmail.com",
       "phone": "89562347",
@@ -103,6 +116,7 @@
       "age": "34",
       "gender": "M",
       "ratings": 4,
+      "ranking": "Тором",
       "numberOfRatings": 14,
       "email": "bilguungalbadrah@gmail.com",
       "phone": "89673452",
@@ -119,6 +133,7 @@
       "age": "22",
       "gender": "F",
       "ratings": 4,
+      "ranking": "Супер Тором",
       "numberOfRatings": 9,
       "email": "mongonzayaatomer@gmail.com",
       "phone": "89745263",
@@ -126,7 +141,8 @@
       "description": "Би математик, физикийн хичээлүүдийг сонирхдог. Студентуудтай харилцахад хичээл заахдаа таатай байдаг.",
       "lessons": [
         "Math", "Физик", "Algo"
-      ]
+      ],
+      "mode": "classroom"
     },
     {
       "id": 9,
@@ -135,6 +151,7 @@
       "age": "29",
       "gender": "M",
       "ratings": 5,
+      "ranking": "Супер Тором",
       "numberOfRatings": 16,
       "email": "jargalsaihanbatzor@gmail.com",
       "phone": "89983412",
@@ -142,7 +159,8 @@
       "description": "Би мэдээллийн технологи, програмчлалын багш. Студентуудын амжилтанд тустай байхын тулд сайн сургалт явуулдаг.",
       "lessons": [
         "Database", "Мэдээллийн технологи"
-      ]
+      ],
+      "mode": "classroom"
     },
     {
       "id": 10,
@@ -151,6 +169,7 @@
       "age": "26",
       "gender": "M",
       "ratings": 4,
+      "ranking": "Их багш",
       "numberOfRatings": 13,
       "email": "tsogt-erdene@gmail.com",
       "phone": "89273568",

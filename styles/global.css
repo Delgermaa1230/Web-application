@@ -2,23 +2,40 @@
 
 :root {
     --base-size: 8px;
-    --base-size-x1: var(--base-size);
-    --base-size-x2: calc(var(--base-size)*2);
-    --base-size-x3: calc(var(--base-size)*3);
-    --base-size-x4: calc(var(--base-size)*4);
-    --base-size-x5: calc(var(--base-size)*5);
-    --base-size-x6: calc(var(--base-size)*6);
-    --base-size-x7: calc(var(--base-size)*7);
-    --base-size-x8: calc(var(--base-size)*8);
-    --base-size-x9: calc(var(--base-size)*9);
-    --base-size-x10: calc(var(--base-size)*10);
-    --base-color-white: #fff;
+    --base-size-x1: var(--base-size); /* 8px */
+    --base-size-x2: calc(var(--base-size)*2); /* 16px */
+    --base-size-x3: calc(var(--base-size)*3); /* 24px */
+    --base-size-x4: calc(var(--base-size)*4); /* 32px */
+    --base-size-x5: calc(var(--base-size)*5); /* 40px */
+    --base-size-x6: calc(var(--base-size)*6); /* 48px */
+    --base-size-x7: calc(var(--base-size)*7); /* 56px */
+    --base-size-x8: calc(var(--base-size)*8); /* 64px */
+    --base-size-x9: calc(var(--base-size)*9); /* 72px */
+    --base-size-x10: calc(var(--base-size)*10); /* 80px */
+    --base-size-x11: calc(var(--base-size)*11); /* 88px */
+    --base-size-x12: calc(var(--base-size)*12); /* 96px */
+    --base-size-x13: calc(var(--base-size)*13); /* 104px */
+    --base-size-x14: calc(var(--base-size)*14); /* 112px */
+    --base-size-x15: calc(var(--base-size)*15); /* 120px */
+    --base-size-x16: calc(var(--base-size)*16); /* 128px */
+    --base-size-x17: calc(var(--base-size)*17); /* 136px */
+    --base-size-x18: calc(var(--base-size)*18); /* 144px */
+    --base-size-x19: calc(var(--base-size)*19); /* 152px */
+    --base-size-x20: calc(var(--base-size)*20); /* 160px */
+    --base-size-x21: calc(var(--base-size)*21); /* 168px */
+    --base-size-x22: calc(var(--base-size)*22); /* 176px */
+    --base-size-x23: calc(var(--base-size)*23); /* 184px */
+    --base-size-x24: calc(var(--base-size)*24); /* 192px */
+    --base-size-x25: calc(var(--base-size)*25); /* 200px */
+    --base-color-white: #ffffff;
+    --base-color-blue: #0093FF;
     --base-color-black: #121212;
     --base-color-dark-grey: #413D3D;
     --base-color-grey: #6d6d6d;
     --base-color-grey-medium: #d9d9d9;
     --base-color-grey-light: #f3f3f3;
     --base-color-orange: #ff9b00;
+    --base-color-secondary-orange:#ffe1b3;
     --base-color-light-orange: #FEF4E4;
     --base-color-system-success: #5bca8d;
     --base-color-system-success-light: #f2fbf6;
@@ -79,16 +96,20 @@ body {
 }
 
 .important-button {
-    padding: var(--base-size-x2);
-    margin: auto;
-    border-radius: var(--base-border-radius-x2);
     border: none;
     background-color: var(--base-color-orange);
+    color: var(--base-color-white);
+    padding: var(--base-padding);
+    border-radius: var(--base-border-radius-x3);
+    font-size: var(--base-button-large-font-size);
+    font-weight: var(--base-medium-font-weight);
     transition: var(--base-transition);
 }
 
 .important-button:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
+    font-size: var(--base-button-large-font-size);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .important-button a {
@@ -111,6 +132,19 @@ body {
     scale: 1.1;
 }
 
+.love {
+    position: absolute;
+    top: var(--base-size-x2);
+    right: var(--base-size-x2);
+    color: var(--base-color-black);
+    background-color: transparent;
+    border: none;
+    transition: var(--base-transition);
+}
+
+.love:hover {
+    scale: 1.1;
+}
 @media (prefers-color-scheme: dark) {
     
     :root {  

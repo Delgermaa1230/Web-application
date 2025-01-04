@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>huselt1 </title>
+    <link rel="stylesheet" href="/styles/header_footer.css">
+    <link rel="icon" type="image/png" href="/imgs/favicon.png">
+    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="header-first-box">
+            <a href="../index.html">
+                <h1>Numteach</h1>
+            </a>
+            <form id="" action="" name="">
+                <input type="text" placeholder="Хайлт хийх...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <nav>
+            <a href="#"><i class="fa fa-question"></i></a>
+            <a href="./lovedTeachers.html"><i class="fa fa-heart"></i></a>
+            <a href="req.html">Багш болох</a>
+            <a href="#"><i class="fa fa-user"></i></a>
+        </nav>
+    </header>
+
+
+    <section class="main">
+        <div class="form-box">
+
+            
+            <!-- login-->
+            <div class="login" id="login">
+                <div class="center">
+                    <h2>Нэвтрэх</h2>
+                </div>
+                <div class="ph-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Мэйл хаяг" class="placeholder">
+                </div>
+                <div class="ph-container">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" placeholder="Нэвтрэх нууц үг" class="placeholder">
+                </div>
+                <div class="remember-and-terms">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> Сануулах</label>
+                    </div>
+                    <div class="two">
+                        <a href="#">нууц үг сэргээх</a>
+                    </div>
+                </div>
+                <button class="important-button">
+                    Нэвтрэх
+                </button>
+                <div class="center">
+                    <span>
+                        Бүртгэлгүй бол 
+                        <a href="#"  onclick="register()">
+                            энд дарна уу
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- register-->
+            <div class="register" id="register">
+                <div class="center">
+                    <h2>Бүртгүүлэх</h2>
+                </div>
+                <div class="fullName">
+                    <div class="ph-container">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Овог" class="placeholder">
+                    </div>
+                    <div class="ph-container">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Нэр" class="placeholder">
+                    </div>
+                </div>
+                <div class="ph-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Мэйл хаяг" class="placeholder">
+                </div>
+                <div class="ph-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Утасний дугаар" class="placeholder">
+                </div>
+                <div class="ph-container">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" placeholder="Нэвтрэх нууц үг" class="placeholder">
+                </div>
+                <div class="remember-and-terms">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> Сануулах</label>
+                    </div>
+                    <div class="two">
+                        <a href="#" >Үйлчилгээний нөхцөл</a>
+                    </div>
+                </div>
+                <button class="important-button">
+                    Бүртгүүүлэх
+                </button>
+                <div class="center">
+                    <span>
+                        Нэвтрэх бол 
+                        <a href="#"onclick="login()">
+                            энд дарна уу
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <script>    
+            let x = document.getElementById("login");
+            let y = document.getElementById("register");
+
+            function login(){
+                y.style.right = "-700px"
+                x.style.left = "0px"
+            }
+            function register(){
+                x.style.left ="-700px";
+                y.style.right = "0px"
+            }
+        </script>
+
+    </section>
+    <footer>
+        <ul>
+            <li>
+                <h4>Тусламж</h4>
+                <ul>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Заавар</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>Холбогдох</4>
+                    <ul>
+                        <li>Утас:<a href="tel:+97688888811">+976 88 888811</a></li>
+                        <li>Мэйл:<a href="mailto: example@teach.com">example@teach.com</a></li>
+                    </ul>
+            </li>
+            <li>
+                <h4>Холбоосууд</h4>
+                <ul id="social-icons">
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

@@ -1,9 +1,12 @@
 h2 {
     font-size: var(--base-h2-font-size);
     color: var(--base-text-color);
+    padding: var(--base-padding);
 }
 
-span, b, p {
+span,
+b,
+p {
     color: var(--base-text-color);
     font-size: var(--base-body-font-size);
 }
@@ -12,7 +15,7 @@ span, b, p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0.5rem 2rem;
+    margin: var(--base-size-x2) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
     gap: var(--base-size-x4);
 }
 
@@ -78,18 +81,84 @@ span, b, p {
     justify-content: center;
 }
 
+.timetable {
+    border-radius: var(--base-border-radius-x3);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: var(--base-color-light-orange);
+    padding: var(--base-size-x4);
+    border: 0.5px solid var(--base-color-secondary-orange);
+}
 
+.cell {
+    background: var(--base-color-white);
+    padding: var(--base-size);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.header {
+    color: var(--base-text-color);
+    padding: var(--base-size);
+    font-size: var(--base-caption-font-size);
+    font-weight: var(--base-medium-font-weight);
+}
+
+.cell {
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: var(--base-color-secondary-orange);
+}
+
+.cell.selected {
+    background-color: var(--base-color-orange);
+}
+
+
+input,
+textarea {
+    border-radius: var(--base-border-radius-x3);
+    padding: var(--base-padding);
+    border: solid var(--base-color-black) 1px;
+    transition: var(--base-transition);
+    margin: var(--base-size) var(--base-size-x4);
+    width: 50%;
+}
+
+input,
+textarea::placeholder {
+    font-size: var(--base-caption-font-size);
+}
+
+#message {
+    width: 90%;
+}
+
+form {
+    display: grid;
+}
+
+.important-button {
+    justify-self: center;
+}
 
 @media (max-width: 700px) {
     .main {
         flex-direction: column;
         justify-content: center;
     }
+
     .sticky-part-wrapper {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
+
     .teacher-sticky-box {
         position: relative;
         justify-self: center;
