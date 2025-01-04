@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/header_footer.css">
     <link rel="stylesheet" href="../styles/index.css">
-    <script type="module" src="../js/topteacherFilter.js"></script>
+    
 </head>
 <body>
     <header>
@@ -51,6 +51,43 @@
             </li>
         </ul>
     </footer>
+    <script type="module" src="../js/searchResult/SR-tutorSec.js"></script>
+<script type="module">
+    document.addEventListener("DOMContentLoaded", async () => {
+        const { default: tutor, loadLovedTeacherData } = await import("../js/searchResult/SR-tutorSec.js");
+        const lovedTeachers = await loadLovedTeacherData();
+        const tutorsBox = document.getElementById("topTutors");
+
+        if (!lovedTeachers || lovedTeachers.length === 0) {
+            tutorsBox.innerHTML = "<p>Танд таалагдсан багш нар одоогоор алга байна.</p>";
+            return;
+        }
+
+        const tutorsHTML = lovedTeachers
+            .map(teacher => (new tutor(teacher)).render())
+            .join('');
+        
+        tutorsBox.insertAdjacentHTML("beforeend", tutorsHTML);
+    });
+
+    window.loveButtonClick = function(event, teacherName) {
+        event.stopPropagation();
+        event.preventDefault();
+        
+        let lovedTeachers = JSON.parse(localStorage.getItem("lovedTeachers")) || [];
+        const isLoved = lovedTeachers.includes(teacherName);
+        
+        if (isLoved) {
+            lovedTeachers = lovedTeachers.filter(name => name !== teacherName);
+            alert(`${teacherName} таны таалагдсан жагсаалтаас хасагдлаа!`);
+            location.reload();
+        }
+
+        localStorage.setItem("lovedTeachers", JSON.stringify(lovedTeachers));
+    }
+</script>
+    </script>
+    
    
 </body>
 </html>
