@@ -27,7 +27,7 @@ export default class tutor {
                 <section class="tutorCard">
                     <div class="tutorImage">
                         <img src="${this.zurag}" alt="fe">
-                        <button class="love" data-id="${this.id}"><svg
+                        <button style="padding: 5px" class="love" data-id="${this.id}"><svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
                             fill="none"

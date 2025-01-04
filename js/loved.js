@@ -2,7 +2,7 @@ function renderLovedTs() {
     const lovedTs = JSON.parse(localStorage.getItem('lovedTs')) || [];
 
     console.log(lovedTs);
-    
+
     if (lovedTs.length === 0) {
         document.getElementById("lovedTutors").innerHTML = `<p style = "color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)" >Таалагдсан багш алга!</p>`;
         return;
@@ -13,7 +13,7 @@ function renderLovedTs() {
             <section class="tutorCard">
                 <div class="tutorImage">
                     <img src="${u.image}" alt="fe">
-                    <button class="love" data-id="${u.id}">
+                    <button style="padding: 5px" class="love" data-id="${u.id}">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" 
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" 
                             stroke-linejoin="round" class="heart-icon" style="width: 24px; height: 24px;">
