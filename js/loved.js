@@ -1,7 +1,10 @@
 function renderLovedTs() {
     const lovedTs = JSON.parse(localStorage.getItem('lovedTs')) || [];
+
+    console.log(lovedTs);
+    
     if (lovedTs.length === 0) {
-        document.getElementById("lovedTutors").innerHTML = "<p>Таалагдсан багш алга!</p>";
+        document.getElementById("lovedTutors").innerHTML = `<p style = "color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)" >Таалагдсан багш алга!</p>`;
         return;
     }
 
