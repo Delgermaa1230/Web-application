@@ -11,26 +11,39 @@
     <link rel="stylesheet" href="styles/index.css">
     <script type="module" src="./js/topteacherFilter.js"></script>
 </head>
-<style>
-    .love.loved .heart-icon path {
-        fill: var(--base-color-orange);  
-      } 
-</style>
+
 <body>
     <header>
         <script>
-        
-        </script>
-        <div class="header-first-box">
+            function loveButtonClick(event) {
+                event.stopPropagation(); 
+                event.preventDefault();
+                alert("You loved this!");
+            }
+            </script>
+        <div class="header-first-box"> 
             <a href="../index.html">
                 <h1>Numteach</h1>
             </a>
+            <!-- <form id="" action="" name="">
+                <input type="text" placeholder="Хайлт хийх...">
+                <button type="submit">
+
+                    <div class="search-icon">
+                        <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11" r="8" stroke="white" stroke-width="4" fill="none" />
+                       <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="4" />
+                        </svg>
+                    </div>
+                </button>
+            </form> -->
         </div>
         <nav>
-
+            
             <a href="#"><i class="fa fa-question"></i></a>
             <a href="/pages/lovedTeachers.html"><i class="fa fa-heart"></i></a>
-            <a href="/pages/login.html">Багш болох</a>
+            <a href="/pages/req1.html">Багш болох</a>
             <a href="/pages/profile.html"><i class="fa fa-user"></i></a>
         </nav>
     </header>
@@ -46,10 +59,10 @@
                 </form>
             </div>
             <div class="common-lessons-nav">
-                <a href="/pages/SearchResult.html?lesson=Algo">Алгоритм</a>
-                <a href="/pages/SearchResult.html?lesson=C">Програмчилалын хэл Си</a>
-                <a href="/pages/SearchResult.html?lesson=Math">Математик 1б</a>
-                <a href="/pages/SearchResult.html?lesson=DB">Өгөгдлийн сангийн үндэс</a>
+                <a href="/pages/SearchResult.html">Алгоритм</a>
+                <a href="/pages/SearchResult.html">Програмчилалын хэл Си</a>
+                <a href="/pages/SearchResult.html">Математик 1б</a>
+                <a href="/pages/SearchResult.html">Өгөгдлийн сангийн үндэс</a>
             </div>
         </div>
         <section class="container">
