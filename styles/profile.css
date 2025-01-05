@@ -40,6 +40,119 @@ body {
   cursor: pointer;
 }
 
+.highlight1{
+    align-items: center; 
+    display: inline-block;
+    background-color:#fff;
+    display: inline-block;
+    width: calc(var(--base-size)*25); 
+    padding: calc(var(--base-size)*0.7); 
+    text-align: center; 
+    font-size: 12px;
+    margin-left: calc(var(--base-size)*12);
+}
+
+.highlight2{
+    align-items: center; 
+    display: inline-block;
+    background-color:#fff;
+    display: inline-block;
+    width: calc(var(--base-size)*25); 
+    padding: calc(var(--base-size)*0.7); 
+    text-align: center; 
+    font-size: calc(var(--base-size)*1.5);
+    margin-left: calc(var(--base-size)*13);
+}
+
+.highlight3{
+    align-items: center; 
+    display: inline-block;
+    background-color:#fff;
+    display: inline-block;
+    width: calc(var(--base-size)*25); 
+    padding: calc(var(--base-size)*0.7); 
+    text-align: center; 
+    font-size: calc(var(--base-size)*1.5);
+    margin-left: calc(var(--base-size)*5.5);
+}
+
+.highlight4{
+    align-items: center; 
+    display: inline-block;
+    background-color:#fff;
+    display: inline-block;
+    width: calc(var(--base-size)*25); 
+    padding: calc(var(--base-size)*0.7); 
+    text-align: center; 
+    font-size: calc(var(--base-size)*1.5);
+    margin-left: calc(var(--base-size)*6);
+}
+
+/*sudalsan, sudalj bui*/
+
+.sudaljbui h2, .sudalsan h2 {
+    font-size: calc(var(--base-size)*2.4);
+    font-weight: bold;
+    margin-bottom: calc(var(--base-size)*2);
+    text-align: center;
+}
+
+.sudaljbui{
+    background-color: var(--base-background-color-orange);
+    border-radius: calc(var(--base-size)*2);
+    padding: calc(var(--base-size)*3);
+    width: calc(var(--base-size)*50);
+    text-align:left;
+    margin-left: calc(var(--base-size)*10);
+}
+
+.sudalsan{
+    background-color: var(--base-background-color-orange);
+    border-radius: calc(var(--base-size)*2);
+    padding: calc(var(--base-size)*3);
+    width: calc(var(--base-size)*50);
+    text-align:left;
+}
+
+.sudaljbui p, .sudalsan p{
+    margin:calc(var(--base-size)*2) 0;
+    margin-top: calc(var(--base-size)*3);
+}
+
+/* Actions section styling */
+.actions {
+    display: flex;
+    justify-content: space-between; /* 3 картын хооронд зай жигд хуваана */
+    background-color: #fff; /* Фоны өнгө */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Зөөлөн сүүдэр */
+    padding: 20px;
+}
+
+.action-card button:hover {
+    transform: translateY(-5px); /* Хулганы заагуур дээр хөдлөх үед дээшлүүлнэ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Сүүдрийг нэмэгдүүлнэ */
+}
+
+.action-card{
+    text-align: center;
+    height: calc(var(--base-size)*22.5);
+    width: calc(var(--base-size)*37.5);
+    margin: 0 calc(var(--base-size)*12.5);
+    border-radius: calc(var(--base-size)*6.25);
+    background-color: var(--base-background-color-orange);;
+}
+
+.action-card button{
+    background-color: #ff9b00;
+    margin-top: calc(var(--base-size)*6.25);
+    height: calc(var(--base-size)*5);
+    width: calc(var(--base-size)*20);
+    border-radius: calc(var(--base-size)*5);
+    font-weight: bold;
+}
+.pHBtn:hover{
+    background-color: var(--base-color-grey-light);
+}
 /* Information Section */
 .Information {
   position: relative;
@@ -144,13 +257,55 @@ body {
   width: 100%;
 
 }
-
-.ranksCont {
-  background-color: var(--base-color-secondary-orange);
-  height: 150px;
+/* progress bar*/
+.progress-container{
+  min-height: var(--base-size-x17);
+  position: relative;
   width: 100%;
+  height: fit-content;
   border-radius: var(--base-border-radius-x2);
+  background-color: var(--base-color-secondary-orange);
+  padding: 20px 15px;  
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+.progressName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+.bubbles{
+  width: var(--base-size-x2);
+  height: var(--base-size-x2);
+  background-color: var(--base-color-white);
+  border-radius: 50%;
+}
+.ProgressRank{
+  width: var(--base-size-x15);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: var(--base-size-x2);
+}
+.progress-bar {
+  position: relative;
+  padding: 0 var(--base-size-x12);
+  top: 46px;
+  width: 100%;
+  padding: 0 6% ;
+  height: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 3;
+}
+.progressBg{
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*post*/
 
 .PostsCont{
   margin-top: 2rem;
@@ -159,17 +314,45 @@ body {
   row-gap: var(--base-size-x2);
 
 } 
-.post {
+
+.postcont{
   color: var(--base-color-white);
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--base-size-x2);
+  background-color: var(--base-color-blue);
   width: 100%;
   min-height: var(--base-size-x20);
   max-height: var(--base-size-x25);
-  background-color: var(--base-color-blue);
-  border-radius: var(--base-border-radius-x2);
+  display: grid;
+  grid-template-columns: auto auto;
   padding: var(--base-size-x2) 2rem;
+  border-radius: var(--base-border-radius-x2);
+}
+
+.postImg{
+  width: var(--base-size-x12);
+  height: var(--base-size-x12);
+  object-fit: cover;
+  border-radius: 50%;
+}
+.postLeft{
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--base-size);
+}
+.postRight {
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--base-size-x2);
+  row-gap: var(--base-size-x2);
+  padding: var(--base-size);
+}
+
+.postBtn{
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: var(--base-size-x1);
 }
 
 
@@ -183,14 +366,22 @@ body {
   flex-wrap: wrap;
 }
 
-.post .subjects-tags ul li {
-  margin: var(--base-size) var(--base-size) 0 0;
-  padding: var(--base-padding);
-  font-size: var(--base-small-font-size);
-  border-radius: var(--base-border-radius);
-  background-color: var(--base-color-light-orange);
-  font-weight: var(--base-bold-font-weight);
-  color: var(--base-color-blue);
+
+.BGhover:hover{
+    background-color: #b8b8b832;
+
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+.action-card p{
+    font-weight: bold;
+    margin-top: calc(var(--base-size)*3.75);
+}
+.pH-left-info{
+    display: flex;
+    flex-direction: row;
 }
 
 .subjects-tags ul li {
@@ -202,6 +393,7 @@ body {
   font-weight: var(--base-bold-font-weight);
   color: var(--base-color-orange);
   box-shadow: 0 0px 8px var(--base-color-grey);
+
 }
 
 .rightCont{

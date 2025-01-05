@@ -32,7 +32,7 @@
         <nav>
             <a href="#"><i class="fa fa-question"></i></a>
             <a href="./lovedTeachers.html"><i class="fa fa-heart"></i></a>
-            <a href="req.html">Багш болох</a>
+            <a href="./login.html">Зар нэмэх</a>
             <a href="#"><i class="fa fa-user"></i></a>
         </nav>
     </header>
@@ -43,13 +43,13 @@
             <h2>Хайлтын Үр Дүн</h2><br>
             <ul>
                 <li>
-                    <button data-category="all" class="Filterbtn">Бүх Зар</button>
+                    <button data-category="all" class="Filterbtn" onclick="toggleDropdown(event, 'all')">Бүх Зар</button>
                 </li>
                 <li>
-                    <button data-category="online" class="Filterbtn">Онлайн</button>
+                    <button data-category="online" class="Filterbtn" onclick="toggleDropdown(event, 'online')">Онлайн</button>
                 </li>
                 <li>
-                    <button data-category="classroom" class="Filterbtn">Танхим</button>
+                    <button data-category="classroom" class="Filterbtn" onclick="toggleDropdown(event, 'class')">Танхим</button>
                 </li>
                 <li>
                     <button data-category="all" class="Filterbtn"

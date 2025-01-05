@@ -35,6 +35,10 @@ h2 {
     padding: var(--base-size-x6);
     transition: .2s ease-in-out;
 }
+.error-message-login{
+    color: red;
+    font-weight: 500;
+}
 .login {
     position: absolute;
     display: flex;
@@ -46,6 +50,17 @@ h2 {
     border-radius: var(--base-border-radius-x3);
     padding: var(--base-size-x6);
     transition: .2s ease-in-out;
+}
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    row-gap:var(--base-size-x2) ;
+}
+
+#registerForm{
+    display: flex;
+    flex-direction: column;
+    row-gap:var(--base-size-x2) ;
 }
 
 .center {
@@ -84,6 +99,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     color: var(--base-color-white);
+    flex-direction: row-reverse;
 }
 
 a {

@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>huselt1 </title>
+    <title>Login & Register</title>
     <link rel="stylesheet" href="/styles/header_footer.css">
+    <link rel="stylesheet" href="../styles/login.css">
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
-    <link rel="stylesheet" href="/styles/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="../js/login.js"></script>
 </head>
 
 <body>
@@ -27,137 +26,107 @@
         <nav>
             <a href="#"><i class="fa fa-question"></i></a>
             <a href="./lovedTeachers.html"><i class="fa fa-heart"></i></a>
-            <a href="req.html">Багш болох</a>
+            <a href="./login.html">Зар нэмэх</a>
             <a href="#"><i class="fa fa-user"></i></a>
         </nav>
     </header>
-
+    </header>
 
     <section class="main">
         <div class="form-box">
 
-            
-            <!-- login-->
+            <!-- Login -->
             <div class="login" id="login">
                 <div class="center">
                     <h2>Нэвтрэх</h2>
                 </div>
-                <div class="ph-container">
-                    <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Мэйл хаяг" class="placeholder">
-                </div>
-                <div class="ph-container">
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="text" placeholder="Нэвтрэх нууц үг" class="placeholder">
-                </div>
-                <div class="remember-and-terms">
-                    <div class="one">
-                        <input type="checkbox" id="register-check">
-                        <label for="register-check"> Сануулах</label>
+                <form id="loginForm">
+                    <div class="ph-container">
+                        <label for="login-email"> <i class="fa-solid fa-envelope"></i></label>
+                        <input type="email" id="login-email" placeholder="Мэйл хаяг" class="placeholder" required>
                     </div>
-                    <div class="two">
-                        <a href="#">нууц үг сэргээх</a>
+                    <div class="ph-container">
+                        <label for="login-password"> <i class="fa-solid fa-lock"></i></label>
+                        <input type="password" id="login-password" placeholder="Нэвтрэх нууц үг" class="placeholder" required>
                     </div>
-                </div>
-                <button class="important-button">
-                    Нэвтрэх
-                </button>
+                    <div class="remember-and-terms">
+                        <label><input type="checkbox" id="remember-check"> Сануулах</label>
+                        <a href="#">Нууц үг сэргээх</a>
+                    </div>
+                    <div class="center">
+                        <p class="error-message-login" id="error-message-login"></p>
+                    </div>
+                    <button type="submit" class="important-button">Нэвтрэх</button>
+                </form>
                 <div class="center">
-                    <span>
-                        Бүртгэлгүй бол 
-                        <a href="#"  onclick="register()">
-                            энд дарна уу
-                        </a>
-                    </span>
+                    <span>Бүртгэлгүй бол <a href="#" onclick="registerSwitch()">энд дарна уу</a></span>
                 </div>
             </div>
 
-            <!-- register-->
+            <!-- Register -->
             <div class="register" id="register">
                 <div class="center">
                     <h2>Бүртгүүлэх</h2>
                 </div>
-                <div class="fullName">
-                    <div class="ph-container">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Овог" class="placeholder">
+                
+                <form id="registerForm">
+                    <div class="fullName">
+                        <div class="ph-container">
+                            <label for="register-lname"> <i class="fa-solid fa-user"></i></label>
+                            <input type="text" id="register-lname" placeholder="Овог" class="placeholder" required>
+                        </div>
+                        <div class="ph-container">
+                            <label for="register-fname"> <i class="fa-solid fa-user"></i></label>
+                            <input type="text" id="register-fname" placeholder="Нэр" class="placeholder" required>
+                        </div>
                     </div>
                     <div class="ph-container">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Нэр" class="placeholder">
+                        <label for="register-email"><i class="fa-solid fa-envelope"></i></label>
+                        <input type="email" id="register-email" placeholder="Мэйл хаяг" class="placeholder" required>
                     </div>
-                </div>
-                <div class="ph-container">
-                    <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Мэйл хаяг" class="placeholder">
-                </div>
-                <div class="ph-container">
-                    <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Утасний дугаар" class="placeholder">
-                </div>
-                <div class="ph-container">
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="text" placeholder="Нэвтрэх нууц үг" class="placeholder">
-                </div>
-                <div class="remember-and-terms">
-                    <div class="one">
-                        <input type="checkbox" id="register-check">
-                        <label for="register-check"> Сануулах</label>
+                    <div class="ph-container">
+                        <label for="register-phone"><i class="fa-solid fa-phone"></i></label>
+                        <input type="text" id="register-phone" placeholder="Утасны дугаар" class="placeholder" required>
                     </div>
-                    <div class="two">
-                        <a href="#" >Үйлчилгээний нөхцөл</a>
+                    <div class="ph-container">
+                        <label for="register-password"><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" id="register-password" placeholder="нууц үг" class="placeholder" required>
                     </div>
-                </div>
-                <button class="important-button">
-                    Бүртгүүүлэх
-                </button>
+                    <div class="ph-container">
+                        <label for="register-retype-password"><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" id="register-retype-password" placeholder="нууц үг давтах" class="placeholder" required>
+                    </div>
+                    <button type="submit" class="important-button">Бүртгүүлэх</button>
+                </form>
                 <div class="center">
-                    <span>
-                        Нэвтрэх бол 
-                        <a href="#"onclick="login()">
-                            энд дарна уу
-                        </a>
-                    </span>
+                    <span>Нэвтрэх бол <a href="#" onclick="loginSwitch()">энд дарна уу</a></span>
                 </div>
             </div>
+
         </div>
-
-        <script>    
-            let x = document.getElementById("login");
-            let y = document.getElementById("register");
-
-            function login(){
-                y.style.right = "-700px"
-                x.style.left = "0px"
-            }
-            function register(){
-                x.style.left ="-700px";
-                y.style.right = "0px"
-            }
-        </script>
-
     </section>
+
     <footer>
         <ul>
             <li>
-                <h4>Тусламж</h4>
+                <h4>Help</h4>
                 <ul>
-                    <li><a href="">FAQs</a></li>
-                    <li><a href="">Заавар</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Instructions</a></li>
                 </ul>
             </li>
             <li>
-                <h4>Холбогдох</4>
-                    <ul>
-                        <li>Утас:<a href="tel:+97688888811">+976 88 888811</a></li>
-                        <li>Мэйл:<a href="mailto: example@teach.com">example@teach.com</a></li>
-                    </ul>
+                <h4>Contact</h4>
+                <ul>
+                    <li>Phone: <a href="tel:+97688888811">+976 88 888811</a></li>
+                    <li>Email: <a href="mailto:example@teach.com">example@teach.com</a></li>
+                </ul>
             </li>
             <li>
-                <h4>Холбоосууд</h4>
+                <h4>Social Links</h4>
                 <ul id="social-icons">
                     <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                 </ul>
             </li>
         </ul>
