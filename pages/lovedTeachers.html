@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,14 +7,9 @@
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/header_footer.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="../styles/searchResult.css">
     <script type="module" src="../js/components/love-button.js"></script>
     <script type="module" src="../js/components/tutor-card.js"></script>
-=======
-    <link rel="stylesheet" href="../styles/index.css">
-    
->>>>>>> main
 </head>
 
 <body>
@@ -35,10 +31,9 @@
     </header>
     <div class="main">
         <section class="container">
-            <h2>Танд таалагдсан багш нар</h2>
-            <div class="tutors-box" id="topTutors">
+            <h2 style="margin-bottom: var(--base-size-x3);">Танд таалагдсан багш нар</h2>
+            <div class="tutors-box" id="lovedTutors">
             </div>
-<<<<<<< HEAD
             <script type="module">
                 import { renderLovedTs } from '../js/modules/loadLovedTutors.js';
 
@@ -46,8 +41,6 @@
                     renderLovedTs();
                 });
             </script>
-=======
->>>>>>> main
         </section>
         <div></div>
     </div>
@@ -76,41 +69,7 @@
             </li>
         </ul>
     </footer>
-    <script type="module" src="../js/searchResult/SR-tutorSec.js"></script>
-<script type="module">
-    document.addEventListener("DOMContentLoaded", async () => {
-        const { default: tutor, loadLovedTeacherData } = await import("../js/searchResult/SR-tutorSec.js");
-        const lovedTeachers = await loadLovedTeacherData();
-        const tutorsBox = document.getElementById("topTutors");
 
-        if (!lovedTeachers || lovedTeachers.length === 0) {
-            tutorsBox.innerHTML = "<p>Танд таалагдсан багш нар одоогоор алга байна.</p>";
-            return;
-        }
-
-        const tutorsHTML = lovedTeachers
-            .map(teacher => (new tutor(teacher)).render())
-            .join('');
-        
-        tutorsBox.insertAdjacentHTML("beforeend", tutorsHTML);
-    });
-
-    window.loveButtonClick = function(event, teacherName) {
-        event.stopPropagation();
-        event.preventDefault();
-        
-        let lovedTeachers = JSON.parse(localStorage.getItem("lovedTeachers")) || [];
-        const isLoved = lovedTeachers.includes(teacherName);
-        
-        if (isLoved) {
-            lovedTeachers = lovedTeachers.filter(name => name !== teacherName);
-            alert(`${teacherName} таны таалагдсан жагсаалтаас хасагдлаа!`);
-            location.reload();
-        }
-
-        localStorage.setItem("lovedTeachers", JSON.stringify(lovedTeachers));
-    }
-</script>
-   
 </body>
+
 </html>
