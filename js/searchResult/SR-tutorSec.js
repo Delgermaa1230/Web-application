@@ -21,6 +21,7 @@ export default class tutor {
         this.sanal = bagsh.numberOfRatings;
         this.tailbar = bagsh.description;
         this.hicheeluud = bagsh.lessons;
+        this.pass = bagsh.password;
     }
 
     render() {

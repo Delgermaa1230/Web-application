@@ -17,7 +17,8 @@
       ],
       "mode": "online",
       "price": 1000,
-      "ranking": "Ботго"
+      "ranking": "Ботго",
+      "password": "123456"
     },
     {
       "id": 2,

@@ -1,0 +1,94 @@
+// Load data from a JSON file
+async function loadData() {
+    const response = await fetch("../data/teacher.json");
+    const data = await response.json();
+    return data.teachers;
+}
+
+// Variables
+let tutorData = [];
+loadData().then(data => tutorData = data);
+
+// DOM Elements
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+const loginEmail = document.getElementById("login-email");
+const loginPassword = document.getElementById("login-password");
+const registerEmail = document.getElementById("register-email");
+const registerPassword = document.getElementById("register-password");
+const registerRetypePassword = document.getElementById("register-retype-password");
+const errorMessageLogin = document.getElementById("error-message-login");
+
+// Form Switch Functions
+function loginSwitch() {
+    document.getElementById("register").style.right = "-520px";
+    document.getElementById("login").style.left = "0px";
+}
+
+function registerSwitch() {
+    document.getElementById("login").style.left = "-700px";
+    document.getElementById("register").style.right = "0px";
+}
+
+// Login Validation
+loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = loginEmail.value.trim();
+    const password = loginPassword.value.trim();
+
+    if (!email || !password) {
+        errorMessageLogin.textContent = "Please enter both email and password.";
+        return;
+    }
+
+    const user = tutorData.find(tutor => tutor.email === email && tutor.password === password);
+
+    if (user) {
+        errorMessageLogin.textContent = "";
+        window.location.href = './profile.html'
+    } else {
+        errorMessageLogin.textContent = "Invalid email or password.";
+    }
+});
+
+// Password Validation Helper
+function isPasswordValid(password) {
+    const hasUppercase = /[A-Z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    return password.length >= 8 && hasUppercase && hasNumber;
+}
+
+// Register Validation
+registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = registerEmail.value.trim();
+    const password = registerPassword.value.trim();
+    const retypePassword = registerRetypePassword.value.trim();
+
+    if (!email || !password || !retypePassword) {
+        alert("All fields are required.");
+        return;
+    }
+
+    if (!isPasswordValid(password)) {
+        alert("Password must be at least 8 characters long, include at least one uppercase letter, and one number.");
+        return;
+    }
+
+    if (password !== retypePassword) {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    // Simulate adding the user to the JSON data (you would handle this server-side)
+    const existingUser = tutorData.find(tutor => tutor.email === email);
+    if (existingUser) {
+        alert("This email is already registered.");
+    } else {
+        tutorData.push({ email, password });
+        alert("Registration successful!");
+        loginSwitch();
+    }
+});
