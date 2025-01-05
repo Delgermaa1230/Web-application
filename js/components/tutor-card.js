@@ -9,13 +9,13 @@ class TutorCard extends HTMLElement {
         const firstLetterOfLastName = lastName.charAt(0);
 
         this.innerHTML = `
-            <a href="/pages/teachInfo.html">
+            <a href="/pages/teachInfo.html?id=${id}">
                 <section class="tutorCard">
                     <div class="tutorImage">
                         <img src="${image}" alt="fe">
                         <love-button did="${id}"> ></love-button>
                     </div>
-                    <h3>${firstLetterOfLastName}. ${firstName}</h3>
+                    <h3>${firstLetterOfLastName}. ${firstName} </h3>
                     <p class="tutorReviews">
                         <i class="fa fa-star"></i>
                         <span id="starsNumber">${ratings}</span>

@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/header_footer.css">
+    <script type="module" src="/js/modules/totur-more-page-loader.js"></script>
+    <script type="module" src="/js/components/tutor-more-page.js"></script>
+    <script  src="/js/modules/loadMoreData.js"></script>
 </head>
 
 <body>
@@ -21,7 +24,8 @@
                 <button type="submit">
                     <!-- inline SVG -->
                     <div class="search-icon">
-                        <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <circle cx="11" cy="11" r="8" stroke="white" stroke-width="4" fill="none" />
                             <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="4" />
                         </svg>
@@ -32,124 +36,10 @@
         <nav>
             <a href="#"><i class="fa fa-question"></i></a>
             <a href="#"><i class="fa fa-heart"></i></a>
-            <a href="req1.html">Багш болох</a>
             <a href="#"><i class="fa fa-user"></i></a>
         </nav>
     </header>
-    <div class="main">
-        <div cass="sticky-part-wrapper">
-            <section class="teacher-sticky-box">
-                <div class="student-number">
-                    <p>Суралцагчид</p>
-                    <span><b>0-50</b></span>
-                </div>
-                <div class="image"><img src="../imgs/img1.png" alt="teacher"></div>
-                <h2>Г.Дэлгэрмаа</h2>
-                <div class="rating">
-                    <span><b>5</b></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <p>(67 санал)</p>
-                </div>
-                <div class="wage">
-                    <p>Төлбөр</p>
-                    <span>10'000₮/цаг</span>
-                </div>
-                <button class="important-button"><a href="contactTeacher.html">Холбогдох</a></button>
-            </section>
-        </div>
-        <section class="information-column">
-            <div class="subjects-tags">
-                <ul>
-                    <li>Алгоритм</li>
-                    <li>Математик 1б</li>
-                    <li>Програмчлалын хэл Си</li>
-                </ul>
-            </div>
-            <h1>Матын хамгийн шилдаг багш! - Ер нь бол алноо Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </h1>
-            <div class="teaching-location">
-                <ul>
-                    <li>Online</li>
-                </ul>
-            </div>
-            <section class="about-lesson-box">
-                <h2>Багшийн тухай</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam tenetur omnis, a consequatur
-                    similique quam beatae nostrum vero iste tempora minima id quaerat atque, ipsa optio cupiditate
-                    quidem fuga?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quam iusto libero minima sit cumque eos
-                    itaque dolorem facere qui, nesciunt distinctio labore fuga quo eligendi ullam. Enim, magnam. Odio.
-                </p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium mollitia consectetur
-                    error praesentium iusto voluptates, placeat repellendus vel laboriosam.</p>
-            </section>
-            <section class="about-lesson-box">
-                <h2>Хичээлийн тухай</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam tenetur omnis, a consequatur
-                    similique quam beatae nostrum vero iste tempora minima id quaerat atque, ipsa optio cupiditate
-                    quidem fuga?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quam iusto libero minima sit cumque eos
-                    itaque dolorem facere qui, nesciunt distinctio labore fuga quo eligendi ullam. Enim, magnam. Odio.
-                </p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium mollitia consectetur
-                    error praesentium iusto voluptates, placeat repellendus vel laboriosam.</p>
-            </section>
-            <section class="available-schedule-box">
-                <h2>Боломжит цаг</h2>
-                <div class="timetable">
-                    <!-- Header Row -->
-                    <div class="header">Цаг</div>
-                    <div class="header">Даваа</div>
-                    <div class="header">Мягмар</div>
-                    <div class="header">Лхагва</div>
-                    <div class="header">Пүрэв</div>
-                    <div class="header">Баасан</div>
-
-                    <!-- Time Slots -->
-                    <div class="header">9:00am - 10:00am</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-
-                    <div class="header">10:00am - 11:00am</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-
-                    <div class="header">11:00am - 12:00am</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
-            </section>
-            <section class="comment-box">
-                <h2>Сэтгэгдэл</h2>
-                <section class="comment">
-                    <div class="comment-owner">
-                        <img src="/imgs/img3.png" alt="user">
-                        <h3>Нямаа Батпүрэв</h3>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium, veritatis eius ducimus
-                        dolorem explicabo cumque tempora eveniet culpa illum molestias, odit alias aliquam nulla ea
-                        optio nihil laudantium porro!</p>
-                </section>
-                <section class="comment">
-                    <div class="comment-owner">
-                        <img src="/imgs/img2.png" alt="user">
-                        <h3>Нямаа Батпүрэв</h3>
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem quasi odit est quisquam ex
-                        repellat
-                        quos quod optio cupiditate similique? Doloremque est tenetur hic neque?</p>
-                </section>
-            </section>
-        </section>
+    <div class="container">
     </div>
 
     <footer>

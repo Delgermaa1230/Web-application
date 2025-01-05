@@ -1,18 +1,26 @@
-let data = null;
-let lovedTs = JSON.parse(localStorage.getItem("lovedTs")) || [];
+let lovedTs = JSON.parse(localStorage.getItem('lovedTs')) || [];
 
-export async function loadData() {
-    const result = await fetch("../data/teacher.json");
-    data = await result.json();
+export function renderLovedTs() {
+    console.log(lovedTs);
 
-    console.log("Data loaded:", data);
+    if (lovedTs.length === 0) {
+        document.getElementById("lovedTutors").innerHTML = `<p style="color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">Таалагдсан багш алга!</p>`;
+        return;
+    }
 
-    const container = document.querySelector('#tutors');
+    const box = document.querySelector('#lovedTutors');
+    
+    if (!box) {
+        console.error('The element #lovedTutors does not exist in the DOM');
+        return;
+    }
 
-    data.teachers.forEach((bagsh) => {
+    box.innerHTML = '';
+
+    lovedTs.forEach((bagsh) => {
         const tutorElement = document.createElement('tutor-card');
         tutorElement.setAttribute('data-bagsh', JSON.stringify(bagsh));
-        container.appendChild(tutorElement);
+        box.appendChild(tutorElement);
     });
 
     initializeLovedButtons();
@@ -29,7 +37,7 @@ window.initializeLovedButtons = () => {
 };
 
 window.loveT = (Tid) => {
-    const t = data.teachers.find((i) => String(i.id) === String(Tid));
+    const t = lovedTs.find((i) => String(i.id) === String(Tid));
     if (!t) {
         alert("Т Tutor олдсонгүй.");
         return;
@@ -47,7 +55,11 @@ window.loveT = (Tid) => {
         if (removeC) {
             lovedTs = lovedTs.filter((l) => l.id !== t.id);
             localStorage.setItem("lovedTs", JSON.stringify(lovedTs));
+            
             if (loveBtn) loveBtn.classList.remove('loved');
+
+            const tutorCard = loveBtn.closest('tutor-card');
+            if (tutorCard) tutorCard.remove();
         }
     }
 };

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <script type="module" src="./js/components/love-button.js"></script>
     <script type="module" src="./js/components/tutor-card.js"></script>
+    <script type="module" src="./js/mainTop.js"></script>
 </head>
 
 <body>
@@ -51,15 +52,8 @@
         </div>
         <section class="container">
             <h2>Санал болгох багш нар</h2>
-            <div class="tutors-box" id="topTutors">
+            <div class="tutors-box" id="tutors">
             </div>
-            <script type="module">
-                import { loadData } from './js/modules/top-tutors-loader.js';
-
-                document.addEventListener('DOMContentLoaded', () => {
-                    loadData();
-                });
-            </script>
         </section>
         <div></div>
     </div>

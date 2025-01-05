@@ -4,11 +4,31 @@ class TutorMorePage extends HTMLElement {
     }
 
     connectedCallback() {
-        this.render();
-    }
-
-    render() {
+        const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
+        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking } = bagsh;
+        const firstLetterOfLastName = lastName.charAt(0);
         this.innerHTML =`
+            <div cass="sticky-part-wrapper">
+            <section class="teacher-sticky-box">
+                <div class="student-number">
+                    <p>Цол :</p>
+                    <span><b>${ranking}</b></span>
+                </div>
+                <div class="image"><img src="${image}" alt="teacher"></div>
+                <h2>${firstLetterOfLastName}. ${firstName}</h2>
+                <div class="rating">
+                    <span><b>${ratings}</b></span>
+                    <span><i class="fa fa-star"></i></span>
+                    <p>(${numberOfRatings} санал)</p>
+                </div>
+                <div class="wage">
+                    <p>Төлбөр</p>
+                    <span>10'000₮/цаг</span>
+                </div>
+                <button class="important-button"><a href="./contactTeacher.html?id=${id}">Холбогдох</a></button>
+            </section>
+        </div>
+        <section class="information-column">
             <div class="subjects-tags">
                 <ul>
                     <li>Алгоритм</li>
@@ -16,8 +36,7 @@ class TutorMorePage extends HTMLElement {
                     <li>Програмчлалын хэл Си</li>
                 </ul>
             </div>
-            <h1>Матын хамгийн шилдаг багш! - Ер нь бол алноо Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </h1>
+            <h1>${description}</h1>
             <div class="teaching-location">
                 <ul>
                     <li>Online</li>
@@ -27,12 +46,12 @@ class TutorMorePage extends HTMLElement {
                 <h2>Багшийн тухай</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam tenetur omnis, a consequatur
                     similique quam beatae nostrum vero iste tempora minima id quaerat atque, ipsa optio cupiditate
-                    quidem fuga</p>
+                    quidem fuga?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quam iusto libero minima sit cumque eos
                     itaque dolorem facere qui, nesciunt distinctio labore fuga quo eligendi ullam. Enim, magnam. Odio.
                 </p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium mollitia consectetur
-                     praesentium iusto voluptates, placeat repellendus vel laboriosam.</p>
+                praesentium iusto voluptates, placeat repellendus vel laboriosam.</p>
             </section>
             <section class="about-lesson-box">
                 <h2>Хичээлийн тухай</h2>
@@ -43,12 +62,11 @@ class TutorMorePage extends HTMLElement {
                     itaque dolorem facere qui, nesciunt distinctio labore fuga quo eligendi ullam. Enim, magnam. Odio.
                 </p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium mollitia consectetur
-                    praesentium iusto voluptates, placeat repellendus vel laboriosam.</p>
+                     praesentium iusto voluptates, placeat repellendus vel laboriosam.</p>
             </section>
             <section class="available-schedule-box">
                 <h2>Боломжит цаг</h2>
                 <div class="timetable">
-                    
                     <div class="header">Цаг</div>
                     <div class="header">Даваа</div>
                     <div class="header">Мягмар</div>
@@ -96,11 +114,14 @@ class TutorMorePage extends HTMLElement {
                     </div>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem quasi odit est quisquam ex
                         repellat
-                        quos quod optio cupiditate similique? Doloremque est tenetur hic neque?</p>
+                        quos quod optio cupiditate similique Doloremque est tenetur hic neque?</p>
                 </section>
             </section>
+        </section>
         `;
     }
+        
+
 }
 
 customElements.define('tutor-morepage', TutorMorePage);

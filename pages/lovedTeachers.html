@@ -27,9 +27,7 @@
                 });
 
             </script>
-            <a href="#"><i class="fa fa-question"></i></a>
-            <!-- <a href="/pages/profile.html"><i class="fa fa-user"></i></a> -->
-        </nav>
+            <a href="#"><i class="fa fa-question"></i></a>        </nav>
     </header>
     <div class="main">
         <section class="container">
@@ -37,7 +35,7 @@
             <div class="tutors-box" id="lovedTutors">
             </div>
             <script type="module">
-                import { renderLovedTs } from '../js/modules/loved-tutors-loader.js';
+                import { renderLovedTs } from '../js/modules/loadLovedTutors.js';
 
                 document.addEventListener('DOMContentLoaded', () => {
                     renderLovedTs();

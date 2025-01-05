@@ -8,92 +8,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="/styles/contactTeachar.css">
+    <script type="module" src="../js/components/contact-tutor.js"></script>
+    <script src="../js/modules/loadContact.js"></script>
 </head>
 
 <body>
     <header>
-        <a href="teachInfo.html" class="back">Буцах</a>
+        <a id="backBtn" class="back">Буцах</a>
+        <script>
+            document.getElementById('backBtn').addEventListener('click', () => {
+                if (document.referrer) {
+                    window.history.back();
+                } else {
+                    window.location.href = '../index.html';
+                }
+            });
+        </script>
         <nav>
-
             <a href="#"><i class="fa fa-question"></i></a>
-            <!-- <a href="req1.html">Багш болох</a> -->
             <a href="#"><i class="fa fa-user"></i></a>
         </nav>
     </header>
-    <div class="main">
-        <div cass="sticky-part-wrapper">
-            <section class="teacher-sticky-box">
-                <div class="student-number">
-                    <p>Суралцагчид</p>
-                    <span><b>0-50</b></span>
-                </div>
-                <div class="image"><img src="../imgs/img1.png" alt="teacher"></div>
-                <h2>Г.Дэлгэрмаа</h2>
-                <div class="rating">
-                    <span><b>5</b></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <p>(67 санал)</p>
-                </div>
-                <div class="wage">
-                    <p>Төлбөр</p>
-                    <span>10'000₮/цаг</span>
-                </div>
-            </section>
-        </div>
-        <div class="contact-forms">
-            <div>
-                <h2>Цаг сонгох</h2>
-                <div class="timetable">
-                    <!-- Header Row -->
-                    <div class="header">Цаг</div>
-                    <div class="header">Даваа</div>
-                    <div class="header">Мягмар</div>
-                    <div class="header">Лхагва</div>
-                    <div class="header">Пүрэв</div>
-                    <div class="header">Баасан</div>
-
-                    <!-- Time Slots -->
-                    <div class="header">9:00am - 10:00am</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-
-                    <div class="header">10:00am - 11:00am</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-
-                    <div class="header">11:00am - 12:00am</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
-            </div>
-            <form action="">
-                <label for="message">
-                    <h2>Таны мессеж</h2>
-                </label>
-                <textarea type="text" id="message" name="message"></textarea>
-                <label for="phone">
-                    <h2>Утас</h2>
-                </label>
-                <input type="tel" id="phone" name="phone">
-                <br>
-                <br>
-                <button class="important-button" type="submit"><a href="">Баталгаажуулах</a></button>
-            </form>
-        </div>
+    <div class="container">
     </div>
     <script>
         document.querySelectorAll(".cell").forEach(cell => {
             cell.addEventListener("click", function () {
-                // Toggle selected class
                 this.classList.toggle("selected");
             });
         });
