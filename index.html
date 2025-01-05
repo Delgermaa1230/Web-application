@@ -9,17 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/header_footer.css">
     <link rel="stylesheet" href="styles/index.css">
-    <script type="module" src="./js/topteacherFilter.js"></script>
+    <script type="module" src="./js/components/love-button.js"></script>
+    <script type="module" src="./js/components/tutor-card.js"></script>
 </head>
-<style>
-    .love.loved .heart-icon path {
-        fill: var(--base-color-orange);  
-      } 
-</style>
+
 <body>
     <header>
         <script>
-        
+
         </script>
         <div class="header-first-box">
             <a href="../index.html">
@@ -56,6 +53,13 @@
             <h2>Санал болгох багш нар</h2>
             <div class="tutors-box" id="topTutors">
             </div>
+            <script type="module">
+                import { loadData } from './js/modules/top-tutors-loader.js';
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    loadData();
+                });
+            </script>
         </section>
         <div></div>
     </div>

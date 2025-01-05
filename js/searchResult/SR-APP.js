@@ -2,47 +2,48 @@ import tutorSec, { loadData } from "./SR-tutorSec.js";
 
 const tutorData = await loadData();
 
-function renderTutors(filteredData) {
+function renderTutors(fData) {
     document.getElementById("tutors").innerHTML = ""; 
 
-    if (filteredData.length == 0) {
-        const noResultsMessage = `<p style = "color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">Хайлт олдсонгүй</p>`;
-        document.getElementById("tutors").insertAdjacentHTML("beforeend", noResultsMessage);
+    if (fData.length == 0) {
+        const nRM = `<p style = "color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">Хайлт олдсонгүй</p>`;
+        document.getElementById("tutors").insertAdjacentHTML("beforeend", nRM);
         return;
     }
 
-    const Tutorhtml = filteredData
-        .map(td => (new tutorSec(td)).render())
-        .reduce((p, c) => p + c, ""); 
+    const container = document.querySelector('#tutors');
 
-    document.getElementById("tutors").insertAdjacentHTML("beforeend", Tutorhtml);
+    fData.forEach((bagsh) => {
+        const tutorElement = document.createElement('tutor-card');
+        tutorElement.setAttribute('data-bagsh', JSON.stringify(bagsh));
+        container.appendChild(tutorElement);
+    });
+
 }
 
 renderTutors(tutorData);
 
 function filterTutors(criteria, category) {
-    let filteredData;
+    let fData;
 
     if (category === "all") {
-        filteredData = tutorData; 
-    } else if (category === "online" || category === "online") {
-        filteredData = tutorData.filter(tutor => tutor.mode === category);
-    } else if (category === "classroom" || category === "classroom") {
-        filteredData = tutorData.filter(tutor => tutor.mode === category);
+        fData = tutorData; 
+    } else if (category === "online" || category === "classroom") {
+        fData = tutorData.filter(tutor => tutor.mode === category);
     } else if (category === "rating") {
-        filteredData = tutorData.filter(tutor => tutor.ratings === parseInt(criteria));
+        fData = tutorData.filter(tutor => tutor.ratings === parseInt(criteria));
     } else if (category === "ranking") {
-        filteredData = tutorData.filter(tutor => tutor.ranking === criteria);
+        fData = tutorData.filter(tutor => tutor.ranking === criteria);
     } else if (category === "price") {
         const sortedData = tutorData.slice(); 
-        filteredData = criteria === "Ихээс бага"
+        fData = criteria === "Ихээс бага"
             ? sortedData.sort((a, b) => b.price - a.price)
             : sortedData.sort((a, b) => a.price - b.price);
     } else {
-        filteredData = []; 
+        fData = []; 
     }
 
-    renderTutors(filteredData);
+    renderTutors(fData);
 }
 
 

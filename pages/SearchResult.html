@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="module" src="../js/searchResult/SR-APP.js"></script>
-    <script type="module" src="../js/url.js"></script>
+    <script src="../js/modules/filtered-tutors-loader.js"></script>
+    <script type="module" src="../js/components/love-button.js"></script>
+    <script type="module" src="../js/components/tutor-card.js"></script>
+    <!-- <script type="module" src="../js/tutor-card-loader.js"></script> -->
+    <!-- <script src="../js/modules/filtered-tutors-loader.js"></script> -->
 </head>
 
 <body>
@@ -51,7 +54,8 @@
                     <button data-category="classroom" class="Filterbtn">Танхим</button>
                 </li>
                 <li>
-                    <button data-category="all" class="Filterbtn" onclick="toggleDropdown(event, 'rating')">Үнэлгээ</button>
+                    <button data-category="all" class="Filterbtn"
+                        onclick="toggleDropdown(event, 'rating')">Үнэлгээ</button>
                     <ul class="dropdown" id="rating">
                         <li><button data-category="rating" data-criteria="1" class="Filterbtn">1</button></li>
                         <li><button data-category="rating" data-criteria="2" class="Filterbtn">2</button></li>
@@ -61,33 +65,38 @@
                     </ul>
                 </li>
                 <li>
-                    <button data-category="all" class="Filterbtn" onclick="toggleDropdown(event, 'ranking')">Цол</button>
-                    <ul class="dropdown" id="ranking" >
+                    <button data-category="all" class="Filterbtn"
+                        onclick="toggleDropdown(event, 'ranking')">Цол</button>
+                    <ul class="dropdown" id="ranking">
                         <li><button data-category="ranking" data-criteria="Ботго" class="Filterbtn">Ботго</button></li>
                         <li><button data-category="ranking" data-criteria="Тором" class="Filterbtn">Тором</button></li>
-                        <li><button data-category="ranking" data-criteria="Супер Тором" class="Filterbtn">Супер Тором</button></li>
-                        <li><button data-category="ranking" data-criteria="Их багш" class="Filterbtn">Их багш</button></li>
+                        <li><button data-category="ranking" data-criteria="Супер Тором" class="Filterbtn">Супер
+                                Тором</button></li>
+                        <li><button data-category="ranking" data-criteria="Их багш" class="Filterbtn">Их багш</button>
+                        </li>
                     </ul>
                 </li>
                 <li>
-                    <button data-category="all" class="Filterbtn" onclick="toggleDropdown(event, 'price')">Үнээр эрэмблэх</button>
-                    <ul class="dropdown" id="price" >
-                        <li><button data-category="price" data-criteria="Ихээс бага" class="Filterbtn">Ихээс бага</button></li>
-                        <li><button data-category="price" data-criteria="Багаас их" class="Filterbtn">Багаас их</button></li>
+                    <button data-category="all" class="Filterbtn" onclick="toggleDropdown(event, 'price')">Үнээр
+                        эрэмблэх</button>
+                    <ul class="dropdown" id="price">
+                        <li><button data-category="price" data-criteria="Ихээс бага" class="Filterbtn">Ихээс
+                                бага</button></li>
+                        <li><button data-category="price" data-criteria="Багаас их" class="Filterbtn">Багаас их</button>
+                        </li>
                     </ul>
                 </li>
             </ul>
         </section>
-    
+
         <script>
             function toggleDropdown(event, id) {
                 event.preventDefault();
-                event.stopPropagation(); // Prevent event from bubbling up
-            
+                event.stopPropagation();
+
                 const dropdown = document.getElementById(id);
                 dropdown.classList.toggle('show');
-            
-                // Close other dropdowns
+
                 const allDropdowns = document.querySelectorAll('.dropdown');
                 allDropdowns.forEach(d => {
                     if (d !== dropdown && d.classList.contains('show')) {
@@ -95,7 +104,7 @@
                     }
                 });
             }
-            
+
             window.onclick = function (event) {
                 if (!event.target.closest('.Filterbtn') && !event.target.closest('.dropdown')) {
                     const dropdowns = document.querySelectorAll('.dropdown');
@@ -104,14 +113,19 @@
                     });
                 }
             };
-            
-            
         </script>
 
         <!-- search result-->
         <section class="container">
             <div class="tutors-box" id="tutors">
             </div>
+            <!-- <script type="module">
+                import { loadData } from './js/modules/top-tutors-loader.js';
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    loadData();
+                });
+            </script> -->
         </section>
 
     </div>

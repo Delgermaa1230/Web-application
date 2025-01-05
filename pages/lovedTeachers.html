@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/header_footer.css">
     <link rel="stylesheet" href="../styles/searchResult.css">
+    <script type="module" src="../js/components/love-button.js"></script>
+    <script type="module" src="../js/components/tutor-card.js"></script>
 </head>
+
 <body>
     <header>
         </div>
         <nav>
-            <a href="/index.html">Буцах</a>
+            <a id="backBtn">Буцах</a>
+            <script>
+                document.getElementById('backBtn').addEventListener('click', () => {
+                    if (document.referrer) {
+                        window.history.back();
+                    } else {
+                        window.location.href = '../index.html';
+                    }
+                });
+
+            </script>
             <a href="#"><i class="fa fa-question"></i></a>
             <!-- <a href="/pages/profile.html"><i class="fa fa-user"></i></a> -->
         </nav>
@@ -23,7 +36,13 @@
             <h2 style="margin-bottom: var(--base-size-x3);">Танд таалагдсан багш нар</h2>
             <div class="tutors-box" id="lovedTutors">
             </div>
-            <script src="../js/loved.js"></script>
+            <script type="module">
+                import { renderLovedTs } from '../js/modules/loved-tutors-loader.js';
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    renderLovedTs();
+                });
+            </script>
         </section>
         <div></div>
     </div>
