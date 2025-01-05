@@ -1,28 +1,41 @@
+
 export async function loadData() {
-    const result = await fetch("../data/teacher.json");
-    const data = await result.json();
-    console.log("data", data);
-    return data.teachers;
+    try {
+        const response = await fetch('http://localhost:3000/teachers');
+        const data = await response.json();
+        console.log("data", data);
+        return data;
+    } catch (error) {
+        console.error("Error loading teachers:", error);
+        return [];
+    }
 }
 
 export async function loadLovedTeacherData() {
-    const result = await fetch("../data/teacher.json");
-    const data = await result.json();
-    const lovedTeachers = JSON.parse(localStorage.getItem("lovedTeachers")) || [];
-    return data.teachers.filter(teacher => lovedTeachers.includes(teacher.firstName));
+    try {
+        const response = await fetch('http://localhost:3000/teachers');
+        const data = await response.json();
+        const lovedTeachers = JSON.parse(localStorage.getItem("lovedTeachers")) || [];
+        return data.filter(teacher => lovedTeachers.includes(teacher.first_name));
+    } catch (error) {
+        console.error("Error loading loved teachers:", error);
+        return [];
+    }
 }
 
 export default class tutor {
     constructor(bagsh) {
+        // Өгөгдлийн сангийн талбарын нэрүүдтэй тохируулах
         this.zurag = bagsh.image;
-        this.ovog = bagsh.lastName;
-        this.ner = bagsh.firstName;
-        this.unelgee = bagsh.ratings;
-        this.sanal = bagsh.numberOfRatings;
+        this.ovog = bagsh.last_name;
+        this.ner = bagsh.first_name;
+        this.unelgee = bagsh.retings;
+        this.sanal = bagsh.number_of_ratings;
         this.tailbar = bagsh.description;
         this.hicheeluud = bagsh.lessons;
         this.pass = bagsh.password;
     }
+
 
     render() {
         const firstLetterOfLastName = this.ovog.charAt(0);
