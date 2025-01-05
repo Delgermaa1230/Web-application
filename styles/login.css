@@ -35,6 +35,10 @@ h2 {
     padding: var(--base-size-x6);
     transition: .2s ease-in-out;
 }
+.error-message-login{
+    color: red;
+    font-weight: 500;
+}
 .login {
     position: absolute;
     display: flex;

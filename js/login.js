@@ -37,18 +37,13 @@ loginForm.addEventListener("submit", (e) => {
     const email = loginEmail.value.trim();
     const password = loginPassword.value.trim();
 
-    if (!email || !password) {
-        errorMessageLogin.textContent = "Please enter both email and password.";
-        return;
-    }
-
     const user = tutorData.find(tutor => tutor.email === email && tutor.password === password);
 
     if (user) {
         errorMessageLogin.textContent = "";
         window.location.href = './profile.html'
     } else {
-        errorMessageLogin.textContent = "Invalid email or password.";
+        errorMessageLogin.textContent = "Мэйл эсвэл нууц үг буруу байна.";
     }
 });
 
@@ -59,6 +54,7 @@ function isPasswordValid(password) {
     return password.length >= 8 && hasUppercase && hasNumber;
 }
 
+
 // Register Validation
 registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -67,28 +63,23 @@ registerForm.addEventListener("submit", (e) => {
     const password = registerPassword.value.trim();
     const retypePassword = registerRetypePassword.value.trim();
 
-    if (!email || !password || !retypePassword) {
-        alert("All fields are required.");
-        return;
-    }
-
     if (!isPasswordValid(password)) {
-        alert("Password must be at least 8 characters long, include at least one uppercase letter, and one number.");
+        alert("Нууц үг 8с баггүй нэг том үсэг тоо ашиглана уу");
         return;
     }
 
     if (password !== retypePassword) {
-        alert("Passwords do not match.");
+        alert("Нууц үг зөрсөн байна");
         return;
     }
 
     // Simulate adding the user to the JSON data (you would handle this server-side)
     const existingUser = tutorData.find(tutor => tutor.email === email);
     if (existingUser) {
-        alert("This email is already registered.");
+        alert("Мэйл бүртгэлтэй байна");
     } else {
         tutorData.push({ email, password });
-        alert("Registration successful!");
+        alert("Амжилттай");
         loginSwitch();
     }
 });

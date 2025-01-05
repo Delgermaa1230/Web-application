@@ -257,13 +257,55 @@ body {
   width: 100%;
 
 }
-
-.ranksCont {
-  background-color: var(--base-color-secondary-orange);
-  height: 150px;
+/* progress bar*/
+.progress-container{
+  min-height: var(--base-size-x17);
+  position: relative;
   width: 100%;
+  height: fit-content;
   border-radius: var(--base-border-radius-x2);
+  background-color: var(--base-color-secondary-orange);
+  padding: 20px 15px;  
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+.progressName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+.bubbles{
+  width: var(--base-size-x2);
+  height: var(--base-size-x2);
+  background-color: var(--base-color-white);
+  border-radius: 50%;
+}
+.ProgressRank{
+  width: var(--base-size-x15);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: var(--base-size-x2);
+}
+.progress-bar {
+  position: relative;
+  padding: 0 var(--base-size-x12);
+  top: 46px;
+  width: 100%;
+  padding: 0 6% ;
+  height: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 3;
+}
+.progressBg{
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*post*/
 
 .PostsCont{
   margin-top: 2rem;
@@ -272,18 +314,45 @@ body {
   row-gap: var(--base-size-x2);
 
 } 
-.post {
+
+.postcont{
   color: var(--base-color-white);
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--base-size-x2);
+  background-color: var(--base-color-blue);
   width: 100%;
   min-height: var(--base-size-x20);
   max-height: var(--base-size-x25);
-  background-color: var(--base-color-blue);
-  border-radius: var(--base-border-radius-x2);
+  display: grid;
+  grid-template-columns: auto auto;
   padding: var(--base-size-x2) 2rem;
+  border-radius: var(--base-border-radius-x2);
+}
 
+.postImg{
+  width: var(--base-size-x12);
+  height: var(--base-size-x12);
+  object-fit: cover;
+  border-radius: 50%;
+}
+.postLeft{
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--base-size);
+}
+.postRight {
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--base-size-x2);
+  row-gap: var(--base-size-x2);
+  padding: var(--base-size);
+}
+
+.postBtn{
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: var(--base-size-x1);
 }
 
 
@@ -313,16 +382,6 @@ body {
 .pH-left-info{
     display: flex;
     flex-direction: row;
-}
-
-.post .subjects-tags ul li {
-  margin: var(--base-size) var(--base-size) 0 0;
-  padding: var(--base-padding);
-  font-size: var(--base-small-font-size);
-  border-radius: var(--base-border-radius);
-  background-color: var(--base-color-light-orange);
-  font-weight: var(--base-bold-font-weight);
-  color: var(--base-color-blue);
 }
 
 .subjects-tags ul li {

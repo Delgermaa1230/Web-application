@@ -91,6 +91,9 @@
     box-sizing: border-box;
 }
 
+main{
+    height: 100vh;
+}
 body {
     background: linear-gradient(180deg, var(--base-background-color) 40%, var(--base-color-light-orange) 70%);
 }
