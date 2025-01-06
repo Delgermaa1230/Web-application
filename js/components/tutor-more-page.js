@@ -5,7 +5,7 @@ class TutorMorePage extends HTMLElement {
 
     connectedCallback() {
         const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
-        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking } = bagsh;
+        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking, moreDescription, teachingDescription } = bagsh;
         const firstLetterOfLastName = lastName.charAt(0);
         this.innerHTML =`
             <div cass="sticky-part-wrapper">
@@ -44,25 +44,11 @@ class TutorMorePage extends HTMLElement {
             </div>
             <section class="about-lesson-box">
                 <h2>Багшийн тухай</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam tenetur omnis, a consequatur
-                    similique quam beatae nostrum vero iste tempora minima id quaerat atque, ipsa optio cupiditate
-                    quidem fuga?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quam iusto libero minima sit cumque eos
-                    itaque dolorem facere qui, nesciunt distinctio labore fuga quo eligendi ullam. Enim, magnam. Odio.
-                </p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium mollitia consectetur
-                praesentium iusto voluptates, placeat repellendus vel laboriosam.</p>
+                <p>${moreDescription}</p>
             </section>
             <section class="about-lesson-box">
                 <h2>Хичээлийн тухай</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam tenetur omnis, a consequatur
-                    similique quam beatae nostrum vero iste tempora minima id quaerat atque, ipsa optio cupiditate
-                    quidem fuga</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quam iusto libero minima sit cumque eos
-                    itaque dolorem facere qui, nesciunt distinctio labore fuga quo eligendi ullam. Enim, magnam. Odio.
-                </p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium mollitia consectetur
-                     praesentium iusto voluptates, placeat repellendus vel laboriosam.</p>
+                <p>${teachingDescription}</p>
             </section>
             <section class="available-schedule-box">
                 <h2>Боломжит цаг</h2>

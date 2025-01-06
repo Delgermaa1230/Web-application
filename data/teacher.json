@@ -12,16 +12,9 @@
       "phone": "89234723",
       "image": "../imgs/img1.png",
       "description": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
-      "moreDescription": "",
+      "moreDescription": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
       "lessons": [
-        {
-          "name": "Math",
-          "lessonDescription": "This is the description of this lesson."
-        },
-        {
-          "name": "Algo",
-          "lessonDescription": "Yeah this is the descitpdvfwaoinsv erb"
-        }
+        "Math", "English", "C"
       ],
       "mode": "online",
       "price": 1000,
@@ -50,7 +43,8 @@
         }
       ],
       "comments": [],
-      "possibleHours": []
+      "possibleHours": [],
+      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
       "id": 2,
@@ -64,20 +58,9 @@
       "phone": "89345567",
       "image": "../imgs/img2.png",
       "description": "Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл.",
-      "moreDescription": "",
+      "moreDescription": " физик болон инженерийн сэдвүүд",
       "lessons": [
-        {
-          "name": "Физик",
-          "lessonDescription": ""
-        },
-        {
-          "name": "C",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Эрчим хүчний систем",
-          "lessonDescription": ""
-        }
+        "Math", "English", "C"
       ],
       "mode": "online",
       "price": 2000,
@@ -86,7 +69,8 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": []
+      "possibleHours": [],
+      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
       "id": 3,
@@ -100,20 +84,9 @@
       "phone": "89234764",
       "image": "../imgs/img3.png",
       "description": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээлийг сайн заадаг.",
-      "moreDescription": "",
+      "moreDescription": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээли",
       "lessons": [
-        {
-          "name": "Math",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Статистик",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Төрөл бүрийн тооцоолол",
-          "lessonDescription": ""
-        }
+        "Math", "English", "C"
       ],
       "mode": "online",
       "price": 1000,
@@ -122,7 +95,8 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": []
+      "possibleHours": [],
+      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
       "id": 4,
@@ -136,16 +110,9 @@
       "phone": "89385623",
       "image": "../imgs/img4.png",
       "description": "Би инженерчлэлийн багшаар ажиллахыг хүсдэг. Хэрэглээний математик заах дуртай.",
-      "moreDescription": "",
+      "moreDescription": "енерчлэлийн багшаар ажиллахы",
       "lessons": [
-        {
-          "name": "Math",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Математик ба эдийн засаг",
-          "lessonDescription": ""
-        }
+        "Math", "English", "C"
       ],
       "mode": "online",
       "price": 1000,
@@ -154,7 +121,8 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": []
+      "possibleHours": [],
+      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
       "id": 5,
@@ -168,16 +136,9 @@
       "phone": "89452374",
       "image": "../imgs/img5.png",
       "description": "Программчлалын багш, веб хөгжүүлэлтийн чиглэлээр туршлагатай.",
-      "moreDescription": "",
+      "moreDescription": "лын багш,",
       "lessons": [
-        {
-          "name": "Database",
-          "lessonDescription": ""
-        },
-        {
-          "name": "C",
-          "lessonDescription": ""
-        }
+        "Math", "English", "C"
       ],
       "mode": "online",
       "price": 1000,
@@ -186,7 +147,8 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": []
+      "possibleHours": [],
+      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
       "id": 6,
@@ -200,16 +162,9 @@
       "phone": "89562347",
       "image": "../imgs/img6.png",
       "description": "Интернет маркетингийн чиглэлээр багшилж байна. Сошиал медиа хэрэглээг заадаг.",
-      "moreDescription": "",
+      "moreDescription": "Интернет маркетингийн чиглэлээр багшилж байна.",
       "lessons": [
-        {
-          "name": "Интернет маркетинг",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Algo",
-          "lessonDescription": ""
-        }
+        "Math", "English", "C"
       ],
       "mode": "online",
       "price": 1000,
@@ -218,7 +173,8 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": []
+      "possibleHours": [],
+      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
       "id": 7,
@@ -232,20 +188,9 @@
       "phone": "89673452",
       "image": "../imgs/img7.png",
       "description": "Би компьютерийн системийн багш. Системийн архитектурын хичээл заадаг.",
-      "moreDescription": "",
+      "moreDescription": "омпьютерийн системийн багш. Системийн архитектурын хичээл заада",
       "lessons": [
-        {
-          "name": "Системийн архитектур",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Компьютерийн сүлжээ",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Algo",
-          "lessonDescription": ""
-        }
+        "Math", "English", "C"
       ],
       "mode": "online",
       "price": 1000,
@@ -254,7 +199,8 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": []
+      "possibleHours": [],
+      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
       "id": 8,
@@ -268,20 +214,9 @@
       "phone": "89745263",
       "image": "../imgs/img8.png",
       "description": "Би математик, физикийн хичээлүүдийг сонирхдог. Студентуудтай харилцахад хичээл заахдаа таатай байдаг.",
-      "moreDescription": "",
+      "moreDescription": "Би математик, физикийн хичээлүүдийг сонирхдог. Студен",
       "lessons": [
-        {
-          "name": "Math",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Физик",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Algo",
-          "lessonDescription": ""
-        }
+        "Math", "English", "C"
       ],
       "mode": "classroom",
       "price": 1000,
@@ -290,7 +225,8 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": []
+      "possibleHours": [],
+      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
       "id": 9,
@@ -304,20 +240,9 @@
       "phone": "89983412",
       "image": "../imgs/img9.png",
       "description": "Машин сургалтын чиглэлээр багшилдаг. Оюутнуудад алгоритмын ойлголтыг заах дуртай.",
-      "moreDescription": "",
+      "moreDescription": "Машин сургалтын чиглэлээр багшилдаг. Оюутнуудад алгоритмын ойлголтыг заах дур",
       "lessons": [
-        {
-          "name": "Machine Learning",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Math",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Algo",
-          "lessonDescription": ""
-        }
+        "Math", "English", "C"
       ],
       "mode": "online",
       "price": 2000,
@@ -326,7 +251,8 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": []
+      "possibleHours": [],
+      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
       "id": 10,
@@ -340,16 +266,9 @@
       "phone": "89764523",
       "image": "../imgs/img10.png",
       "description": "Би философийн багш. Эртний философийн сэдвүүдийг оюутнуудад заах дуртай.",
-      "moreDescription": "",
+      "moreDescription": "Би философийн багш. Эртний философийн сэдвүүдийг оюутнуудад заах дуртай.",
       "lessons": [
-        {
-          "name": "Philosophy",
-          "lessonDescription": ""
-        },
-        {
-          "name": "Философи",
-          "lessonDescription": ""
-        }
+        "Math", "English", "C"
       ],
       "mode": "online",
       "price": 1000,
@@ -358,7 +277,8 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": []
+      "possibleHours": [],
+      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     }
   ]
 }
