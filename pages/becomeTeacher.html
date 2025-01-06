@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teaher</title>
+    <title>Teacher Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/styles/header_footer.css">
-    <link rel="stylesheet" href="../styles/becomeTeacher.css">
-    <link rel="icon" type="image/png" href="/imgs/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="stylesheet" href="../styles/becomeTeacher.css"></head>
 
 <body>
     <header>
@@ -29,57 +29,147 @@
             <a href="#"><i class="fa fa-user"></i></a>
         </nav>
     </header>
-    </header>
 
-    <section class="main">
+    <div class="main">
+        <!-- First Section -->
+        <section id="selection" class="section">
+            <div class="selectedSub">
+                <h2>Таны сонгосон хичээл</h2>
+                <p>Өөрийн авсан дүнг хавсаргана уу</p>
+            </div>
+            <div>
+                <input id="selectLes" type="text" class="lessonSearch" placeholder="Заах хичээлээ сонгоно уу">
+                <button class="important-button" onclick="next()">Үргэлжлүүлэх</button>
+            </div>
 
-            <!-- submit -->
-            <div class="submit">
-                <div class="center">
-                    <h2>Таны сонгосон хичээл </h2>
-                    <p>Өөрийн авсан дүнг хавсаргана уу</p>
-                </div>
-                <div class="selceted">
-                </div>
+        </section>
+
+        <!-- Second Section -->
+        <section id="bio" class="section">
+            <h2>Өөрийн танилцуулгаа оруулна уу (30-с дээш үг)</h2>
+            <textarea id="bioSubmit" placeholder="Танилцуулгаа бичнэ үү..."></textarea>
+            <div class="two-btn">
+                <button class="important-button" onclick="back()">Буцах</button>
+                <button class="important-button" onclick="next()">Үргэлжлүүлэх</button>
             </div>
-            <div class="leftCont">
-                <h3>Заах хичээлээ сонгоно уу </h3>
-                <label for="search">
-                    <input type="text" placeholder="Заах хичээлээ сонгоно уу">
-                </label>
-                <div class="two-btn">
-                    <button class="important-button">aa</button>
-                    <button class="important-button">aa</button>
-                </div>
+        </section>
+
+        <!-- Third Section -->
+        <section id="timetable" class="section">
+            <h2>Боломжит цагаа сонгоно уу</h2>
+            <div class="timetable">
+                <div class="header">Цаг</div>
+                <div class="header">Даваа</div>
+                <div class="header">Мягмар</div>
+                <div class="header">Лхагва</div>
+                <div class="header">Пүрэв</div>
+                <div class="header">Баасан</div>
+
+                <!-- Time Slots -->
+                <div class="header">9:00am - 10:00am</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                
+                <!-- Time Slots -->
+                <div class="header">9:00am - 10:00am</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                
+                <!-- Time Slots -->
+                <div class="header">9:00am - 10:00am</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                
+                <!-- Time Slots -->
+                <div class="header">9:00am - 10:00am</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                
+                <!-- Time Slots -->
+                <div class="header">9:00am - 10:00am</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                
+                <!-- Time Slots -->
+                <div class="header">9:00am - 10:00am</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
             </div>
-    </section>
+            <div class="two-btn">
+                <button class="important-button" onclick="back()">Буцах</button>
+                <a class="important-button" href="./profile.html" >Үргэлжлүүлэх</a>
+            </div>
+        </section>
+    </div>
 
     <footer>
         <ul>
             <li>
-                <h4>Help</h4>
+                <h4>Тусламж</h4>
                 <ul>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Instructions</a></li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Заавар</a></li>
                 </ul>
             </li>
             <li>
-                <h4>Contact</h4>
-                <ul>
-                    <li>Phone: <a href="tel:+97688888811">+976 88 888811</a></li>
-                    <li>Email: <a href="mailto:example@teach.com">example@teach.com</a></li>
-                </ul>
+                <h4>Холбогдох</4>
+                    <ul>
+                        <li>Утас:<a href="tel:+97688888811">+976 88 888811</a></li>
+                        <li>Мэйл:<a href="mailto: example@teach.com">example@teach.com</a></li>
+                    </ul>
             </li>
             <li>
-                <h4>Social Links</h4>
+                <h4>Холбоосууд</h4>
                 <ul id="social-icons">
                     <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                 </ul>
             </li>
         </ul>
     </footer>
 
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        let currentIndex = 0;
+
+        // Initialize the first section
+        sections[currentIndex].classList.add('active');
+
+        function next() {
+            if (currentIndex < sections.length - 1) {
+                sections[currentIndex].classList.remove('active');
+                currentIndex++;
+                sections[currentIndex].classList.add('active');
+            }
+        }
+
+        function back() {
+            if (currentIndex > 0) {
+                sections[currentIndex].classList.remove('active');
+                currentIndex--;
+                sections[currentIndex].classList.add('active');
+            }
+        }
+    </script>
 </body>
 
 </html>

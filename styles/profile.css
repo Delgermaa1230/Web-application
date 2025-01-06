@@ -239,25 +239,20 @@ body {
 }
 
 /* main content*/
-.main{
-  display: flex;
-  justify-content: center;
-  padding: var(--base-size-x2) var(--base-size-x4);
-}
-
-.mainCont {
-  display: flex;
-  flex-direction: row;
+.main {
+  display: grid;
+  grid-template-columns: 30% auto; 
   justify-content: space-between;
   column-gap: var(--base-size-x10);
-  width: 80vw;
+  width: 100vw;
+  padding: var(--base-size-x4) 10vw;
 }
-
+/* progress bar*/
 .leftCont {
   width: 100%;
 
 }
-/* progress bar*/
+
 .progress-container{
   min-height: var(--base-size-x17);
   position: relative;
@@ -292,7 +287,7 @@ body {
   padding: 0 var(--base-size-x12);
   top: 46px;
   width: 100%;
-  padding: 0 6% ;
+  padding: 0 var(--base-size-x7) ;
   height: 5px;
   border-radius: 5px;
   overflow: hidden;
@@ -400,7 +395,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: var(--base-size-x3);
-  width: 40vw;
+  width: 100%;
   row-gap: var(--base-size-x4);
 }
 
@@ -412,4 +407,11 @@ body {
   align-items: center;
   row-gap: var(--base-size-x2);
   box-shadow: 0 4px 8px var(--base-color-grey);
+}
+
+@media screen and (max-width:700px) {
+  .main{
+    grid-template-columns: auto;
+    row-gap: var(--base-size-x4);
+  }
 }

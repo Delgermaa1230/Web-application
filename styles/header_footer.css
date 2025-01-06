@@ -107,6 +107,10 @@ header .back:hover {
 
 
 /* footer style */
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
 
 footer {
     padding: 2rem;
