@@ -1,28 +1,119 @@
-.main{
-    display: grid;
-    grid-template-columns: 25% 55%;
-    justify-content: space-between;
-    padding: 0 var(--base-size-x10);
-    margin-top: var(--base-size-x6);
-    min-height: 700px;
-    align-items: center;
-    text-align: center;
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e;
+    color: #fff;
 }
 
-h2{
-    font-size: 30px;
-    text-align: center;
+/* Main sections */
+.main {
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
 }
 
-
-.submit{
+.section {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    row-gap: var(--base-size-x4);
-    min-height: 400px;
-    height: fit-content;
-    width: 100%;
-    background-color: var(--base-color-secondary-orange);
-    padding: var(--base-size-x4);
-    border-radius: var(--base-border-radius-x2);
+    align-items: center;
+    justify-content: center;
+    transition: top 0.5s ease-in-out;
+    background-color: #333;
 }
+
+.section.active {
+    top: 0;
+}
+
+.lessonSearch,
+#bioSubmit {
+    width: 80%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: var(--base-border-radius-x3);
+    border: none;
+    outline: none;
+}
+
+#bioSubmit{
+    height: 20vh;
+}
+.two-btn {
+    margin-top: 2rem;
+}
+
+#selection{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.selectedSub{
+    background-color: var(--base-color-light-orange);
+    padding: var(--base-size-x4);
+    border-radius: var(--base-border-radius-x3);
+    height: 30vh;
+}
+
+
+.important-button {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.important-button:hover {
+    background-color: #e68900;
+}
+
+
+.timetable {
+    border-radius: var(--base-border-radius-x3);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: var(--base-color-light-orange);
+    padding: var(--base-size-x4);
+    border: 0.5px solid var(--base-color-secondary-orange);
+}
+
+.cell {
+    background: var(--base-color-white);
+    padding: var(--base-size);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.header {
+    color: var(--base-text-color);
+    padding: var(--base-size);
+    font-size: var(--base-caption-font-size);
+    font-weight: var(--base-medium-font-weight);
+}
+
+.cell {
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: var(--base-color-secondary-orange);
+}
+
+.cell.selected {
+    background-color: var(--base-color-orange);
+}
+

@@ -251,9 +251,10 @@
   flex-direction: row;
   justify-content: space-between;
   column-gap: var(--base-size-x10);
-  width: 80vw;
+  width: 100%;
+  padding: var(--base-size-x4) 9vw;
 }
-
+/* progress bar*/
 .leftCont {
   width: 100%;
 
