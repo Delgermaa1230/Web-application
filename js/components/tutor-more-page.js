@@ -49,65 +49,63 @@ class TutorMorePage extends HTMLElement {
                 </section>
                 <section class="available-schedule-box">
                     <h2>Боломжит цаг</h2>
-                    <div>
-                <h2>Цаг сонгох</h2>
-                <div class="timetable">
-                    <div class="header">Цаг</div>
-                    <div class="header">Даваа</div>
-                    <div class="header">Мягмар</div>
-                    <div class="header">Лхагва</div>
-                    <div class="header">Пүрэв</div>
-                    <div class="header">Баасан</div>
+                    <div class="timetable">
+                        <div class="header">Цаг</div>
+                        <div class="header">Даваа</div>
+                        <div class="header">Мягмар</div>
+                        <div class="header">Лхагва</div>
+                        <div class="header">Пүрэв</div>
+                        <div class="header">Баасан</div>
 
-                    <div class="header">07:40 - 09:10</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
+                        <div class="header">07:40 - 09:10</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
 
-                    <div class="header">09:20 - 10:50</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
+                        <div class="header">09:20 - 10:50</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
 
-                    <div class="header">11:00 - 12:30</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
+                        <div class="header">11:00 - 12:30</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
 
-                    <div class="header">12:40 - 14:10</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
+                        <div class="header">12:40 - 14:10</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
 
-                    <div class="header">14:20 - 15:50</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
+                        <div class="header">14:20 - 15:50</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
 
-                    <div class="header">16:00 - 17:30</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
+                        <div class="header">16:00 - 17:30</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
 
-                    <div class="header">17:40 - 19:20</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
+                        <div class="header">17:40 - 19:20</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
                 </section>
                 <section class="comment-box">
                     <h2>Сэтгэгдэл</h2>
