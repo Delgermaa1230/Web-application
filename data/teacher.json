@@ -14,7 +14,9 @@
       "description": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
       "moreDescription": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
       "lessons": [
-        "Mathematic", "Programming Language C", "Algorithm"
+        "Mathematic",
+        "Programming Language C",
+        "Algorithm"
       ],
       "mode": "online",
       "price": 1000,
@@ -46,17 +48,63 @@
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         },
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         }
       ],
-      "possibleHours": [],
+      "possibleHours": {
+        "Monday": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "Tuesday": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Wednesday": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "Thursday": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Friday": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
       "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
@@ -73,7 +121,9 @@
       "description": "Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл.",
       "moreDescription": " физик болон инженерийн сэдвүүд",
       "lessons": [
-        "Physics", "Engineering", "Database"
+        "Physics",
+        "Engineering",
+        "Database"
       ],
       "mode": "online",
       "price": 2000,
@@ -85,23 +135,69 @@
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         },
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         },
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         }
       ],
-      "possibleHours": [],
+      "possibleHours": {
+        "Monday": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "Tuesday": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "Wednesday": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "Thursday": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Friday": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
       "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
@@ -118,7 +214,8 @@
       "description": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээлийг сайн заадаг.",
       "moreDescription": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээли",
       "lessons": [
-        "Descrete Mathematics", "Statics"
+        "Descrete Mathematics",
+        "Statics"
       ],
       "mode": "online",
       "price": 1000,
@@ -130,23 +227,36 @@
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         },
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         },
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         }
       ],
-      "possibleHours": [],
+      "possibleHours": {
+        "Monday": [
+          "07:40 - 09:10",
+          "09:20 - 10:50"
+        ],
+        "Tuesday": [
+          "14:20 - 15:50"
+        ],
+        "Wednesday": [],
+        "Thursday": [
+          "12:40 - 14:10"
+        ],
+        "Friday": []
+      },
       "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
@@ -163,7 +273,9 @@
       "description": "Би инженерчлэлийн багшаар ажиллахыг хүсдэг. Хэрэглээний математик заах дуртай.",
       "moreDescription": "енерчлэлийн багшаар ажиллахы",
       "lessons": [
-        "Algorithm", "English", "Engineering"
+        "Algorithm",
+        "English",
+        "Engineering"
       ],
       "mode": "online",
       "price": 1000,
@@ -175,29 +287,42 @@
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         },
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         },
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         },
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         }
       ],
-      "possibleHours": [],
+      "possibleHours": {
+        "Monday": [
+          "07:40 - 09:10",
+          "09:20 - 10:50"
+        ],
+        "Tuesday": [
+          "14:20 - 15:50"
+        ],
+        "Wednesday": [],
+        "Thursday": [
+          "12:40 - 14:10"
+        ],
+        "Friday": []
+      },
       "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
@@ -214,7 +339,9 @@
       "description": "Программчлалын багш, веб хөгжүүлэлтийн чиглэлээр туршлагатай.",
       "moreDescription": "лын багш,",
       "lessons": [
-        "Algorithm", "Programming Language C", "Database"
+        "Algorithm",
+        "Programming Language C",
+        "Database"
       ],
       "mode": "online",
       "price": 1000,
@@ -226,11 +353,24 @@
         {
           "firstName": "Номин",
           "lastName": "Төмөрбаатар",
-          "image":"../imgs/img6.png",
+          "image": "../imgs/img6.png",
           "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
         }
       ],
-      "possibleHours": [],
+      "possibleHours": {
+        "Monday": [
+          "07:40 - 09:10",
+          "09:20 - 10:50"
+        ],
+        "Tuesday": [
+          "14:20 - 15:50"
+        ],
+        "Wednesday": [],
+        "Thursday": [
+          "12:40 - 14:10"
+        ],
+        "Friday": []
+      },
       "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
@@ -247,7 +387,8 @@
       "description": "Интернет маркетингийн чиглэлээр багшилж байна. Сошиал медиа хэрэглээг заадаг.",
       "moreDescription": "Интернет маркетингийн чиглэлээр багшилж байна.",
       "lessons": [
-        "Mathematic", "Database"
+        "Mathematic",
+        "Database"
       ],
       "mode": "online",
       "price": 1000,
@@ -256,7 +397,20 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": [],
+      "possibleHours": {
+        "Monday": [
+          "07:40 - 09:10",
+          "09:20 - 10:50"
+        ],
+        "Tuesday": [
+          "14:20 - 15:50"
+        ],
+        "Wednesday": [],
+        "Thursday": [
+          "12:40 - 14:10"
+        ],
+        "Friday": []
+      },
       "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
@@ -273,7 +427,9 @@
       "description": "Би компьютерийн системийн багш. Системийн архитектурын хичээл заадаг.",
       "moreDescription": "омпьютерийн системийн багш. Системийн архитектурын хичээл заада",
       "lessons": [
-        "Math", "English", "C"
+        "Math",
+        "English",
+        "C"
       ],
       "mode": "online",
       "price": 1000,
@@ -282,7 +438,20 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": [],
+      "possibleHours": {
+        "Monday": [
+          "07:40 - 09:10",
+          "09:20 - 10:50"
+        ],
+        "Tuesday": [
+          "14:20 - 15:50"
+        ],
+        "Wednesday": [],
+        "Thursday": [
+          "12:40 - 14:10"
+        ],
+        "Friday": []
+      },
       "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
@@ -299,7 +468,9 @@
       "description": "Би математик, физикийн хичээлүүдийг сонирхдог. Студентуудтай харилцахад хичээл заахдаа таатай байдаг.",
       "moreDescription": "Би математик, физикийн хичээлүүдийг сонирхдог. Студен",
       "lessons": [
-        "Math", "English", "C"
+        "Math",
+        "English",
+        "C"
       ],
       "mode": "classroom",
       "price": 1000,
@@ -308,7 +479,20 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": [],
+      "possibleHours": {
+        "Monday": [
+          "07:40 - 09:10",
+          "09:20 - 10:50"
+        ],
+        "Tuesday": [
+          "14:20 - 15:50"
+        ],
+        "Wednesday": [],
+        "Thursday": [
+          "12:40 - 14:10"
+        ],
+        "Friday": []
+      },
       "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
@@ -325,7 +509,9 @@
       "description": "Машин сургалтын чиглэлээр багшилдаг. Оюутнуудад алгоритмын ойлголтыг заах дуртай.",
       "moreDescription": "Машин сургалтын чиглэлээр багшилдаг. Оюутнуудад алгоритмын ойлголтыг заах дур",
       "lessons": [
-        "Math", "English", "C"
+        "Math",
+        "English",
+        "C"
       ],
       "mode": "online",
       "price": 2000,
@@ -334,7 +520,20 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": [],
+      "possibleHours": {
+        "Monday": [
+          "07:40 - 09:10",
+          "09:20 - 10:50"
+        ],
+        "Tuesday": [
+          "14:20 - 15:50"
+        ],
+        "Wednesday": [],
+        "Thursday": [
+          "12:40 - 14:10"
+        ],
+        "Friday": []
+      },
       "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     },
     {
@@ -351,7 +550,9 @@
       "description": "Би философийн багш. Эртний философийн сэдвүүдийг оюутнуудад заах дуртай.",
       "moreDescription": "Би философийн багш. Эртний философийн сэдвүүдийг оюутнуудад заах дуртай.",
       "lessons": [
-        "Math", "English", "C"
+        "Math",
+        "English",
+        "C"
       ],
       "mode": "online",
       "price": 1000,
@@ -360,7 +561,20 @@
       "studyingSessions": [],
       "teachingSesssions": [],
       "comments": [],
-      "possibleHours": [],
+      "possibleHours": {
+        "Monday": [
+          "07:40 - 09:10",
+          "09:20 - 10:50"
+        ],
+        "Tuesday": [
+          "14:20 - 15:50"
+        ],
+        "Wednesday": [],
+        "Thursday": [
+          "12:40 - 14:10"
+        ],
+        "Friday": []
+      },
       "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
     }
   ]
