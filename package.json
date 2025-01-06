@@ -1,0 +1,23 @@
+{
+  "name": "web-application",
+  "version": "1.0.0",
+  "description": "github page at: https://delgermaa1230.github.io/Web-application/",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "data-uri-to-buffer": "^4.0.1",
+    "express": "^4.21.2",
+    "fetch-blob": "^3.2.0",
+    "formdata-polyfill": "^4.0.10",
+    "node-domexception": "^1.0.0",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.13.1",
+    "web-streams-polyfill": "^3.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

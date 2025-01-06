@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,23 +7,40 @@
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/header_footer.css">
-    <link rel="stylesheet" href="../styles/index.css">
-    
+    <link rel="stylesheet" href="../styles/searchResult.css">
+    <script type="module" src="../js/components/love-button.js"></script>
+    <script type="module" src="../js/components/tutor-card.js"></script>
 </head>
+
 <body>
     <header>
         </div>
         <nav>
-            <a href="/index.html">Буцах</a>
-            <a href="#"><i class="fa fa-question"></i></a>
-            <!-- <a href="/pages/profile.html"><i class="fa fa-user"></i></a> -->
-        </nav>
+            <a id="backBtn">Буцах</a>
+            <script>
+                document.getElementById('backBtn').addEventListener('click', () => {
+                    if (document.referrer) {
+                        window.history.back();
+                    } else {
+                        window.location.href = '../index.html';
+                    }
+                });
+
+            </script>
+            <a href="#"><i class="fa fa-question"></i></a>        </nav>
     </header>
     <div class="main">
         <section class="container">
-            <h2>Танд таалагдсан багш нар</h2>
-            <div class="tutors-box" id="topTutors">
+            <h2 style="margin-bottom: var(--base-size-x3);">Танд таалагдсан багш нар</h2>
+            <div class="tutors-box" id="lovedTutors">
             </div>
+            <script type="module">
+                import { renderLovedTs } from '../js/modules/loadLovedTutors.js';
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    renderLovedTs();
+                });
+            </script>
         </section>
         <div></div>
     </div>
@@ -51,41 +69,7 @@
             </li>
         </ul>
     </footer>
-    <script type="module" src="../js/searchResult/SR-tutorSec.js"></script>
-<script type="module">
-    document.addEventListener("DOMContentLoaded", async () => {
-        const { default: tutor, loadLovedTeacherData } = await import("../js/searchResult/SR-tutorSec.js");
-        const lovedTeachers = await loadLovedTeacherData();
-        const tutorsBox = document.getElementById("topTutors");
 
-        if (!lovedTeachers || lovedTeachers.length === 0) {
-            tutorsBox.innerHTML = "<p>Танд таалагдсан багш нар одоогоор алга байна.</p>";
-            return;
-        }
-
-        const tutorsHTML = lovedTeachers
-            .map(teacher => (new tutor(teacher)).render())
-            .join('');
-        
-        tutorsBox.insertAdjacentHTML("beforeend", tutorsHTML);
-    });
-
-    window.loveButtonClick = function(event, teacherName) {
-        event.stopPropagation();
-        event.preventDefault();
-        
-        let lovedTeachers = JSON.parse(localStorage.getItem("lovedTeachers")) || [];
-        const isLoved = lovedTeachers.includes(teacherName);
-        
-        if (isLoved) {
-            lovedTeachers = lovedTeachers.filter(name => name !== teacherName);
-            alert(`${teacherName} таны таалагдсан жагсаалтаас хасагдлаа!`);
-            location.reload();
-        }
-
-        localStorage.setItem("lovedTeachers", JSON.stringify(lovedTeachers));
-    }
-</script>
-   
 </body>
+
 </html>

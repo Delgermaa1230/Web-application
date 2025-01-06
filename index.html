@@ -9,35 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/header_footer.css">
     <link rel="stylesheet" href="styles/index.css">
-    <script type="module" src="./js/topteacherFilter.js"></script>
+    <script type="module" src="./js/components/love-button.js"></script>
+    <script type="module" src="./js/components/tutor-card.js"></script>
+    <script type="module" src="./js/mainTop.js"></script>
 </head>
+
 
 <body>
     <header>
         <script>
-            function loveButtonClick(event) {
-                event.stopPropagation(); 
-                event.preventDefault();
-                alert("You loved this!");
-            }
-            </script>
-        <div class="header-first-box"> 
+
+        </script>
+        <div class="header-first-box">
             <a href="../index.html">
                 <h1>Numteach</h1>
             </a>
-            <!-- <form id="" action="" name="">
-                <input type="text" placeholder="Хайлт хийх...">
-                <button type="submit">
 
-                    <div class="search-icon">
-                        <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="11" cy="11" r="8" stroke="white" stroke-width="4" fill="none" />
-                       <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="4" />
-                        </svg>
-                    </div>
-                </button>
-            </form> -->
         </div>
         <nav>
             
@@ -67,7 +54,7 @@
         </div>
         <section class="container">
             <h2>Санал болгох багш нар</h2>
-            <div class="tutors-box" id="topTutors">
+            <div class="tutors-box" id="tutors">
             </div>
         </section>
         <div></div>

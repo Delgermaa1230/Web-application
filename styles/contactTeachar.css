@@ -164,21 +164,3 @@ form {
         justify-self: center;
     }
 }
-
-
-/* @media (prefers-color-scheme: dark) {
-    
-    :root {
-        --color-background: #1c1c1c; 
-        --color-primary: #ff990031; 
-        --color-light-grey: #363535; 
-        --color-grey: #454343; 
-        --color-black: hsl(0, 0%, 100%); 
-        --color-white: #121111; 
-        --color-dark-grey: #b9b9b9; 
-    }
-
-    body {
-        background: rgba(35, 34, 34, 0.9);
-    }
-} */
