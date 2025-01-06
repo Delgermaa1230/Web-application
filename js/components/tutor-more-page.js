@@ -5,7 +5,7 @@ class TutorMorePage extends HTMLElement {
 
     connectedCallback() {
         const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
-        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking, moreDescription, teachingDescription, price, lessons } = bagsh;
+        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking, moreDescription, teachingDescription, price, lessons, comments } = bagsh;
         const firstLetterOfLastName = lastName.charAt(0);
         
         this.innerHTML = `
@@ -109,25 +109,12 @@ class TutorMorePage extends HTMLElement {
                 </section>
                 <section class="comment-box">
                     <h2>Сэтгэгдэл</h2>
-                    <section class="comment">
-                        <div class="comment-owner">
-                            <img src="/imgs/img3.png" alt="user">
-                            <h3>Нямаа Батпүрэв</h3>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    </section>
-                    <section class="comment">
-                        <div class="comment-owner">
-                            <img src="/imgs/img2.png" alt="user">
-                            <h3>Нямаа Батпүрэв</h3>
-                        </div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    </section>
                 </section>
             </section>
         `;
         
         this.renderLessons(lessons);
+        this.renderComments(comments);
     }
 
     renderLessons(lessons) {
@@ -141,6 +128,16 @@ class TutorMorePage extends HTMLElement {
         });
         
         this.querySelector('.subjects-tags').appendChild(ul);
+    }
+
+    renderComments(comments) {
+        const box = document.querySelector('.comment-box')
+        
+        comments.forEach(c => {
+            const celement = document.createElement("comment-element");
+            celement.setAttribute('comment-data', JSON.stringify(c))
+            box.appendChild(celement);
+        });
     }
 }
 
