@@ -244,8 +244,8 @@ body {
   grid-template-columns: 30% auto; 
   justify-content: space-between;
   column-gap: var(--base-size-x10);
-  width: 100vw;
-  padding: var(--base-size-x4) 10vw;
+  width: 100%;
+  padding: var(--base-size-x4) 9vw;
 }
 /* progress bar*/
 .leftCont {
