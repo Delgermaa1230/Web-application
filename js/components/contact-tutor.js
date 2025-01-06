@@ -7,8 +7,8 @@ class ContactTutor extends HTMLElement {
         const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
         const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking } = bagsh;
         const firstLetterOfLastName = lastName.charAt(0);
-        this.innerHTML =`
-        <div cass="sticky-part-wrapper">
+        this.innerHTML = `
+        <div class="sticky-part-wrapper">
             <section class="teacher-sticky-box">
                 <div class="student-number">
                     <p>Цол</p>
@@ -31,7 +31,6 @@ class ContactTutor extends HTMLElement {
             <div>
                 <h2>Цаг сонгох</h2>
                 <div class="timetable">
-
                     <div class="header">Цаг</div>
                     <div class="header">Даваа</div>
                     <div class="header">Мягмар</div>
@@ -39,21 +38,49 @@ class ContactTutor extends HTMLElement {
                     <div class="header">Пүрэв</div>
                     <div class="header">Баасан</div>
 
-                    <div class="header">9:00am - 10:00am</div>
+                    <div class="header">07:40 - 09:10</div>
                     <div class="cell"></div>
                     <div class="cell"></div>
                     <div class="cell"></div>
                     <div class="cell"></div>
                     <div class="cell"></div>
 
-                    <div class="header">10:00am - 11:00am</div>
+                    <div class="header">09:20 - 10:50</div>
                     <div class="cell"></div>
                     <div class="cell"></div>
                     <div class="cell"></div>
                     <div class="cell"></div>
                     <div class="cell"></div>
 
-                    <div class="header">11:00am - 12:00am</div>
+                    <div class="header">11:00 - 12:30</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <div class="header">12:40 - 14:10</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <div class="header">14:20 - 15:50</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <div class="header">16:00 - 17:30</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <div class="header">17:40 - 19:20</div>
                     <div class="cell"></div>
                     <div class="cell"></div>
                     <div class="cell"></div>
@@ -61,7 +88,7 @@ class ContactTutor extends HTMLElement {
                     <div class="cell"></div>
                 </div>
             </div>
-            <form action="">
+            <form id="contact-form">
                 <label for="message">
                     <h2>Таны мессеж</h2>
                 </label>
@@ -70,15 +97,43 @@ class ContactTutor extends HTMLElement {
                     <h2>Утас</h2>
                 </label>
                 <input type="tel" id="phone" name="phone">
-                <br>
-                <br>
-                <button class="important-button" type="submit"><a href="">Баталгаажуулах</a></button>
+                <br><br>
+                <button class="important-button" type="submit">Баталгаажуулах</button>
             </form>
         </div>
         `;
-    }
-        
 
+        this.querySelectorAll(".cell").forEach(cell => {
+            cell.addEventListener("click", function () {
+                this.classList.toggle("selected");
+            });
+        });
+
+        const form = this.querySelector('#contact-form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Form submitted!');
+        });
+
+        this.querySelectorAll('.cell.selected').forEach(cell => {
+                formData.selectedTimes.push(cell.textContent.trim());
+            });
+
+            fetch('http://localhost:3000/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Data submitted successfully!');
+            })
+            .catch(error => {
+                alert('Error submitting data: ' + error.message);
+            });
+    }
 }
 
 customElements.define('contact-tutor', ContactTutor);

@@ -115,7 +115,7 @@ p {
     background-color: var(--base-color-secondary-orange);
 }
 
-.cell.selected {
+.selected {
     background-color: var(--base-color-orange);
 }
 

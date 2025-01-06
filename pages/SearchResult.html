@@ -24,8 +24,8 @@
             <a href="../index.html">
                 <h1>Numteach</h1>
             </a>
-            <form id="" action="" name="">
-                <input type="text" placeholder="Хайлт хийх...">
+            <form id="" action="SearchResult.html" name="lesson">
+                <input type="text" placeholder="Сурах хичээлийн нэр?" name="lesson">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
@@ -52,7 +52,7 @@
                     <button data-category="classroom" class="Filterbtn" onclick="toggleDropdown(event, 'class')">Танхим</button>
                 </li>
                 <li>
-                    <button data-category="all" class="Filterbtn"
+                    <button class="FilterbtnA"
                         onclick="toggleDropdown(event, 'rating')">Үнэлгээ</button>
                     <ul class="dropdown" id="rating">
                         <li><button data-category="rating" data-criteria="1" class="Filterbtn">1</button></li>
@@ -63,7 +63,7 @@
                     </ul>
                 </li>
                 <li>
-                    <button data-category="all" class="Filterbtn"
+                    <button class="FilterbtnA"
                         onclick="toggleDropdown(event, 'ranking')">Цол</button>
                     <ul class="dropdown" id="ranking">
                         <li><button data-category="ranking" data-criteria="Ботго" class="Filterbtn">Ботго</button></li>
@@ -75,7 +75,7 @@
                     </ul>
                 </li>
                 <li>
-                    <button data-category="all" class="Filterbtn" onclick="toggleDropdown(event, 'price')">Үнээр
+                    <button class="FilterbtnA" onclick="toggleDropdown(event, 'price')">Үнээр
                         эрэмблэх</button>
                     <ul class="dropdown" id="price">
                         <li><button data-category="price" data-criteria="Ихээс бага" class="Filterbtn">Ихээс

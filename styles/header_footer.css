@@ -48,6 +48,7 @@ header h1:hover {
     background-color: transparent;
     width: calc(var(--base-size-x2)*13);
     padding: var(--base-padding);
+    color: var(--base-text-color);
 }
 
 .header-first-box form input:focus {
@@ -57,6 +58,8 @@ header h1:hover {
 
 .header-first-box form input::placeholder{
     font-size: var(--base-caption-font-size);
+    color: var(--base-text-color);
+    font-weight: var(--base-thin-font-weight);
 }
 
 .header-first-box form button {
@@ -107,10 +110,6 @@ header .back:hover {
 
 
 /* footer style */
-h2 {
-    font-size: 30px;
-    text-align: center;
-}
 
 footer {
     padding: 2rem;
