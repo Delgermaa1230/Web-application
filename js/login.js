@@ -1,22 +1,8 @@
-// Load data from a JSON file
-async function loadData() {
-    const response = await fetch("../data/teacher.json");
-    const data = await response.json();
-    return data.teachers;
-}
+// Login and registration handling
+const API_URL = 'http://localhost:3000';
 
-// Variables
-let tutorData = [];
-loadData().then(data => tutorData = data);
-
-// DOM Elements
 const loginForm = document.getElementById("loginForm");
 const registerForm = document.getElementById("registerForm");
-const loginEmail = document.getElementById("login-email");
-const loginPassword = document.getElementById("login-password");
-const registerEmail = document.getElementById("register-email");
-const registerPassword = document.getElementById("register-password");
-const registerRetypePassword = document.getElementById("register-retype-password");
 const errorMessageLogin = document.getElementById("error-message-login");
 
 // Form Switch Functions
@@ -30,23 +16,6 @@ function registerSwitch() {
     document.getElementById("register").style.right = "0px";
 }
 
-// Login Validation
-loginForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const email = loginEmail.value.trim();
-    const password = loginPassword.value.trim();
-
-    const user = tutorData.find(tutor => tutor.email === email && tutor.password === password);
-
-    if (user) {
-        errorMessageLogin.textContent = "";
-        window.location.href = './profile.html'
-    } else {
-        errorMessageLogin.textContent = "Мэйл эсвэл нууц үг буруу байна.";
-    }
-});
-
 // Password Validation Helper
 function isPasswordValid(password) {
     const hasUppercase = /[A-Z]/.test(password);
@@ -54,17 +23,50 @@ function isPasswordValid(password) {
     return password.length >= 8 && hasUppercase && hasNumber;
 }
 
-
-// Register Validation
-registerForm.addEventListener("submit", (e) => {
+// Login Handler
+loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const email = registerEmail.value.trim();
-    const password = registerPassword.value.trim();
-    const retypePassword = registerRetypePassword.value.trim();
+    const email = document.getElementById("login-email").value.trim();
+    const password = document.getElementById("login-password").value.trim();
+
+    try {
+        const response = await fetch(`${API_URL}/students/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            errorMessageLogin.textContent = "";
+            // Store user data if needed
+            localStorage.setItem('student', JSON.stringify(data.student));
+            window.location.href = './profile.html';
+        } else {
+            errorMessageLogin.textContent = data.error;
+        }
+    } catch (error) {
+        errorMessageLogin.textContent = "Серверт холбогдоход алдаа гарлаа";
+    }
+});
+
+// Register Handler
+registerForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const firstName = document.getElementById("register-fname").value.trim();
+    const lastName = document.getElementById("register-lname").value.trim();
+    const email = document.getElementById("register-email").value.trim();
+    const phone = document.getElementById("register-phone").value.trim();
+    const password = document.getElementById("register-password").value.trim();
+    const retypePassword = document.getElementById("register-retype-password").value.trim();
 
     if (!isPasswordValid(password)) {
-        alert("Нууц үг 8с баггүй нэг том үсэг тоо ашиглана уу");
+        alert("Нууц үг 8-с багагүй, нэг том үсэг, тоо ашиглана уу");
         return;
     }
 
@@ -73,13 +75,30 @@ registerForm.addEventListener("submit", (e) => {
         return;
     }
 
-    // Simulate adding the user to the JSON data (you would handle this server-side)
-    const existingUser = tutorData.find(tutor => tutor.email === email);
-    if (existingUser) {
-        alert("Мэйл бүртгэлтэй байна");
-    } else {
-        tutorData.push({ email, password });
-        alert("Амжилттай");
-        loginSwitch();
+    try {
+        const response = await fetch(`${API_URL}/students`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                first_name: firstName,
+                last_name: lastName,
+                email,
+                password,
+                phone
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert(data.message); // Амжилттай бүртгэгдлээ
+            loginSwitch(); // Switch to login form
+        } else {
+            alert(data.error);
+        }
+    } catch (error) {
+        alert("Серверт холбогдоход алдаа гарлаа");
     }
 });
