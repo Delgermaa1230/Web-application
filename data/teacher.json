@@ -14,7 +14,7 @@
       "description": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
       "moreDescription": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
       "lessons": [
-        "Math", "English", "C"
+        "Mathematic", "Programming Language C", "Algorithm"
       ],
       "mode": "online",
       "price": 1000,
@@ -60,7 +60,7 @@
       "description": "Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл.",
       "moreDescription": " физик болон инженерийн сэдвүүд",
       "lessons": [
-        "Math", "English", "C"
+        "Physics", "Engineering", "Database"
       ],
       "mode": "online",
       "price": 2000,
@@ -86,7 +86,7 @@
       "description": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээлийг сайн заадаг.",
       "moreDescription": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээли",
       "lessons": [
-        "Math", "English", "C"
+        "Descrete Mathematics", "Statics"
       ],
       "mode": "online",
       "price": 1000,
@@ -112,7 +112,7 @@
       "description": "Би инженерчлэлийн багшаар ажиллахыг хүсдэг. Хэрэглээний математик заах дуртай.",
       "moreDescription": "енерчлэлийн багшаар ажиллахы",
       "lessons": [
-        "Math", "English", "C"
+        "Algorithm", "English", "Engineering"
       ],
       "mode": "online",
       "price": 1000,
@@ -138,7 +138,7 @@
       "description": "Программчлалын багш, веб хөгжүүлэлтийн чиглэлээр туршлагатай.",
       "moreDescription": "лын багш,",
       "lessons": [
-        "Math", "English", "C"
+        "Algorithm", "Programming Language C", "Database"
       ],
       "mode": "online",
       "price": 1000,
@@ -164,7 +164,7 @@
       "description": "Интернет маркетингийн чиглэлээр багшилж байна. Сошиал медиа хэрэглээг заадаг.",
       "moreDescription": "Интернет маркетингийн чиглэлээр багшилж байна.",
       "lessons": [
-        "Math", "English", "C"
+        "Mathematic", "Database"
       ],
       "mode": "online",
       "price": 1000,

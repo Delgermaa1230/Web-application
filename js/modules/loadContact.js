@@ -16,7 +16,7 @@ async function loadData() {
 
         const container = document.querySelector('.container');
         if (!container) {
-            console.error("Container element not found");
+            console.error("Container element oldsngu");
             return;
         }
 

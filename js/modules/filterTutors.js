@@ -3,7 +3,7 @@ import { tutors } from './loadData.js';
 
 export function filterTutors(criteria, category) {
     if (!tutors) {
-        console.log("Data not loaded yet");
+        console.log("Data load hiigdsengu");
         return;
     }
 

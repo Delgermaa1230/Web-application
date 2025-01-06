@@ -65,7 +65,7 @@
     --base-bold-font-weight: bold;
     --base-medium-font-weight: 600;
     --base-regular-font-weight: normal;
-    --base-thin-font-weight: 200;
+    --base-thin-font-weight: 100;
     --base-transition: all 0.4s ease;
     --base-padding: var(--base-size) var(--base-size-x2);
     --base-padding-even: var(--base-size);
@@ -162,5 +162,6 @@ body {
         --base-color-grey-light:var(--base-color-grey);
         --base-grey-text-color: var(--base-color-white);
         --base-color-shadow: var(--base-color-white);
+        --base-color-blue: #16353d;
     }
 }

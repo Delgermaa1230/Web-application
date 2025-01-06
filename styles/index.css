@@ -55,7 +55,8 @@ form {
 input {
     border: none;
     background-color: transparent;
-    padding: var(--base-padding)
+    padding: var(--base-padding);
+    color: var(--base-text-color)
 }
 
 input:focus {
