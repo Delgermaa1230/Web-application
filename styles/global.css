@@ -28,7 +28,7 @@
     --base-size-x24: calc(var(--base-size)*24); /* 192px */
     --base-size-x25: calc(var(--base-size)*25); /* 200px */
     --base-color-white: #ffffff;
-    --base-color-blue: #0093FF;
+    --base-color-blue: #79b1d8;
     --base-color-black: #121212;
     --base-color-dark-grey: #413D3D;
     --base-color-grey: #6d6d6d;
