@@ -97,9 +97,10 @@ h2{
 
 /* main content*/
 .main{
-  height: 90vh;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 100%;
   background-color: var(--base-background-color-profile);
 }
 
@@ -142,15 +143,15 @@ h2{
 
 .Container {
   position: absolute;
-  height: 80vh;
-  top: 100%; /* Hidden by default */
-  left: 0;
+  height: 100%;
+  left: 100%; /* Hidden by default */
   width: 100%;
   box-sizing: border-box;
 }
 
 .Container.active {
-  top: 0; /* Slide into view when active */
+  left: 0;
+  position: relative;
 }
 
 
@@ -399,11 +400,11 @@ h2{
     grid-template-columns: auto;
     row-gap: var(--base-size-x4);
   }
-
-  .main{
-    height: 120vh;
-    background-color: #333;
+  #student{
+    grid-template-columns: auto;
+    row-gap: var(--base-size-x4);
   }
+
 
   .rightCont {
     grid-column: 1; /* Stays at the top */
