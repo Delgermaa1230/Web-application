@@ -18,7 +18,6 @@ h2{
 
 .BGCont {
   position: relative;
-  background-color: #121212;
   width: 100%;
   height: 200px;
   overflow: hidden;
@@ -98,9 +97,10 @@ h2{
 
 /* main content*/
 .main{
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   position: relative;
+  background-color: var(--base-background-color-profile);
 }
 
 .dashBoard{
@@ -118,7 +118,7 @@ h2{
   font-size: large;
   font-weight: bold;
   border-bottom: 3px solid transparent; 
-  color: #ffffffa1; 
+  color: var( --base-color-deactivaded-grey); 
   padding: 10px;
   cursor: pointer;
   transition: color 0.3s ease, border-bottom 0.3s ease;
@@ -126,8 +126,8 @@ h2{
 
 .studentBtn.active,
 .teacherBtn.active {
-  color: var(--base-color-white); 
-  border-bottom: 3px solid var(--base-color-white); 
+  color: var(--base-text-color); 
+  border-bottom: 3px solid var(--base-text-color); 
 }
 /*teacher*/
 #teacher {
@@ -138,18 +138,11 @@ h2{
   padding: var(--base-size-x6) var(--base-size-x10);
 }
 
-#student{
-  display: grid;
-  grid-template-columns: 60% 40%;
-  justify-content: space-between;
-  column-gap: var(--base-size-x2);
-  padding: var(--base-size-x10);
-}
+
 
 .Container {
   position: absolute;
   height: 80vh;
-  background-color: #333;
   top: 100%; /* Hidden by default */
   left: 0;
   width: 100%;
@@ -165,6 +158,7 @@ h2{
 
   /*left container*/
   .leftCont{
+    width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: var(--base-size-x4);
@@ -269,7 +263,7 @@ h2{
     row-gap: var(--base-size-x4);
   }
     .CommonCont{
-      text-align: center;
+      width: fit-content;
       display: flex;
       flex-direction: column ;
       align-items: center;
@@ -278,6 +272,18 @@ h2{
       background-color: var(--base-background-color-orange);
       padding: var(--base-size-x2) ;
       border-radius: var(--base-border-radius-x2);
+    }
+
+    .CommonCont h3 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    } 
+
+    .info-item {
+      display: flex; 
+      justify-content: space-between; 
+      margin-bottom: 10px;
     }
     
     .subjects-tags p {
@@ -297,10 +303,97 @@ h2{
 
 /*student*/
 
-.leftCont {
-  width: 100%;
+#student{
+  display: grid;
+  grid-template-columns: 60% 30%;
+  justify-content: space-between;
+  column-gap: var(--base-size-x2);
+  padding: var(--base-size-x6) var(--base-size-x10);
 }
+  /*right cont*/
+  .form-container{
+    width: 100%;
+    background-color: var(--base-background-color-orange);
+    padding: var(--base-size-x4);
+    border-radius: var(--base-border-radius-x2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .form-container h3 {
+    font-size: 18px;
+    color: var(--base-text-color);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: var(--base-size);
+    width: 100%;
+  }
+
+  label {
+    font-size: 14px;
+    color: var(--base-text-color);
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: black;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--base-border-radius-x2);
+    box-sizing: border-box;
+  }
+  .fullName {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    column-gap: var(--base-size-x2);
+}
+  /*left cont*/
+  .learninglessonCont{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--base-size-x4);
+  }
+  .learninglesson{
+    width: 100%;
+    height: var(--base-size-x20);
+    background-color: var(--base-background-color-orange);
+    border-radius: var(--base-border-radius-x2);
+  } 
+
+  .PostsCont{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--base-size-x2);
+  
+  } 
+  .post {
+    color: var(--base-color-white);
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--base-size-x2);
+    width: 100%;
+    height: 150px;
+    background-color: var(--base-background-color-orange);
+    border-radius: var(--base-border-radius-x2);
+    padding: var(--base-size-x2) 2rem;
+  }
+  
+
+
+
+
+
+
+/*responsive*/
 @media (max-width: 1100px) {
   #teacher{
     grid-template-columns: auto;

@@ -31,6 +31,7 @@
     --base-color-blue: #79b1d8;
     --base-color-black: #121212;
     --base-color-dark-grey: #413D3D;
+    --base-color-deactivaded-grey:#2c2c2c88;
     --base-color-grey: #6d6d6d;
     --base-color-grey-medium: #d9d9d9;
     --base-color-grey-light: #f3f3f3;
@@ -40,6 +41,7 @@
     --base-color-system-success: #5bca8d;
     --base-color-system-success-light: #f2fbf6;
     --base-color-system-warning: #ff3636;
+
     --base-font-family: ;
     --base-h1-font-size: 40px;
     --base-h2-font-size: 26px;
@@ -70,6 +72,7 @@
     --base-padding: var(--base-size) var(--base-size-x2);
     --base-padding-even: var(--base-size);
     --base-background-color: var(--base-color-white);
+    --base-background-color-profile: var(--base-color-white);
     --base-background-color-orange: var(--base-color-light-orange);
     --base-color-shadow: var(--base-color-dark-grey);
     --base-background-color-shadow: #fbb13b14;
@@ -163,5 +166,8 @@ body {
         --base-grey-text-color: var(--base-color-white);
         --base-color-shadow: var(--base-color-white);
         --base-color-blue: #16353d;
+        --base-background-color-profile: #333;
+        --base-color-deactivaded-grey: #ffffff9c;
+        
     }
 }
