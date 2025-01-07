@@ -460,6 +460,8 @@ background: linear-gradient(124deg, rgba(255,113,0,1) 0%, rgba(0,0,0,1) 32%, rgb
   }
 }
 
+
+/*utas*/
 @media (max-width:500px) {
   *{
     font-size: smaller;
@@ -485,29 +487,24 @@ background: linear-gradient(124deg, rgba(255,113,0,1) 0%, rgba(0,0,0,1) 32%, rgb
   }
   .ProfPicCnt {
     position: absolute;
-    top: -80px;
+    top: -40px;
     left: 10px;
-    width: 150px;
-    height: 150px;
+    width: var(--base-size-x12);
+    height: var(--base-size-x12);
     overflow: hidden;
     z-index: 2;
   }
   .text-info {
     text-align: start;
-    margin-left: 150px;
+    margin-left: var(--base-size-x12);
     color: var(--base-text-color);
   }
 
   .dashBoard{
-    width: 100%;
     display: flex;
     column-gap: var(--base-size-x2);
     padding: 0 var(--base-size-x5);
-    align-items: center;
     justify-content: center;
-  }
-  .leftCont{
-    width: 100%;
   }
 
   .progress-container {
@@ -521,6 +518,12 @@ background: linear-gradient(124deg, rgba(255,113,0,1) 0%, rgba(0,0,0,1) 32%, rgb
   }
   .postInfoLine{
     flex-direction: column;
+  }
+  .postLesson img{
+    width: var(--base-size-x8);
+    height: var(--base-size-x8);
+    object-fit: cover;
+    border-radius: 50%;
   }
 
 

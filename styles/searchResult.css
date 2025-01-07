@@ -53,18 +53,17 @@ body {
 }
 
 .dropdown {
+    
     border-radius: var(--base-size-x2);
-    padding: var(--base-padding);
+    padding: 4px;
     position: absolute;
     z-index: 999;
-    display: none;
-    /* Default hidden */
-    margin-top: var(--base-size);
+    display: none;  
+    background-color: var(--base-background-color);
 }
 
 .dropdown li {
     display: block;
-    margin-top: var(--base-size);
 }
 
 
@@ -201,5 +200,14 @@ body {
         display: grid;
         grid-template-columns: 98%;
         grid-template-rows: auto;
+    }
+}
+
+@media (max-width:500px) {
+    .filterMenu{
+        font-size: xx-small;
+    }
+    .main {
+        margin: var(--base-size-x2);
     }
 }
