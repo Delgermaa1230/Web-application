@@ -30,7 +30,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Routes
 app.use('/api/teachers', teacherRouter);
-app.use('/students', studentRoutes);
+app.use('/api/students', studentRoutes);
 
 
 const PORT = process.env.PORT || 3000;
