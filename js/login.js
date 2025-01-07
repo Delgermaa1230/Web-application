@@ -7,12 +7,12 @@ const errorMessageLogin = document.getElementById("error-message-login");
 
 // Хэлбэр солих функцүүд
 function loginSwitch() {
-    document.getElementById("register").style.right = "-520px";
+    document.getElementById("register").style.right = "100%";
     document.getElementById("login").style.left = "0px";
 }
 
 function registerSwitch() {
-    document.getElementById("login").style.left = "-700px";
+    document.getElementById("login").style.left = "100%";
     document.getElementById("register").style.right = "0px";
 }
 
