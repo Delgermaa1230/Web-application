@@ -36,19 +36,34 @@ router.get('/:id', async (req, res) => {
  * @swagger
  * /api/teachers:
  *   get:
- *     summary: Get all teachers
+ *     summary: Get all teachers with their lessons
  *     responses:
  *       200:
- *         description: List of all teachers
+ *         description: List of all teachers with their lessons
  */
 router.get('/', async (req, res) => {
     try {
+        // Бүх багшийн мэдээллийг авч байна
         const teachers = await moTeacher.getAllTeachers();
-        res.json(teachers);
+
+        // Багш бүрийн хичээлүүдийг авч, багшийн мэдээлэлтэй нэгтгэнэ
+        const teachersWithLessons = await Promise.all(
+            teachers.map(async (teacher) => {
+                const teacherLessons = await moTeacher.getTeacherLessons(teacher.teacher_id);
+                return {
+                    ...teacher,
+                    lessons: teacherLessons, // Багшийн хичээлүүдийг нэмнэ
+                };
+            })
+        );
+
+        // Эцэст нь багш болон хичээлүүдийг буцаана
+        res.json(teachersWithLessons);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
+
 
 /**
  * @swagger

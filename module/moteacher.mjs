@@ -40,7 +40,7 @@ export default class Moteacher {
     async getTeacherLessons(teacherId) {
         try {
             const query = `
-                SELECT *
+                SELECT teacher_id, lesson_name
                 FROM "Teacher_lessons"
                 WHERE teacher_id = $1
             `;
