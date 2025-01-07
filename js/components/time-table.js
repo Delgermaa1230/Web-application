@@ -8,16 +8,17 @@ class Timetable extends HTMLElement {
 
         this.innerHTML = `
             <style>
-            .timetable {
+                .timetable {
                     border-radius: var(--base-border-radius-x3);
                     display: grid;
                     grid-template-columns: repeat(6, 1fr);
                     gap: 6px;
-                    max-width: 100%;
+                    width: 100%;
+                    margin: 0 auto;
                     background-color: var(--base-color-light-orange);
                     padding: var(--base-size-x4);
-                    border: 0.5px solid var(--base-color-secondary-orange);
-                }
+                    border: 0.5px solid var(--base-color-orange);
+                    }
 
                 .cell {
                     background: var(--base-color-grey-medium);

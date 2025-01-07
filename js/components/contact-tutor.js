@@ -5,7 +5,7 @@ class ContactTutor extends HTMLElement {
 
     connectedCallback() {
         const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
-        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking, possibleHours } = bagsh;
+        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking, possibleHours,price } = bagsh;
         const firstLetterOfLastName = lastName.charAt(0);
         this.innerHTML = `
         <div class="sticky-part-wrapper">
@@ -23,7 +23,7 @@ class ContactTutor extends HTMLElement {
                 </div>
                 <div class="wage">
                     <p>Төлбөр</p>
-                    <span>10'000₮/цаг</span>
+                    <span>${price}₮/цаг</span>
                 </div>
             </section>
         </div>
