@@ -219,3 +219,9 @@ h3 {
         justify-self: center;
     }
 }
+
+@media screen and (max-width: 550px) {
+    .main {
+        margin: var(--base-size)
+    } 
+}

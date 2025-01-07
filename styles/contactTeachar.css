@@ -118,7 +118,7 @@ form {
     justify-self: center;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
     .main {
         flex-direction: column;
         justify-content: center;
@@ -134,4 +134,10 @@ form {
         position: relative;
         justify-self: center;
     }
+}
+
+@media screen and (max-width: 550px) {
+    .main {
+        margin: var(--base-size)
+    } 
 }
