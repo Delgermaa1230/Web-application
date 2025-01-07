@@ -138,6 +138,7 @@ footer ul li ul li {
 }
 
 footer ul li ul li a{
+    margin-top: var(--base-size);
     font-weight: var(--base-regular-font-weight);
     font-size: var(--base-caption-font-size);
     color: var(--base-grey-text-color)

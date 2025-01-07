@@ -24,9 +24,10 @@ h2{
   height: 200px;
   overflow: hidden;
 }
-.BGCont img{
-  object-fit: contain;
+.BGimage{
   width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .postHeader {
