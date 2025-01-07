@@ -5,7 +5,7 @@ class ContactTutor extends HTMLElement {
 
     connectedCallback() {
         const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
-        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking } = bagsh;
+        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking, possibleHours } = bagsh;
         const firstLetterOfLastName = lastName.charAt(0);
         this.innerHTML = `
         <div class="sticky-part-wrapper">
@@ -30,73 +30,13 @@ class ContactTutor extends HTMLElement {
         <div class="contact-forms">
             <div>
                 <h2>Цаг сонгох</h2>
-                <div class="timetable">
-                    <div class="header">Цаг</div>
-                    <div class="header">Даваа</div>
-                    <div class="header">Мягмар</div>
-                    <div class="header">Лхагва</div>
-                    <div class="header">Пүрэв</div>
-                    <div class="header">Баасан</div>
-
-                    <div class="header">07:40 - 09:10</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-
-                    <div class="header">09:20 - 10:50</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-
-                    <div class="header">11:00 - 12:30</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-
-                    <div class="header">12:40 - 14:10</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-
-                    <div class="header">14:20 - 15:50</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-
-                    <div class="header">16:00 - 17:30</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-
-                    <div class="header">17:40 - 19:20</div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
+                <time-table class="timetable" schedule-data='${JSON.stringify(possibleHours)}' ></time-table>
             </div>
             <form id="contact-form">
                 <label for="message">
                     <h2>Таны мессеж</h2>
                 </label>
                 <textarea type="text" id="message" name="message"></textarea>
-                <label for="phone">
-                    <h2>Утас</h2>
-                </label>
-                <input type="tel" id="phone" name="phone">
                 <br><br>
                 <button class="important-button" type="submit">Баталгаажуулах</button>
             </form>

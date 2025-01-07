@@ -15,107 +15,62 @@ app.get('/', (req, res) => {
   res.send('hello world!');
 });
 
-// Бүх багш нарын мэдээлэл авах
-app.get('/teachers', async (req, res) => {
-  try {
-    const result = await client.query('SELECT * FROM "Teacher"');
-    res.json(result.rows);
-  } catch (error) {
-    console.error('Санал асуулга гүйцэтгэх алдаа', error.stack);
-    res.status(500).send('Өгөгдлийн сангийн алдаа');
-  }
-});
-
-// ID-аар багшийн мэдээлэл авах
-app.get('/teachers/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const result = await client.query('SELECT * FROM "Teacher" WHERE id = $1', [id]);
-    
-    if (result.rows.length === 0) {
-      res.status(404).send('Багш олдсонгүй');
-    } else {
-      res.json(result.rows[0]);
-    }
-  } catch (error) {
-    console.error('Query error:', error);
-    res.status(500).send('Өгөгдлийн сангийн алдаа');
-  }
-});
-
-// Шинэ багш бүртгэх
-app.post('/teachers', async (req, res) => {
+app.post('/students', async (req, res) => {
   try {
     const {
       first_name,
       last_name,
       email,
       password,
-      image,
-      ratings,
-      number_of_ratings,
-      description,
-      lessons
+      phone
     } = req.body;
 
-    const result = await client.query(
-      'INSERT INTO "Teacher" (first_name, last_name, email, password, image, ratings, number_of_ratings, description, lessons) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *',
-      [first_name, last_name, email, password, image, ratings, number_of_ratings, description, lessons]
+    // Check if email already exists
+    const emailCheck = await client.query(
+      'SELECT * FROM "Student" WHERE email = $1',
+      [email]
     );
 
-    res.status(201).json(result.rows[0]);
+    if (emailCheck.rows.length > 0) {
+      return res.status(400).json({ error: 'Мэйл хаяг бүртгэлтэй байна' });
+    }
+
+    const result = await client.query(
+      'INSERT INTO "Student" (first_name, last_name, email, password, phone) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+      [first_name, last_name, email, password, phone]
+    );
+
+    res.status(201).json({ 
+      message: 'Амжилттай бүртгэгдлээ',
+      student: result.rows[0]
+    });
   } catch (error) {
     console.error('Query error:', error);
-    res.status(500).send('Өгөгдлийн сангийн алдаа');
+    res.status(500).json({ error: 'Өгөгдлийн сангийн алдаа' });
   }
 });
 
-// Багшийн мэдээлэл шинэчлэх
-app.put('/teachers/:id', async (req, res) => {
+// Student нэвтрэх
+app.post('/students/login', async (req, res) => {
   try {
-    const { id } = req.params;
-    const {
-      first_name,
-      last_name,
-      email,
-      password,
-      image,
-      ratings,
-      number_of_ratings,
-      description,
-      lessons
-    } = req.body;
+    const { email, password } = req.body;
 
     const result = await client.query(
-      'UPDATE "Teacher" SET first_name = $1, last_name = $2, email = $3, password = $4, image = $5, ratings = $6, number_of_ratings = $7, description = $8, lessons = $9 WHERE id = $10 RETURNING *',
-      [first_name, last_name, email, password, image, ratings, number_of_ratings, description, lessons, id]
+      'SELECT * FROM "Student" WHERE email = $1 AND password = $2',
+      [email, password]
     );
 
     if (result.rows.length === 0) {
-      res.status(404).send('Багш олдсонгүй');
-    } else {
-      res.json(result.rows[0]);
+      return res.status(401).json({ error: 'Мэйл эсвэл нууц үг буруу байна' });
     }
-  } catch (error) {
-    console.error('Query error:', error);
-    res.status(500).send('Өгөгдлийн сангийн алдаа');
-  }
-});
 
-// Багшийн мэдээлэл устгах
-app.delete('/teachers/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const result = await client.query('DELETE FROM "Teacher" WHERE id = $1 RETURNING *', [id]);
-    
-    if (result.rows.length === 0) {
-      res.status(404).send('Багш олдсонгүй');
-    } else {
-      res.json({ message: 'Амжилттай устгагдлаа', deletedTeacher: result.rows[0] });
-    }
+    res.json({ 
+      message: 'Амжилттай нэвтэрлээ',
+      student: result.rows[0]
+    });
   } catch (error) {
     console.error('Query error:', error);
-    res.status(500).send('Өгөгдлийн сангийн алдаа');
+    res.status(500).json({ error: 'Өгөгдлийн сангийн алдаа' });
   }
 });
 

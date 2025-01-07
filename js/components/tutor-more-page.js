@@ -5,7 +5,7 @@ class TutorMorePage extends HTMLElement {
 
     connectedCallback() {
         const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
-        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking, moreDescription, teachingDescription, price, lessons } = bagsh;
+        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking, moreDescription, teachingDescription, price, lessons, comments, possibleHours } = bagsh;
         const firstLetterOfLastName = lastName.charAt(0);
         
         this.innerHTML = `
@@ -49,85 +49,16 @@ class TutorMorePage extends HTMLElement {
                 </section>
                 <section class="available-schedule-box">
                     <h2>Боломжит цаг</h2>
-                    <div class="timetable">
-                        <div class="header">Цаг</div>
-                        <div class="header">Даваа</div>
-                        <div class="header">Мягмар</div>
-                        <div class="header">Лхагва</div>
-                        <div class="header">Пүрэв</div>
-                        <div class="header">Баасан</div>
-
-                        <div class="header">07:40 - 09:10</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <div class="header">09:20 - 10:50</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <div class="header">11:00 - 12:30</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <div class="header">12:40 - 14:10</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <div class="header">14:20 - 15:50</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <div class="header">16:00 - 17:30</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <div class="header">17:40 - 19:20</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                    </div>
+                    <time-table class="timetable" schedule-data='${JSON.stringify(possibleHours)}' ></time-table>
                 </section>
                 <section class="comment-box">
                     <h2>Сэтгэгдэл</h2>
-                    <section class="comment">
-                        <div class="comment-owner">
-                            <img src="/imgs/img3.png" alt="user">
-                            <h3>Нямаа Батпүрэв</h3>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    </section>
-                    <section class="comment">
-                        <div class="comment-owner">
-                            <img src="/imgs/img2.png" alt="user">
-                            <h3>Нямаа Батпүрэв</h3>
-                        </div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    </section>
                 </section>
             </section>
         `;
         
         this.renderLessons(lessons);
+        this.renderComments(comments);
     }
 
     renderLessons(lessons) {
@@ -141,6 +72,16 @@ class TutorMorePage extends HTMLElement {
         });
         
         this.querySelector('.subjects-tags').appendChild(ul);
+    }
+
+    renderComments(comments) {
+        const box = document.querySelector('.comment-box')
+        
+        comments.forEach(c => {
+            const celement = document.createElement("comment-element");
+            celement.setAttribute('comment-data', JSON.stringify(c))
+            box.appendChild(celement);
+        });
     }
 }
 

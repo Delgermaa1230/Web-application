@@ -36,7 +36,7 @@ h3 {
     margin-bottom: var(--base-size-x4);
     margin-top: var(--base-size);
     border-radius: var(--base-border-radius-x4);
-    padding: var(--base-size-x2);
+    padding: var(--base-size-x2) var(--base-size);
     height: fit-content;
     gap: var(--base-size);
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
@@ -44,7 +44,7 @@ h3 {
 
 .teacher-sticky-box .student-number {
     display: flex;
-    margin: var(--base-size-x2);
+    margin-left: var(--base-size-x4);    
     gap: var(--base-size);
 }
 
@@ -167,49 +167,10 @@ h3 {
     color:var(--base-text-color);
 }
 
-.information-column section section {
-    margin: 0;
-}
-
-.timetable {
-    border-radius: var(--base-border-radius-x3);
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 6px;
-    max-width: 100%;
-    background-color: var(--base-color-light-orange);
-    padding: var(--base-size-x4);
-    border: 0.5px solid var(--base-color-secondary-orange);
-}
-
-.cell {
-    background: var(--base-color-white);
-    padding: var(--base-size);
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.header {
-    color: var(--base-text-color);
-    padding: var(--base-size);
-    font-size: var(--base-caption-font-size);
-    font-weight: var(--base-medium-font-weight);
-}
-
-.cell {
-    cursor: pointer;
-}
-
-.cell:hover {
-    background-color: var(--base-color-secondary-orange);
-}
-
-.cell.selected {
-    background-color: var(--base-color-orange);
-}
-
 .comment {
     padding: var(--base-size-x4) var(--base-size-x2);
+    display: flex;
+    flex-direction: column;
 }
 
 .comment-owner {
