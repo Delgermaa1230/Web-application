@@ -412,7 +412,7 @@ background: linear-gradient(124deg, rgba(255,113,0,1) 0%, rgba(0,0,0,1) 32%, rgb
     .postInfoLine{
       width: 100%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       column-gap: var(--base-size-x2);
       flex-wrap: wrap;
     }
@@ -505,22 +505,15 @@ background: linear-gradient(124deg, rgba(255,113,0,1) 0%, rgba(0,0,0,1) 32%, rgb
   }
 
   .progress-bar {
-    position: relative;
-    padding: 0 var(--base-size-x12);
     top: 43px;
-    width: 100%;
     padding: 0 var(--base-size-x6);
-    height: 5px;
-    border-radius: 5px;
-    overflow: hidden;
-    z-index: 3;
+
+  }
+  .postInfoLine{
+    flex-direction: column;
   }
 
-  .progressBg {
-    background-color: white;
-    height: 100%;
-    width: 100%;
-  }
+
 
 }
 
