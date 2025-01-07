@@ -7,13 +7,17 @@ body {
     padding: 0;
     background-color: #2e2e2e;
     color: #fff;
+    display: flex;
+    min-height: 100vw;
+
 }
 
 /* Main sections */
 .main {
     position: relative;
     overflow: hidden;
-    height: fit-content;
+    height: 80vh;
+    flex:1;
 }
 
 .section {
