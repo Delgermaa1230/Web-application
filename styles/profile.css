@@ -430,13 +430,10 @@ background: linear-gradient(124deg, rgba(255,113,0,1) 0%, rgba(0,0,0,1) 32%, rgb
     .bigTag{
       font-weight: 700;
     }
-  
 
-
-
-
-
-
+    footer {
+      background-color: var(--base-background-color-profile);
+    }
 /*responsive*/
 @media (max-width: 1100px) {
   #teacher{
