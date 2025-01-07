@@ -1,5 +1,3 @@
-@import url(/styles/global.css);
-
 h2 {
     font-size: var(--base-h2-font-size);
     color: var(--base-text-color);

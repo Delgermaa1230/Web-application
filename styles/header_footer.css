@@ -181,14 +181,15 @@ footer ul li #social-icons li a:hover{
     header {
         justify-content: center;
         align-items: space-between;
-        padding: 1rem;
+        padding: var(--base-size-x2);
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: var(--base-size-x2);
     }
 
     .header-first-box form input {
-        width: 6rem;
+        width: var(--base-size-x12);
     }
+
 }
 
 @media (max-width: 400px) {
@@ -205,6 +206,13 @@ footer ul li #social-icons li a:hover{
         flex-direction: row;
         justify-content: flex-start;
     }
+
 }
 
-@media (max-width: 500px) {}
+@media (max-width: 500px) {
+    .header-first-box {
+        justify-content: center;
+        gap: var(--base-size-x2);
+        flex-direction: column;
+    }
+}
