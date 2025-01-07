@@ -1,4 +1,3 @@
-GET http://localhost:3000/api/teachers
+GET http://localhost:3000/api/students/login
 
-##
-POST http://localhost:3000/api/students
+

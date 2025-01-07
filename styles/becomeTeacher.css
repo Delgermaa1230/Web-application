@@ -5,25 +5,29 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2e2e2e;
+    background-color: var(--base-background-color-profile);
     color: #fff;
     display: flex;
-    min-height: 100vw;
+    min-height: 100vh;
     flex-direction: column;
 }
 
 /* Main sections */
 .main {
+    display: flex;
+    flex-direction:column;
     position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    height: 80vh;
-    flex:1;
+    background-color: var(--base-background-color-profile);
 }
 
 .section {
     position: absolute;
     left: 100%;
     width: 100%;
+    height: 700px;
     padding: 2rem;
     box-sizing: border-box;
     display: flex;
@@ -35,53 +39,76 @@ body {
 }
 
 .section.active {
+    top: 0;
     left: 0;
     position: relative;
 }
 
+/*selection*/
+#selection{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-between;
+    column-gap: var(--base-size-x10);
+    
+}
+.selectedSub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--base-size-x2);
+    background-color: var(--base-color-light-orange);
+    padding: var(--base-size-x4);
+    border-radius: var(--base-border-radius-x3);
+    min-height: 30vh;
+    width: 100%;
+    
+}
+.UploadingGrade{
+    display: flex;
+    width: 100%;
+    column-gap: var(--base-size-x2);
+}
+.lessonInput{
+    display: flex;
+    width: 100%;
+    background-color: var(--base-background-color-profile);
+    padding: var(--base-size);
+    border-radius: var(--base-border-radius-x3);
+    justify-content: center;
+    align-items: center;
+}
+
+.rightCont{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lessonSearch{
+    width: 100%;
+}
 .lessonSearch,
 #bioSubmit {
-    width: 80%;
     padding: 1rem;
     margin: 1rem 0;
     border-radius: var(--base-border-radius-x3);
     border: none;
     outline: none;
 }
+#bioSubmit{
+    width: 70% ;
+}
 
 #bioSubmit{
     height: 20vh;
 }
 .two-btn {
+    display: flex;
+    column-gap: var(--base-size-x2);
     margin-top: 2rem;
-}
 
-#selection{
-    display: grid;
-    grid-template-columns: auto auto;
 }
-.selectedSub{
-    background-color: var(--base-color-light-orange);
-    padding: var(--base-size-x4);
-    border-radius: var(--base-border-radius-x3);
-    height: 30vh;
-}
-
-
-.important-button {
-    background-color: #ff9800;
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 0.5rem;
-}
-
-.important-button:hover {
-    background-color: #e68900;
-}
-
 
 .timetable {
     border-radius: var(--base-border-radius-x3);
@@ -121,3 +148,12 @@ body {
     background-color: var(--base-color-orange);
 }
 
+@media (max-width:700px) {
+    #selection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
