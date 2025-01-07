@@ -171,3 +171,9 @@ body {
         
     }
 }
+
+@media (max-width: 500px) {
+    :root {
+        --base-size: 4px;
+    }
+}

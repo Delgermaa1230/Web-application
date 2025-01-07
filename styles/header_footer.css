@@ -155,7 +155,7 @@ footer ul li #social-icons {
 
 footer ul li #social-icons li {
     font-size: var(--base-h4-font-size);
-    padding: var(--base-padding);
+    padding: var(--base-size-x2);
 }
 
 footer a {
@@ -186,9 +186,6 @@ footer ul li #social-icons li a:hover{
         gap: var(--base-size-x2);
     }
 
-    .header-first-box form input {
-        width: var(--base-size-x12);
-    }
 
 }
 
@@ -196,10 +193,7 @@ footer ul li #social-icons li a:hover{
     footer ul {
         flex-direction: column;
         justify-content: center;
-    }
-
-    :root {
-        font-size: 13px;
+        padding-bottom: var(--base-size-x2);
     }
 
     footer ul li #social-icons {
@@ -209,10 +203,15 @@ footer ul li #social-icons li a:hover{
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 590px) {
     .header-first-box {
         justify-content: center;
-        gap: var(--base-size-x2);
+        gap: 0;
         flex-direction: column;
+    }
+
+    
+    footer ul li  li {
+        padding: var(--base-size-x2)
     }
 }
