@@ -55,18 +55,26 @@ export async function loadData() {
             return;
         }
 
-        if (lessonName) {
-            const selectedTutors = tutors.filter((t) =>
-                t.lessons && t.lessons.some((lesson) => 
-                    String(lesson).toLowerCase().includes(String(lessonName).toLowerCase())
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+        
+        const lessonName = getQueryParam('lesson');
+
+        if (lessonName) { 
+            const selectedTutors = tutors.filter((tutor) =>
+                tutor.lessons && tutor.lessons.some((lesson) =>
+                    String(lesson.lesson_name).toLowerCase().includes(String(lessonName).toLowerCase())
                 )
             );
             console.log("Filtered tutors:", selectedTutors);
-            tutors = selectedTutors;
+            tutors = selectedTutors; 
             renderTutors(selectedTutors);
         } else {
             renderTutors(tutors);
         }
+
     } catch (error) {
         console.error("Error loading data:", error);
     }
