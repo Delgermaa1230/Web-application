@@ -501,37 +501,15 @@ background: linear-gradient(124deg, rgba(255,113,0,1) 0%, rgba(0,0,0,1) 32%, rgb
   }
 
   .progress-container {
-    padding: var(--base-size-x4) var(--base-size);
-  }
-
-  .progressName {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-  }
-
-  .bubbles {
-    width: var(--base-size-x2);
-    height: var(--base-size-x2);
-    background-color: var(--base-color-white);
-    border-radius: 50%;
-  }
-
-  .ProgressRank {
-    width: var(--base-size-x15);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    row-gap: var(--base-size-x2);
+    padding: var(--base-size-x4) 0;
   }
 
   .progress-bar {
     position: relative;
     padding: 0 var(--base-size-x12);
-    top: 46px;
+    top: 43px;
     width: 100%;
-    padding: 0 var(--base-size-x7);
+    padding: 0 var(--base-size-x6);
     height: 5px;
     border-radius: 5px;
     overflow: hidden;
