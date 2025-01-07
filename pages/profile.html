@@ -7,11 +7,10 @@
     <title>Numteach</title>
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="../styles/profile.css">
+    <script src="../js/profile.js" defer></script>
+    </script>
 </head>
 
 <body>
@@ -28,14 +27,14 @@
     </header>
     <section class="profile-header">
         <div class="BGCont">
-            <img src="../imgs/3347022_orig.jpg" alt="Background Image" class="BGimage">
+            <img src="" alt="Background Image" class="BGimage">
         </div>
         <div class="Information">
             <div class="pH-left-info">
                 <div class="ProfPicCnt">
                     <img src="../imgs/img1.png" alt="" class="ProfPic">
                     <button class="profPicBtn" >
-                        <i class="fa-solid fa-camera fa-lg" style="color: white;" aria-label="change pro"></i>
+                        <i class="fa fa-camera" style="color: white;" aria-label="change pro"></i>
                     </button>
                 </div>
                 <div class="text-info">
@@ -88,58 +87,7 @@
                             </div>
                         </div>                        
                     </div>
-                    <div class="post">
-                        <h2>Веб аппликейшн</h2>
-                        <div class="postLesson">
-                            <div class="teacherPro">
-                                <img src="/imgs/img10.png" alt="">
-                                <h3>Б.Галдан</h3>
-                            
-                            </div>
-                            <div class="postInfo">
-                                <div class="postInfoLine">
-                                    <p class="bigTag">хувиар: </p>
-                                    <p>Мягмар 7:40</p>
-                                    <p>Лхагва 7:40</p>
-                                    <p>Баасан 7:40</p>    
-                                </div>
-                                <div class="postInfoLine">
-                                    <p class="bigTag">Орох байршил:</p>
-                                    <p>Онлайн</p>
-                                    <p>Танхим</p>
-                                </div>
-                                <div>
-                                    <button class="important-button">Утасны дугаар</button>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
-                    <div class="post">
-                        <h2>Веб аппликейшн</h2>
-                        <div class="postLesson">
-                            <div class="teacherPro">
-                                <img src="/imgs/img10.png" alt="">
-                                <h3>Б.Галдан</h3>
-                            
-                            </div>
-                            <div class="postInfo">
-                                <div class="postInfoLine">
-                                    <p class="bigTag">хувиар: </p>
-                                    <p>Мягмар 7:40</p>
-                                    <p>Лхагва 7:40</p>
-                                    <p>Баасан 7:40</p>    
-                                </div>
-                                <div class="postInfoLine">
-                                    <p class="bigTag">Орох байршил:</p>
-                                    <p>Онлайн</p>
-                                    <p>Танхим</p>
-                                </div>
-                                <div>
-                                    <button class="important-button">Утасны дугаар</button>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
+
 
 
                 </div>
@@ -355,30 +303,26 @@
             </li>
         </ul>
     </footer>
-
     <script>
-        const studentSection = document.getElementById('student');
-        const teacherSection = document.getElementById('teacher');
-
-        const teacherBtn = document.getElementById('teacherBtn');
-        const studentBtn = document.getElementById('studentBtn');
-
+        
         function student() {
-            studentSection.classList.add('active');
-            teacherSection.classList.remove('active');
+            document.getElementById('student').classList.add('active');
+            document.getElementById('teacher').classList.remove('active');
             
             //button toggle
-            studentBtn.classList.add('active');
-            teacherBtn.classList.remove('active');
+            document.getElementById('studentBtn').classList.add('active');
+            document.getElementById('teacherBtn').classList.remove('active');
         }
 
         function teacher() {
-            teacherSection.classList.add('active');
-            studentSection.classList.remove('active');
-            studentBtn.classList.remove('active');
-            teacherBtn.classList.add('active');
+            document.getElementById('teacher').classList.add('active');
+            document.getElementById('student').classList.remove('active');
+            document.getElementById('studentBtn').classList.remove('active');
+            document.getElementById('teacherBtn').classList.add('active');
         }
 
         student();
+
     </script>
+
 </body>
