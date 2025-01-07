@@ -9,7 +9,7 @@ body {
     color: #fff;
     display: flex;
     min-height: 100vw;
-
+    flex-direction: column;
 }
 
 /* Main sections */
