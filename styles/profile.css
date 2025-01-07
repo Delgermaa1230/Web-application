@@ -1,7 +1,9 @@
 *{
   color: var(--base-text-color);
 }
-
+h1{
+  font-size: 30px;
+}
 
 /*profile header*/
 h2{
@@ -357,36 +359,59 @@ h2{
     column-gap: var(--base-size-x2);
 }
   /*left cont*/
-  .learninglessonCont{
-    display: flex;
-    flex-direction: column;
-    row-gap: var(--base-size-x4);
-  }
-  .learninglesson{
-    width: 100%;
-    height: var(--base-size-x20);
-    background-color: var(--base-background-color-orange);
-    border-radius: var(--base-border-radius-x2);
-  } 
+    .PostsCont{
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--base-size-x2);
+    
+    } 
+    .post {
+      color: var(--base-color-white);
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--base-size-x2);
+      width: 100%;
+      min-height: 150px;
+      background-color: var(--base-background-color-orange);
+      border-radius: var(--base-border-radius-x2);
+      padding: var(--base-size-x2) 2rem;
+    }
+    .postLesson{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      column-gap: var(--base-size-x4);
+    }
+    .postLesson img{
+      height: var(--base-size-x10);
+      width: var(--base-size-x10);
+      object-fit: cover;
+      height: var(--base-size-x10);
+      border-radius: 50%;
+    }
 
-  .PostsCont{
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: var(--base-size-x2);
-  
-  } 
-  .post {
-    color: var(--base-color-white);
-    display: flex;
-    flex-direction: column;
-    row-gap: var(--base-size-x2);
-    width: 100%;
-    height: 150px;
-    background-color: var(--base-background-color-orange);
-    border-radius: var(--base-border-radius-x2);
-    padding: var(--base-size-x2) 2rem;
-  }
+    .teacherPro{
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--base-size);
+      align-items: center;
+    }
+
+    .postInfo{
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--base-size-x2);
+    }
+
+    .postInfoLine{
+      display: flex;
+       column-gap: var(--base-size-x2);
+    }
+
+    .bigTag{
+      font-weight: 700;
+    }
   
 
 
