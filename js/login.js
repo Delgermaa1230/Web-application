@@ -1,11 +1,11 @@
-// Login and registration handling
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://localhost:3000/api';
 
+// Элементийг DOM-оос авах
 const loginForm = document.getElementById("loginForm");
 const registerForm = document.getElementById("registerForm");
 const errorMessageLogin = document.getElementById("error-message-login");
 
-// Form Switch Functions
+// Хэлбэр солих функцүүд
 function loginSwitch() {
     document.getElementById("register").style.right = "-520px";
     document.getElementById("login").style.left = "0px";
@@ -16,14 +16,14 @@ function registerSwitch() {
     document.getElementById("register").style.right = "0px";
 }
 
-// Password Validation Helper
+// Нууц үг шалгах туслагч функц
 function isPasswordValid(password) {
     const hasUppercase = /[A-Z]/.test(password);
     const hasNumber = /\d/.test(password);
     return password.length >= 8 && hasUppercase && hasNumber;
 }
 
-// Login Handler
+// Нэвтрэх үйлдэл
 loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -33,28 +33,29 @@ loginForm.addEventListener("submit", async (e) => {
     try {
         const response = await fetch(`${API_URL}/students/login`, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
         });
 
         const data = await response.json();
 
         if (response.ok) {
+            // Нэвтрэлтийн амжилт
             errorMessageLogin.textContent = "";
-            // Store user data if needed
             localStorage.setItem('student', JSON.stringify(data.student));
-            window.location.href = './profile.html';
+            alert(data.message); // Амжилтын мэдээлэл
+            window.location.href = './profile.html'; // Профайл руу шилжих
         } else {
-            errorMessageLogin.textContent = data.error;
+            // Алдааны мэдээлэл харуулах
+            errorMessageLogin.textContent = data.error || "Нэвтрэхэд алдаа гарлаа.";
         }
     } catch (error) {
-        errorMessageLogin.textContent = "Серверт холбогдоход алдаа гарлаа";
+        // Сервертэй холбогдох алдаа
+        errorMessageLogin.textContent = "Серверт холбогдоход алдаа гарлаа.";
     }
 });
 
-// Register Handler
+// Бүртгэх үйлдэл
 registerForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -65,40 +66,42 @@ registerForm.addEventListener("submit", async (e) => {
     const password = document.getElementById("register-password").value.trim();
     const retypePassword = document.getElementById("register-retype-password").value.trim();
 
+    // Нууц үг баталгаажуулах
     if (!isPasswordValid(password)) {
-        alert("Нууц үг 8-с багагүй, нэг том үсэг, тоо ашиглана уу");
+        alert("Нууц үг 8 тэмдэгтээс багагүй, нэг том үсэг, тоо ашиглана уу.");
         return;
     }
 
     if (password !== retypePassword) {
-        alert("Нууц үг зөрсөн байна");
+        alert("Нууц үг зөрсөн байна.");
         return;
     }
 
     try {
         const response = await fetch(`${API_URL}/students`, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 first_name: firstName,
                 last_name: lastName,
                 email,
-                password,
-                phone
+                phone,
+                password
             })
         });
 
         const data = await response.json();
 
         if (response.ok) {
-            alert(data.message); // Амжилттай бүртгэгдлээ
-            loginSwitch(); // Switch to login form
+            // Бүртгэлийн амжилт
+            alert(data.message || "Амжилттай бүртгэгдлээ.");
+            loginSwitch(); // Нэвтрэх хэлбэр рүү шилжих
         } else {
-            alert(data.error);
+            // Алдааны мэдээлэл харуулах
+            alert(data.error || "Бүртгэл хийхэд алдаа гарлаа.");
         }
     } catch (error) {
-        alert("Серверт холбогдоход алдаа гарлаа");
+        // Сервертэй холбогдох алдаа
+        alert("Серверт холбогдоход алдаа гарлаа.");
     }
 });

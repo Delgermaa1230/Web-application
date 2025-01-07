@@ -12,6 +12,8 @@
     "node-domexception": "^1.0.0",
     "node-fetch": "^3.3.2",
     "pg": "^8.13.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "web-streams-polyfill": "^3.3.3"
   },
   "scripts": {
