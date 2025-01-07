@@ -1,3 +1,12 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
 
 h1 {
     font-size: var(--base-h1-font-size);
@@ -209,4 +218,10 @@ h3 {
         position: relative;
         justify-self: center;
     }
+}
+
+@media screen and (max-width: 550px) {
+    .main {
+        margin: var(--base-size)
+    } 
 }

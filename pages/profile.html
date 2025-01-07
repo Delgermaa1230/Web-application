@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="profile">
     <title>Numteach</title>
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="../styles/profile.css">
+    <script src="../js/profile.js" defer></script>
+    </script>
 </head>
 
 <body>
 
     <header>
         <div class="header-first-box">
-            <a href="../index.html">
+            <a aria-label="logo" href="../index.html">
                 <h1>Numteach</h1>
             </a>
         </div>
@@ -28,14 +28,14 @@
     </header>
     <section class="profile-header">
         <div class="BGCont">
-            <img src="../imgs/3347022_orig.jpg" alt="Background Image" class="BGimage">
+            <img src="" alt="Background Image" class="BGimage">
         </div>
         <div class="Information">
             <div class="pH-left-info">
                 <div class="ProfPicCnt">
                     <img src="../imgs/img1.png" alt="" class="ProfPic">
                     <button class="profPicBtn" >
-                        <i class="fa-solid fa-camera fa-lg" style="color: white;" aria-label="change pro"></i>
+                        <i class="fa fa-camera" style="color: white;" aria-label="change pro"></i>
                     </button>
                 </div>
                 <div class="text-info">
@@ -88,58 +88,7 @@
                             </div>
                         </div>                        
                     </div>
-                    <div class="post">
-                        <h2>Веб аппликейшн</h2>
-                        <div class="postLesson">
-                            <div class="teacherPro">
-                                <img src="/imgs/img10.png" alt="">
-                                <h3>Б.Галдан</h3>
-                            
-                            </div>
-                            <div class="postInfo">
-                                <div class="postInfoLine">
-                                    <p class="bigTag">хувиар: </p>
-                                    <p>Мягмар 7:40</p>
-                                    <p>Лхагва 7:40</p>
-                                    <p>Баасан 7:40</p>    
-                                </div>
-                                <div class="postInfoLine">
-                                    <p class="bigTag">Орох байршил:</p>
-                                    <p>Онлайн</p>
-                                    <p>Танхим</p>
-                                </div>
-                                <div>
-                                    <button class="important-button">Утасны дугаар</button>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
-                    <div class="post">
-                        <h2>Веб аппликейшн</h2>
-                        <div class="postLesson">
-                            <div class="teacherPro">
-                                <img src="/imgs/img10.png" alt="">
-                                <h3>Б.Галдан</h3>
-                            
-                            </div>
-                            <div class="postInfo">
-                                <div class="postInfoLine">
-                                    <p class="bigTag">хувиар: </p>
-                                    <p>Мягмар 7:40</p>
-                                    <p>Лхагва 7:40</p>
-                                    <p>Баасан 7:40</p>    
-                                </div>
-                                <div class="postInfoLine">
-                                    <p class="bigTag">Орох байршил:</p>
-                                    <p>Онлайн</p>
-                                    <p>Танхим</p>
-                                </div>
-                                <div>
-                                    <button class="important-button">Утасны дугаар</button>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
+
 
 
                 </div>
@@ -223,7 +172,7 @@
                             <p>20</p>
                         </div>
                         <div class="ProgressRank">
-                            <p>Супер Тором</p>
+                            <p>Лаг Тором</p>
                             <div class="bubbles"></div>
                             <p>50</p>
                         </div>
@@ -239,11 +188,11 @@
                     <br>
                     <div class="timetable">
                         <div class="header">Цаг</div>
-                        <div class="header">Даваа</div>
-                        <div class="header">Мягмар</div>
-                        <div class="header">Лхагва</div>
-                        <div class="header">Пүрэв</div>
-                        <div class="header">Баасан</div>
+                        <div class="header">Да</div>
+                        <div class="header">Мя</div>
+                        <div class="header">Лха</div>
+                        <div class="header">Пү</div>
+                        <div class="header">Ба</div>
 
                         <!-- Time Slots -->
                         <div class="header">9:00am - 10:00am</div>
@@ -329,56 +278,51 @@
             </div>
         </section>
     </div>
-
     <footer>
         <ul>
             <li>
                 <h4>Тусламж</h4>
                 <ul>
-                    <li><a href="">FAQs</a></li>
-                    <li><a href="">Заавар</a></li>
+                    <li><a aria-label="question" href="">FAQs</a></li>
+                    <li><a aria-label="instruction" href="">Заавар</a></li>
                 </ul>
             </li>
             <li>
                 <h4>Холбогдох</4>
                     <ul>
-                        <li>Утас:<a href="tel:+97688888811">+976 88 888811</a></li>
-                        <li>Мэйл:<a href="mailto: example@teach.com">example@teach.com</a></li>
+                        <li>Утас:<a  aria-label="phone" href="tel:+97688888811">+976 88 888811</a></li>
+                        <li>Мэйл:<a aria-label="mail" href="mailto: example@teach.com">example@teach.com</a></li>
                     </ul>
             </li>
             <li>
                 <h4>Холбоосууд</h4>
                 <ul id="social-icons">
-                    <li><a href="https://www.instagram.com/" target="_blank" aria-label="instagram"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="whttps://www.facebook.com/" target="_blank" aria-label="facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a aria-label="instagram" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a aria-label="facebook" href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                 </ul>
             </li>
         </ul>
     </footer>
-
     <script>
-        const studentSection = document.getElementById('student');
-        const teacherSection = document.getElementById('teacher');
-
-        const teacherBtn = document.getElementById('teacherBtn');
-        const studentBtn = document.getElementById('studentBtn');
-
+        
         function student() {
-            studentSection.classList.add('active');
-            teacherSection.classList.remove('active');
+            document.getElementById('student').classList.add('active');
+            document.getElementById('teacher').classList.remove('active');
             
             //button toggle
-            studentBtn.classList.add('active');
-            teacherBtn.classList.remove('active');
+            document.getElementById('studentBtn').classList.add('active');
+            document.getElementById('teacherBtn').classList.remove('active');
         }
 
         function teacher() {
-            teacherSection.classList.add('active');
-            studentSection.classList.remove('active');
-            studentBtn.classList.remove('active');
-            teacherBtn.classList.add('active');
+            document.getElementById('teacher').classList.add('active');
+            document.getElementById('student').classList.remove('active');
+            document.getElementById('studentBtn').classList.remove('active');
+            document.getElementById('teacherBtn').classList.add('active');
         }
 
         student();
+
     </script>
+
 </body>
