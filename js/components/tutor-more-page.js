@@ -67,7 +67,7 @@ class TutorMorePage extends HTMLElement {
         
         lessons.forEach(lesson => {
             const li = document.createElement("li");
-            li.textContent = lesson;
+            li.textContent = lesson.lesson_name;
             ul.appendChild(li);
         });
         
