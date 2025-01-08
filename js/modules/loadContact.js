@@ -29,7 +29,6 @@ async function loadData() {
 
         console.log("Raw API response:", data);
 
-        // Handle different data structures
         const teachers = Array.isArray(data) ? data : data.teachers;
 
         if (!teachers || !Array.isArray(teachers)) {

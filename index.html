@@ -7,12 +7,12 @@
     <meta name="description" content="Top tutors of numteach">
     <title>Цагийн багш</title>
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/header_footer.css">
     <link rel="stylesheet" href="styles/index.css">
     <script type="module" src="./js/components/love-button.js"></script>
     <script type="module" src="./js/components/tutor-card.js"></script>
     <script type="module" src="./js/mainTop.js"></script>
+    <script type="module" src="./js/components/foo-ter.js"></script>
 </head>
 
 
@@ -27,12 +27,23 @@
             </a>
 
         </div>
-        <nav>
-            
-            <a aria-label="question" href="#"><i class="fa fa-question"></i></a>
-            <a aria-label="love-teachers" href="/pages/lovedTeachers.html"><i class="fa fa-heart"></i></a>
-            <a aria-label="become-teacher" href="./pages/login.html">Зар нэмэх</a>
-            <a aria-label="profile" href="/pages/profile.html"><i class="fa fa-user"></i></a>
+        <nav> 
+            <a aria-label="question" href="./question.html" style="font-size: 16px;">?</a>
+            <a aria-label="loved-tutors" href="./lovedTeachers.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                    <path
+                        d="M20.84 6.61a5.5 5.5 0 0 0-7.78 0L12 7.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 23.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                        fill="currentColor"></path>
+                </svg>
+            </a>
+            <a aria-label="become-teacher" href="./login.html">Багш болох</a>
+            <a aria-label="profile" href="./login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-user">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg></a>
         </nav>
     </header>
     <div class="main">
@@ -60,31 +71,7 @@
         </section>
         <div></div>
     </div>
-    <footer>
-        <ul>
-            <li>
-                <h4>Тусламж</h4>
-                <ul>
-                    <li><a aria-label="question" href="">FAQs</a></li>
-                    <li><a aria-label="instruction" href="">Заавар</a></li>
-                </ul>
-            </li>
-            <li>
-                <h4>Холбогдох</4>
-                    <ul>
-                        <li>Утас:<a  aria-label="phone" href="tel:+97688888811">+976 88 888811</a></li>
-                        <li>Мэйл:<a aria-label="mail" href="mailto: example@teach.com">example@teach.com</a></li>
-                    </ul>
-            </li>
-            <li>
-                <h4>Холбоосууд</h4>
-                <ul id="social-icons">
-                    <li><a aria-label="instagram" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    <li><a aria-label="facebook" href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                </ul>
-            </li>
-        </ul>
-    </footer>
+    <foo-ter></foo-ter>
 
 </body>
 

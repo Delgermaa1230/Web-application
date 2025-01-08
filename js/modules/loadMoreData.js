@@ -26,7 +26,6 @@ function transformTeacherData(teacher) {
     };
 }
 
-// Main execution
 const tutorId = getQueryParam('id');
 console.log("Loading data for tutor ID:", tutorId);
 
@@ -43,7 +42,6 @@ async function loadData() {
             return;
         }
 
-        // Handle both array and object with teachers property
         const teachers = Array.isArray(data) ? data : data.teachers;
         
         if (!Array.isArray(teachers)) {
@@ -71,7 +69,7 @@ async function loadData() {
         console.error("Error loading data:", error);
         const container = document.querySelector('.container');
         if (container) {
-            container.innerHTML = '<p>Өгөгдөл ачаалахад алдаа гарлаа</p>';
+            container.innerHTML = '<p style="padding-left: 70px">Өгөгдөл ачаалахад алдаа гарлаа</p>';
         }
     }
 }

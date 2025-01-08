@@ -7,10 +7,10 @@
     <meta name="description" content="profile">
     <title>Numteach</title>
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="../styles/profile.css">
     <script type="module" src="/js/components/profile-inf.js"></script>
+    <script type="module" src="../js/components/foo-ter.js"></script>
 </head>
 
 <body>
@@ -22,58 +22,11 @@
             </a>
         </div>
         <nav>
-            <a href="#" aria-label="about"><i class="fa fa-question"></i></a>
+            <a aria-label="question" href="./question.html" style="font-size: 16px;">?</a>
         </nav>
     </header>
 
     <profile-inf></profile-inf>
-    <footer>
-        <ul>
-            <li>
-                <h4>Тусламж</h4>
-                <ul>
-                    <li><a aria-label="question" href="">FAQs</a></li>
-                    <li><a aria-label="instruction" href="">Заавар</a></li>
-                </ul>
-            </li>
-            <li>
-                <h4>Холбогдох</4>
-                    <ul>
-                        <li>Утас:<a aria-label="phone" href="tel:+97688888811">+976 88 888811</a></li>
-                        <li>Мэйл:<a aria-label="mail" href="mailto: example@teach.com">example@teach.com</a></li>
-                    </ul>
-            </li>
-            <li>
-                <h4>Холбоосууд</h4>
-                <ul id="social-icons">
-                    <li><a aria-label="instagram" href="https://www.instagram.com/" target="_blank"><i
-                                class="fa fa-instagram"></i></a></li>
-                    <li><a aria-label="facebook" href="whttps://www.facebook.com/" target="_blank"><i
-                                class="fa fa-facebook"></i></a></li>
-                </ul>
-            </li>
-        </ul>
-    </footer>
-    <script>
-
-        function student() {
-            document.getElementById('student').classList.add('active');
-            document.getElementById('teacher').classList.remove('active');
-
-            //button toggle
-            document.getElementById('studentBtn').classList.add('active');
-            document.getElementById('teacherBtn').classList.remove('active');
-        }
-
-        function teacher() {
-            document.getElementById('teacher').classList.add('active');
-            document.getElementById('student').classList.remove('active');
-            document.getElementById('studentBtn').classList.remove('active');
-            document.getElementById('teacherBtn').classList.add('active');
-        }
-
-        student();
-
-    </script>
+    <foo-ter></foo-ter>
 
 </body>

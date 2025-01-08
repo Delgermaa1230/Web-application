@@ -221,8 +221,14 @@
       "price": 1000,
       "ranking": "Их багш",
       "password": "123456",
-      "studyingSessions": [],
-      "teachingSesssions": [],
+      "studyingSessions": [
+        
+      ],
+      "teachingSesssions": [
+        {"teacherid": 1,
+        "studentid": 2,
+        "lesson": "ner"}
+      ],
       "comments": [
         {
           "firstName": "Номин",

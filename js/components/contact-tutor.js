@@ -43,7 +43,6 @@ class ContactTutor extends HTMLElement {
         </div>
         `;
 
-        // Add event listeners for cell selection
         const form = this.querySelector('#contact-form');
         const formData = { selectedTimes: [] };
 
@@ -53,11 +52,9 @@ class ContactTutor extends HTMLElement {
             });
         });
 
-        // Submit form data
         form.addEventListener('submit', async function (event) {
             event.preventDefault();
 
-            // Collect selected times
             document.querySelectorAll('.cell.selected').forEach(cell => {
                 formData.selectedTimes.push(cell.textContent.trim());
             });

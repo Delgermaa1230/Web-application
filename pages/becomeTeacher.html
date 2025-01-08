@@ -6,9 +6,9 @@
     <meta name="description" content="become a tutor">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Registration</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="../styles/becomeTeacher.css"></head>
+    <script type="module" src="../js/components/foo-ter.js"></script>
 
 <body>
     <header>
@@ -16,16 +16,15 @@
             <a aria-label="logo" href="../index.html">
                 <h1>Numteach</h1>
             </a>
-            <form id="" action="SearchResult.html" name="lesson">
-                <input type="text" placeholder="Сурах хичээлийн нэр?" name="lesson">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
         </div>
         <nav>
-            <a aria-label="question" href="#"><i class="fa fa-question"></i></a>
-            <a aria-label="loved-tutors" href="./lovedTeachers.html"><i class="fa fa-heart"></i></a>
-            <a aria-label="become-teacher" href="./login.html">Зар нэмэх</a>
-            <a aria-label="profile" href="#"><i class="fa fa-user"></i></a>
+            <a aria-label="question" href="./question.html" style="font-size: 16px;">?</a>
+            <a aria-label="profile" href="./login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-user">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg></a>
         </nav>
     </header>
 
@@ -134,34 +133,7 @@
             </div>
         </section>
     </div>
-
-    <footer>
-        <ul>
-            <li>
-                <h4>Тусламж</h4>
-                <ul>
-                    <li><a aria-label="question" href="">FAQs</a></li>
-                    <li><a aria-label="instruction" href="">Заавар</a></li>
-                </ul>
-            </li>
-            <li>
-                <h4>Холбогдох</4>
-                    <ul>
-                        <li>Утас:<a  aria-label="phone" href="tel:+97688888811">+976 88 888811</a></li>
-                        <li>Мэйл:<a aria-label="mail" href="mailto: example@teach.com">example@teach.com</a></li>
-                    </ul>
-            </li>
-            <li>
-                <h4>Холбоосууд</h4>
-                <ul id="social-icons">
-                    <li><a aria-label="instagram" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    <li><a aria-label="facebook" href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                </ul>
-            </li>
-        </ul>
-    </footer>
-
-
+    <foo-ter></foo-ter>
     <script>
         const sections = document.querySelectorAll('.section');
         let currentIndex = 0;

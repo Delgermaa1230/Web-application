@@ -15,11 +15,10 @@ function transformTeacherData(teacher) {
         firstName: teacher.first_name ,
         lastName: teacher.last_name ,
         image: teacher.image ,
-        ratings: teacher.retings ,  // Note: "retings" in API response
+        ratings: teacher.retings ,
         numberOfRatings: teacher.number_of_ratings ,
         description: teacher.description ,
         lessons: teacher.lessons || [],
-        // Additional fields that might be useful
         email: teacher.email ,
         rank: teacher.rank ,
         phone: teacher.phone ,
@@ -41,7 +40,6 @@ export async function loadData() {
         const data = await response.json();
         console.log("Raw API response:", data);
 
-        // Transform each teacher's data
         const transformedData = Array.isArray(data) 
             ? data.map(transformTeacherData)
             : (data.teachers || []).map(transformTeacherData);
