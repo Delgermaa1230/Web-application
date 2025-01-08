@@ -35,7 +35,7 @@
     --base-color-grey: #6d6d6d;
     --base-color-grey-medium: #d9d9d9;
     --base-color-grey-light: #f3f3f3;
-    --base-color-orange: #f49405;
+    --base-color-orange: #905805;
     --base-color-secondary-orange:#ffe1b3;
     --base-color-light-orange: #FEF4E4;
     --base-color-system-success: #5bca8d;
@@ -105,11 +105,14 @@ body {
     border: none;
     background-color: var(--base-color-orange);
     color: var(--base-color-white);
-    padding: var(--base-padding);
     border-radius: var(--base-border-radius-x3);
     font-size: var(--base-button-large-font-size);
     font-weight: var(--base-medium-font-weight);
     transition: var(--base-transition);
+}
+
+a {
+    padding: var(--base-size-x2);
 }
 
 .important-button:hover {

@@ -9,23 +9,7 @@ class ContactTutor extends HTMLElement {
 
         this.innerHTML = `
         <div class="sticky-part-wrapper">
-            <section class="teacher-sticky-box">
-                <div class="student-number">
-                    <p>Цол</p>
-                    <span><b>${ranking}</b></span>
-                </div>
-                <div class="image"><img src="${image}" alt="teacher"></div>
-                <h2>${firstLetterOfLastName}. ${firstName}</h2>
-                <div class="rating">
-                    <span><b>${ratings}</b></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <p>(${numberOfRatings} санал)</p>
-                </div>
-                <div class="wage">
-                    <p>Төлбөр</p>
-                    <span>${price}₮/цаг</span>
-                </div>
-            </section>
+            <sticky-box data-bagsh='${JSON.stringify(bagsh)}'></sticky-box>
         </div>
         <div class="contact-forms">
             <div>
@@ -43,43 +27,6 @@ class ContactTutor extends HTMLElement {
         </div>
         `;
 
-        const form = this.querySelector('#contact-form');
-        const formData = { selectedTimes: [] };
-
-        this.querySelectorAll(".cell").forEach(cell => {
-            cell.addEventListener("click", function () {
-                this.classList.toggle("selected");
-            });
-        });
-
-        form.addEventListener('submit', async function (event) {
-            event.preventDefault();
-
-            document.querySelectorAll('.cell.selected').forEach(cell => {
-                formData.selectedTimes.push(cell.textContent.trim());
-            });
-
-            formData.message = document.querySelector('#message').value;
-
-            try {
-                const response = await fetch('http://localhost:3000/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData),
-                });
-
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-
-                const data = await response.json();
-                alert('Data submitted successfully!');
-            } catch (error) {
-                alert('Error submitting data: ' + error.message);
-            }
-        });
     }
 }
 

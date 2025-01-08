@@ -97,7 +97,6 @@ export async function loadDataOfTop() {
         const data = await response.json();
         console.log("Raw API response for top tutors:", data);
 
-        // Transform the data before filtering
         const transformedData = Array.isArray(data) 
             ? data.map(transformTeacherData)
             : (data.teachers || []).map(transformTeacherData);
