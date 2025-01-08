@@ -52,6 +52,7 @@ body {
     column-gap: var(--base-size-x10);
     
 }
+
 .selectedSub{
     display: flex;
     flex-direction: column;
@@ -62,6 +63,7 @@ body {
     border-radius: var(--base-border-radius-x3);
     min-height: 30vh;
     width: 100%;
+    max-width: 35vw;
     
 }
 .UploadingGrade{
@@ -89,20 +91,108 @@ body {
     width: 100%;
 }
 .lessonSearch,
-#bioSubmit {
+#bioSubmit,.pricePH {
     padding: 1rem;
     margin: 1rem 0;
     border-radius: var(--base-border-radius-x3);
     border: none;
     outline: none;
 }
+
+/*bio */
+#bio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.price{
+    display: flex;
+    align-items: center;
+    column-gap: var(--base-size-x2);
+    width: 100%;
+}
+.pricePH{
+    padding: var(--base-size);
+}
+.bioRightCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.bioleftCont{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--base-size-x4);
+}
 #bioSubmit{
-    width: 70% ;
+    width: 80% ;
 }
 
 #bioSubmit{
     height: 20vh;
 }
+
+/*checkbox*/
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-group label {
+    margin-left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.checkbox-group label:hover {
+    color: var(--base-color-orange);
+}
+
+.custom-checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--base-text-color);
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-checkbox::after {   
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    border: solid var(--base-background-color-profile);
+    border-width: 0 3px 3px 0;
+    top: 4px;
+    left: 8px;
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+input[type="checkbox"] {
+    display: none;  
+}
+
+input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: var(--base-color-orange);
+    border-color: var(--base-color-orange);
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::after {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+}
+
+
 .two-btn {
     display: flex;
     column-gap: var(--base-size-x2);

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="../styles/becomeTeacher.css"></head>
-
+    <script type="module" src="../js/becomeTeacher.js"></script>
 <body>
     <header>
         <div class="header-first-box">
@@ -38,18 +38,22 @@
                 <div class="UploadingGrade">
                     <button class="important-button">хавсаргах</button>
                     <p class="lessonInput">Алгоритм</p>
+                    <button class="important-button">x</button>
                 </div>
                 <div class="UploadingGrade">
                     <button class="important-button">хавсаргах</button>
                     <p class="lessonInput">Математик 1б</p>
+                    <button class="important-button">x</button>
                 </div>
                 <div class="UploadingGrade">
                     <button class="important-button">хавсаргах</button>
-                    <p class="lessonInput">Програмчлалын хэл Си</p>
+                    <p class="lessonInput">Програмчлалын хэл</p>
+                     <button class="important-button">x</button>
                 </div>
                 <div class="UploadingGrade">
                     <button class="important-button">хавсаргах</button>
                     <p class="lessonInput">Математик 1B</p>
+                    <button class="important-button">x</button>
                 </div>
             </div>
             <div class="rightCont">
@@ -61,11 +65,39 @@
 
         <!-- Second Section -->
         <section id="bio" class="section">
-            <h2>Өөрийн танилцуулгаа оруулна уу (30-с дээш үг)</h2>
-            <textarea id="bioSubmit" placeholder="Танилцуулгаа бичнэ үү..."></textarea>
-            <div class="two-btn">
-                <button class="important-button" onclick="back()">Буцах</button>
-                <button class="important-button" onclick="next()">Үргэлжлүүлэх</button>
+            <div class="selectedSub">
+                <h2>Хичээл орох мэдээлэл </h2>
+                <div class="two-btn">
+                    <h3>хичээлийн Танхим:</h3>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="online">
+                        <div class="custom-checkbox"></div>
+                        <label for="online">Онлайн</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="class">
+                        <div class="custom-checkbox"></div>
+                            <label for="class">Танхим</label>
+                    </div>
+                </div>
+                <div class="price">
+                    <label for="pricePH">
+                        <h3>Нэг цагийн үнэлгээ:</h3>
+                    </label>                
+                    <input type="text" id="priceInput" placeholder="МНТ" class="pricePH">
+
+                </div>
+                
+            </div>
+            <div class="bioRightCont">
+                <h2>Өөрийн танилцуулгаа оруулна уу (12-с дээш үг)</h2>
+                <textarea id="bioSubmit" place  holder="Танилцуулгаа бичнэ үү..."></textarea>
+                <h2>Заах арга барилаа оруулна уу (30-с дээш үг)</h2>
+                <textarea id="bioSubmit" place  holder="Танилцуулгаа бичнэ үү..."></textarea>
+                <div class="two-btn">
+                    <button class="important-button" onclick="back()">Буцах</button>
+                    <button class="important-button" onclick="next()">Үргэлжлүүлэх</button>
+                </div>
             </div>
         </section>
 
