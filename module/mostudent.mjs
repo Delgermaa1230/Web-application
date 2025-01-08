@@ -56,8 +56,8 @@ export default class Mostudent {
     async loginStudent(email, password) {
       try {
         const query = `
-          SELECT student_id, first_name, last_name, email, password
-          FROM "Student"
+          SELECT *
+          FROM "Teacher"
           WHERE email = $1 AND password = $2;
         `;
         const values = [email, password];
