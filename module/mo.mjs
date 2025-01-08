@@ -4,6 +4,7 @@ import pg from 'pg';
 import Moteacher from './moteacher.mjs';
 import Mostudent from './mostudent.mjs';
 import Mofeedback from './mofeedback.mjs';
+import Molesson from './molesson.mjs';
 
 const client = new pg.Client({
   user: 'postgres',
@@ -23,4 +24,6 @@ export default client;
 const moTeacher=new Moteacher(client);
 const moStudent=new Mostudent(client);
 const moFeedback=new Mofeedback(client);
-export{moTeacher,moStudent,moFeedback};
+const moLesson=new Molesson(client);
+
+export{moTeacher,moStudent,moFeedback, moLesson};

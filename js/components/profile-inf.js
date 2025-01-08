@@ -5,9 +5,14 @@ class ProfileInf extends HTMLElement {
     }
 
     async connectedCallback() {
-        await this.fetchLoginData(); 
-        const {description, email, first_name, image, last_name, lesson_info, mode, number_of_ratings, phone, rank, retings, teacher_info} = this.studentData;
-        const firstLetterOfLastName = last_name.charAt(0);
+        await this.fetchLoginData();
+        this.querySelector('#studentBtn').addEventListener('click', () => this.student());
+        this.querySelector('#teacherBtn').addEventListener('click', () => this.teacher());
+    }
+
+    renderProfile() {
+        const { image, first_name, last_name, email, phone, teacher_info } = this.studentData;
+        const firstLetterOfLastName = last_name ? last_name.charAt(0) : '';
         this.innerHTML = `
         <section class="profile-header">
             <div class="BGCont">
@@ -33,10 +38,10 @@ class ProfileInf extends HTMLElement {
 
         <div class="dashBoard">
             <div class="menuUnderline">
-                <a href="" id="studentBtn" class="studentBtn" onclick="student()">Сурч буй</a>
+                <button id="studentBtn" class="studentBtn" onclick="this.getRootNode().host.student()">Сурч буй</button>
             </div>
             <div class="menuUnderline">
-                <a href="" id="teacherBtn" class="teacherBtn" onclick="teacher()">Зааж буй</a>
+                <button id="teacherBtn" class="teacherBtn" onclick="this.getRootNode().host.teacher()">Зааж буй</button>
             </div>
         </div>
 
@@ -258,6 +263,9 @@ class ProfileInf extends HTMLElement {
             </section>
         </div>
         `;
+        this.querySelector('#studentBtn').addEventListener('click', () => this.student());
+        this.querySelector('#teacherBtn').addEventListener('click', () => this.teacher());
+
     }
 
     async fetchLoginData() {
@@ -265,29 +273,61 @@ class ProfileInf extends HTMLElement {
         const urlParams = new URLSearchParams(queryString);
         const email = urlParams.get('email');
         const password = urlParams.get('password');
+    
+        if (!email || !password) {
+            console.error('Email or password is missing from query parameters.');
+            return;
+        }
+    
         const loginData = { email, password };
-
-        console.log(loginData);
-
+    
         try {
             const response = await fetch('http://localhost:3000/api/students/login', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(loginData)
+                body: JSON.stringify(loginData),
             });
-
-            const data = await response.json();
+    
             if (response.ok) {
-                this.studentData = data.student; 
+                const data = await response.json();
+                this.studentData = data.student;
+                this.renderProfile();
+                this.student();
             } else {
-                document.getElementById('error-message-login').textContent = data.error;
+                const errorData = await response.json();
+                console.error('Login Error:', errorData.error);
+                const errorMessageElement = document.getElementById('error-message-login');
+                if (errorMessageElement) {
+                    errorMessageElement.textContent = errorData.error;
+                }
             }
         } catch (error) {
-            document.getElementById('error-message-login').textContent = 'Серверт холбогдоход алдаа гарлаа';
+            console.error('Fetch Error:', error);
+            const errorMessageElement = document.getElementById('error-message-login');
+            if (errorMessageElement) {
+                errorMessageElement.textContent = 'Серверт холбогдоход алдаа гарлаа';
+            }
         }
     }
+
+    student() {
+        document.getElementById('student').classList.add('active');
+        document.getElementById('teacher').classList.remove('active');
+
+        document.getElementById('studentBtn').classList.add('active');
+        document.getElementById('teacherBtn').classList.remove('active');
+    }
+
+    teacher() {
+        document.getElementById('teacher').classList.add('active');
+        document.getElementById('student').classList.remove('active');
+        document.getElementById('studentBtn').classList.remove('active');
+        document.getElementById('teacherBtn').classList.add('active');
+    }
+
+
 }
 
 customElements.define('profile-inf', ProfileInf);

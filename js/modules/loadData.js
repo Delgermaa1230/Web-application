@@ -7,6 +7,16 @@ function getQueryParam(param) {
     return urlParams.get(param);
 }
 
+export async function loadDataLocal() {
+    const response = await fetch("../data/teacher.json"); // Fetch the JSON file
+    if (!response.ok) {
+        throw new Error(`Failed to load data: ${response.statusText}`);
+    }
+    const data = await response.json(); // Parse the JSON response
+    return data.teachers; // Return the parsed data
+}
+
+
 const lessonName = getQueryParam('lesson');
 
 function transformTeacherData(teacher) {

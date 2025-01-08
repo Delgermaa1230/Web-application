@@ -134,6 +134,8 @@ background: linear-gradient(124deg, rgba(255,113,0,1) 0%, rgba(0,0,0,1) 32%, rgb
   font-size: large;
   font-weight: bold;
   border-bottom: 3px solid transparent; 
+  background-color: var(--base-background-color-orange);
+  border: none;
   color: var( --base-color-deactivaded-grey); 
   padding: 10px;
   cursor: pointer;
