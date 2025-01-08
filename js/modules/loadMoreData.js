@@ -18,7 +18,7 @@ function transformTeacherData(teacher) {
         teachingDescription: teacher.lesson_info ,
         price: teacher.price || 2500,
         lessons: teacher.lessons || [],
-        comments: teacher.comments || [],
+        comments: teacher.feedback ,
         possibleHours: teacher.possible_hours || [],
         email: teacher.email,
         phone: teacher.phone,

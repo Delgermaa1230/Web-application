@@ -10,7 +10,7 @@ class LoveButton extends HTMLElement {
 
     render() {
         this.innerHTML =`
-            <button style="padding: 5px" class="love" data-id="${this.id}"><svg
+            <button style="padding: 5px" class="love" data-id="${this.id}" aria-label="love"><svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"

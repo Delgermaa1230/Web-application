@@ -43,22 +43,22 @@ router.get('/:id', async (req, res) => {
  */
 router.get('/', async (req, res) => {
     try {
-        // Бүх багшийн мэдээллийг авч байна
         const teachers = await moTeacher.getAllTeachers();
 
-        // Багш бүрийн хичээлүүдийг авч, багшийн мэдээлэлтэй нэгтгэнэ
-        const teachersWithLessons = await Promise.all(
+        // Багш бүрийн хичээл болон сэтгэгдлийг нэгтгэх
+        const teachersWithDetails = await Promise.all(
             teachers.map(async (teacher) => {
                 const teacherLessons = await moTeacher.getTeacherLessons(teacher.teacher_id);
+                const teacherComments = await moTeacher.getcomment(teacher.teacher_id);
                 return {
                     ...teacher,
-                    lessons: teacherLessons, // Багшийн хичээлүүдийг нэмнэ
+                    lessons: teacherLessons,
+                    feedback: teacherComments,
                 };
             })
         );
 
-        // Эцэст нь багш болон хичээлүүдийг буцаана
-        res.json(teachersWithLessons);
+        res.json(teachersWithDetails);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

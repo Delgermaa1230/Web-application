@@ -28,9 +28,10 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         });
 
         const data = await response.json();
+        console.log(data);
         if (response.ok) {
             localStorage.setItem('student', JSON.stringify(data.student));
-            window.location.href = './profile.html';
+            window.location.href = `./profile.html?email=${data.student.email}&password=${data.student.password}`;
         } else {
             document.getElementById('error-message-login').textContent = data.error;
         }
