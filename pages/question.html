@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,11 +12,27 @@
     <script type="module" src="../js/components/love-button.js"></script>
     <script type="module" src="../js/components/tutor-card.js"></script>
     <script type="module" src="../js/components/foo-ter.js"></script>
+    <style>
+        /* Define the fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        </div>
         <nav>
             <a aria-label="back" id="backBtn">Буцах</a>
             <script>
@@ -26,18 +43,20 @@
                         window.location.href = '../index.html';
                     }
                 });
-
             </script>
+        </nav>
     </header>
     <div class="main">
         <section class="container">
             <h2 style="margin-bottom: var(--base-size-x3);">🥲🥲 асуудал тулгарсан уу?</h2>
-            <p style="color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">Бид туслахад бэлэн шүү😊</p>
-            <p style="color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">Холбогдоорой😊: <a  aria-label="phone" href="tel:+97688888811">+976 88 888811</a></p>
-            <div class="tutors-box" id="lovedTutors">
-            </div>
+            <p style="color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">
+                Бид туслахад бэлэн шүү😊
+            </p>
+            <p style="color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">
+                Холбогдоорой😊: <a aria-label="phone" href="tel:+97688888811">+976 88 888811</a>
+            </p>
+            <div class="tutors-box" id="lovedTutors"></div>
         </section>
-        <div></div>
     </div>
     <foo-ter></foo-ter>
 </body>

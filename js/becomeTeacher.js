@@ -15,7 +15,7 @@ async function initializeDropdown() {
 
 function populateDropdown(optionsArray) {
     const dropdown = document.getElementById("dropdown-options");
-    dropdown.innerHTML = ""; // Clear existing options
+    dropdown.innerHTML = ""; 
     optionsArray.forEach(option => {
         const div = document.createElement("div");
         div.className = "option";

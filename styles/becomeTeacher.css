@@ -162,6 +162,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    column-gap: var(--base-size-x2);
 }
 
 /*left*/
@@ -308,7 +309,19 @@ body {
         padding: var(--base-size-x2);
     }
     #bio{
-        grid-template-columns: auto ;
+        flex-direction: column;
+        row-gap: var(--base-size-x2);
+
+    }
+    h2{
+        font-size: larger;
+    }
+    h3{
+        font-size: medium;
     }
 
+}
+
+@media (max-width:500px) {
+    
 }

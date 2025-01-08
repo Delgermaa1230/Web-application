@@ -1,12 +1,13 @@
 class Timetable extends HTMLElement {
     constructor() {
         super();
+        this.attachShadow({ mode: 'open' }); 
     }
 
     connectedCallback() {
         const possibleHours = JSON.parse(this.getAttribute('schedule-data'));
 
-        this.innerHTML = `
+        const style = `
             <style>
                 .timetable {
                     border-radius: var(--base-border-radius-x3);
@@ -18,7 +19,7 @@ class Timetable extends HTMLElement {
                     background-color: var(--base-color-light-orange);
                     padding: var(--base-size-x4);
                     border: 0.5px solid var(--base-color-orange);
-                    }
+                }
 
                 .cell {
                     background: var(--base-color-grey-medium);
@@ -46,69 +47,76 @@ class Timetable extends HTMLElement {
                 .cell.po.selected {
                     background-color: var(--base-color-orange);
                 }
-
             </style>
-            <div class="header">Цаг</div>
-            <div class="header">Да</div>
-            <div class="header">Мя</div>
-            <div class="header">Лха</div>
-            <div class="header">Пү</div>
-            <div class="header">Ба</div>
+        `;
 
-            <div class="header">07:40 - 09:10</div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+        const template = `
+            <div class="timetable">
+                <div class="header">Цаг</div>
+                <div class="header">Да</div>
+                <div class="header">Мя</div>
+                <div class="header">Лха</div>
+                <div class="header">Пү</div>
+                <div class="header">Ба</div>
 
-            <div class="header">09:20 - 10:50</div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+                <div class="header">07:40 - 09:10</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
 
-            <div class="header">11:00 - 12:30</div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+                <div class="header">09:20 - 10:50</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
 
-            <div class="header">12:40 - 14:10</div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+                <div class="header">11:00 - 12:30</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
 
-            <div class="header">14:20 - 15:50</div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+                <div class="header">12:40 - 14:10</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
 
-            <div class="header">16:00 - 17:30</div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+                <div class="header">14:20 - 15:50</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
 
-            <div class="header">17:40 - 19:20</div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>`;
+                <div class="header">16:00 - 17:30</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="header">17:40 - 19:20</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+        `;
+        this.shadowRoot.innerHTML = `${style}${template}`;
+
         this.renderSchedule(possibleHours);
     }
 
     renderSchedule(possibleHours) {
         console.log(possibleHours);
-    
+
         const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
         const timeslots = [
             "07:40 - 09:10",
@@ -119,9 +127,9 @@ class Timetable extends HTMLElement {
             "16:00 - 17:30",
             "17:40 - 19:20"
         ];
-    
-        const allCells = this.querySelectorAll(".cell");
-    
+
+        const allCells = this.shadowRoot.querySelectorAll(".cell");
+
         days.forEach((day, dayIndex) => {
             if (possibleHours[day]) {
                 possibleHours[day].forEach((isAvailable, timeIndex) => {
