@@ -257,6 +257,28 @@ class ProfileInf extends HTMLElement {
                 </div>
             </section>
         </div>
+            
+        <script>
+
+            function student() {
+                document.getElementById('student').classList.add('active');
+                document.getElementById('teacher').classList.remove('active');
+
+                //button toggle
+                document.getElementById('studentBtn').classList.add('active');
+                document.getElementById('teacherBtn').classList.remove('active');
+            }
+
+            function teacher() {
+                document.getElementById('teacher').classList.add('active');
+                document.getElementById('student').classList.remove('active');
+                document.getElementById('studentBtn').classList.remove('active');
+                document.getElementById('teacherBtn').classList.add('active');
+            }
+
+            student();
+
+        </script>
         `;
     }
 
