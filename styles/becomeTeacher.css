@@ -12,6 +12,13 @@ body {
     flex-direction: column;
 }
 
+.two-btn {
+    display: flex;
+    column-gap: var(--base-size-x2);
+    margin-top: 2rem;
+
+}
+
 /* Main sections */
 .main {
     display: flex;
@@ -22,7 +29,7 @@ body {
     overflow: hidden;
     background-color: var(--base-background-color-profile);
 }
-
+/*Switching function style*/
 .section {
     position: absolute;
     left: 100%;
@@ -30,10 +37,6 @@ body {
     height: 700px;
     padding: 2rem;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: var(--base-size-x4);
     justify-content: center;
     background-color: #333;
 }
@@ -47,50 +50,105 @@ body {
 /*selection*/
 #selection{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 50% 50%;
     justify-content: space-between;
-    column-gap: var(--base-size-x10);
-    
-}
+    column-gap: 5%;
 
-.selectedSub{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: var(--base-size-x2);
-    background-color: var(--base-color-light-orange);
-    padding: var(--base-size-x4);
-    border-radius: var(--base-border-radius-x3);
-    min-height: 30vh;
-    width: 100%;
-    max-width: 35vw;
+}
+    /*left*/
+    .selectedSub{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: var(--base-size-x2);
+        background-color: var(--base-color-light-orange);
+        padding: var(--base-size-x4);
+        border-radius: var(--base-border-radius-x3);
+        min-height: 30vh;
+        width: 100%;
+        
+    }   
+
+    /*RIGHT*/
     
-}
-.UploadingGrade{
-    display: flex;
+    .rightCont{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        row-gap: var(--base-size-x10);
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--base-size-x10);
+    }
+
+    /*search style*/
+    #search-input {
     width: 100%;
-    column-gap: var(--base-size-x2);
-}
-.lessonInput{
-    display: flex;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+
+    .dropdown-options {
+    position: absolute;
     width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+    margin-bottom: var(--base-size-x4);
+    }
+
+    .option {
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--base-text-color);
+    color: var(--base-background-color-profile);
+    }
+
+    .option:hover {
     background-color: var(--base-background-color-profile);
-    padding: var(--base-size);
-    border-radius: var(--base-border-radius-x3);
-    justify-content: center;
-    align-items: center;
-}
+    color: var(--base-text-color);
+    }
 
-.rightCont{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.lessonSearch{
-    width: 100%;
-}
-.lessonSearch,
+
+    #search-input:focus + .dropdown-options,
+    .dropdown-options:hover {
+    display: block;
+    }
+
+
+    #add-button{
+        height: 100%;
+        padding: var(--base-size);
+        border-radius: 0 var(--base-border-radius) var(--base-border-radius) 0;
+        background-color: var(--base-color-orange);
+    }
+    
+    .UploadingGrade{
+        display: flex;
+        width: 100%;
+        column-gap: var(--base-size-x2);
+    }
+    .lessonInput{
+        display: flex;
+        width: 100%;
+        background-color: var(--base-background-color-profile);
+        padding: var(--base-size);
+        border-radius: var(--base-border-radius-x3);
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+/*bio */
+
 #bioSubmit,.pricePH {
     padding: 1rem;
     margin: 1rem 0;
@@ -99,21 +157,90 @@ body {
     outline: none;
 }
 
-/*bio */
+
 #bio{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.price{
-    display: flex;
-    align-items: center;
-    column-gap: var(--base-size-x2);
-    width: 100%;
-}
-.pricePH{
-    padding: var(--base-size);
-}
+
+/*left*/
+    .bioleftCont{
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--base-size-x4);
+    }
+
+
+    .price{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: var(--base-size-x2);
+        width: 100%;
+    }
+    .pricePH{
+        padding: var(--base-size);
+    }
+
+    /*checkbox*/
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-group label {
+            margin-left: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .checkbox-group label:hover {
+            color: var(--base-color-orange);
+        }
+
+        .custom-checkbox {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--base-text-color);
+            border-radius: 4px;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .custom-checkbox::after {   
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 14px;
+            border: solid var(--base-background-color-profile);
+            border-width: 0 3px 3px 0;
+            top: 4px;
+            left: 8px;
+            opacity: 0;
+            transform: rotate(45deg);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        input[type="checkbox"] {
+            display: none;  
+        }
+
+        input[type="checkbox"]:checked + .custom-checkbox {
+            background-color: var(--base-color-orange);
+            border-color: var(--base-color-orange);
+        }
+
+        input[type="checkbox"]:checked + .custom-checkbox::after {
+            opacity: 1;
+            transform: rotate(45deg) scale(1);
+        }
+
+/*right*/
 .bioRightCont{
     display: flex;
     flex-direction: column;
@@ -122,83 +249,14 @@ body {
     width: 100%;
 }
 
-.bioleftCont{
-    display: flex;
-    flex-direction: column;
-    row-gap: var(--base-size-x4);
-}
 #bioSubmit{
-    width: 80% ;
-}
-
-#bioSubmit{
+    width: 80% ;    
     height: 20vh;
 }
 
-/*checkbox*/
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
 
-.checkbox-group label {
-    margin-left: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.checkbox-group label:hover {
-    color: var(--base-color-orange);
-}
-
-.custom-checkbox {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    border: 2px solid var(--base-text-color);
-    border-radius: 4px;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.custom-checkbox::after {   
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 14px;
-    border: solid var(--base-background-color-profile);
-    border-width: 0 3px 3px 0;
-    top: 4px;
-    left: 8px;
-    opacity: 0;
-    transform: rotate(45deg);
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-input[type="checkbox"] {
-    display: none;  
-}
-
-input[type="checkbox"]:checked + .custom-checkbox {
-    background-color: var(--base-color-orange);
-    border-color: var(--base-color-orange);
-}
-
-input[type="checkbox"]:checked + .custom-checkbox::after {
-    opacity: 1;
-    transform: rotate(45deg) scale(1);
-}
-
-
-.two-btn {
-    display: flex;
-    column-gap: var(--base-size-x2);
-    margin-top: 2rem;
-
-}
+    
+/*timetable*/
 
 .timetable {
     border-radius: var(--base-border-radius-x3);
@@ -238,12 +296,19 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
     background-color: var(--base-color-orange);
 }
 
-@media (max-width:700px) {
+@media (max-width:900px) {
     #selection{
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: auto;
         justify-content: center;
         align-items: center;
-
     }
+
+    .rightCont{
+        grid-row: 1;
+        padding: var(--base-size-x2);
+    }
+    #bio{
+        grid-template-columns: auto ;
+    }
+
 }

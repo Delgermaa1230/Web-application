@@ -34,33 +34,27 @@
         <section id="selection" class="section">
             <div class="selectedSub">
                 <h2>Таны сонгосон хичээл</h2>
-                <p>Өөрийн авсан дүнг хавсаргана уу</p>
-                <div class="UploadingGrade">
-                    <button class="important-button">хавсаргах</button>
-                    <p class="lessonInput">Алгоритм</p>
-                    <button class="important-button">x</button>
+                <p>Өөрийн авсан дүнг хавсаргана уу</p>            
+                <div class="selectedSubList" style="display: grid;width: 100%; row-gap: var(--base-size-x2);">
+                    <!-- Dynamically added lessons will go here -->
+
                 </div>
-                <div class="UploadingGrade">
-                    <button class="important-button">хавсаргах</button>
-                    <p class="lessonInput">Математик 1б</p>
-                    <button class="important-button">x</button>
-                </div>
-                <div class="UploadingGrade">
-                    <button class="important-button">хавсаргах</button>
-                    <p class="lessonInput">Програмчлалын хэл</p>
-                     <button class="important-button">x</button>
-                </div>
-                <div class="UploadingGrade">
-                    <button class="important-button">хавсаргах</button>
-                    <p class="lessonInput">Математик 1B</p>
-                    <button class="important-button">x</button>
-                </div>
+                <button onclick="next()" class="important-button">Үргэлжлүүлэх</button>
+
             </div>
             <div class="rightCont">
-                <input id="selectLes" type="text" class="lessonSearch" placeholder="Заах хичээлээ сонгоно уу">
-                <button class="important-button" onclick="next()">Үргэлжлүүлэх</button>
+                <div style="display: flex;
+                flex-direction: column;">
+                        
+                    <div class="lessonInput">
+                        <input id="search-input" type="text" placeholder="Search...">
+                        <button id="add-button" class="important-button">Нэмэх</button>
+                    </div>
+                    <div id="dropdown-options">
+                    </div>
+                    <br>
+                </div>               
             </div>
-
         </section>
 
         <!-- Second Section -->
@@ -84,7 +78,7 @@
                     <label for="pricePH">
                         <h3>Нэг цагийн үнэлгээ:</h3>
                     </label>                
-                    <input type="text" id="priceInput" placeholder="МНТ" class="pricePH">
+                    <input type="number"  id="priceInput" placeholder="МНТ" class="pricePH">
 
                 </div>
                 
@@ -216,6 +210,7 @@
                 sections[currentIndex].classList.add('active');
             }
         }
+
     </script>
 </body>
 
