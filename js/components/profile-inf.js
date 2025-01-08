@@ -16,7 +16,7 @@ class ProfileInf extends HTMLElement {
             <div class="Information">
                 <div class="pH-left-info">
                     <div class="ProfPicCnt">
-                        <img src="" alt="" class="ProfPic">
+                        <img src="${image}" alt="" class="ProfPic">
                         <button class="profPicBtn">
                             <i class="fa fa-camera" style="color: white;" aria-label="change pro"></i>
                         </button>
