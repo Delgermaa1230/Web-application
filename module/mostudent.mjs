@@ -32,9 +32,9 @@ export default class Mostudent {
   
       try {
         const query = `
-          INSERT INTO "Student" (first_name, last_name, email, password, phone)
+          INSERT INTO "Teacher" (first_name, last_name, email, password, phone)
           VALUES ($1, $2, $3, $4, $5)
-          RETURNING student_id;
+          RETURNING teacher_id;
         `;
         const values = [first_name, last_name, email, password, phone];
         const result = await this.client.query(query, values);

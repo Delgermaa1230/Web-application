@@ -4,15 +4,15 @@ class CommentElement extends HTMLElement {
     }
 
     connectedCallback() {
-        const comment = JSON.parse(this.getAttribute('comment-data')); 
-        const { firstName, lastName, image, comments } = comment;
+        const commentinf = JSON.parse(this.getAttribute('comment-data')); 
+        const { student_first_name, student_last_name, image, comment } = commentinf;
         this.setAttribute('class', 'comment');
         this.innerHTML = `
         <div class="comment-owner">
              <img src="${image}" alt="user">
-             <h3>${firstName} ${lastName}</h3>
+             <h3>${student_first_name} ${student_last_name}</h3>
         </div>
-        <p>${comments}</p>
+        <p>${comment}</p>
         `;
     }
 }
