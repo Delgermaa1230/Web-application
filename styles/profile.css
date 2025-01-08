@@ -11,8 +11,8 @@ body {
   min-height: 100vh;
 }
 
-.main {
-  flex: 1;
+profile-inf{
+  flex:1;
 }
 
 /*profile header*/
