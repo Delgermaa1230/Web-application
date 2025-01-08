@@ -33,10 +33,10 @@ class ProfileInf extends HTMLElement {
 
         <div class="dashBoard">
             <div class="menuUnderline">
-                <a href="#" id="studentBtn" class="studentBtn" onclick="student()">Сурч буй</a>
+                <a href="" id="studentBtn" class="studentBtn" onclick="student()">Сурч буй</a>
             </div>
             <div class="menuUnderline">
-                <a href="#" id="teacherBtn" class="teacherBtn" onclick="teacher()">Зааж буй</a>
+                <a href="" id="teacherBtn" class="teacherBtn" onclick="teacher()">Зааж буй</a>
             </div>
         </div>
 
