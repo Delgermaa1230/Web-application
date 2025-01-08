@@ -4,7 +4,7 @@ class CommentElement extends HTMLElement {
     }
 
     connectedCallback() {
-        const comment = JSON.parse(this.getAttribute('comment-data'));  // Corrected: 'comment-data' should be a string
+        const comment = JSON.parse(this.getAttribute('comment-data')); 
         const { firstName, lastName, image, comments } = comment;
         this.setAttribute('class', 'comment');
         this.innerHTML = `

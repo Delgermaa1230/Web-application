@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="../styles/profile.css">
-    </script>
+    <script type="module" src="/js/components/profile-inf.js"></script>
 </head>
 
 <body>
@@ -26,267 +26,7 @@
         </nav>
     </header>
 
-    <!--ProfileHeader-->
-
-    <section class="profile-header">
-        <div class="BGCont">
-            <img src="" alt="Background Image" class="BGimage">
-        </div>
-        <div class="Information">
-            <div class="pH-left-info">
-                <div class="ProfPicCnt">
-                    <img src="../imgs/img1.png" alt="" class="ProfPic">
-                    <button class="profPicBtn" >
-                        <i class="fa fa-camera" style="color: white;" aria-label="change pro"></i>
-                    </button>
-                </div>
-                <div class="text-info">
-                    <h2>Г.Дэлгэрмаа</h2>
-                    <p>Мэдээллийн технологи, электроникийн сургууль</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Dashboard-->
-
-    <div class="dashBoard">
-        <div class="menuUnderline">
-            <a href="#" id="studentBtn" class="studentBtn" onclick="student()">Сурч буй</a>
-        </div>
-        <div class="menuUnderline">
-            <a href="#" id="teacherBtn" class="teacherBtn" onclick="teacher()">Зааж буй</a>
-        </div>
-    </div>
-
-    
-    <!-- main-->
-    <div class="main">
-
-    
-        <!-- Student-->
-        <section class="Container" id="student">
-            <div class="leftCont">
-                <h1>Танд Санал болгох</h1>
-                <div class="tutors-box" id="tutors">
-                </div>
-                
-                <div class="PostsCont">
-                    <h1>Таны үзэж буй хичээлүүд</h1>
-                    <div class="post">
-                        <h2>Веб аппликейшн</h2>
-                        <div class="postLesson">
-                            <div class="teacherPro">
-                                <img src="/imgs/img10.png" alt="">
-                                <h3>Б.Галдан</h3>
-                            
-                            </div>
-                            <div class="postInfo">
-                                <div class="postInfoLine">
-                                    <p class="bigTag">хувиар: </p>
-                                    <p>Мягмар 7:40</p>
-                                    <p>Лхагва 7:40</p>
-                                    <p>Баасан 7:40</p>    
-                                </div>
-                                <div class="postInfoLine">
-                                    <p class="bigTag">Орох байршил:</p>
-                                    <p>Онлайн</p>
-                                    <p>Танхим</p>
-                                </div>
-                                <div>
-                                    <button class="important-button">Утасны дугаар</button>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
-
-
-
-                </div>
-            </div>  
-            <div class="rightCont">
-                <div class="form-container">
-                    <h3>Ерөнхий мэдээлэл </h3>     
-                    <div class="fullName">
-                        <div class="form-group">
-                            <label for="firstname">Нэр</label>
-                            <input type="text" id="firstname" value="Батаа">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname">Овог</label>
-                            <input type="text" id="lastname" value="Батка">
-                        </div>
-                    </div>               
-                   
-                
-                    <div class="form-group">
-                        <label for="email">Имэйл хаяг</label>
-                        <div class="input-with-icon">
-                            <input type="email" id="email" value="bataabatka92@gmail.com">
-                        </div>
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="phone">Утасны дугаар</label>
-                        <div class="input-with-icon">
-                            <input type="tel" id="phone" value="99114444">
-                        </div>
-                    </div>
-                
-                    <button class="important-button">Засварлах</button>
-                    <br>
-                    <h3>Нууц үг солих</h3>
-                    <div class="form-group">
-                        <label for="oldPass">Одоогийн нууц үг</label>
-                        <div class="input-with-icon">
-                            <input type="password" id="oldPass">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Pass">Шинэ нууц үг</label>
-                        <div class="input-with-icon">
-                            <input type="password" id="Pass">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="rePass">Шинэ нууц үг давтах</label>
-                        <div class="input-with-icon">
-                            <input type="password" id="rePass">
-                        </div>
-                    </div>
-
-                    <button class="important-button">Засварлах</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Teacher-->
-        <section class="Container" id="teacher">
-            <div class="leftCont">
-                <div class="progress-container">
-                    <div class="progress-bar">
-                        <div class="progressBg">
-                        </div>
-                        <div class="progress" style="width: 10%;"></div>
-                    </div>
-                    <div class="progressName">
-                        <div class="ProgressRank">
-                            <p>Ботго</p>
-                            <div class="bubbles"></div>
-                            <p>0</p>
-                        </div>
-                        <div class="ProgressRank">
-                            <p>Тором</p>
-                            <div class="bubbles"></div>
-                            <p>20</p>
-                        </div>
-                        <div class="ProgressRank">
-                            <p>Лаг Тором</p>
-                            <div class="bubbles"></div>
-                            <p>50</p>
-                        </div>
-                        <div class="ProgressRank">
-                            <p>Их багш</p>
-                            <div class="bubbles"></div>
-                            <p>100</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timetableCont">
-                    <h2>Таны хувиар</h2>
-                    <br>
-                    <div class="timetable">
-                        <div class="header">Цаг</div>
-                        <div class="header">Да</div>
-                        <div class="header">Мя</div>
-                        <div class="header">Лха</div>
-                        <div class="header">Пү</div>
-                        <div class="header">Ба</div>
-
-                        <!-- Time Slots -->
-                        <div class="header">9:00am - 10:00am</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <!-- Time Slots -->
-                        <div class="header">9:00am - 10:00am</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <!-- Time Slots -->
-                        <div class="header">9:00am - 10:00am</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <!-- Time Slots -->
-                        <div class="header">9:00am - 10:00am</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <!-- Time Slots -->
-                        <div class="header">9:00am - 10:00am</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-
-                        <!-- Time Slots -->
-                        <div class="header">9:00am - 10:00am</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rightCont">
-                <div class="CommonCont">
-                    <h3>Танилцуулга</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper malesuada placerat.
-                        Phasellus ante eros, volutpat sed mi ac, pharetra congue libero. Nulla facilisi. Morbi pulvinar
-                        neque in tortor
-                    </p>
-                    <button class="important-button">
-                        Танилцуулга солих
-                    </button>
-                </div>
-
-                <div class="CommonCont">
-                    <h3>
-                        Заадаг чиглэлүүд
-                    </h3>
-                    <div class="subjects-tags">
-                        <p>Алгоритм</p>
-                        <p>Математик 1б</p>
-                        <p>Програмчлалын хэл Си</p>
-                        <p>Математик 1a</p>
-                        <p>Математик 1B</p>
-
-                    </div>
-                    <button class="important-button">
-                        Засварлах
-                    </button>
-                </div>
-
-            </div>
-        </section>
-    </div>
+    <profile-inf></profile-inf>
     <footer>
         <ul>
             <li>
@@ -299,25 +39,27 @@
             <li>
                 <h4>Холбогдох</4>
                     <ul>
-                        <li>Утас:<a  aria-label="phone" href="tel:+97688888811">+976 88 888811</a></li>
+                        <li>Утас:<a aria-label="phone" href="tel:+97688888811">+976 88 888811</a></li>
                         <li>Мэйл:<a aria-label="mail" href="mailto: example@teach.com">example@teach.com</a></li>
                     </ul>
             </li>
             <li>
                 <h4>Холбоосууд</h4>
                 <ul id="social-icons">
-                    <li><a aria-label="instagram" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    <li><a aria-label="facebook" href="whttps://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a aria-label="instagram" href="https://www.instagram.com/" target="_blank"><i
+                                class="fa fa-instagram"></i></a></li>
+                    <li><a aria-label="facebook" href="whttps://www.facebook.com/" target="_blank"><i
+                                class="fa fa-facebook"></i></a></li>
                 </ul>
             </li>
         </ul>
     </footer>
     <script>
-        
+
         function student() {
             document.getElementById('student').classList.add('active');
             document.getElementById('teacher').classList.remove('active');
-            
+
             //button toggle
             document.getElementById('studentBtn').classList.add('active');
             document.getElementById('teacherBtn').classList.remove('active');
