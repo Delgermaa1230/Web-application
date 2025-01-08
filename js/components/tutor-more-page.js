@@ -5,7 +5,7 @@ class TutorMorePage extends HTMLElement {
 
     connectedCallback() {
         const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
-        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking, moreDescription, teachingDescription, price, lessons, feedback, possibleHours } = bagsh;
+        const { id, image, lastName, firstName, ratings, numberOfRatings, description, ranking, moreDescription, teachingDescription, price, lessons, comments, possibleHours } = bagsh;
         const firstLetterOfLastName = lastName.charAt(0);
         
         this.innerHTML = `
@@ -58,7 +58,7 @@ class TutorMorePage extends HTMLElement {
         `;
         
         this.renderLessons(lessons);
-        this.renderComments(feedback);
+        this.renderComments(comments);
     }
 
     renderLessons(lessons) {
@@ -74,10 +74,10 @@ class TutorMorePage extends HTMLElement {
         this.querySelector('.subjects-tags').appendChild(ul);
     }
 
-    renderComments(feedback) {
+    renderComments(comments) {
         const box = document.querySelector('.comment-box')
         
-        feedback.forEach(c => {
+        comments.forEach(c => {
             const celement = document.createElement("comment-element");
             celement.setAttribute('comment-data', JSON.stringify(c))
             box.appendChild(celement);
