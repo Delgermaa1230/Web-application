@@ -6,7 +6,8 @@ class ProfileInf extends HTMLElement {
 
     async connectedCallback() {
         await this.fetchLoginData(); 
-        const studentName = this.studentData?.name || 'delgermaa';
+        const {description, email, first_name, image, last_name, lesson_info, mode, number_of_ratings, phone, rank, retings, teacher_info} = this.studentData;
+        const firstLetterOfLastName = last_name.charAt(0);
         this.innerHTML = `
         <section class="profile-header">
             <div class="BGCont">
@@ -15,13 +16,13 @@ class ProfileInf extends HTMLElement {
             <div class="Information">
                 <div class="pH-left-info">
                     <div class="ProfPicCnt">
-                        <img src="../imgs/img1.png" alt="" class="ProfPic">
+                        <img src="" alt="" class="ProfPic">
                         <button class="profPicBtn">
                             <i class="fa fa-camera" style="color: white;" aria-label="change pro"></i>
                         </button>
                     </div>
                     <div class="text-info">
-                        <h2>Г.Дэлгэрмаа</h2>
+                        <h2>${firstLetterOfLastName}. ${first_name}</h2>
                         <p>Мэдээллийн технологи, электроникийн сургууль</p>
                     </div>
                 </div>
@@ -82,11 +83,11 @@ class ProfileInf extends HTMLElement {
                         <div class="fullName">
                             <div class="form-group">
                                 <label for="firstname">Нэр</label>
-                                <input type="text" id="firstname" value="Батаа">
+                                <input type="text" id="firstname" value="${first_name}">
                             </div>
                             <div class="form-group">
                                 <label for="lastname">Овог</label>
-                                <input type="text" id="lastname" value="Батка">
+                                <input type="text" id="lastname" value="${last_name}">
                             </div>
                         </div>
 
@@ -94,14 +95,14 @@ class ProfileInf extends HTMLElement {
                         <div class="form-group">
                             <label for="email">Имэйл хаяг</label>
                             <div class="input-with-icon">
-                                <input type="email" id="email" value="bataabatka92@gmail.com">
+                                <input type="email" id="email" value="${email}">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Утасны дугаар</label>
                             <div class="input-with-icon">
-                                <input type="tel" id="phone" value="99114444">
+                                <input type="tel" id="phone" value="${phone}">
                             </div>
                         </div>
 
@@ -229,10 +230,7 @@ class ProfileInf extends HTMLElement {
                     <div class="CommonCont">
                         <h3>Танилцуулга</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper malesuada placerat.
-                            Phasellus ante eros, volutpat sed mi ac, pharetra congue libero. Nulla facilisi. Morbi
-                            pulvinar
-                            neque in tortor
+                            ${teacher_info}
                         </p>
                         <button class="important-button">
                             Танилцуулга солих
