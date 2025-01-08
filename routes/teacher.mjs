@@ -50,10 +50,12 @@ router.get('/', async (req, res) => {
             teachers.map(async (teacher) => {
                 const teacherLessons = await moTeacher.getTeacherLessons(teacher.teacher_id);
                 const teacherComments = await moTeacher.getcomment(teacher.teacher_id);
+                const teachersession=await moTeacher.getteachingsessions(teacher.teacher_id);
                 return {
                     ...teacher,
                     lessons: teacherLessons,
                     feedback: teacherComments,
+                    teachingSessions: teachersession,
                 };
             })
         );
