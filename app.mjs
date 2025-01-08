@@ -7,6 +7,7 @@ import swaggerUi from 'swagger-ui-express';
 import teacherRouter from './routes/teacher.mjs';
 import studentRoutes from './routes/student.mjs'
 import feedbackRoutes from './routes/feedback.mjs'
+import lessonRoutes from './routes/lesson.mjs'
 
 
 const app = express();
@@ -33,6 +34,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use('/api/teachers', teacherRouter);
 app.use('/api/students', studentRoutes);
 app.use('/api/feedback', feedbackRoutes);
+app.use('/api/lesson',lessonRoutes);
 
 
 const PORT = process.env.PORT || 3000;
