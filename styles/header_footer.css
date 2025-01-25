@@ -70,7 +70,7 @@ header form input,
     outline: none;
 }
 
-header form input,
+header form input::placeholder,
 .search-bar-bottom input::placeholder {
     font-size: var(--base-caption-font-size);
     color: var(--base-text-color);
