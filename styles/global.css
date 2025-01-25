@@ -41,9 +41,8 @@
     --base-color-system-success: #5bca8d;
     --base-color-system-success-light: #f2fbf6;
     --base-color-system-warning: #ff3636;
-
     --base-font-family: ;
-    --base-h1-font-size: 40px;
+    --base-h1-font-size: 36px;
     --base-h2-font-size: 26px;
     --base-h3-font-size: 24px;
     --base-h4-font-size: 20px;
@@ -86,6 +85,7 @@
     font-family: "Montserrat Alternates", sans-serif;
     list-style: none;
     text-decoration: none;
+    font-size: var(--base-body-font-size);
 }
 
 *,
@@ -112,7 +112,7 @@ body {
 }
 
 a {
-    padding: var(--base-size-x2);
+    padding: var(--base-padding);
 }
 
 .important-button:hover {
@@ -171,12 +171,19 @@ a {
         --base-color-blue: #16353d;
         --base-background-color-profile: #333;
         --base-color-deactivaded-grey: #ffffff9c;
+        --base-color-orange: orange;
         
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 570px) {
     :root {
         --base-size: 6px;
+        --base-h1-font-size: 30px;
+        --base-body-font-size: 14px;
+        --base-caption-font-size: 13px;
+        --base-h2-font-size: 20px;
+        --base-h3-font-size: 16px;
+        --base-h4-font-size: 15px;
     }
 }

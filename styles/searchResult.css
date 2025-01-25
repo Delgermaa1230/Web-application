@@ -15,7 +15,8 @@ body {
 
 .main {
     flex: 1;
-    margin: var(--base-size-x3) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
+    padding: var(--base-size-x3) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
+    background: linear-gradient(180deg, var(--base-background-color) 40%, var(--base-color-light-orange) 70%);
 }
 
 /*filter*/
@@ -116,13 +117,12 @@ body {
     grid-template-rows: auto;
     justify-content: space-between;
     align-items: stretch;
-    gap: var(--base-size-x6);
     flex-wrap: wrap;
     justify-items: stretch;
     align-items: stretch;
 }
 
-.tutors-box a {
+.tutors-box a{
     width: 100%;
     height: 100%;
     color: var(--base-text-color);
@@ -161,11 +161,16 @@ body {
 
 .tutorCard h3 {
     font-size: var(--base-h4-font-size);
-    padding: 0 var(--base-size-x2);
+    padding:0 var(--base-size-x2);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.tutorCard p {
-    padding: 0 var(--base-size-x2);
+.tutorCard p{
+    padding:0 var(--base-size-x2);
     font-size: var(--base-caption-font-size);
 }
 
@@ -188,15 +193,8 @@ body {
 @media (max-width: 900px) {
     .tutors-box {
         display: grid;
-        grid-template-columns: 49% 49%;
-        grid-template-rows: auto;
-    }
-}
-
-@media (max-width: 700px) {
-    .tutors-box {
-        display: grid;
-        grid-template-columns: 98%;
+        grid-template-columns: 46% 46%;
+        gap: var(--base-size-x2);
         grid-template-rows: auto;
     }
 }
@@ -205,7 +203,10 @@ body {
     .filterMenu{
         font-size: xx-small;
     }
-    .main {
-        margin: var(--base-size-x2);
+}
+
+@media (max-width: 470px) {
+    .main{
+        padding: 0 var(--base-size-x4) var(--base-size-x4) var(--base-size-x4);
     }
 }

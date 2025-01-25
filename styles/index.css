@@ -124,7 +124,6 @@ input::placeholder{
     grid-template-rows: auto;
     justify-content: space-between;
     align-items: stretch;
-    gap: var(--base-size-x6);
     flex-wrap: wrap;
     justify-items: stretch;
     align-items: stretch;
@@ -175,6 +174,11 @@ h2 {
 
 .tutorCard h3 {
     font-size: var(--base-h4-font-size);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding:0 var(--base-size-x2);
 }
 
@@ -202,15 +206,14 @@ h2 {
 @media (max-width: 900px) {
     .tutors-box {
         display: grid;
-        grid-template-columns: 49% 49%;
+        grid-template-columns: 46% 46%;
+        gap: var(--base-size-x2);
         grid-template-rows: auto;
     }
 }
 
-@media (max-width: 700px) {
-    .tutors-box {
-        display: grid;
-        grid-template-columns: 98%;
-        grid-template-rows: auto;
+@media (max-width: 500px) {
+    .container{
+        margin:var(--base-size-x5) var(--base-size-x4) var(--base-size-x4) var(--base-size-x4);
     }
 }

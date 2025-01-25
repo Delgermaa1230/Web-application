@@ -18,33 +18,58 @@
 
 <body>
     <header>
-        <script>
-
-        </script>
         <div class="header-first-box">
             <a aria-label="logo" href="../index.html">
                 <h1>Numteach</h1>
             </a>
 
         </div>
-        <nav> 
-            <a aria-label="question" href="./pages/question.html" style="font-size: 16px;">?</a>
-            <a aria-label="loved-tutors" href="./pages/lovedTeachers.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                    height="16" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="2"
+
+        <nav class="top-menu">
+            <a class="top-menu-item"aria-label="question" href="./pages/question.html">?</a>
+            <a class="top-menu-item"aria-label="loved-tutors" href="./pages/lovedTeachers.html"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="16" height="16" viewBox="0 0 24 26" fill="currentColor" stroke="white" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
                     <path
                         d="M20.84 6.61a5.5 5.5 0 0 0-7.78 0L12 7.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 23.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
                         fill="currentColor"></path>
                 </svg>
             </a>
-            <a aria-label="become-teacher" href="./pages/login.html">Багш болох</a>
-            <a aria-label="profile" href="./pages/login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" class="feather feather-user">
+            <a class="top-menu-item"aria-label="become-teacher" href="./pages/login.html" >Багш болох</a>
+            <a class="top-menu-item"aria-label="profile" href="./pages/login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                 </svg></a>
+            <a aria-label="side-menu-bar" class="side-menu-bar" onclick="displaySideBar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </a>
         </nav>
+
+        <script>
+            function displaySideBar() {
+                const sidebar = document.querySelector('.side-menu');
+                sidebar.style.display = 'flex';
+            }
+
+            function closeSideBar() {
+                const sidebar = document.querySelector('.side-menu');
+                sidebar.style.display = 'none';
+            }
+
+        </script>
+
+        <nav class="side-menu">
+            <a onclick="closeSideBar()" aria-label="close" href="">X</a>
+            <a aria-label="question" href="./pages/question.html">Асуулт?</a>
+            <a aria-label="loved-tutors" href="./pages/lovedTeachers.html">Хадгалсан багш нар</a>
+            <a aria-label="become-teacher" href="./pages/login.html">Багш болох</a>
+            <a aria-label="profile" href="./pages/login.html">Профайл үзэх</a>
+        </nav>
+
     </header>
     <div class="main">
         <div class="center">
