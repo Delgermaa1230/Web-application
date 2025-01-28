@@ -115,6 +115,7 @@ h3 {
 .teacher-sticky-box h2 {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .information-column {
