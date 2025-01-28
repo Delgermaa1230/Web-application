@@ -1,3 +1,4 @@
+// contactTeacher.html хуудсанд багшийн мэдээллийг хауулах компонент
 class ContactTutor extends HTMLElement {
     constructor() {
         super();

@@ -1,3 +1,5 @@
+// Багш дээр ирсэн сурагчдын сэтгэгдлийг багшийн дэлгэрэнгүй мэдээллийн 
+// teacherInfo.html хуудсанд харуулах үед комментыг харуулах компонент
 class CommentElement extends HTMLElement {
     constructor() {
         super();

@@ -1,3 +1,4 @@
+// багшийн ерөнхий мэдээллийг агуулж буй кард
 class TutorCard extends HTMLElement {
     constructor() {
         super();

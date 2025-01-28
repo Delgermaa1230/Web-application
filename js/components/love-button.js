@@ -1,3 +1,4 @@
+// Багшийг хадгалах lovedTeacher.html хуудсан оруулах component
 class LoveButton extends HTMLElement {
     constructor() {
         super();

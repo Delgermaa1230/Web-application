@@ -1,3 +1,4 @@
+//багшийн заадаг хичээлийг харуулах component
 class LessonTag extends HTMLElement {
     constructor() {
         super();

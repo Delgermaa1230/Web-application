@@ -1,3 +1,4 @@
+// бүх хуудсанд байх footer component
 class FooTer extends HTMLElement {
     constructor() {
         super();

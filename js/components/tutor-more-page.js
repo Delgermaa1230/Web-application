@@ -1,3 +1,4 @@
+// багшийн дэлгэрэнгүй мэдээллийг харуулах component
 class TutorMorePage extends HTMLElement {
     constructor() {
         super();
@@ -47,6 +48,7 @@ class TutorMorePage extends HTMLElement {
         this.renderComments(comments);
     }
 
+    // Багшийн зааж буй хичээлүүдийн render хийж буй function
     renderLessons(lessons) {
         const ul = document.createElement('ul');
         ul.setAttribute('lessons-data', JSON.stringify(lessons));
@@ -60,6 +62,8 @@ class TutorMorePage extends HTMLElement {
         this.querySelector('.subjects-tags').appendChild(ul);
     }
 
+    // Багш дээр ирсэн сэтгэгдэлүүдийг comment-element component ашиглан
+    // render хийж буй function
     renderComments(comments) {
         const box = this.querySelector('.comment-box');
 

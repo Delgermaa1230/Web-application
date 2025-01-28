@@ -1,3 +1,5 @@
+// contactTeacher.html болон teacherInfo.html хуудсанд буй 
+// багшийн ерөнхий мэддээллийг агуулсан component
 class StickyBox extends HTMLElement {
     constructor() {
         super();

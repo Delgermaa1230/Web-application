@@ -1,3 +1,4 @@
+// profile.html хуудасны мэдээллийг агуулж буй component
 class ProfileInf extends HTMLElement {
     constructor() {
         super();

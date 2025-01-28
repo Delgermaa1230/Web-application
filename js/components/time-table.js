@@ -1,3 +1,4 @@
+// багшийн боломжит ыагийг харуулж буй timetable
 class Timetable extends HTMLElement {
     constructor() {
         super();
