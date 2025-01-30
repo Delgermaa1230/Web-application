@@ -9,7 +9,7 @@ class StickyBox extends HTMLElement {
         const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
         const showContact = this.hasAttribute('data-show-contact');   
 
-        const { id, image, firstName, firstLetterOfLastName, ratings, numberOfRatings, ranking, price } = bagsh;
+        const { id, image, firstName, lastName, ratings, numberOfRatings, ranking, price } = bagsh;
 
         this.innerHTML = `
             <section class="teacher-sticky-box">
@@ -18,7 +18,7 @@ class StickyBox extends HTMLElement {
                     <span><b>${ranking}</b></span>
                 </div>
                 <div class="image"><img src="${image}" alt="teacher"></div>
-                <h2>${firstLetterOfLastName}. ${firstName}</h2>
+                <h2>${lastName}. ${firstName}</h2>
                 <div class="rating">
                     <span><b>${ratings}</b></span>
                     <span><i class="fa fa-star"></i></span>

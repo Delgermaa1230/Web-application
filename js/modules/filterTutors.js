@@ -16,7 +16,7 @@ export function filterTutors(criteria, category) {
     } else if (category === "rating") {
         fData = tutors.filter(tutor => tutor.ratings === parseInt(criteria));
     } else if (category === "ranking") {
-        fData = tutors.filter(tutor => tutor.ranking === criteria);
+        fData = tutors.filter(tutor => tutor.rank === criteria);
     } else if (category === "price") {
         const sortedData = tutors.slice();
         fData = criteria === "Ихээс бага"
