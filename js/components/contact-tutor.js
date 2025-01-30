@@ -7,7 +7,7 @@ class ContactTutor extends HTMLElement {
     connectedCallback() {
         const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
         const { id, image, firstName, firstLetterOfLastName, ratings, numberOfRatings, description, ranking, possibleHours, price } = bagsh;
-
+        
         this.innerHTML = `
         <div class="sticky-part-wrapper">
             <sticky-box data-bagsh='${JSON.stringify(bagsh)}'></sticky-box>

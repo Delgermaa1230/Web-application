@@ -8,7 +8,7 @@ function transformTeacherData(teacher) {
     return {
         id: teacher.teacher_id,
         firstName: teacher.first_name,
-        lastName: teacher.last_name,
+        firstLetterOfLastName: teacher.last_name, 
         image: teacher.image,
         ratings: teacher.retings ,  
         numberOfRatings: teacher.number_of_ratings ,
