@@ -18,7 +18,7 @@ class TutorMorePage extends HTMLElement {
                 <sticky-box data-bagsh='${JSON.stringify(bagsh)}' data-show-contact ></sticky-box>
             </div>
             <section class="information-column">
-                <div class="subjects-tags" id="lesson-container">->
+                <div class="subjects-tags" id="lesson-container">
                 </div>
                 <h1>${description}</h1>
                 <div class="teaching-location">
