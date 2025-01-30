@@ -13,21 +13,21 @@ class FooTer extends HTMLElement {
             <footer>
         <ul>
             <li>
-                <h4>Тусламж</h4>
+                <h3>Тусламж</h3>
                 <ul>
                     <li><a aria-label="question" href="./question.html">FAQs</a></li>
                     <li><a aria-label="instruction" href="./question.html">Заавар</a></li>
                 </ul>
             </li>
             <li>
-                <h4>Холбогдох</h4>
+                <h3>Холбогдох</h3>
                     <ul>
                         <li>Утас:<a aria-label="phone" href="tel:+97688888811">+976 88 888811</a></li>
                         <li>Мэйл:<a aria-label="mail" href="mailto: example@teach.com">example@teach.com</a></li>
                     </ul>
             </li>
             <li>
-                <h4>Холбоосууд</h4>
+                <h3>Холбоосууд</h3>
                 <ul id="social-icons">
                     <li><a aria-label="instagram" href="https://www.instagram.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--base-text-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>

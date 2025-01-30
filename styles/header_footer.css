@@ -182,7 +182,7 @@ footer ul li ul li a {
     color: var(--base-grey-text-color)
 }
 
-footer ul li h4 {
+footer ul li h3 {
     font-size: var(--base-caption-font-size);
     color: var(--base-grey-text-color);
 }
