@@ -15,7 +15,7 @@ class Timetable extends HTMLElement {
                     display: grid;
                     grid-template-columns: repeat(6, 1fr);
                     gap: 6px;
-                    width: 100%;
+                    width: auto;
                     margin: 0 auto;
                     background-color: var(--base-color-light-orange);
                     padding: var(--base-size-x4);
