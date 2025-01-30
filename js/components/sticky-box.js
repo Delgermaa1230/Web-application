@@ -28,7 +28,7 @@ class StickyBox extends HTMLElement {
                     <p>Төлбөр</p>
                     <span>${price}₮/цаг</span>
                 </div>
-                ${showContact ? `<button class="important-button"><a href="./contactTeacher.html?id=${id}">Холбогдох</a></button>` : ''}
+                ${showContact ? `<button class="important-button" onclick="location.href='./contactTeacher.html?id=${id}'">Холбогдох</button>` : ''}
             </section>`;
     }
 }
