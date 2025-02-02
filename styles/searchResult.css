@@ -43,8 +43,8 @@ body {
     text-align: center;
     font-size: var(--base-body-font-size);
     background: var(--base-background-color);
-    border: solid 1px;
-    border-radius: var(--base-border-radius-x2);
+    border: solid 0.3px var(--base-color-grey);
+    border-radius: var(--base-border-radius-x3);
     margin-right: var(--base-size);
     margin-bottom: var(--base-size);
     width: 100%;
@@ -83,7 +83,7 @@ body {
     font-size: var(--base-body-font-size);
     background: var(--base-background-color);
     border: solid 1px;
-    border-radius: var(--base-border-radius-x2);
+    border-radius: var(--base-border-radius-x3);
     margin-right: var(--base-size);
     width: 100%;
     cursor: pointer;

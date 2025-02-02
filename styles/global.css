@@ -175,7 +175,7 @@ a {
 @media (max-width: 570px) {
     :root {
         --base-size: 6px;
-        --base-h1-font-size: 30px;
+        --base-h1-font-size: 25px;
         --base-body-font-size: 14px;
         --base-caption-font-size: 13px;
         --base-h2-font-size: 20px;

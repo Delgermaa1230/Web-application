@@ -140,4 +140,8 @@ form {
     .main {
         margin: var(--base-size)
     } 
+
+    .container {
+        margin: var(--base-size-x4);
+    }
 }

@@ -6,7 +6,6 @@ export function filterTutors(criteria, category) {
         console.log("Data load hiigdsengu");
         return;
     }
-
     let fData;
 
     if (category === "all") {

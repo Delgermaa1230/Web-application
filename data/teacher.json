@@ -1,597 +1,522 @@
-{
-  "teachers": [
-    {
-      "id":0,
-      "lessons": [
-        "Mathematic",
-        "Programming Language C",
-        "Algorithm",
-        "Mathematic 1b",
-        "Mathematic 1v"
-      ]
-    },  
-    {
-      "id": 1,
-      "firstName": "Дэлгэрмаа",
-      "lastName": "Галбаяр",
-      "age": "20",
-      "gender": "F",
-      "ratings": 5,
-      "numberOfRatings": 10,
-      "email": "galbayardelgermaa@gmail.com",
-      "phone": "89234723",
-      "image": "../imgs/img1.png",
-      "description": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
-      "moreDescription": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
-      "lessons": [
-        "Mathematic",
-        "Programming Language C",
-        "Algorithm"
-      ],
-      "mode": "online",
-      "price": 1000,
-      "ranking": "Ботго",
-      "password": "123456",
-      "studyingSessions": [
-        {
-          "tutorID": 2,
-          "lessonName": "Math",
-          "message": "bi math suramaar bn",
-          "time": ""
-        },
-        {
-          "tutorID": 3,
-          "lessonName": "Math",
-          "message": "bi math suramaar bn",
-          "time": ""
-        }
-      ],
-      "teachingSesssions": [
-        {
-          "studenID": 4,
-          "lessonName": "Math",
-          "message": "bi math suramaar bn",
-          "time": ""
-        }
-      ],
-      "comments": [
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        },
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        }
-      ],
-      "possibleHours": {
-        "Monday": [
-          1,
-          0,
-          1,
-          0,
-          1,
-          1,
-          1
-        ],
-        "Tuesday": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "Wednesday": [
-          1,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0
-        ],
-        "Thursday": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "Friday": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
+[
+  {
+    "teacher_id": 1,
+    "first_name": "Дэлгэрмээ",
+    "last_name": "Галбаяр",
+    "email": "galbayardelgermaa@gmail.com",
+    "description": "Би математикт маш их дуртай, бас заах эрмэлзэлтэй учир би багш",
+    "retings": 5,
+    "number_of_ratings": 10,
+    "image": "../imgs/img1.png",
+    "rank": "Ботго",
+    "phone": "89234723",
+    "mode": "online",
+    "teacher_info": "багш нь математик болон логикийн чиглэлээр мэргэшсэн бөгөөд сурагчдын сэтгэх чадварыг хөгжүүлэхэд ихээхэн анхаардаг. Тэрээр олон жилийн турш хичээл зааж, өөрийн аргачлалаараа сурагчдыг амжилттай суралцахад чиглүүлж ирсэн.                                  ",
+    "lesson_info": "Хичээлээ сурагчдын оролцоог идэвхжүүлэх үүднээс асуулт тавьж, ярилцлага өрнүүлдэг. Мөн бодлого шийдвэрлэх чадварыг хөгжүүлэхэд анхаардаг.                                                                                                                      ",
+    "lessons": [
+      {
+        "teacher_id": 1,
+        "lesson_name": "Math"
       },
-      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
-    },
-    {
-      "id": 2,
-      "firstName": "Номин",
-      "lastName": "Төмөрбаатар",
-      "age": "28",
-      "gender": "F",
-      "ratings": 4,
-      "numberOfRatings": 15,
-      "email": "nomintomor@gmail.com",
-      "phone": "89345567",
-      "image": "../imgs/img2.png",
-      "description": "Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл.",
-      "moreDescription": " физик болон инженерийн сэдвүүд",
-      "lessons": [
-        "Physics",
-        "Engineering",
-        "Database"
-      ],
-      "mode": "online",
-      "price": 2000,
-      "ranking": "Ботго",
-      "password": "123456",
-      "studyingSessions": [],
-      "teachingSesssions": [],
-      "comments": [
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        },
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        },
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        }
-      ],
-      "possibleHours": {
-        "Monday": [
-          1,
-          0,
-          1,
-          0,
-          1,
-          1,
-          1
-        ],
-        "Tuesday": [
-          0,
-          1,
-          0,
-          1,
-          0,
-          0,
-          0
-        ],
-        "Wednesday": [
-          1,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0
-        ],
-        "Thursday": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "Friday": [
-          0,
-          1,
-          0,
-          0,
-          0,
-          0,
-          1
-        ]
+      {
+        "teacher_id": 1,
+        "lesson_name": "Algo"
       },
-      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
-    },
-    {
-      "id": 3,
-      "firstName": "Санжид",
-      "lastName": "Мөнх-Эрдэнэ",
-      "age": "32",
-      "gender": "M",
-      "ratings": 3,
-      "numberOfRatings": 20,
-      "email": "sanjidmunkh@gmail.com",
-      "phone": "89234764",
-      "image": "../imgs/img3.png",
-      "description": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээлийг сайн заадаг.",
-      "moreDescription": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээли",
-      "lessons": [
-        "Descrete Mathematics",
-        "Statics"
-      ],
-      "mode": "online",
-      "price": 1000,
-      "ranking": "Их багш",
-      "password": "123456",
-      "studyingSessions": [
-        
-      ],
-      "teachingSesssions": [
-        {"teacherid": 1,
-        "studentid": 2,
-        "lesson": "ner"}
-      ],
-      "comments": [
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        },
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        },
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        }
-      ],
-      "possibleHours": {
-        "Monday": [
-          "07:40 - 09:10",
-          "09:20 - 10:50"
-        ],
-        "Tuesday": [
-          "14:20 - 15:50"
-        ],
-        "Wednesday": [],
-        "Thursday": [
-          "12:40 - 14:10"
-        ],
-        "Friday": []
+      {
+        "teacher_id": 1,
+        "lesson_name": "C"
+      }
+    ],
+    "feedback": [
+      {
+        "teacher_id": 1,
+        "image": "../imgs/img1.png",
+        "student_last_name": "Хүрэлсүх",
+        "student_first_name": "Жамъян",
+        "comment": "Энэ багшийн заасан хичээл маш ойлгомжтой байлаа. Багш маш мэргэжлийн бөгөөд сурагчдад ээлтэй ханддаг. Сургалтын арга барил нь их оновчтой байсан. Хичээл бүр урам зориг нэмдэг байсан бөгөөд ахиц гарсан."
+      }
+    ],
+    "teachingSessions": [
+      {
+        "teacher_id": 1,
+        "first_name": "Жамъян",
+        "last_name": "Хүрэлсүх",
+        "image": "../imgs/img1.png",
+        "lesson_name": "C",
+        "messege": "This is a sample message for session 1                                                                                                                                                                                                                         "
       },
-      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
-    },
-    {
-      "id": 4,
-      "firstName": "Түмэнжаргал",
-      "lastName": "Цогтгэрэл",
-      "age": "25",
-      "gender": "M",
-      "ratings": 5,
-      "numberOfRatings": 8,
-      "email": "tumenjargal@gmail.com",
-      "phone": "89385623",
-      "image": "../imgs/img4.png",
-      "description": "Би инженерчлэлийн багшаар ажиллахыг хүсдэг. Хэрэглээний математик заах дуртай.",
-      "moreDescription": "енерчлэлийн багшаар ажиллахы",
-      "lessons": [
-        "Algorithm",
-        "English",
-        "Engineering"
-      ],
-      "mode": "online",
-      "price": 1000,
-      "ranking": "Ботго",
-      "password": "123456",
-      "studyingSessions": [],
-      "teachingSesssions": [],
-      "comments": [
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        },
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        },
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        },
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        }
-      ],
-      "possibleHours": {
-        "Monday": [
-          "07:40 - 09:10",
-          "09:20 - 10:50"
-        ],
-        "Tuesday": [
-          "14:20 - 15:50"
-        ],
-        "Wednesday": [],
-        "Thursday": [
-          "12:40 - 14:10"
-        ],
-        "Friday": []
+      {
+        "teacher_id": 1,
+        "first_name": "Нямаа",
+        "last_name": "Батпүрэв",
+        "image": "../imgs/img1.png",
+        "lesson_name": "Math",
+        "messege": "This is a sample message for session 2                                                                                                                                                                                                                         "
+      }
+    ]
+  },
+  {
+    "teacher_id": 2,
+    "first_name": "Номин",
+    "last_name": "Төмөрбаатар",
+    "email": "nomintomor@gmail.com",
+    "description": "Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл.",
+    "retings": 4,
+    "number_of_ratings": 15,
+    "image": "../imgs/img2.png",
+    "rank": "Ботго",
+    "phone": "89345567",
+    "mode": "online",
+    "teacher_info": " Багш нь түүхийн салбарт мэргэжилтэй бөгөөд, түүхийн баримт, жишээнүүдийг ашиглан сурагчдад түүхийн ойлголт болон анализ хийх чадварыг хөгжүүлдэг. Түүний хичээлүүд нь анхаарал татахуйц бөгөөд сонирхолтой байдаг.                                            ",
+    "lesson_info": "Хичээлээ түүхийн жишээнүүд болон анхаарал татах видео материал ашиглан тайлбарладаг.                                                                                                                                                                           ",
+    "lessons": [
+      {
+        "teacher_id": 2,
+        "lesson_name": "Физик"
       },
-      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
-    },
-    {
-      "id": 5,
-      "firstName": "Ганбат",
-      "lastName": "Лхагвасүрэн",
-      "age": "30",
-      "gender": "M",
-      "ratings": 4,
-      "numberOfRatings": 12,
-      "email": "ganbatlhagvasuren@gmail.com",
-      "phone": "89452374",
-      "image": "../imgs/img5.png",
-      "description": "Программчлалын багш, веб хөгжүүлэлтийн чиглэлээр туршлагатай.",
-      "moreDescription": "лын багш,",
-      "lessons": [
-        "Algorithm",
-        "Programming Language C",
-        "Database"
-      ],
-      "mode": "online",
-      "price": 1000,
-      "ranking": "Ботго",
-      "password": "123456",
-      "studyingSessions": [],
-      "teachingSesssions": [],
-      "comments": [
-        {
-          "firstName": "Номин",
-          "lastName": "Төмөрбаатар",
-          "image": "../imgs/img6.png",
-          "description": "Маш сайн багш шүү. Би матаа ерөөсөө ойлгодгүй байсан энэ багш дээр үзээд маш сайн ойлгодог болсон. Ба гэхдээ заримдаа зааж байгаа арга барил нь таалагдаагүй ээ. Гэхдээ яах вэ. Гоёшүү"
-        }
-      ],
-      "possibleHours": {
-        "Monday": [
-          "07:40 - 09:10",
-          "09:20 - 10:50"
-        ],
-        "Tuesday": [
-          "14:20 - 15:50"
-        ],
-        "Wednesday": [],
-        "Thursday": [
-          "12:40 - 14:10"
-        ],
-        "Friday": []
+      {
+        "teacher_id": 2,
+        "lesson_name": "C"
       },
-      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
-    },
-    {
-      "id": 6,
-      "firstName": "Намуунаа",
-      "lastName": "Цэрэнбат",
-      "age": "27",
-      "gender": "F",
-      "ratings": 5,
-      "numberOfRatings": 10,
-      "email": "namuunaatseren@gmail.com",
-      "phone": "89562347",
-      "image": "../imgs/img6.png",
-      "description": "Интернет маркетингийн чиглэлээр багшилж байна. Сошиал медиа хэрэглээг заадаг.",
-      "moreDescription": "Интернет маркетингийн чиглэлээр багшилж байна.",
-      "lessons": [
-        "Mathematic",
-        "Database"
-      ],
-      "mode": "online",
-      "price": 1000,
-      "ranking": "Тором",
-      "password": "123456",
-      "studyingSessions": [],
-      "teachingSesssions": [],
-      "comments": [],
-      "possibleHours": {
-        "Monday": [
-          "07:40 - 09:10",
-          "09:20 - 10:50"
-        ],
-        "Tuesday": [
-          "14:20 - 15:50"
-        ],
-        "Wednesday": [],
-        "Thursday": [
-          "12:40 - 14:10"
-        ],
-        "Friday": []
+      {
+        "teacher_id": 2,
+        "lesson_name": "Эрчим хүчний систем"
+      }
+    ],
+    "feedback": [
+      {
+        "teacher_id": 2,
+        "image": "../imgs/img2.png",
+        "student_last_name": "Батпүрэв",
+        "student_first_name": "Нямаа",
+        "comment": "Лекцийн ном нь өөрийнх нь ном онлайн ордог байхад үнэхээр юу ч харагдахгүй их хэцүү байсан."
+      }
+    ],
+    "teachingSessions": [
+      {
+        "teacher_id": 2,
+        "first_name": "Болд",
+        "last_name": "Хулан",
+        "image": "../imgs/img2.png",
+        "lesson_name": "C",
+        "messege": "This is a sample message for session 3                                                                                                                                                                                                                         "
       },
-      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
-    },
-    {
-      "id": 7,
-      "firstName": "Билгүүн",
-      "lastName": "Галбадрах",
-      "age": "34",
-      "gender": "M",
-      "ratings": 4,
-      "numberOfRatings": 14,
-      "email": "bilguungalbadrah@gmail.com",
-      "phone": "89673452",
-      "image": "../imgs/img7.png",
-      "description": "Би компьютерийн системийн багш. Системийн архитектурын хичээл заадаг.",
-      "moreDescription": "омпьютерийн системийн багш. Системийн архитектурын хичээл заада",
-      "lessons": [
-        "Math",
-        "English",
-        "C"
-      ],
-      "mode": "online",
-      "price": 1000,
-      "ranking": "Тором",
-      "password": "123456",
-      "studyingSessions": [],
-      "teachingSesssions": [],
-      "comments": [],
-      "possibleHours": {
-        "Monday": [
-          "07:40 - 09:10",
-          "09:20 - 10:50"
-        ],
-        "Tuesday": [
-          "14:20 - 15:50"
-        ],
-        "Wednesday": [],
-        "Thursday": [
-          "12:40 - 14:10"
-        ],
-        "Friday": []
+      {
+        "teacher_id": 2,
+        "first_name": "Хүслэн",
+        "last_name": "Пүрэв",
+        "image": "../imgs/img2.png",
+        "lesson_name": "Физик",
+        "messege": "This is a sample message for session 4                                                                                                                                                                                                                         "
+      }
+    ]
+  },
+  {
+    "teacher_id": 3,
+    "first_name": "Санжид",
+    "last_name": "Мөнх-Эрдэнэ",
+    "email": "sanjidmunkh@gmail.com",
+    "description": "Математикийн багшаар 8 жил ажилласан. Статистикийн хичээлийг сайн заадаг.",
+    "retings": 3,
+    "number_of_ratings": 20,
+    "image": "../imgs/img3.png",
+    "rank": "Их багш",
+    "phone": "89234764",
+    "mode": "online",
+    "teacher_info": "Багш нь нийгмийн ухааны чиглэлээр мэргэшсэн бөгөөд, хичээлүүдийн эхэнд сурагчидтай хамтран санаа бодол солилцож, тэдний сонирхлыг татах байдлаар хичээлээ эхэлдэг. Түүний хичээлүүд нь интерактив, идэвхтэй оролцоотой байдаг.                                 ",
+    "lesson_info": "Сурагчдын идэвхтэй оролцоог байнга хянаж, санал бодлоо солилцох хичээлүүд зохион байгуулдаг.                                                                                                                                                                   ",
+    "lessons": [
+      {
+        "teacher_id": 3,
+        "lesson_name": "Math"
       },
-      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
-    },
-    {
-      "id": 8,
-      "firstName": "Мөнгөнзаяа",
-      "lastName": "Төмөр",
-      "age": "22",
-      "gender": "F",
-      "ratings": 4,
-      "numberOfRatings": 9,
-      "email": "mongonzayaatomer@gmail.com",
-      "phone": "89745263",
-      "image": "../imgs/img8.png",
-      "description": "Би математик, физикийн хичээлүүдийг сонирхдог. Студентуудтай харилцахад хичээл заахдаа таатай байдаг.",
-      "moreDescription": "Би математик, физикийн хичээлүүдийг сонирхдог. Студен",
-      "lessons": [
-        "Math",
-        "English",
-        "C"
-      ],
-      "mode": "classroom",
-      "price": 1000,
-      "ranking": "Супер Тором",
-      "password": "123456",
-      "studyingSessions": [],
-      "teachingSesssions": [],
-      "comments": [],
-      "possibleHours": {
-        "Monday": [
-          "07:40 - 09:10",
-          "09:20 - 10:50"
-        ],
-        "Tuesday": [
-          "14:20 - 15:50"
-        ],
-        "Wednesday": [],
-        "Thursday": [
-          "12:40 - 14:10"
-        ],
-        "Friday": []
+      {
+        "teacher_id": 3,
+        "lesson_name": "Статистик"
       },
-      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
-    },
-    {
-      "id": 9,
-      "firstName": "Жаргалсайхан",
-      "lastName": "Батзориг",
-      "age": "29",
-      "gender": "M",
-      "ratings": 5,
-      "numberOfRatings": 16,
-      "email": "jargalsaihanbatzor@gmail.com",
-      "phone": "89983412",
-      "image": "../imgs/img9.png",
-      "description": "Машин сургалтын чиглэлээр багшилдаг. Оюутнуудад алгоритмын ойлголтыг заах дуртай.",
-      "moreDescription": "Машин сургалтын чиглэлээр багшилдаг. Оюутнуудад алгоритмын ойлголтыг заах дур",
-      "lessons": [
-        "Math",
-        "English",
-        "C"
-      ],
-      "mode": "online",
-      "price": 2000,
-      "ranking": "Тором",
-      "password": "123456",
-      "studyingSessions": [],
-      "teachingSesssions": [],
-      "comments": [],
-      "possibleHours": {
-        "Monday": [
-          "07:40 - 09:10",
-          "09:20 - 10:50"
-        ],
-        "Tuesday": [
-          "14:20 - 15:50"
-        ],
-        "Wednesday": [],
-        "Thursday": [
-          "12:40 - 14:10"
-        ],
-        "Friday": []
+      {
+        "teacher_id": 3,
+        "lesson_name": "Төрөл бүрийн тооцоолол"
+      }
+    ],
+    "feedback": [
+      {
+        "teacher_id": 3,
+        "image": "../imgs/img3.png",
+        "student_last_name": "Батпүрэв",
+        "student_first_name": "Нямаа",
+        "comment": "Энэ багшийн заасан хичээлүүд ойлгомжтой, сурагчдад ээлтэй байсан. Багшийн заах арга барил маш үр дүнтэй бөгөөд сурагчдын мэдлэгийг ахиулахад чиглэгдсэн байсан. Хичээл бүр сурагчдад урам зориг өгч, ахиц гаргахад тусалсан."
+      }
+    ],
+    "teachingSessions": [
+      {
+        "teacher_id": 3,
+        "first_name": "Хуяг",
+        "last_name": "Норов",
+        "image": "../imgs/img3.png",
+        "lesson_name": "Math",
+        "messege": "This is a sample message for session 5                                                                                                                                                                                                                         "
+      }
+    ]
+  },
+  {
+    "teacher_id": 4,
+    "first_name": "Түмэнжаргал",
+    "last_name": "Цогтгэрэл",
+    "email": "tumenjargal@gmail.com",
+    "description": "Би инженерчлэлийн багшаар ажиллахыг хүсдэг. Хэрэглээний математик заах дуртай.",
+    "retings": 5,
+    "number_of_ratings": 8,
+    "image": "../imgs/img4.png",
+    "rank": "Ботго",
+    "phone": "89385623",
+    "mode": "classroom",
+    "teacher_info": "Багш нь физик болон химийн чиглэлээр боловсролтой бөгөөд хичээлээ жишээ болон туршилтын материалууд ашиглан заадаг. Тэрээр сурагчдад шинжлэх ухааны талаар анхааралтай, ойлгомжтой тайлбар өгдөг.                                                              ",
+    "lesson_info": "Хичээлийн эхэнд өдрийн сэдвийг тодорхойлж, дараа нь жишээнүүдийг дэлгэрэнгүй тайлбарладаг.                                                                                                                                                                     ",
+    "lessons": [
+      {
+        "teacher_id": 4,
+        "lesson_name": "Math"
       },
-      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
-    },
-    {
-      "id": 10,
-      "firstName": "Энхтүвшин",
-      "lastName": "Эрдэнэбаяр",
-      "age": "35",
-      "gender": "M",
-      "ratings": 3,
-      "numberOfRatings": 11,
-      "email": "enkhtuvshinerd@gmail.com",
-      "phone": "89764523",
-      "image": "../imgs/img10.png",
-      "description": "Би философийн багш. Эртний философийн сэдвүүдийг оюутнуудад заах дуртай.",
-      "moreDescription": "Би философийн багш. Эртний философийн сэдвүүдийг оюутнуудад заах дуртай.",
-      "lessons": [
-        "Math",
-        "English",
-        "C"
-      ],
-      "mode": "online",
-      "price": 1000,
-      "ranking": "Тором",
-      "password": "123456",
-      "studyingSessions": [],
-      "teachingSesssions": [],
-      "comments": [],
-      "possibleHours": {
-        "Monday": [
-          "07:40 - 09:10",
-          "09:20 - 10:50"
-        ],
-        "Tuesday": [
-          "14:20 - 15:50"
-        ],
-        "Wednesday": [],
-        "Thursday": [
-          "12:40 - 14:10"
-        ],
-        "Friday": []
+      {
+        "teacher_id": 4,
+        "lesson_name": "Математик ба эдийн засаг"
+      }
+    ],
+    "feedback": [],
+    "teachingSessions": [
+      {
+        "teacher_id": 4,
+        "first_name": "Жамъян",
+        "last_name": "Хүрэлсүх",
+        "image": "../imgs/img4.png",
+        "lesson_name": "Math",
+        "messege": "This is a sample message for session 6                                                                                                                                                                                                                         "
+      }
+    ]
+  },
+  {
+    "teacher_id": 5,
+    "first_name": "Ганбат",
+    "last_name": "Лхагвасүрэн",
+    "email": "ganbatlhagvasuren@gmail.com",
+    "description": "Программчлалын багш, веб хөгжүүлэлтийн чиглэлээр туршлагатай.",
+    "retings": 4,
+    "number_of_ratings": 12,
+    "image": "../imgs/img5.png",
+    "rank": "Ботго",
+    "phone": "89452374",
+    "mode": "online",
+    "teacher_info": "Багш нь байгаль шинжлэх ухааны чиглэлээр мэргэшсэн бөгөөд хичээлдээ олон төрлийн практик жишээ ашиглан, сурагчдад ойлголт өгөхөд гол анхаарлаа хандуулдаг.                                                                                                     ",
+    "lesson_info": "Хичээлдээ олон төрлийн сонирхолтой дасгал болон практик жишээг ашигладаг.                                                                                                                                                                                      ",
+    "lessons": [
+      {
+        "teacher_id": 5,
+        "lesson_name": "Database"
       },
-      "teachingDescription": "This is my teaching description: Би физик болон инженерийн сэдвүүдэд мэргэшсэн. Багшаар ажиллаж буй нь миний хүсэл."
-    }
-  ]
-}
+      {
+        "teacher_id": 5,
+        "lesson_name": "C"
+      }
+    ],
+    "feedback": [],
+    "teachingSessions": [
+      {
+        "teacher_id": 5,
+        "first_name": "Нямаа",
+        "last_name": "Батпүрэв",
+        "image": "../imgs/img5.png",
+        "lesson_name": "Database",
+        "messege": "This is a sample message for session 7                                                                                                                                                                                                                         "
+      }
+    ]
+  },
+  {
+    "teacher_id": 6,
+    "first_name": "Намуунаа",
+    "last_name": "Цэрэнбат",
+    "email": "namuunaatseren@gmail.com",
+    "description": "Интернет маркетингийн чиглэлээр багшилж байна. Сошиал медиа хэрэглээг заадаг.",
+    "retings": 5,
+    "number_of_ratings": 10,
+    "image": "../imgs/img6.png",
+    "rank": "Тором",
+    "phone": "89562347",
+    "mode": "classroom",
+    "teacher_info": "Багш нь математик болон програмчлалын чиглэлээр мэргэжилтэй бөгөөд хичээлдээ практик дасгалуудыг багтааж, сурагчдын бие дааж суралцах чадварыг хөгжүүлдэг.                                                                                                     ",
+    "lesson_info": "Хичээлийг илүү интерактив байдлаар зохион байгуулж, сурагчдыг бүлэгт хувааж, санал бодлоо хуваалцуулдаг.                                                                                                                                                       ",
+    "lessons": [
+      {
+        "teacher_id": 6,
+        "lesson_name": "Интернет маркктинг"
+      },
+      {
+        "teacher_id": 6,
+        "lesson_name": "Algo"
+      }
+    ],
+    "feedback": [],
+    "teachingSessions": [
+      {
+        "teacher_id": 6,
+        "first_name": "Болд",
+        "last_name": "Хулан",
+        "image": "../imgs/img6.png",
+        "lesson_name": "Algo",
+        "messege": "This is a sample message for session 8                                                                                                                                                                                                                         "
+      }
+    ]
+  },
+  {
+    "teacher_id": 7,
+    "first_name": "Билгүүн",
+    "last_name": "Галбадрах",
+    "email": "bilguungalbadrah@gmail.com",
+    "description": "Би компьютерийн системийн багш. Системийн архитектурын хичээл заадаг.",
+    "retings": 4,
+    "number_of_ratings": 14,
+    "image": "../imgs/img7.png",
+    "rank": "Тором",
+    "phone": "89673452",
+    "mode": "online",
+    "teacher_info": "Багш нь биологийн салбарт мэргэжилтэй бөгөөд хичээлээ сурагчдад илүү амьдралыг ойлгуулах, танин мэдэхүйн хөгжлийг дэмжих зорилгоор сонирхолтой жишээнүүд болон амьдралын туршлагаар баяжуулдаг.                                                                ",
+    "lesson_info": "Хичээлийн агуулгыг хялбаршуулж, сурагчдад бодлого шийдвэрлэх ажлыг өөрсдөө хийлгэж, зааварчилгаа өгдөг.                                                                                                                                                        ",
+    "lessons": [
+      {
+        "teacher_id": 7,
+        "lesson_name": "Системийн архитектур"
+      },
+      {
+        "teacher_id": 7,
+        "lesson_name": "Компьютерийн сүлжээ"
+      },
+      {
+        "teacher_id": 7,
+        "lesson_name": "Algo"
+      }
+    ],
+    "feedback": [
+      {
+        "teacher_id": 7,
+        "image": "../imgs/img7.png",
+        "student_last_name": "Хүрэлсүх",
+        "student_first_name": "Жамъян",
+        "comment": "Лекц дээрээ битгий таслаарай чи л хохирно шүү. Бас шалгалтуудаа онлайнаар авдаг ер нь үзсэндээ харамсдагүй ээ"
+      }
+    ],
+    "teachingSessions": [
+      {
+        "teacher_id": 7,
+        "first_name": "Хүслэн",
+        "last_name": "Пүрэв",
+        "image": "../imgs/img7.png",
+        "lesson_name": "Algo",
+        "messege": "This is a sample message for session 9                                                                                                                                                                                                                         "
+      }
+    ]
+  },
+  {
+    "teacher_id": 8,
+    "first_name": "Мөнгөнзаяа",
+    "last_name": "Төмөр",
+    "email": "mongonzayaatomer@gmail.com",
+    "description": "Би математик, физикийн хичээлүүдийг сонирхдог. Студентуудтай харилцахад хичээл заахдаа таатай байдаг.",
+    "retings": 4,
+    "number_of_ratings": 9,
+    "image": "../imgs/img8.png",
+    "rank": "Супер Тором",
+    "phone": "89745263",
+    "mode": "classroom",
+    "teacher_info": "Багш нь нийгэм судлал болон сэтгэл зүйгийн чиглэлээр мэргэшсэн. Тэрээр хичээлдээ олон төрлийн дүрсэлж тайлбарлах аргыг ашиглан сурагчдын ойлголтыг хөгжүүлдэг.                                                                                                 ",
+    "lesson_info": "Видео болон графикийг хэрэглэж, хичээлийн агуулгыг ойлгоход илүү тусалдаг.                                                                                                                                                                                     ",
+    "lessons": [
+      {
+        "teacher_id": 8,
+        "lesson_name": "Math"
+      },
+      {
+        "teacher_id": 8,
+        "lesson_name": "Физик"
+      },
+      {
+        "teacher_id": 8,
+        "lesson_name": "Algo"
+      }
+    ],
+    "feedback": [
+      {
+        "teacher_id": 8,
+        "image": "../imgs/img8.png",
+        "student_last_name": "Хүрэлсүх",
+        "student_first_name": "Жамъян",
+        "comment": "Шалгалтууд л их хүнд байдаг юм байна л ээ шүү бас лекцээ өгдөггүй болохоор жаахан хэцүү, лекц яагаад ч тасалж болохгүй шүү"
+      }
+    ],
+    "teachingSessions": [
+      {
+        "teacher_id": 8,
+        "first_name": "Хуяг",
+        "last_name": "Норов",
+        "image": "../imgs/img8.png",
+        "lesson_name": "Math",
+        "messege": "This is a sample message for session 10                                                                                                                                                                                                                        "
+      }
+    ]
+  },
+  {
+    "teacher_id": 9,
+    "first_name": "Жаргалсайхан",
+    "last_name": "Батзориг",
+    "email": "jargalsaihanbatzor@gmail.com",
+    "description": "Би мэдээллийн технологи, програмчлалын багш. Студентуудын амжилтанд тустай байхын тулд сайн сургалт явуулдаг.",
+    "retings": 5,
+    "number_of_ratings": 16,
+    "image": "../imgs/img9.png",
+    "rank": "Супер Тором",
+    "phone": "89983412",
+    "mode": "classroom",
+    "teacher_info": "Багш нь хэлний ухаан болон хэл шинжлэлийн чиглэлээр мэргэжилтэй бөгөөд хичээлдээ сурагчдыг бүтээлч сэтгэлгээ, шинийг сэтгэх чадварыг хөгжүүлэхээр анхаардаг.                                                                                                   ",
+    "lesson_info": "Хичээлдээ тэмдэглэл хийх болон бие даан суралцах чадварыг хөгжүүлэх үйл ажиллагаанууд ордог.                                                                                                                                                                   ",
+    "lessons": [
+      {
+        "teacher_id": 9,
+        "lesson_name": "Database"
+      },
+      {
+        "teacher_id": 9,
+        "lesson_name": "Мэдээллийн технологи"
+      }
+    ],
+    "feedback": [],
+    "teachingSessions": [
+      {
+        "teacher_id": 9,
+        "first_name": "Жамъян",
+        "last_name": "Хүрэлсүх",
+        "image": "../imgs/img9.png",
+        "lesson_name": "Database",
+        "messege": "This is a sample message for session 11                                                                                                                                                                                                                        "
+      }
+    ]
+  },
+  {
+    "teacher_id": 10,
+    "first_name": "Цогт-Эрдэнэ",
+    "last_name": "Чулуунбилэг",
+    "email": "tsogt-erdene@gmail.com",
+    "description": "Математик, физик, инженерийн чиглэлээр багшилдаг. Шинжлэх ухааны аргачлал дээр анхаардаг.",
+    "retings": 4,
+    "number_of_ratings": 13,
+    "image": "../imgs/img10.png",
+    "rank": "Их багш",
+    "phone": "89273568",
+    "mode": "online",
+    "teacher_info": "Багш нь урлагийн чиглэлээр боловсрол эзэмшсэн бөгөөд сурагчдыг бие даан ажиллах, бүтээлч сэтгэлгээнийхээ чадварыг сайжруулахад чиглүүлдэг. Тэрээр хичээлдээ илэрхийлэх арга барил болон бие дааж суралцах үйл ажиллагаануудыг оролцуулдаг.                     ",
+    "lesson_info": "Хичээлийн төгсгөлд сурагчдын ойлголт болон гүйцэтгэлийг шалгах асуулт тавьж, тохирсон зөвлөгөө өгдөг.                                                                                                                                                          ",
+    "lessons": [
+      {
+        "teacher_id": 10,
+        "lesson_name": "Math"
+      },
+      {
+        "teacher_id": 10,
+        "lesson_name": "Algo"
+      },
+      {
+        "teacher_id": 10,
+        "lesson_name": "Database"
+      }
+    ],
+    "feedback": [
+      {
+        "teacher_id": 10,
+        "image": "../imgs/img10.png",
+        "student_last_name": "Батпүрэв",
+        "student_first_name": "Нямаа",
+        "comment": "Яах вэ гоё мэдлэг чадвартай багш, гэхдээ ирц дээр бол үнэхээр няхуур шүү. Шалгалтын тал дээр дажгүй ээ, цахимаар авах талтай."
+      }
+    ],
+    "teachingSessions": [
+      {
+        "teacher_id": 10,
+        "first_name": "Нямаа",
+        "last_name": "Батпүрэв",
+        "image": "../imgs/img10.png",
+        "lesson_name": "Math",
+        "messege": "This is a sample message for session 12                                                                                                                                                                                                                        "
+      }
+    ]
+  },
+  {
+    "teacher_id": 11,
+    "first_name": "Мөнгөө",
+    "last_name": "Бурмаа",
+    "email": "burmaa44@gmail.com",
+    "description": null,
+    "retings": null,
+    "number_of_ratings": 0,
+    "image": null,
+    "rank": null,
+    "phone": "99668811",
+    "mode": null,
+    "teacher_info": null,
+    "lesson_info": null,
+    "lessons": [],
+    "feedback": [],
+    "teachingSessions": []
+  },
+  {
+    "teacher_id": 12,
+    "first_name": "Хүрэлээ",
+    "last_name": "Молом",
+    "email": "hurlee55@gmail.com",
+    "description": null,
+    "retings": null,
+    "number_of_ratings": 0,
+    "image": null,
+    "rank": null,
+    "phone": "99882255",
+    "mode": null,
+    "teacher_info": null,
+    "lesson_info": null,
+    "lessons": [],
+    "feedback": [],
+    "teachingSessions": []
+  },
+  {
+    "teacher_id": 13,
+    "first_name": "Наямаа",
+    "last_name": "Хэрлэг",
+    "email": "nyma78345@gmail.com",
+    "description": null,
+    "retings": null,
+    "number_of_ratings": 0,
+    "image": null,
+    "rank": null,
+    "phone": "90453454",
+    "mode": null,
+    "teacher_info": null,
+    "lesson_info": null,
+    "lessons": [],
+    "feedback": [],
+    "teachingSessions": []
+  },
+  {
+    "teacher_id": 14,
+    "first_name": "Наямаа",
+    "last_name": "Хэрлэг",
+    "email": "nym@gmail.com",
+    "description": null,
+    "retings": null,
+    "number_of_ratings": 0,
+    "image": null,
+    "rank": null,
+    "phone": "90453454",
+    "mode": null,
+    "teacher_info": null,
+    "lesson_info": null,
+    "lessons": [],
+    "feedback": [],
+    "teachingSessions": []
+  }
+]

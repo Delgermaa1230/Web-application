@@ -11,6 +11,8 @@
     <script type="module" src="../js/components/love-button.js"></script>
     <script type="module" src="../js/components/tutor-card.js"></script>
     <script type="module" src="../js/components/foo-ter.js"></script>
+    <script type="module" src="../js/pages/loved.js" ></script>
+    <script src="../js/modules/loveTutorsManager.js"></script>
 </head>
 
 <body>
@@ -26,22 +28,14 @@
                         window.location.href = '../index.html';
                     }
                 });
-
             </script>
             <a aria-label="question" href="./question.html" style="font-size: 16px;">?</a>
     </header>
     <div class="main">
         <section class="container">
             <h2 style="margin-bottom: var(--base-size-x3);">Танд таалагдсан багш нар</h2>
-            <div class="tutors-box" id="lovedTutors">
+            <div class="tutors-box" id="tutors">
             </div>
-            <script type="module">
-                import { renderLovedTs } from '../js/modules/loadLovedTutors.js';
-
-                document.addEventListener('DOMContentLoaded', () => {
-                    renderLovedTs();
-                });
-            </script>
         </section>
         <div></div>
     </div>

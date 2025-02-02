@@ -205,7 +205,7 @@ h3 {
 }
 
 /* responsive */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .main {
         flex-direction: column;
         justify-content: center;
@@ -225,4 +225,8 @@ h3 {
     .main {
         margin: var(--base-size)
     } 
+
+    .container {
+        margin: var(--base-size-x4)
+    }
 }
