@@ -13,6 +13,7 @@ export function transformTeacherData(teacher) {
         phone: teacher.phone,
         mode: teacher.mode,
         teacher_info: teacher.teacher_info,
+        price: teacher.price,
         lesson_info: teacher.lesson_info
     };
 }

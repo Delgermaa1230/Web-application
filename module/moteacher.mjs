@@ -10,7 +10,7 @@ export default class Moteacher {
             const query = `
                 SELECT teacher_id, first_name, last_name, email,
                        description, retings, number_of_ratings, image,
-                       rank, phone, mode, teacher_info, lesson_info
+                       rank, phone, mode, teacher_info, lesson_info, price
                 FROM "Teacher"
                 ORDER BY teacher_id
             `;
@@ -26,7 +26,7 @@ export default class Moteacher {
             const query = `
                 SELECT teacher_id, first_name, last_name, email, password,
                        description, retings, number_of_ratings, image,
-                       rank, phone, mode, teacher_info, lesson_info
+                       rank, phone, mode, teacher_info, lesson_info, price
                 FROM "Teacher"
                 WHERE teacher_id = $1
             `;

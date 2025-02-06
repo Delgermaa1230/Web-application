@@ -52,7 +52,6 @@
     --base-caption-font-size: 14px;
     --base-small-font-size: 12px;
     --base-tiny-font-size: 10px;
-    --base-button-xlarge-font-size: var(--base-body-font-size);
     --base-button-large-font-size: var(--base-body-font-size);
     --base-button-medium-font-size: var(--base-caption-font-size);
     --base-button-small-font-size: var(--base-small-font-size);
@@ -106,8 +105,8 @@ body {
     background-color: var(--base-color-orange);
     color: var(--base-color-white);
     border-radius: var(--base-border-radius-x3);
-    font-size: var(--base-button-medium-font-size);
-    font-weight: var(--base-heavy-font-weight);
+    font-size: var(--base-button-large-font-size);
+    font-weight: var(--base-bold-font-weight);
     transition: var(--base-transition);
     padding: var(--base-padding);
 
@@ -118,9 +117,8 @@ a {
 }
 
 .important-button:hover {
-    transform: scale(1.05);
-    font-size: var(--base-button-large-font-size);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transform: scale(1.002);
+    box-shadow: rgba(50, 50, 93, 0.5) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .love {

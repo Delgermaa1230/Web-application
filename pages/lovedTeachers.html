@@ -11,8 +11,36 @@
     <script type="module" src="../js/components/love-button.js"></script>
     <script type="module" src="../js/components/tutor-card.js"></script>
     <script type="module" src="../js/components/foo-ter.js"></script>
-    <script type="module" src="../js/pages/loved.js" ></script>
+    <script type="module" src="../js/components/love-tutors-count.js"></script>
+    <script type="module" src="../js/pages/loved.js"></script>
     <script src="../js/modules/loveTutorsManager.js"></script>
+    <style>
+        .lovedTutorsTitle {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        loved-tutors-count {
+            padding: var(--base-padding);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+    </style>
 </head>
 
 <body>
@@ -33,7 +61,10 @@
     </header>
     <div class="main">
         <section class="container">
-            <h2 style="margin-bottom: var(--base-size-x3);">Танд таалагдсан багш нар</h2>
+            <div class="lovedTutorsTitle">
+                <h2 style="margin-bottom: var(--base-size-x3);">Танд таалагдсан багш нар</h2>
+                <loved-tutors-count></loved-tutors-count>
+            </div>
             <div class="tutors-box" id="tutors">
             </div>
         </section>

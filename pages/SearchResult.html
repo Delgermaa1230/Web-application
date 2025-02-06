@@ -12,7 +12,7 @@
     <script type="module" src="../js/components/love-button.js"></script>
     <script type="module" src="../js/components/tutor-card.js"></script>
     <script type="module" src="../js/components/foo-ter.js"></script>
-    <script type="module" src="../js/pages/search.js"></script>
+    <script type="module" src="../js/components/tutor-list.js"> </script>
     <script src="../js/modules/loveTutorsManager.js"></script>
 </head>
 
@@ -85,76 +85,57 @@
         <!--filter-->
         <section class="filterMenu">
             <h2>Хайлтын Үр Дүн</h2><br>
-            <ul>
-                <li>
-                    <button data-category="all" class="Filterbtn">Бүх Зар</button>
-                </li>
-                <li>
-                    <button data-category="online" class="Filterbtn">Онлайн</button>
-                </li>
-                <li>
-                    <button data-category="classroom" class="Filterbtn">Танхим</button>
-                </li>
-                <li>
-                    <button class="FilterbtnA" onclick="toggleDropdown(event, 'rating')">Үнэлгээ</button>
-                    <ul class="dropdown" id="rating">
-                        <li><button data-category="rating" data-criteria="1" class="Filterbtn">1</button></li>
-                        <li><button data-category="rating" data-criteria="2" class="Filterbtn">2</button></li>
-                        <li><button data-category="rating" data-criteria="3" class="Filterbtn">3</button></li>
-                        <li><button data-category="rating" data-criteria="4" class="Filterbtn">4</button></li>
-                        <li><button data-category="rating" data-criteria="5" class="Filterbtn">5</button></li>
-                    </ul>
-                </li>
-                <li>
-                    <button class="FilterbtnA" onclick="toggleDropdown(event, 'ranking')">Цол</button>
-                    <ul class="dropdown" id="ranking">
-                        <li><button data-category="ranking" data-criteria="Ботго" class="Filterbtn">Ботго</button></li>
-                        <li><button data-category="ranking" data-criteria="Тором" class="Filterbtn">Тором</button></li>
-                        <li><button data-category="ranking" data-criteria="Супер Тором" class="Filterbtn">Супер
-                                Тором</button></li>
-                        <li><button data-category="ranking" data-criteria="Их багш" class="Filterbtn">Их багш</button>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <button class="FilterbtnA" onclick="toggleDropdown(event, 'price')">Үнэ</button>
-                    <ul class="dropdown" id="price">
-                        <li><button data-category="price" data-criteria="Ихээс бага" class="Filterbtn">Ихээс
-                                бага</button></li>
-                        <li><button data-category="price" data-criteria="Багаас их" class="Filterbtn">Багаас их</button>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
+            <form id="filterForm">
+                
+                <select id="categoryFilter" class="FilterSelect">
+                    <option value="all">Бүх Зар</option>
+                    <option value="online">Онлайн</option>
+                    <option value="classroom">Танхим</option>
+                </select>
 
-        <script>
-            function toggleDropdown(event, id) {
-                event.preventDefault();
-                event.stopPropagation();
-
-                const dropdown = document.getElementById(id);
-                dropdown.classList.toggle('show');
-
-                const allDropdowns = document.querySelectorAll('.dropdown');
-                allDropdowns.forEach(d => {
-                    if (d !== dropdown && d.classList.contains('show')) {
-                        d.classList.remove('show');
+                <select id="ratingFilter" class="FilterSelect">
+                    <option value="">Үнэлгээ</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            
+                <select id="rankingFilter" class="FilterSelect">
+                    <option value="">Цол</option>
+                    <option value="Ботго">Ботго</option>
+                    <option value="Тором">Тором</option>
+                    <option value="Супер Тором">Супер Тором</option>
+                    <option value="Их багш">Их багш</option>
+                </select>
+            
+                <select id="priceFilter" class="FilterSelect">
+                    <option value="">Үнэ</option>
+                    <option value="Ихээс бага">Ихээс бага</option>
+                    <option value="Багаас их">Багаас их</option>
+                </select>
+            
+                <button type="button" class="important-button" id="filterButton">Шүүx</button>
+            </form>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const tutorListElement = document.querySelector("tutor-list");
+                
+                    if (tutorListElement) {
+                        document.getElementById("filterButton").addEventListener("click", () => {
+                            tutorListElement.applyFilters();
+                        });
+                    } else {
+                        console.error("❌ 'tutor-list' элемент DOM-д хараахан ачаалагдаагүй байна!");
                     }
                 });
-            }
-
-            window.onclick = function (event) {
-                if (!event.target.closest('.Filterbtn') && !event.target.closest('.dropdown')) {
-                    const dropdowns = document.querySelectorAll('.dropdown');
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('show');
-                    });
-                }
-            };
-        </script>
+            </script>
+        
+        </section>
         <section class="container">
             <div class="tutors-box" id="tutors">
+                <tutor-list></tutor-list>
             </div>
         </section>
 
