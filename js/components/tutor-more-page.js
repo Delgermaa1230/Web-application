@@ -1,25 +1,34 @@
-// багшийн дэлгэрэнгүй мэдээллийг харуулах component
 class TutorMorePage extends HTMLElement {
     constructor() {
         super();
+        this.bagsh = {}; 
+    }
+
+    static get observedAttributes() {
+        return ['data-bagsh'];
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'data-bagsh' && oldValue !== newValue) {
+            this.bagsh = JSON.parse(newValue);
+            this.render();
+        }
     }
 
     connectedCallback() {
-        const bagsh = JSON.parse(this.getAttribute('data-bagsh'));
-        if (!bagsh) {
-            console.error('TutorMorePage: Missing or invalid "data-bagsh" attribute.');
-            return;
-        }
+        this.bagsh = JSON.parse(this.getAttribute('data-bagsh') || '{}');
+        this.render();
+    }
 
-        const { description, moreDescription, teachingDescription, lessons, comments, possibleHours, mode } = bagsh;
+    render() {
+        const { description, moreDescription, teachingDescription, lessons, comments, possibleHours, mode } = this.bagsh;
 
         this.innerHTML = `
             <div class="sticky-part-wrapper">
-                <sticky-box data-bagsh='${JSON.stringify(bagsh)}' data-show-contact ></sticky-box>
+                <sticky-box data-bagsh='${JSON.stringify(this.bagsh)}' data-show-contact></sticky-box>
             </div>
             <section class="information-column">
-                <div class="subjects-tags" id="lesson-container">
-                </div>
+                <div class="subjects-tags" id="lesson-container"></div>
                 <h1>${description}</h1>
                 <div class="teaching-location">
                     <ul>
@@ -48,8 +57,11 @@ class TutorMorePage extends HTMLElement {
         this.renderComments(comments);
     }
 
-    // Багшийн зааж буй хичээлүүдийн render хийж буй function
     renderLessons(lessons) {
+        const lessonContainer = this.querySelector('.subjects-tags');
+        if (!lessonContainer) return;
+        lessonContainer.innerHTML = ''; // Clear existing content
+        
         const ul = document.createElement('ul');
         ul.setAttribute('lessons-data', JSON.stringify(lessons));
 
@@ -59,18 +71,18 @@ class TutorMorePage extends HTMLElement {
             ul.appendChild(li);
         });
 
-        this.querySelector('.subjects-tags').appendChild(ul);
+        lessonContainer.appendChild(ul);
     }
 
-    // Багш дээр ирсэн сэтгэгдэлүүдийг comment-element component ашиглан
-    // render хийж буй function
     renderComments(comments) {
-        const box = this.querySelector('.comment-box');
+        const commentBox = this.querySelector('.comment-box');
+        if (!commentBox) return;
+        commentBox.innerHTML = '<h2>Сэтгэгдэл</h2>'; // Reset comments
 
         comments.forEach((c) => {
             const commentElement = document.createElement('comment-element');
             commentElement.setAttribute('comment-data', JSON.stringify(c));
-            box.appendChild(commentElement);
+            commentBox.appendChild(commentElement);
         });
     }
 }
