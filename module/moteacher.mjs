@@ -10,8 +10,9 @@ export default class Moteacher {
             const query = `
                 SELECT teacher_id, first_name, last_name, email,
                        description, retings, number_of_ratings, image,
-                       rank, phone, mode, teacher_info, lesson_info, price
-                FROM "Teacher"
+                       rank, phone, mode, teacher_info, lesson_info, price, isBagsh
+                       FROM "Teacher"
+                WHERE isBagsh = TRUE
                 ORDER BY teacher_id
             `;
             const result = await this.client.query(query);
