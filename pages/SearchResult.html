@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="/styles/searchResult.css">
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
-    <script type="module" src="../js/components/love-button.js"></script>
     <script type="module" src="../js/components/tutor-card.js"></script>
     <script type="module" src="../js/components/foo-ter.js"></script>
-    <script type="module" src="../js/components/tutor-list.js"> </script>
+    <script type="module" src="../js/components/tutor-list.js" defer> </script>
+    <script type="module" src="../js/components/love-button.js"></script>
     <script src="../js/modules/loveTutorsManager.js"></script>
-    <script type="module" src="../js/modules/filterControls.js"></script>
 </head>
 
 <body>
@@ -92,6 +91,7 @@
                     <option value="all">Бүх Зар</option>
                     <option value="online">Онлайн</option>
                     <option value="classroom">Танхим</option>
+                    <option value="hybrid">Хосолсон</option>
                 </select>
 
                 <select id="ratingFilter" class="FilterSelect">

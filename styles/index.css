@@ -182,12 +182,12 @@ h2 {
     padding:0 var(--base-size-x2);
 }
 
-.tutorCard p{
-    padding:0 var(--base-size-x2);
+.tutorCard p {
+    padding: 0 var(--base-size-x2);
     font-size: var(--base-caption-font-size);
-}
-
-.tutorDescription {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -195,8 +195,12 @@ h2 {
     text-overflow: ellipsis;
 }
 
-.tutorCard i {
-    color: rgb(255, 208, 0);
+.tutorCard span {
+    font-size: var(--base-caption-font-size);
+}
+
+.tutorDescription {
+   
 }
 
 #starsNumber {

@@ -11,7 +11,7 @@ class TutorMorePage extends HTMLElement {
             return;
         }
 
-        const { description, moreDescription, teachingDescription, lessons, comments, possibleHours } = bagsh;
+        const { description, moreDescription, teachingDescription, lessons, comments, possibleHours, mode } = bagsh;
 
         this.innerHTML = `
             <div class="sticky-part-wrapper">
@@ -23,7 +23,7 @@ class TutorMorePage extends HTMLElement {
                 <h1>${description}</h1>
                 <div class="teaching-location">
                     <ul>
-                        <li>Online</li>
+                        <li>${mode}</li>
                     </ul>
                 </div>
                 <section class="about-lesson-box">

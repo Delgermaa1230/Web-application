@@ -37,7 +37,6 @@ class TutorList extends HTMLElement {
 
         if (price === "Ихээс бага") {
             filteredTutors.sort((a, b) => (b.price || 0) - (a.price || 0));
-            renderTutors(this.container, filteredTutors);
         } else if (price === "Багаас их") {
             filteredTutors.sort((a, b) => (a.price || 0) - (b.price || 0));
         }
