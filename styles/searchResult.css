@@ -65,7 +65,7 @@ body {
 }
 
 #filterButton {
-    background-color: var(--base-color-grey-light);
+    background-color: var(--base-color-orange);
     font-weight: normal;
     cursor: pointer;
 }
