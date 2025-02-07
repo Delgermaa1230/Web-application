@@ -51,7 +51,7 @@ class LoveButton extends HTMLElement {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="white"
-            stroke="var(--base-color-grey)"
+            stroke="var(--base-color-dark-grey)"
             stroke-width="1"
             stroke-linecap="round"
             stroke-linejoin="round"

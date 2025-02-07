@@ -5,7 +5,7 @@ import { renderTutors } from "../modules/renderTutors.js";
 class TutorList extends HTMLElement {
     constructor() {
         super();
-        this.tutors = []; // Бүх багшийн мэдээлэл хадгалах массив
+        this.tutors = []; // Бүх багшийн мэдээллийг хадгалах массив
         this.container = null; // Энэ хэсгийг `connectedCallback` дээр онооно
     }
 
@@ -15,22 +15,26 @@ class TutorList extends HTMLElement {
     }
 
     async loadTutors() {
-        // JSON өгөгдлийг татах
         const data = await fetchTutorsData();
         this.tutors = Array.isArray(data) ? data.map(transformTeacherData) : (data.teachers || []).map(transformTeacherData);
-        console.log(this.tutors);
 
-        renderTutors(this.container, this.tutors);
+        this.applyFilters(); // Филтерийг шууд хэрэгжүүлэх
     }
 
     applyFilters() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const lessonParam = urlParams.get("lesson"); // URL дээрээс 'lesson' авах
+
         const category = document.getElementById("categoryFilter").value;
         const rating = document.getElementById("ratingFilter").value;
         const ranking = document.getElementById("rankingFilter").value;
         const price = document.getElementById("priceFilter").value;
 
         let filteredTutors = this.tutors.filter(tutor => {
-            return (category === "all" || tutor.mode === category) &&
+            const matchesLesson = !lessonParam || tutor.lessons.some(lesson => lesson.lesson_name.toLowerCase() === lessonParam.toLowerCase());
+            
+            return matchesLesson &&
+                (category === "all" || tutor.mode === category) &&
                 (!rating || tutor.ratings == rating) &&
                 (!ranking || tutor.rank === ranking);
         });
@@ -41,9 +45,8 @@ class TutorList extends HTMLElement {
             filteredTutors.sort((a, b) => (a.price || 0) - (b.price || 0));
         }
 
-        console.log("ff", filteredTutors);
+        console.log("Filtered Tutors:", filteredTutors);
         renderTutors(this.container, filteredTutors);
-
     }
 }
 
