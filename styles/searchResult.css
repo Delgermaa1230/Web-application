@@ -64,6 +64,12 @@ body {
     box-shadow: 0 0 5px var(--base-primary-color);
 }
 
+#filterButton {
+    background-color: var(--base-color-grey-light);
+    font-weight: normal;
+    cursor: pointer;
+}
+
 
 .FilterSelect:hover {
     background: var(--base-color-light-orange);
@@ -154,6 +160,13 @@ body {
 .tutorCard p {
     padding: 0 var(--base-size-x2);
     font-size: var(--base-caption-font-size);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tutorCard span {
+    font-size: var(--base-caption-font-size);
 }
 
 .tutorDescription {
@@ -162,10 +175,6 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.tutorCard i {
-    color: rgb(255, 208, 0);
 }
 
 #starsNumber {
