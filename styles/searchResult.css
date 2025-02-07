@@ -68,6 +68,8 @@ body {
     background-color: var(--base-color-orange);
     font-weight: normal;
     cursor: pointer;
+    color: var(--base-text-color);
+    border: solid 0.3px var(--base-color-grey);
 }
 
 

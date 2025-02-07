@@ -14,6 +14,26 @@
     <script type="module" src="../js/components/tutor-list.js" defer> </script>
     <script type="module" src="../js/components/love-button.js"></script>
     <script src="../js/modules/loveTutorsManager.js"></script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        #tutors {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+    </style>
 </head>
 
 <body>
