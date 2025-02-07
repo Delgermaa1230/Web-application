@@ -31,10 +31,9 @@ h2{
 .BGCont {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 100px;
   overflow: hidden;
-  background: rgb(255,113,0);
-background: linear-gradient(124deg, rgba(255,113,0,1) 0%, rgba(0,0,0,1) 32%, rgba(0,212,255,1) 100%);
+  background: var(--base-background-color-orange)
 }
 .BGimage{
   width: 100%;
