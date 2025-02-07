@@ -23,6 +23,7 @@ class TutorCard extends HTMLElement {
   render() {
       const { id, image, lastName, firstName, ratings, numberOfRatings, description, price } = this.bagsh;
       const firstLetterOfLastName = lastName ? lastName.charAt(0) : '';
+      const indexpge= window.location.pathname.includes('index.html');
 
       this.innerHTML = `
           <a href="/pages/teachInfo.html?id=${id}">
@@ -39,7 +40,7 @@ class TutorCard extends HTMLElement {
                   </svg>
                 <span id="starsNumber">${ratings}</span>
                 <span id="reviewsNumber">(${numberOfRatings} санал)</span>
-                <span style="font-weight: bold; font-size: 12px; color: var(--base-color-orange)">${price}₮/ц</span>
+                 ${!indexpge? `<span style="font-weight: bold; font-size: 12px; color: var(--base-color-orange)">${price}₮/ц</span>` : ''}  
               </p>
               <p class="tutorDescription">${description}</p>
             </section>
