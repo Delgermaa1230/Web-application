@@ -45,7 +45,7 @@ class CommonLessonsNav extends HTMLElement {
     render() {
         this.innerHTML = `
             <div class="common-lessons-nav">
-                ${this.links.map(link => `<a href="${link.href}">${link.text}</a>`).join('')}
+                ${this.links.map(link => `<a href="${link.href}">${link.text}</a>`).reduce((acc, cur) => acc + cur)}
             </div>
             <style>
                 .common-lessons-nav a.active {
