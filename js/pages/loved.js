@@ -8,17 +8,19 @@ async function loadLovedTutors() {
     const transformedData = Array.isArray(data) ? data.map(transformTeacherData) : (data.teachers || []).map(transformTeacherData);
 
     // LocalStorage-аас хэрэглэгчийн like дарсан багш нарын id-уудыг авах
-    const lovedTutorIds = JSON.parse(localStorage.getItem('lovedTutors')) || [];
-    console.log(lovedTutorIds); // lovedTutors дотор хадгалагдсан id-ууд
+    const lovedTutorIds = lovedTutorsManager.lovedTutors; // localStorage-оос авах шаардлагагүй
 
     // transformedData-аас lovedTutors-ийн id-тай багш нарыг шүүж авах
     const lovedTutors = transformedData.filter(teacher => lovedTutorIds.includes(String(teacher.id)));
-    console.log(lovedTutors)
 
     // Тухайн багш нарыг render хийх
     const container = document.getElementById("tutors");
+    container.innerHTML = ""; // 🆕 өмнөх элемэнтүүдийг цэвэрлэх
     renderTutors(container, lovedTutors);
 }
+
+//LovedTutorsManager-д төлөвийн өөрчлөлтийг бүртгэх
+lovedTutorsManager.subscribe(loadLovedTutors);
 
 document.addEventListener("DOMContentLoaded", loadLovedTutors);
 

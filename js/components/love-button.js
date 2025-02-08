@@ -15,29 +15,22 @@ class LoveButton extends HTMLElement {
       const tutorId = this.id;
   
       if (this.isLoved) {
-        // loved list дотор байвал арилгах
-        const removed = lovedTutorsManager.removeTutor(tutorId);
-        if (removed) {
-          this.isLoved = false;
-        }
+          lovedTutorsManager.removeTutor(tutorId);
       } else {
-        // loved list дотор байхгүй бол нэмэх
-        const added = lovedTutorsManager.addTutor(tutorId);
-        if (added) {
-          this.isLoved = true;
-        }
+          lovedTutorsManager.addTutor(tutorId);
       }
   
-      // Button өнгийг нь төлөвийн дагуу өөрчлөх
+      this.isLoved = lovedTutorsManager.lovedTutors.includes(this.id);
       this.updateButtonAppearance();
   
-      // custom event
+      // Зөвхөн тухайн элемэнтийг update хийх
       const event = new CustomEvent("tutor-loved", {
-        bubbles: true, //DOM-д оруулах
-        detail: { tutorId, isLoved: this.isLoved }
+          bubbles: true,
+          detail: { tutorId, isLoved: this.isLoved }
       });
       this.dispatchEvent(event);
-    }
+  }
+  
   
     updateButtonAppearance() {
       const heartIcon = this.querySelector(".heart-icon");

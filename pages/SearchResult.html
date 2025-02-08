@@ -43,7 +43,7 @@
             <a aria-label="logo" href="../index.html">
                 <h1>Numteach</h1>
             </a>
-            <form class="search-bar" id="" action="SearchResult.html" name="lesson">
+            <form class="search-bar" id="searchForm" action="SearchResult.html" name="lesson">
                 <input type="text" placeholder="Сурах хичээлийн нэр?" name="lesson">
                 <button type="submit" aria-label="search" ><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -136,22 +136,8 @@
                     <option value="Ихээс бага">Ихээс бага</option>
                     <option value="Багаас их">Багаас их</option>
                 </select>
-            
-                <button type="button" class="important-button" id="filterButton">Шүүx</button>
+
             </form>
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const tutorListElement = document.querySelector("tutor-list");
-                
-                    if (tutorListElement) {
-                        document.getElementById("filterButton").addEventListener("click", () => {
-                            tutorListElement.applyFilters();
-                        });
-                    } else {
-                        console.error("❌ 'tutor-list' элемент DOM-д хараахан ачаалагдаагүй байна!");
-                    }
-                });
-            </script>
         
         </section>
         <section class="container">
@@ -164,7 +150,7 @@
 
     <foo-ter>
     </foo-ter>
-    <form class="search-bar-bottom" id="" action="SearchResult.html" name="lesson">
+    <form class="search-bar-bottom" id="searchForm" action="SearchResult.html" name="lesson">
         <input type="text" placeholder="Сурах хичээлийн нэр?" name="lesson">
         <button type="submit" aria-label="search" ><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -173,6 +159,25 @@
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg></button>
     </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchForm = document.getElementById("searchForm");
+            const lessonInput = document.getElementById("lessonInput");
+        
+            // LocalStorage-с хамгийн сүүлд хайсан утгыг авах
+            const lastSearch = localStorage.getItem("lastLessonSearch");
+            if (lastSearch) {
+                lessonInput.value = lastSearch;
+            }
+        
+            // Хэрэглэгч хайлт хийхэд хадгалах
+            searchForm.addEventListener("submit", function () {
+                localStorage.setItem("lastLessonSearch", lessonInput.value);
+            });
+        });
+
+        </script>
 
 </body>
 

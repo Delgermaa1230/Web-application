@@ -5,30 +5,33 @@ import { renderTutors } from "../modules/renderTutors.js";
 class TutorList extends HTMLElement {
     constructor() {
         super();
-        this.tutors = []; // Бүх багшийн мэдээллийг хадгалах массив
-        this.container = null; // Энэ хэсгийг `connectedCallback` дээр онооно
+        this.tutors = [];
+        this.container = null;
     }
 
     connectedCallback() {
-        this.container = document.getElementById("tutors"); // DOM дээр гарсны дараа авах
+        this.container = document.getElementById("tutors");
+        this.restoreFilters(); // Хуудсыг ачаалахад хадгалсан утгуудыг сэргээх
         this.loadTutors();
+        this.setupFilterListeners(); // Филтер сонгогдоход хадгалах
     }
 
     async loadTutors() {
         const data = await fetchTutorsData();
         this.tutors = Array.isArray(data) ? data.map(transformTeacherData) : (data.teachers || []).map(transformTeacherData);
-
-        this.applyFilters(); // Филтерийг шууд хэрэгжүүлэх
+        this.applyFilters();
     }
 
     applyFilters() {
         const urlParams = new URLSearchParams(window.location.search);
-        const lessonParam = urlParams.get("lesson"); // URL дээрээс 'lesson' авах
+        const lessonParam = urlParams.get("lesson");
 
         const category = document.getElementById("categoryFilter").value;
         const rating = document.getElementById("ratingFilter").value;
         const ranking = document.getElementById("rankingFilter").value;
         const price = document.getElementById("priceFilter").value;
+
+        this.saveFilters({ category, rating, ranking, price }); // ⚡ Хэрэглэгчийн сонголтыг хадгалах
 
         let filteredTutors = this.tutors.filter(tutor => {
             const matchesLesson = !lessonParam || tutor.lessons.some(lesson => lesson.lesson_name.toLowerCase() === lessonParam.toLowerCase());
@@ -47,6 +50,25 @@ class TutorList extends HTMLElement {
 
         console.log("Filtered Tutors:", filteredTutors);
         renderTutors(this.container, filteredTutors);
+    }
+
+    saveFilters(filters) {
+        localStorage.setItem("tutorFilters", JSON.stringify(filters));
+    }
+
+    restoreFilters() {
+        const savedFilters = JSON.parse(localStorage.getItem("tutorFilters")) || {};
+        document.getElementById("categoryFilter").value = savedFilters.category || "all";
+        document.getElementById("ratingFilter").value = savedFilters.rating || "";
+        document.getElementById("rankingFilter").value = savedFilters.ranking || "";
+        document.getElementById("priceFilter").value = savedFilters.price || "";
+    }
+
+    setupFilterListeners() {
+        document.getElementById("categoryFilter").addEventListener("change", () => this.applyFilters());
+        document.getElementById("ratingFilter").addEventListener("change", () => this.applyFilters());
+        document.getElementById("rankingFilter").addEventListener("change", () => this.applyFilters());
+        document.getElementById("priceFilter").addEventListener("change", () => this.applyFilters());
     }
 }
 

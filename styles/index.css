@@ -97,8 +97,11 @@ input::placeholder{
     border-radius: var(--base-border-radius-x4);
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: var(--base-size-x2);
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    flex-wrap: wrap;
 }
 
 .common-lessons-nav a {
@@ -112,6 +115,12 @@ input::placeholder{
 .common-lessons-nav a:hover {
     background-color: var(--base-background-color);
     border: solid 0.3px var(--base-color-white);
+}
+
+.common-lessons-nav {
+    max-height: 200px; /* 200px-аас дээш хэтэрвэл scroll үүснэ */
+    overflow-y: auto;  /* Босоо scroll идэвхжүүлнэ */
+    padding: 10px;
 }
 
 .container{
