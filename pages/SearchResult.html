@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Numteach - Хайлтын Үр Дүн</title>
     <meta name="description" content="search result of your search">
+    <link rel="apple-touch-icon" sizes="180x180" href=".в/imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../imgs/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../imgs/favicon/site.webmanifest">
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="/styles/searchResult.css">
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
@@ -159,25 +163,6 @@
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg></button>
     </form>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const searchForm = document.getElementById("searchForm");
-            const lessonInput = document.getElementById("lessonInput");
-        
-            // LocalStorage-с хамгийн сүүлд хайсан утгыг авах
-            const lastSearch = localStorage.getItem("lastLessonSearch");
-            if (lastSearch) {
-                lessonInput.value = lastSearch;
-            }
-        
-            // Хэрэглэгч хайлт хийхэд хадгалах
-            searchForm.addEventListener("submit", function () {
-                localStorage.setItem("lastLessonSearch", lessonInput.value);
-            });
-        });
-
-        </script>
 
 </body>
 

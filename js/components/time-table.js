@@ -1,15 +1,36 @@
-// багшийн боломжит ыагийг харуулж буй timetable
 class Timetable extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({ mode: 'open' }); 
+        this.attachShadow({ mode: 'open' });
+        this._state = 'default'; 
+    }
+
+    static get observedAttributes() {
+        return ['state']; 
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'state') {
+            this._state = newValue;
+            this.updateStyle();
+        }
     }
 
     connectedCallback() {
-        const possibleHours = JSON.parse(this.getAttribute('schedule-data'));
-
         const style = `
             <style>
+                :host([state="default"]) .cell {
+                    background-color: var(--base-color-grey-medium);
+                }
+
+                :host([state="selected"]) .cell.selected {
+                    background-color: var(--base-color-orange);
+                }
+
+                :host([state="unselected"]) .cell.unselected {
+                    background-color: var(--base-color-grey-light);
+                }
+
                 .timetable {
                     border-radius: var(--base-border-radius-x3);
                     display: grid;
@@ -35,13 +56,12 @@ class Timetable extends HTMLElement {
                     padding: var(--base-size);
                     font-size: var(--base-caption-font-size);
                     font-weight: var(--base-medium-font-weight);
-                }
-
-                .cell.po {
+                }        
+                .cell{
                     background-color: var(--base-color-secondary-orange);
                 }
 
-                .cell.po:hover {
+                .cell:hover {
                     background-color: var(--base-color-orange);
                 }
 
@@ -73,7 +93,7 @@ class Timetable extends HTMLElement {
                 <div class="cell"></div>
                 <div class="cell"></div>
                 <div class="cell"></div>
-
+                
                 <div class="header">11:00 - 12:30</div>
                 <div class="cell"></div>
                 <div class="cell"></div>
@@ -112,38 +132,31 @@ class Timetable extends HTMLElement {
         `;
         this.shadowRoot.innerHTML = `${style}${template}`;
 
-        this.renderSchedule(possibleHours);
+        this.renderSchedule();
     }
 
-    renderSchedule(possibleHours) {
-        console.log(possibleHours);
-
-        const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-        const timeslots = [
-            "07:40 - 09:10",
-            "09:20 - 10:50",
-            "11:00 - 12:30",
-            "12:40 - 14:10",
-            "14:20 - 15:50",
-            "16:00 - 17:30",
-            "17:40 - 19:20"
-        ];
-
+    renderSchedule() {
         const allCells = this.shadowRoot.querySelectorAll(".cell");
 
-        days.forEach((day, dayIndex) => {
-            if (possibleHours[day]) {
-                possibleHours[day].forEach((isAvailable, timeIndex) => {
-                    if (isAvailable === 1) {
-                        const cellIndex = timeIndex * 5 + dayIndex;
-                        const cell = allCells[cellIndex];
-                        if (cell) {
-                            cell.classList.add('po');
-                        }
-                    }
-                });
-            }
+        allCells.forEach(cell => {
+            cell.addEventListener('click', () => this.toggleSelection(cell));
         });
+    }
+
+    toggleSelection(cell) {
+        if (cell.classList.contains('selected')) {
+            cell.classList.remove('selected');
+            cell.classList.add('unselected');
+            this.setAttribute('state', 'unselected'); 
+        } else {
+            cell.classList.remove('unselected');
+            cell.classList.add('selected');
+            this.setAttribute('state', 'selected'); 
+        }
+    }
+
+    updateStyle() {
+        console.log(`Current state: ${this._state}`);
     }
 }
 
