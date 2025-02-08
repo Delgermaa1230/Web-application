@@ -9,18 +9,6 @@ class CommentElement extends HTMLElement {
 
         template.innerHTML = `
             <style>
-                :host {
-                    --base-size: 8px;
-                    --base-size-x2: 16px;
-                    --base-size-x4: 32px;
-                    --base-border-radius-x5: 12px;
-                    --base-border-radius-x6: 16px;
-                    --base-caption-font-size: 14px;
-                    --base-regular-font-weight: 400;
-                    --base-text-color: #333;
-                   
-                }
-
                 .comment {
                     padding: var(--base-size-x4) var(--base-size-x2);
                     display: flex;
