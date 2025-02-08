@@ -31,7 +31,7 @@ class TutorList extends HTMLElement {
         const ranking = document.getElementById("rankingFilter").value;
         const price = document.getElementById("priceFilter").value;
 
-        this.saveFilters({ category, rating, ranking, price }); // ⚡ Хэрэглэгчийн сонголтыг хадгалах
+        this.saveFilters({ category, rating, ranking, price }); // Хэрэглэгчийн сонголтыг хадгалах
 
         let filteredTutors = this.tutors.filter(tutor => {
             const matchesLesson = !lessonParam || tutor.lessons.some(lesson => lesson.lesson_name.toLowerCase() === lessonParam.toLowerCase());

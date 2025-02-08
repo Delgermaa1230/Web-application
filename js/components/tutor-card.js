@@ -40,7 +40,7 @@ class TutorCard extends HTMLElement {
     shadowEffect(isLoved) {
         const tutorImage = this.querySelector('.tutorImage');
         if (tutorImage) {
-            tutorImage.style.boxShadow = isLoved ? '0 0 5px 5px rgba(255, 165, 0, 0.2)' : ''; // Orange shadow
+            tutorImage.style.boxShadow = isLoved ? '0 0 5px 5px rgba(255, 165, 0, 0.2)' : '';
         }
     }
   

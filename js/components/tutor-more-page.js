@@ -60,7 +60,7 @@ class TutorMorePage extends HTMLElement {
     renderLessons(lessons) {
         const lessonContainer = this.querySelector('.subjects-tags');
         if (!lessonContainer) return;
-        lessonContainer.innerHTML = ''; // Clear existing content
+        lessonContainer.innerHTML = ''; 
         
         const ul = document.createElement('ul');
         ul.setAttribute('lessons-data', JSON.stringify(lessons));
@@ -77,7 +77,7 @@ class TutorMorePage extends HTMLElement {
     renderComments(comments) {
         const commentBox = this.querySelector('.comment-box');
         if (!commentBox) return;
-        commentBox.innerHTML = '<h2>Сэтгэгдэл</h2>'; // Reset comments
+        commentBox.innerHTML = '<h2>Сэтгэгдэл</h2>'; 
 
         comments.forEach((c) => {
             const commentElement = document.createElement('comment-element');
