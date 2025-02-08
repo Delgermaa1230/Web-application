@@ -3,7 +3,7 @@ class CommonLessonsNav extends HTMLElement {
         super();
         this.links = [
             { href: "/pages/SearchResult.html?lesson=algorithm", text: "Алгоритм" },
-            { href: "/pages/SearchResult.html?lesson=c", text: "Програмчилалын хэл Си" },
+            { href: "/pages/SearchResult.html?lesson=c", text: "Си хэл" },
             { href: "/pages/SearchResult.html?lesson=math", text: "Математик 1б" },
             { href: "/pages/SearchResult.html?lesson=database", text: "Өгөгдлийн сангийн үндэс" },
             { href: "/pages/SearchResult.html?lesson=OOP", text: "ОПХ" }

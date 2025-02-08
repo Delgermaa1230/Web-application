@@ -28,6 +28,31 @@
                     window.location.href = '../index.html';
                 }
             });
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const contactForm = document.getElementById("contact-form");
+                if (contactForm) {  // contact-form элемент байх эсэхийг шалгах
+                    contactForm.addEventListener("submit", function(event) {
+                        event.preventDefault();  // Формын стандарт үйлдлийг зогсоох
+            
+                        const message = document.getElementById("message").value;  // Хэрэглэгчийн бичсэн мессежийг авах
+            
+                        // Одоогийн query string-ийг авах
+                        const urlParams = new URLSearchParams(window.location.search);
+                        
+                        // message параметрийг нэмэх
+                        urlParams.set('message', message);  // Энэ нь message параметрийг URL руу нэмнэ
+            
+                        // Шинэ URL үүсгэх
+                        const newUrl = `./login.html?${urlParams.toString()}`;
+            
+                        // Шилжих
+                        window.location.href = newUrl;
+                    });
+                }
+            });
+            
+            
         </script>
         <nav>
             <a aria-label="question" href="./question.html" style="font-size: 16px;">?</a>
