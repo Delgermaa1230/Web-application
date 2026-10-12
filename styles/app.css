@@ -6,7 +6,7 @@ profile-inf { display: block; }
 .app-heading h1 { font-size: clamp(28px, 4vw, 40px); color: var(--base-text-color); }
 .app-eyebrow { color: var(--base-color-orange); font-weight: 700; margin-bottom: 8px; }
 .app-muted { color: var(--base-grey-text-color); line-height: 1.6; }
-.app-card { background: var(--base-color-white); border: 1px solid var(--base-color-secondary-orange); border-radius: 24px; padding: 24px; box-shadow: 0 8px 30px var(--base-background-color-shadow); }
+.app-card { padding: 0; }
 .app-card h2, .app-shell section > h2 { font-size: 22px; margin-bottom: 16px; color: var(--base-text-color); }
 .app-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .app-grid label, .app-field { display: grid; gap: 8px; font-weight: 600; }
@@ -32,13 +32,13 @@ contact-tutor button:disabled { opacity: .55; cursor: not-allowed; }
 .slot-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--base-color-grey-medium); }
 .slot-row span { overflow-wrap: anywhere; }
 .course-options { display: flex; flex-wrap: wrap; gap: 8px; }
-.course-option { border: 1px solid var(--base-color-secondary-orange); background: var(--base-color-light-orange); color: var(--base-color-orange); border-radius: 999px; padding: 6px 12px; cursor: pointer; font-weight: 600; }
-.lesson-editor { border-top: 1px solid var(--base-color-secondary-orange); padding-top: 20px; margin-top: 20px; }
-.lesson-detail { border: 1px solid var(--base-color-secondary-orange); border-radius: 16px; padding: 16px; }
+.course-option { border: 0; background: var(--base-color-light-orange); color: var(--base-color-orange); border-radius: 999px; padding: 6px 12px; cursor: pointer; font-weight: 600; }
+.lesson-editor { border-top: 1px solid var(--base-color-grey-medium); padding-top: 20px; margin-top: 20px; }
+.lesson-detail { padding: 0; }
 .lesson-detail h3 { margin-bottom: 8px; }
 .lesson-detail p { margin: 6px 0; line-height: 1.5; }
-.review-form { border-top: 1px solid var(--base-color-secondary-orange); margin-top: 16px; padding-top: 16px; }
-comment-element.review-item { display: block; border-top: 1px solid var(--base-color-secondary-orange); padding: 16px 0; }
+.review-form { border-top: 1px solid var(--base-color-grey-medium); margin-top: 16px; padding-top: 16px; }
+comment-element.review-item { display: block; border-top: 1px solid var(--base-color-grey-medium); padding: 16px 0; }
 comment-element.review-item h3 { font-size: 16px; margin-bottom: 6px; }
 comment-element.review-item p { margin: 4px 0; line-height: 1.5; }
 .booking-card h3 { font-size: 18px; margin-bottom: 8px; }
@@ -48,7 +48,7 @@ tutor-morepage.main { display: grid; grid-template-columns: minmax(0, 1fr) minma
 tutor-morepage.main .information-column { grid-column: 1; grid-row: 1; margin: 0; }
 tutor-morepage.main .sticky-part-wrapper { grid-column: 2; grid-row: 1; min-width: 0; position: sticky; top: 24px; }
 tutor-morepage.main .sticky-part-wrapper sticky-box { display: block; width: 100%; }
-tutor-morepage .teacher-sticky-box { position: static; width: 100%; box-sizing: border-box; margin: 0; padding: 24px; gap: 16px; align-items: center; background: var(--base-color-white); border: 1px solid var(--base-color-secondary-orange); box-shadow: 0 8px 24px var(--base-background-color-shadow); }
+tutor-morepage .teacher-sticky-box { position: static; width: 100%; box-sizing: border-box; margin: 0; padding: 0; gap: 16px; align-items: center; background: transparent; box-shadow: none; }
 tutor-morepage .teacher-sticky-box .image { padding: 0; width: 100%; }
 tutor-morepage .teacher-sticky-box .tutor-avatar,
 tutor-morepage .teacher-sticky-box .image img { width: min(260px, 100%); height: auto; aspect-ratio: 1; margin: auto; }
@@ -64,17 +64,17 @@ tutor-morepage .teacher-sticky-box .important-button { margin: 0; padding: 12px 
 .favorites-empty p { margin: 8px 0 20px; }
 .information-column, .available-schedule-box, #booking-form, #slot-table, #sample-schedule { min-width: 0; max-width: 100%; }
 .information-column { width: 100%; }
-.available-schedule-box { box-sizing: border-box; background: var(--base-color-white); border: 1px solid var(--base-color-secondary-orange); border-radius: 24px; padding: 24px; }
+.available-schedule-box { box-sizing: border-box; padding: 0; }
 #booking-form { grid-template-columns: minmax(0, 1fr); }
 #booking-form select { min-width: 0; }
 #booking-summary { overflow-wrap: anywhere; }
 .available-schedule-box > p { margin-bottom: 16px; }
 .available-schedule-box .app-field { margin-bottom: 12px; }
 .schedule-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin: 12px 0; }
-.schedule-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--base-color-secondary-orange); border-radius: 14px; }
+.schedule-scroll { max-width: 100%; overflow-x: auto; }
 .weekly-schedule { width: 100%; min-width: 620px; border-collapse: collapse; text-align: center; }
 .weekly-schedule caption { text-align: left; padding: 10px 12px; font-weight: 700; }
-.weekly-schedule th, .weekly-schedule td { min-width: 76px; padding: 8px 4px; border-top: 1px solid var(--base-color-secondary-orange); border-right: 1px solid var(--base-color-secondary-orange); }
+.weekly-schedule th, .weekly-schedule td { min-width: 76px; padding: 8px 4px; border-top: 1px solid var(--base-color-grey-medium); border-right: 1px solid var(--base-color-grey-medium); }
 .weekly-schedule th { background: var(--base-color-light-orange); font-size: 13px; }
 .weekly-schedule td:last-child, .weekly-schedule th:last-child { border-right: 0; }
 .schedule-slot { width: 100%; border: 1px solid var(--base-color-orange); border-radius: 8px; background: var(--base-color-white); color: var(--base-color-orange); cursor: pointer; padding: 7px 3px; font-size: 12px; font-weight: 700; }
@@ -88,7 +88,7 @@ tutor-morepage .teacher-sticky-box .important-button { margin: 0; padding: 12px 
   .editor-page header nav [aria-label="become-teacher"] { display: none; }
   .editor-page header .header-first-box { flex-direction: row; }
 }
-@media (max-width: 650px) { .app-shell { margin-top: 20px; } .app-grid { grid-template-columns: 1fr; } .app-heading { align-items: center; } .app-card { padding: 18px; } }
+@media (max-width: 650px) { .app-shell { margin-top: 20px; } .app-grid { grid-template-columns: 1fr; } .app-heading { align-items: center; } }
 @media (max-width: 700px) {
   contact-tutor.main { margin-top: 24px; }
 }
