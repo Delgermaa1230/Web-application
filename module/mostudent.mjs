@@ -1,4 +1,24 @@
 
+import { randomBytes, scrypt as scryptCallback, timingSafeEqual } from 'node:crypto';
+import { promisify } from 'node:util';
+
+const scrypt = promisify(scryptCallback);
+
+async function hashPassword(password) {
+      const salt = randomBytes(16).toString('hex');
+      const hash = (await scrypt(password, salt, 64)).toString('hex');
+      return `scrypt:${salt}:${hash}`;
+}
+
+async function verifyPassword(password, storedPassword) {
+      if (typeof storedPassword !== 'string') return false;
+      if (!storedPassword.startsWith('scrypt:')) return password === storedPassword;
+      const [, salt, storedHash] = storedPassword.split(':');
+      if (!salt || !storedHash || !/^[0-9a-f]{128}$/.test(storedHash)) return false;
+      const candidate = await scrypt(password, salt, 64);
+      return timingSafeEqual(candidate, Buffer.from(storedHash, 'hex'));
+}
+
 export default class Mostudent {
     constructor(dbClient) {
       this.client = dbClient;
@@ -9,7 +29,7 @@ export default class Mostudent {
       const hasUpperCase = /[A-Z]/.test(password);
       const hasNumber = /\d/.test(password);
   
-      if (password.length < minLength) {
+      if (typeof password !== 'string' || password.length < minLength) {
         return { isValid: false, error: "Нууц үг 8-аас багагүй тэмдэгттэй байх ёстой" };
       }
       if (!hasUpperCase) {
@@ -36,7 +56,7 @@ export default class Mostudent {
           VALUES ($1, $2, $3, $4, $5)
           RETURNING teacher_id;
         `;
-        const values = [first_name, last_name, email, password, phone];
+        const values = [first_name, last_name, email, await hashPassword(password), phone];
         const result = await this.client.query(query, values);
         
         return {
@@ -58,13 +78,20 @@ export default class Mostudent {
         const query = `
           SELECT *
           FROM "Teacher"
-          WHERE email = $1 AND password = $2;
+          WHERE email = $1;
         `;
-        const values = [email, password];
-        const result = await this.client.query(query, values);
+        if (typeof email !== 'string' || typeof password !== 'string') {
+          return { success: false, error: 'Invalid email or password' };
+        }
+        const result = await this.client.query(query, [email]);
   
-        if (result.rows.length > 0) {
-          return { success: true, student: result.rows[0] };
+        const account = result.rows[0];
+        if (account && await verifyPassword(password, account.password)) {
+          if (!account.password.startsWith('scrypt:')) {
+            await this.client.query('UPDATE "Teacher" SET password = $1 WHERE teacher_id = $2', [await hashPassword(password), account.teacher_id]);
+          }
+          const { password: _password, ...student } = account;
+          return { success: true, student };
         } else {
           return { success: false, error: "И-мэйл эсвэл нууц үг буруу байна" };
         }

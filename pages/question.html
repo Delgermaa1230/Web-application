@@ -2,17 +2,20 @@
 <html lang="en">
 
 <head>
+    <script src="/js/theme-init.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="../js/components/mobile-nav.js"></script>
     <meta name="description" content="loved tutors">
     <link rel="apple-touch-icon" sizes="180x180" href=".в/imgs/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../imgs/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../imgs/favicon/favicon-16x16.png">
     <link rel="manifest" href="../imgs/favicon/site.webmanifest">
-    <title>Question</title>
+    <title>Тусламж · Numteach</title>
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
     <link rel="stylesheet" href="../styles/header_footer.css">
     <link rel="stylesheet" href="../styles/searchResult.css">
+    <link rel="stylesheet" href="../styles/app.css">
     <script type="module" src="../js/components/love-button.js"></script>
     <script type="module" src="../js/components/tutor-card.js"></script>
     <script type="module" src="../js/components/foo-ter.js"></script>
@@ -35,7 +38,7 @@
     </style>
 </head>
 
-<body>
+<body class="help-page">
     <header>
         <nav>
             <a aria-label="back" id="backBtn">Буцах</a>
@@ -50,18 +53,14 @@
             </script>
         </nav>
     </header>
-    <div class="main">
-        <section class="container">
-            <h2 style="margin-bottom: var(--base-size-x3);">🥲🥲 асуудал тулгарсан уу?</h2>
-            <p style="color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">
-                Бид туслахад бэлэн шүү😊
-            </p>
-            <p style="color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">
-                Холбогдоорой😊: <a aria-label="phone" href="tel:+97688888811">+976 88 888811</a>
-            </p>
-            <div class="tutors-box" id="lovedTutors"></div>
-        </section>
-    </div>
+    <main class="app-shell">
+      <div class="app-heading"><div><p class="app-eyebrow">Numteach</p><h1>Түгээмэл асуулт</h1></div></div>
+      <section class="app-card app-stack">
+        <details><summary>Багшийн цагийг хэрхэн захиалах вэ?</summary><p>Багшийн профайлаас “Холбогдох” товчийг дарж, хичээл болон цагаа сонгоно. Багш хүсэлтийг батална.</p></details>
+        <details><summary>Би сурагч, багш хоёулаа байж болох уу?</summary><p>Тийм. Нэг бүртгэлээр өөр багшийн цаг захиалж, өөрийн заах хичээл болон боломжтой цагаа нийтэлнэ.</p></details>
+        <details><summary>Захиалгаа хэрхэн цуцлах вэ?</summary><p>Профайл дахь “Миний захиалгууд” хэсгээс хүлээгдэж буй эсвэл батлагдсан захиалгаа цуцална.</p></details>
+      </section>
+    </main>
     <foo-ter></foo-ter>
 </body>
 

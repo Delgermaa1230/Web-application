@@ -16,7 +16,14 @@ async function loadLovedTutors() {
     // Тухайн багш нарыг render хийх
     const container = document.getElementById("tutors");
     container.innerHTML = ""; // 🆕 өмнөх элемэнтүүдийг цэвэрлэх
-    renderTutors(container, lovedTutors);
+    if (!lovedTutors.length) {
+        const empty = document.createElement('div');
+        empty.className = 'app-card favorites-empty';
+        empty.innerHTML = '<h3>Хадгалсан багш алга</h3><p>Таалагдсан багшийн зүрхэн тэмдгийг дарж энд хадгална.</p><a class="important-button" href="./SearchResult.html">Багш хайх</a>';
+        container.append(empty);
+    } else {
+        renderTutors(container, lovedTutors);
+    }
 }
 
 //LovedTutorsManager-д төлөвийн өөрчлөлтийг бүртгэх

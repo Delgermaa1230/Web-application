@@ -1,9 +1,14 @@
 {
   "name": "web-application",
   "version": "1.0.0",
-  "description": "github page at: https://delgermaa1230.github.io/Web-application/",
-  "main": "index.js",
+  "description": "NUM student tutoring website",
+  "type": "module",
+  "main": "app.mjs",
+  "engines": {
+    "node": ">=24"
+  },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
     "cors": "^2.8.5",
     "data-uri-to-buffer": "^4.0.1",
     "express": "^4.21.2",
@@ -11,13 +16,16 @@
     "formdata-polyfill": "^4.0.10",
     "node-domexception": "^1.0.0",
     "node-fetch": "^3.3.2",
-    "pg": "^8.13.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "web-streams-polyfill": "^3.3.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --env-file-if-exists=.env app.mjs",
+    "db:migrate": "node --env-file-if-exists=.env scripts/migrate.mjs",
+    "build": "node scripts/build-static.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check:neon": "node --env-file-if-exists=.env scripts/check-neon.mjs"
   },
   "keywords": [],
   "author": "",
@@ -29,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/Delgermaa1230/Web-application/issues"
   },
-  "homepage": "https://github.com/Delgermaa1230/Web-application#readme"
+  "homepage": "https://github.com/Delgermaa1230/Web-application#readme",
+  "devDependencies": {
+    "playwright-core": "^1.64.0"
+  }
 }

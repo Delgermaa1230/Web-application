@@ -2,6 +2,7 @@
 <html lang="mn">
 
 <head>
+    <script src="/js/theme-init.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Numteach - Хайлтын Үр Дүн</title>
@@ -18,6 +19,7 @@
     <script type="module" src="../js/components/tutor-list.js" defer> </script>
     <script type="module" src="../js/components/love-button.js"></script>
     <script src="../js/modules/loveTutorsManager.js"></script>
+    <script defer src="../js/components/mobile-nav.js"></script>
     <style>
         @keyframes fadeIn {
             from {
@@ -68,8 +70,8 @@
                         fill="currentColor"></path>
                 </svg>
             </a>
-            <a class="top-menu-item"aria-label="become-teacher" href="./login.html">Багш болох</a>
-            <a class="top-menu-item"aria-label="profile" href="./login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+            <a class="top-menu-item"aria-label="become-teacher" href="./becomeTeacher.html">Багш болох</a>
+            <a class="top-menu-item"aria-label="profile" href="./profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                     height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -127,12 +129,10 @@
                     <option value="5">5</option>
                 </select>
             
-                <select id="rankingFilter" class="FilterSelect">
-                    <option value="">Цол</option>
-                    <option value="Ботго">Ботго</option>
-                    <option value="Тором">Тором</option>
-                    <option value="Супер Тором">Супер Тором</option>
-                    <option value="Их багш">Их багш</option>
+                <select id="availabilityFilter" class="FilterSelect" aria-label="Захиалах боломж">
+                    <option value="all">Бүх зар</option>
+                    <option value="bookable">Сул цагтай багш</option>
+                    <option value="live">Бодит багш</option>
                 </select>
             
                 <select id="priceFilter" class="FilterSelect">

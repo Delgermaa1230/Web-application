@@ -2,7 +2,7 @@ export function renderTutors(container, filteredTutors) {
     container.innerHTML = "";
 
     if (filteredTutors.length === 0) {
-        const nRM = `<p style="color: var(--base-text-color); font-size: var(--base-h6-font-size); padding: var(--base-padding)">Юу ч алгоо 🥲</p>`;
+        const nRM = `<p class="app-muted" style="grid-column: 1 / -1; padding: 24px">Багш олдсонгүй. Өөр хичээл эсвэл шүүлтүүрээр хайна уу.</p>`;
         container.insertAdjacentHTML("beforeend", nRM);
         return;
     }

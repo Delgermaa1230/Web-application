@@ -3,11 +3,14 @@ import { renderTutors } from '../modules/renderTutors.js';
 import { transformTeacherData } from '../modules/transformTutors.js';
 
 async function loadTopTutors() {
-    const data = await fetchTutorsData();
-    const transformedData = Array.isArray(data) ? data.map(transformTeacherData) : (data.teachers || []).map(transformTeacherData);
-
     const container = document.getElementById("tutors");
-    renderTutors(container, transformedData.slice(0, 8)); // Зөвхөн топ 8 харуулах
+    try {
+        const data = await fetchTutorsData();
+        const transformedData = Array.isArray(data) ? data.map(transformTeacherData) : (data.teachers || []).map(transformTeacherData);
+        renderTutors(container, transformedData.slice(0, 8));
+    } catch (error) {
+        container.textContent = 'Багшийн мэдээлэл ачаалж чадсангүй. Дахин оролдоно уу.';
+    }
 }
 
 document.addEventListener("DOMContentLoaded", loadTopTutors);

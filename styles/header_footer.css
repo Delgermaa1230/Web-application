@@ -81,7 +81,7 @@ header form button,
 .search-bar-bottom button {
     border: none;
     background-color: var(--base-color-orange);
-    color: var(--base-color-white);
+    color: var(--base-on-accent);
     padding: var(--base-size) calc(var(--base-size)*1.5);
     border-radius: 20cap;
     right: var(--base-size);
@@ -123,13 +123,13 @@ nav a {
 
 header nav a:hover {
     background-color: var(--base-color-orange);
-    color: var(--base-background-color);
+    color: var(--base-on-accent);
     box-shadow: var(--base-color-shadow) 0px 2px 5px -1px, var(--base-color-shadow) 0px 1px 3px -1px;
 }
 
 header .back:hover {
     background-color: var(--base-color-orange);
-    color: var(--base-background-color);
+    color: var(--base-on-accent);
     box-shadow: var(--base-color-shadow) 0px 2px 5px -1px, var(--base-color-shadow) 0px 1px 3px -1px;
 }
 
@@ -146,6 +146,28 @@ header .back:hover {
     padding: var(--base-size-x4);
     justify-content: center;
     align-items: center;
+    gap: var(--base-size-x2);
+}
+
+header .side-menu .side-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    min-height: 44px;
+    text-align: center;
+    font-size: 14px;
+}
+
+header .side-menu .side-menu-item svg {
+    width: 16px;
+    height: 16px;
+}
+
+header .side-menu [aria-label="close"] {
+    position: absolute;
+    top: var(--base-size-x4);
+    right: var(--base-size-x4);
 }
 
 .side-menu-bar {
@@ -265,4 +287,32 @@ footer ul li #social-icons li a:hover {
     .side-menu-bar {
         display: block;
     }
+}
+
+.site-footer { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 32px clamp(16px, 3vw, 48px); background: var(--base-color-light-orange); color: var(--base-text-color); }
+.site-footer strong { color: var(--base-color-orange); font-size: 20px; }
+.site-footer p { margin-top: 8px; line-height: 1.5; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 12px; padding: 0; }
+.site-footer nav a { background: transparent; color: var(--base-color-orange); font-size: 14px; padding: 8px; }
+@media (max-width: 650px) { .site-footer { flex-direction: column; } }
+
+/* Shared navigation on every page */
+.site-header { min-height: 68px; padding: 8px clamp(16px, 3vw, 32px); background: var(--base-color-white); border-bottom: 1px solid var(--base-color-secondary-orange); }
+.site-header .site-logo { padding: 0; color: var(--base-color-orange); font-size: clamp(25px, 3vw, 34px); font-weight: 800; letter-spacing: -0.04em; }
+.site-header .site-nav { display: flex; align-items: center; gap: 8px; padding: 0; margin-left: auto; }
+.site-header .site-nav a, .site-header .site-drawer a { display: inline-flex; align-items: center; gap: 8px; color: var(--base-text-color); background: var(--base-color-grey-light); border-radius: 999px; padding: 10px 14px; font-size: 13px; font-weight: 600; }
+.site-header .site-nav a span, .site-header .site-drawer a span { font-size: inherit; }
+.site-header .site-nav a:hover, .site-header .site-drawer a:hover { color: var(--base-on-accent); background: var(--base-color-orange); }
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; margin-left: 8px; border: 0; border-radius: 50%; color: var(--base-text-color); background: var(--base-color-grey-light); cursor: pointer; flex: 0 0 auto; }
+.theme-toggle:hover { color: var(--base-on-accent); background: var(--base-color-orange); }
+.site-menu-toggle { display: none; align-items: center; justify-content: center; width: 42px; height: 42px; border: 0; border-radius: 50%; color: var(--base-text-color); background: var(--base-color-grey-light); cursor: pointer; }
+.site-header .site-drawer { position: fixed; inset: 68px 0 0; z-index: 1100; padding: 20px 16px; background: var(--base-color-white); display: flex; flex-direction: column; align-items: stretch; gap: 10px; overflow-y: auto; }
+.site-header .site-drawer[hidden] { display: none; }
+.site-header .site-drawer a { min-height: 50px; border-radius: 16px; font-size: 16px; }
+.site-header .site-drawer svg { width: 20px; height: 20px; }
+.theme-toggle:focus-visible, .site-menu-toggle:focus-visible { outline: 2px solid var(--base-color-orange); outline-offset: 3px; }
+@media (max-width: 900px) {
+  .site-header .site-nav { display: none; }
+  .site-menu-toggle { display: inline-flex; }
+  .theme-toggle { margin-left: auto; }
 }

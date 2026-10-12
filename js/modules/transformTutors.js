@@ -1,6 +1,7 @@
 export function transformTeacherData(teacher) {
     return {
         id: teacher.teacher_id,
+        available: Boolean(teacher.user_id),
         firstName: teacher.first_name,
         lastName: teacher.last_name,
         image: teacher.image,
@@ -8,6 +9,9 @@ export function transformTeacherData(teacher) {
         numberOfRatings: teacher.number_of_ratings,
         description: teacher.description,
         lessons: teacher.lessons || [],
+        nextAvailableAt: teacher.next_available_at || null,
+        possibleHours: teacher.possible_hours || [],
+        mode: teacher.mode,
         email: teacher.email,
         rank: teacher.rank,
         phone: teacher.phone,
@@ -21,6 +25,7 @@ export function transformTeacherData(teacher) {
 export function transformTeacherMoreData(teacher) {
     return {
         id: teacher.teacher_id,
+        available: Boolean(teacher.user_id),
         firstName: teacher.first_name,
         firstLetterOfLastName: teacher.last_name?.[0] || '', 
         image: teacher.image,
@@ -30,7 +35,7 @@ export function transformTeacherMoreData(teacher) {
         ranking: teacher.rank ,
         moreDescription: teacher.teacher_info ,
         teachingDescription: teacher.lesson_info ,
-        price: teacher.price || 2500,
+        price: teacher.price ?? 0,
         lessons: teacher.lessons || [],
         comments: teacher.feedback ,
         possibleHours: teacher.possible_hours || [],
@@ -43,6 +48,7 @@ export function transformTeacherMoreData(teacher) {
 export function transformTeacherContactData(teacher) {
     return {
         id: teacher.teacher_id,
+        available: Boolean(teacher.user_id),
         firstName: teacher.first_name,
         firstLetterOfLastName: teacher.last_name?.[0] || '', 
         image: teacher.image || '',
@@ -52,7 +58,7 @@ export function transformTeacherContactData(teacher) {
         lessons: teacher.lessons || [],
         email: teacher.email || '',
         ranking: teacher.rank || 'N/A',
-        price: teacher.price || 2500,
+        price: teacher.price ?? 0,
         possibleHours: teacher.possible_hours || [],
     };
 }

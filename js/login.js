@@ -1,13 +1,18 @@
 
 // Хэлбэр солих функцүүд
 function loginSwitch() {
-    document.getElementById("register").style.right = "100%";
-    document.getElementById("login").style.left = "0px";
+    document.querySelector('.form-box').classList.remove('register-open');
 }
 
 function registerSwitch() {
-    document.getElementById("login").style.left = "100%";
-    document.getElementById("register").style.right = "0px";
+    document.querySelector('.form-box').classList.add('register-open');
+}
+
+function afterLogin() {
+    const next = new URLSearchParams(window.location.search).get('next');
+    const target = next ? new URL(next, window.location.href) : new URL('./profile.html', window.location.href);
+    window.location.href = target.origin === window.location.origin && target.pathname.startsWith('/pages/')
+        ? target.href : './profile.html';
 }
 
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
@@ -19,7 +24,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/api/students/login', {
+        const response = await fetch('/api/students/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -28,10 +33,9 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         });
 
         const data = await response.json();
-        console.log(data);
         if (response.ok) {
-            localStorage.setItem('student', JSON.stringify(data.student));
-            window.location.href = `./profile.html?email=${data.student.email}&password=${data.student.password}`;
+            localStorage.removeItem('student');
+            afterLogin();
         } else {
             document.getElementById('error-message-login').textContent = data.error;
         }
@@ -47,7 +51,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     const retypePassword = document.getElementById('register-retype-password').value;
 
     if (password !== retypePassword) {
-        alert('Нууц үг таарахгүй байна');
+        document.getElementById('error-message-register').textContent = 'Нууц үг таарахгүй байна.';
         return;
     }
 
@@ -60,7 +64,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     };
 
     try {
-        const response = await fetch('http://localhost:3000/api/students', {
+        const response = await fetch('/api/students', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -70,12 +74,11 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
 
         const data = await response.json();
         if (response.ok) {
-            alert(data.message);
-            loginSwitch(); 
+            afterLogin();
         } else {
-            alert(data.error);
+            document.getElementById('error-message-register').textContent = data.error;
         }
     } catch (error) {
-        alert('Серверт холбогдоход алдаа гарлаа');
+        document.getElementById('error-message-register').textContent = 'Серверт холбогдоход алдаа гарлаа.';
     }
 });

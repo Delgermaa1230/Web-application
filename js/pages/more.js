@@ -1,5 +1,4 @@
 import { transformTeacherMoreData } from "../modules/transformTutors.js";
-import { fetchTutorsData } from "../modules/fetchTutorsData.js";
 
 // Url Parameter авах функц
 function getQueryParam(param) {
@@ -11,15 +10,19 @@ function getQueryParam(param) {
 const tutorId = getQueryParam('id');
 
 async function loadMoreData() {
-        const data = await fetchTutorsData();
-        const tutors = Array.isArray(data) ? data.map(transformTeacherMoreData) : (data.teachers || []).map(transformTeacherMoreData);
-
         // багшийн мэдээллийг оруулах container
         const container = document.querySelector('.container');
-
-        // URL parameter аар дамжиж ирсэн id тай багшийн мэдээллийг авах
-        const selectedTutor = tutors.find((t) => String(t.id) === String(tutorId));
-        console.log("Сонгогдсон багшийн дата:", selectedTutor);
+        if (!/^\d+$/.test(tutorId || '')) {
+            container.textContent = 'Багш олдсонгүй.';
+            return;
+        }
+        const response = await fetch(`/api/teachers/${tutorId}`);
+        if (!response.ok) {
+            container.textContent = response.status === 404 ? 'Багш олдсонгүй.' : 'Багшийн мэдээлэл ачаалж чадсангүй.';
+            return;
+        }
+        const { teacher } = await response.json();
+        const selectedTutor = transformTeacherMoreData(teacher);
 
         // Сонгогдсон багшийн датаг хувирган, display хийх
         if (selectedTutor) {
@@ -33,4 +36,8 @@ async function loadMoreData() {
         }
 }
 
-document.addEventListener("DOMContentLoaded", loadMoreData);
+document.addEventListener("DOMContentLoaded", () => {
+    loadMoreData().catch(() => {
+        document.querySelector('.container').textContent = 'Багшийн мэдээлэл ачаалж чадсангүй.';
+    });
+});

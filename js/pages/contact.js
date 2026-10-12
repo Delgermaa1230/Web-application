@@ -1,36 +1,24 @@
-import { transformTeacherContactData } from "../modules/transformTutors.js";
-import { fetchTutorsData } from "../modules/fetchTutorsData.js";
+import { transformTeacherContactData } from '../modules/transformTutors.js';
 
-// Url Parameter авах функц
-function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
+async function loadContactPage() {
+    const container = document.querySelector('.container');
+    const id = new URLSearchParams(location.search).get('id');
+    if (!/^\d+$/.test(id || '')) {
+        container.textContent = 'Багш олдсонгүй.';
+        return;
+    }
+    try {
+        const response = await fetch(`/api/teachers/${id}`);
+        if (!response.ok) throw new Error(response.status === 404
+            ? 'Багш олдсонгүй.' : 'Багшийн мэдээлэл ачаалж чадсангүй.');
+        const { teacher } = await response.json();
+        const element = document.createElement('contact-tutor');
+        element.setAttribute('data-bagsh', JSON.stringify(transformTeacherContactData(teacher)));
+        element.className = 'main';
+        container.replaceChildren(element);
+    } catch (error) {
+        container.textContent = error.message;
+    }
 }
 
-// URL аас багшийн id г авах
-const tutorId = getQueryParam('id');
-
-async function loadMoreData() {
-        const data = await fetchTutorsData();
-        const tutors = Array.isArray(data) ? data.map(transformTeacherContactData) : (data.teachers || []).map(transformTeacherContactData);
-
-        // багшийн мэдээллийг оруулах container
-        const container = document.querySelector('.container');
-
-        // URL parameter аар дамжиж ирсэн id тай багшийн мэдээллийг авах
-        const selectedTutor = tutors.find((t) => String(t.id) === String(tutorId));
-        console.log("Сонгогдсон багшийн дата:", selectedTutor);
-
-        // Сонгогдсон багшийн датаг хувирган, display хийх
-        if (selectedTutor) {
-            // Хувиргасан датагаа contact-tutor component д оруулан display хийнэ
-            const tutorElement = document.createElement('contact-tutor');
-            tutorElement.setAttribute('data-bagsh', JSON.stringify(selectedTutor));
-            tutorElement.setAttribute('class', "main");
-            container.appendChild(tutorElement);
-        } else {
-            container.innerHTML = '<p>Багш олдсонгүй</p>';
-        }
-}
-
-document.addEventListener("DOMContentLoaded", loadMoreData);
+document.addEventListener('DOMContentLoaded', loadContactPage);

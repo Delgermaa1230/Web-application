@@ -107,7 +107,7 @@ h3 {
 }
 
 .important-button a {
-    color: var(--base-color-white);
+    color: var(--base-on-accent);
     font-weight: var(--base-heavy-font-weight);
     font-size:var(--base-body-font-size);
 }

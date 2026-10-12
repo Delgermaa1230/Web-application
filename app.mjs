@@ -1,43 +1,17 @@
-//app.mjs
+import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
+import { openDatabase } from './server/database.mjs';
+import { openPostgres } from './server/postgres.mjs';
+import { databaseDriver } from './server/config.mjs';
+import { createApp } from './server/webapp.mjs';
 
-import express from 'express';
-import cors from 'cors';
-import swaggerJsdoc from 'swagger-jsdoc';
-import swaggerUi from 'swagger-ui-express';
-import teacherRouter from './routes/teacher.mjs';
-import studentRoutes from './routes/student.mjs'
-import feedbackRoutes from './routes/feedback.mjs'
-import lessonRoutes from './routes/lesson.mjs'
+const root = fileURLToPath(new URL('.', import.meta.url));
+const databasePath = process.env.DATABASE_PATH || join(root, 'data', 'numteach.sqlite');
+const driver = databaseDriver();
+const db = driver === 'postgres'
+  ? await openPostgres(process.env.DATABASE_URL)
+  : openDatabase(databasePath, { demoData: process.env.NODE_ENV !== 'production' });
+const app = createApp(db);
+const port = Number(process.env.PORT) || 3100;
 
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-// Swagger configuration
-const swaggerOptions = {
-    definition: {
-        openapi: '3.0.0',
-        info: {
-            title: 'Teacher Student API',
-            version: '1.0.0',
-            description: 'API documentation for Teacher Student system'
-        },
-    },
-    apis: ['./routes/*.mjs'],
-};
-
-const swaggerDocs = swaggerJsdoc(swaggerOptions);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-
-// Routes
-app.use('/api/teachers', teacherRouter);
-app.use('/api/students', studentRoutes);
-app.use('/api/feedback', feedbackRoutes);
-app.use('/api/lesson',lessonRoutes);
-
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+app.listen(port, () => console.log(`Numteach (${driver}): http://localhost:${port}`));

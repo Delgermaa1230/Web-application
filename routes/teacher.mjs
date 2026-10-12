@@ -20,7 +20,7 @@ const router = express.Router();
  *       200:
  *         description: Teacher details retrieved successfully
  */
-router.get('/:id', async (req, res) => {
+router.get('/:id(\\d+)', async (req, res) => {
     try {
         const teacherDetails = await moTeacher.getTeacherDetails(req.params.id);
         const teacherLessons = await moTeacher.getTeacherLessons(req.params.id);

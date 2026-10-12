@@ -41,7 +41,11 @@ body {
     border-radius: 0 0 var(--base-border-radius-x6) var(--base-border-radius-x6);
     background: linear-gradient(191deg, var(--base-background-color) 30%, var(--base-color-light-orange) 62%);
     width: 100%;
+    min-width: 0;
 }
+
+common-lessons-nav { display: block; width: min(100%, 900px); min-width: 0; }
+.common-lessons-nav { max-width: 100%; justify-content: center; }
 
 .searchBox {
     border-radius: var(--base-border-radius-x6);
@@ -77,7 +81,7 @@ input::placeholder{
 .important-button {
     border: none;
     background-color: var(--base-color-orange);
-    color: var(--base-color-white);
+    color: var(--base-on-accent);
     padding: var(--base-padding);
     border-radius: var(--base-border-radius-x3);
     font-size: var(--base-button-large-font-size);
@@ -129,7 +133,7 @@ input::placeholder{
 
 .tutors-box {
     display: grid;
-    grid-template-columns: 22% 22% 22% 22%;
+    grid-template-columns: repeat(4, minmax(0, 22%));
     grid-template-rows: auto;
     justify-content: space-between;
     align-items: stretch;
@@ -151,8 +155,7 @@ input::placeholder{
 
 @media (max-width: 900px) {
     .tutors-box {
-        display: grid;
-        grid-template-columns: 46% 46%;
+        grid-template-columns: repeat(2, minmax(0, 46%));
         gap: var(--base-size-x2);
         grid-template-rows: auto;
     }
@@ -160,6 +163,13 @@ input::placeholder{
 
 @media (max-width: 500px) {
     .container{
-        margin:var(--base-size-x5) var(--base-size-x4) var(--base-size-x4) var(--base-size-x4);
+        margin:var(--base-size-x5) var(--base-size-x2) var(--base-size-x4);
     }
+    .center { gap: var(--base-size-x4); padding: var(--base-size-x5) var(--base-size-x2); }
+    .main h1 { font-size: 28px; }
+    .searchBox { width: 100%; max-width: 420px; padding: var(--base-size); }
+    .searchBox form { display: flex; width: 100%; }
+    .searchBox input { width: 100%; min-width: 0; }
+    .common-lessons-nav { justify-content: flex-start; flex-wrap: nowrap; }
+    .container h2 { font-size: 22px; margin-bottom: 16px; }
 }

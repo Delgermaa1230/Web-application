@@ -1,62 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
 
 <head>
+    <script src="/js/theme-init.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="contact your teacher">
-    <title>Numteach</title>
+    <meta name="description" content="Хичээл, боломжит цаг сонгож багштай холбогдох">
+    <title>Цаг захиалах · Numteach</title>
     <link rel="stylesheet" href="/styles/header_footer.css">
     <link rel="stylesheet" href="/styles/contactTeachar.css">
+    <link rel="stylesheet" href="../styles/app.css">
     <script type="module" src="../js/components/contact-tutor.js"></script>
     <script type="module" src="../js/components/time-table.js"></script>
     <script type="module" src="../js/components/foo-ter.js"></script>
-    <script type="module" src="../js/components/sticky-box.js"></script>
     <script type="module" src="../js/pages/contact.js"></script>
+    <script defer src="../js/components/mobile-nav.js"></script>
     <script type="module" src="../js/components/love-button.js"></script>
     <script src="../js/modules/loveTutorsManager.js"></script>
 </head>
 
 <body>
     <header style="padding-left: var(--base-size-x2);">
-        <a id="backBtn" class="back" >Буцах</a>
+        <a id="backBtn" class="back" href="./SearchResult.html">Буцах</a>
         <script>
-            document.getElementById('backBtn').addEventListener('click', () => {
-                if (document.referrer) {
-                    window.history.back();
+            document.getElementById('backBtn').addEventListener('click', event => {
+                event.preventDefault();
+                const id = new URLSearchParams(window.location.search).get('id');
+                if (id && /^\d+$/.test(id)) {
+                    window.location.href = `./teachInfo.html?id=${id}`;
                 } else {
-                    window.location.href = '../index.html';
+                    window.location.href = './SearchResult.html';
                 }
             });
-
-            document.addEventListener("DOMContentLoaded", function() {
-                const contactForm = document.getElementById("contact-form");
-                if (contactForm) {  // contact-form элемент байх эсэхийг шалгах
-                    contactForm.addEventListener("submit", function(event) {
-                        event.preventDefault();  // Формын стандарт үйлдлийг зогсоох
-            
-                        const message = document.getElementById("message").value;  // Хэрэглэгчийн бичсэн мессежийг авах
-            
-                        // Одоогийн query string-ийг авах
-                        const urlParams = new URLSearchParams(window.location.search);
-                        
-                        // message параметрийг нэмэх
-                        urlParams.set('message', message);  // Энэ нь message параметрийг URL руу нэмнэ
-            
-                        // Шинэ URL үүсгэх
-                        const newUrl = `./login.html?${urlParams.toString()}`;
-            
-                        // Шилжих
-                        window.location.href = newUrl;
-                    });
-                }
-            });
-            
-            
         </script>
         <nav>
             <a aria-label="question" href="./question.html" style="font-size: 16px;">?</a>
-            <a aria-label="profile" href="./login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            <a aria-label="profile" href="./profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" class="feather feather-user">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>

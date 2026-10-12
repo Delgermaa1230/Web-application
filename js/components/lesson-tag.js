@@ -10,9 +10,9 @@ class LessonTag extends HTMLElement {
     }
 
     render() {
-        this.innerHTML =`
-            <li>${this.name}</li>
-        `;
+        const item = document.createElement('li');
+        item.textContent = this.name;
+        this.replaceChildren(item);
     }
 }
 

@@ -1,5 +1,6 @@
 export async function fetchTutorsData() {
-    const response = await fetch("http://localhost:3000/api/teachers"); 
+    const url = new URL('/api/teachers', window.NUMTEACH_API_URL || window.location.origin);
+    const response = await fetch(url);
     if (!response.ok) {
         throw new Error(`Data tathad aldaa garlaa: ${response.statusText}`);
     }

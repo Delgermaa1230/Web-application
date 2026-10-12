@@ -1,0 +1,99 @@
+@import url('./global.css');
+
+profile-inf { display: block; }
+.app-shell { width: min(100% - 32px, 1000px); margin: 32px auto 72px; display: grid; gap: 24px; }
+.app-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.app-heading h1 { font-size: clamp(28px, 4vw, 40px); color: var(--base-text-color); }
+.app-eyebrow { color: var(--base-color-orange); font-weight: 700; margin-bottom: 8px; }
+.app-muted { color: var(--base-grey-text-color); line-height: 1.6; }
+.app-card { background: var(--base-color-white); border: 1px solid var(--base-color-secondary-orange); border-radius: 24px; padding: 24px; box-shadow: 0 8px 30px var(--base-background-color-shadow); }
+.app-card h2, .app-shell section > h2 { font-size: 22px; margin-bottom: 16px; color: var(--base-text-color); }
+.app-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.app-grid label, .app-field { display: grid; gap: 8px; font-weight: 600; }
+.app-grid input, .app-grid textarea, .app-grid select, .app-field input, .app-field textarea, .app-field select { width: 100%; border: 1px solid var(--base-color-grey-medium); border-radius: 12px; padding: 12px; background: var(--base-color-white); color: var(--base-text-color); }
+.app-field input, .app-field textarea, .app-field select { margin: 0; }
+.app-grid textarea, .app-field textarea { min-height: 120px; resize: vertical; }
+.app-grid input:focus, .app-grid textarea:focus, .app-grid select:focus, .app-field input:focus, .app-field textarea:focus, .app-field select:focus { outline: 2px solid var(--base-color-orange); outline-offset: 2px; }
+.app-span { grid-column: 1 / -1; }
+.app-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; grid-column: 1 / -1; }
+.app-secondary { display: inline-flex; justify-content: center; align-items: center; border: 1px solid var(--base-color-orange); color: var(--base-color-orange); border-radius: 24px; padding: 8px 16px; background: var(--base-color-white); cursor: pointer; font-weight: 700; }
+.app-stack { display: grid; gap: 12px; }
+.message-card h3 { font-size: 18px; margin-bottom: 4px; }
+.message-card p { margin-bottom: 8px; }
+.message-card a { display: inline-block; color: var(--base-color-orange); padding: 0; }
+.app-help { color: var(--base-grey-text-color); font-size: 14px; }
+.app-error { color: var(--base-error-text); }
+.app-success { color: var(--base-success-text); }
+contact-tutor.main { width: min(100% - 32px, 880px); margin: 32px auto 72px; display: block; }
+contact-tutor .contact-forms { width: 100%; max-width: none; }
+contact-tutor .contact-forms h1 { font-size: clamp(22px, 3vw, 28px); margin-bottom: 10px; line-height: 1.3; }
+contact-tutor .booking-summary { padding: 14px 16px; border-radius: 14px; background: var(--base-color-light-orange); color: var(--base-text-color); }
+contact-tutor button:disabled { opacity: .55; cursor: not-allowed; }
+.slot-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--base-color-grey-medium); }
+.slot-row span { overflow-wrap: anywhere; }
+.course-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.course-option { border: 1px solid var(--base-color-secondary-orange); background: var(--base-color-light-orange); color: var(--base-color-orange); border-radius: 999px; padding: 6px 12px; cursor: pointer; font-weight: 600; }
+.lesson-editor { border-top: 1px solid var(--base-color-secondary-orange); padding-top: 20px; margin-top: 20px; }
+.lesson-detail { border: 1px solid var(--base-color-secondary-orange); border-radius: 16px; padding: 16px; }
+.lesson-detail h3 { margin-bottom: 8px; }
+.lesson-detail p { margin: 6px 0; line-height: 1.5; }
+.review-form { border-top: 1px solid var(--base-color-secondary-orange); margin-top: 16px; padding-top: 16px; }
+comment-element.review-item { display: block; border-top: 1px solid var(--base-color-secondary-orange); padding: 16px 0; }
+comment-element.review-item h3 { font-size: 16px; margin-bottom: 6px; }
+comment-element.review-item p { margin: 4px 0; line-height: 1.5; }
+.booking-card h3 { font-size: 18px; margin-bottom: 8px; }
+.booking-card p { margin-bottom: 8px; line-height: 1.5; }
+.teacher-sticky-box .tutor-avatar { width: min(240px, 100%); aspect-ratio: 1; display: grid; place-items: center; background: var(--base-color-light-orange); color: var(--base-color-orange); border-radius: 16px; font-size: 88px; font-weight: 800; }
+tutor-morepage.main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(380px, 460px); align-items: start; width: min(100% - 48px, 1440px); margin: 32px auto 80px; gap: clamp(24px, 3vw, 48px); }
+tutor-morepage.main .information-column { grid-column: 1; grid-row: 1; margin: 0; }
+tutor-morepage.main .sticky-part-wrapper { grid-column: 2; grid-row: 1; min-width: 0; position: sticky; top: 24px; }
+tutor-morepage.main .sticky-part-wrapper sticky-box { display: block; width: 100%; }
+tutor-morepage .teacher-sticky-box { position: static; width: 100%; box-sizing: border-box; margin: 0; padding: 24px; gap: 16px; align-items: center; background: var(--base-color-white); border: 1px solid var(--base-color-secondary-orange); box-shadow: 0 8px 24px var(--base-background-color-shadow); }
+tutor-morepage .teacher-sticky-box .image { padding: 0; width: 100%; }
+tutor-morepage .teacher-sticky-box .tutor-avatar,
+tutor-morepage .teacher-sticky-box .image img { width: min(260px, 100%); height: auto; aspect-ratio: 1; margin: auto; }
+tutor-morepage .teacher-sticky-box h2 { margin: 0; padding: 0; font-size: clamp(22px, 2.5vw, 28px); }
+tutor-morepage .teacher-sticky-box .rating { display: block; margin: 0; color: var(--base-grey-text-color); font-size: 14px; text-align: center; }
+tutor-morepage .teacher-sticky-box .wage { display: block; margin: 0; padding: 0; color: var(--base-color-orange); font-size: 22px; font-weight: 700; text-align: center; }
+tutor-morepage .teacher-sticky-box .important-button { margin: 0; padding: 12px 24px; }
+.help-page .app-card details { padding: 12px 0; border-bottom: 1px solid var(--base-color-grey-medium); }
+.help-page .app-card details:last-child { border: 0; }
+.help-page summary { cursor: pointer; font-weight: 700; }
+.help-page details p { margin-top: 10px; line-height: 1.6; }
+.favorites-empty { grid-column: 1 / -1; max-width: 520px; }
+.favorites-empty p { margin: 8px 0 20px; }
+.information-column, .available-schedule-box, #booking-form, #slot-table, #sample-schedule { min-width: 0; max-width: 100%; }
+.information-column { width: 100%; }
+.available-schedule-box { box-sizing: border-box; background: var(--base-color-white); border: 1px solid var(--base-color-secondary-orange); border-radius: 24px; padding: 24px; }
+#booking-form { grid-template-columns: minmax(0, 1fr); }
+#booking-form select { min-width: 0; }
+#booking-summary { overflow-wrap: anywhere; }
+.available-schedule-box > p { margin-bottom: 16px; }
+.available-schedule-box .app-field { margin-bottom: 12px; }
+.schedule-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin: 12px 0; }
+.schedule-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--base-color-secondary-orange); border-radius: 14px; }
+.weekly-schedule { width: 100%; min-width: 620px; border-collapse: collapse; text-align: center; }
+.weekly-schedule caption { text-align: left; padding: 10px 12px; font-weight: 700; }
+.weekly-schedule th, .weekly-schedule td { min-width: 76px; padding: 8px 4px; border-top: 1px solid var(--base-color-secondary-orange); border-right: 1px solid var(--base-color-secondary-orange); }
+.weekly-schedule th { background: var(--base-color-light-orange); font-size: 13px; }
+.weekly-schedule td:last-child, .weekly-schedule th:last-child { border-right: 0; }
+.schedule-slot { width: 100%; border: 1px solid var(--base-color-orange); border-radius: 8px; background: var(--base-color-white); color: var(--base-color-orange); cursor: pointer; padding: 7px 3px; font-size: 12px; font-weight: 700; }
+.schedule-slot[aria-pressed="true"] { background: var(--base-color-orange); color: var(--base-on-accent); }
+.schedule-slot:focus-visible { outline: 3px solid var(--base-color-orange); outline-offset: 2px; }
+[hidden] { display: none !important; }
+@media (max-width: 650px) {
+  .editor-page header form { display: none; }
+  .editor-page header nav [aria-label="question"],
+  .editor-page header nav [aria-label="loved-tutors"],
+  .editor-page header nav [aria-label="become-teacher"] { display: none; }
+  .editor-page header .header-first-box { flex-direction: row; }
+}
+@media (max-width: 650px) { .app-shell { margin-top: 20px; } .app-grid { grid-template-columns: 1fr; } .app-heading { align-items: center; } .app-card { padding: 18px; } }
+@media (max-width: 700px) {
+  contact-tutor.main { margin-top: 24px; }
+}
+@media (max-width: 1050px) {
+  tutor-morepage.main { grid-template-columns: minmax(0, 1fr); width: min(100% - 32px, 760px); }
+  tutor-morepage.main .sticky-part-wrapper { grid-column: 1; position: static; width: min(100%, 520px); margin: 0 auto; }
+  tutor-morepage.main .information-column { grid-column: 1; grid-row: 2; }
+}

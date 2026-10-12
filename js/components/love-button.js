@@ -11,7 +11,9 @@ class LoveButton extends HTMLElement {
       this.addEventListener("click", this.handleLoveClick.bind(this));
     }
   
-    handleLoveClick() {
+    handleLoveClick(event) {
+      event.preventDefault();
+      event.stopPropagation();
       const tutorId = this.id;
   
       if (this.isLoved) {
@@ -24,22 +26,23 @@ class LoveButton extends HTMLElement {
       this.updateButtonAppearance();
   
       // Зөвхөн тухайн элемэнтийг update хийх
-      const event = new CustomEvent("tutor-loved", {
+      const lovedEvent = new CustomEvent("tutor-loved", {
           bubbles: true,
           detail: { tutorId, isLoved: this.isLoved }
       });
-      this.dispatchEvent(event);
+      this.dispatchEvent(lovedEvent);
   }
   
   
     updateButtonAppearance() {
       const heartIcon = this.querySelector(".heart-icon");
       heartIcon.style.fill = this.isLoved ? "var(--base-color-orange)" : "rgba(186, 188, 188, 0.4)";
+      this.querySelector('button').setAttribute('aria-pressed', String(this.isLoved));
     }
   
     render() {
       this.innerHTML = `
-        <button style="padding: 5px" class="love" data-id="${this.id}" aria-label="love" onclick="event.preventDefault();">
+        <button style="padding: 5px" class="love" data-id="${this.id}" aria-label="Багшийг хадгалах" aria-pressed="${this.isLoved}">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

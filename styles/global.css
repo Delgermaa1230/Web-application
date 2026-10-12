@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
+    color-scheme: light;
     --base-size: 8px;
     --base-size-x1: var(--base-size); /* 8px */
     --base-size-x2: calc(var(--base-size)*2); /* 16px */
@@ -41,6 +42,9 @@
     --base-color-system-success: #5bca8d;
     --base-color-system-success-light: #f2fbf6;
     --base-color-system-warning: #ff3636;
+    --base-on-accent: #ffffff;
+    --base-error-text: #9f2929;
+    --base-success-text: #236942;
     --base-font-family: ;
     --base-h1-font-size: 36px;
     --base-h2-font-size: 26px;
@@ -78,6 +82,25 @@
     --base-grey-text-color: var(--base-color-dark-grey);
 }
 
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --base-color-white: #1b1d22;
+    --base-color-black: #f5f1eb;
+    --base-color-dark-grey: #c7c2ba;
+    --base-color-grey: #aaa49c;
+    --base-color-grey-medium: #57534e;
+    --base-color-grey-light: #292b31;
+    --base-color-orange: #efb75d;
+    --base-color-secondary-orange: #564536;
+    --base-color-light-orange: #2d251e;
+    --base-color-system-success-light: #1b3329;
+    --base-background-color-shadow: #00000040;
+    --base-color-shadow: #000000;
+    --base-on-accent: #21180e;
+    --base-error-text: #ff9b9b;
+    --base-success-text: #92d5a7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -93,17 +116,21 @@
     box-sizing: border-box;
 }
 
-main{
-    height: 100vh;
-}
+main { min-height: 0; }
 body {
     background: linear-gradient(180deg, var(--base-background-color) 40%, var(--base-color-light-orange) 70%);
+    color: var(--base-text-color);
+    min-width: 0;
+    overflow-x: hidden;
 }
+
+button, input, select, textarea { font: inherit; }
+:focus-visible { outline: 2px solid var(--base-color-orange); outline-offset: 2px; }
 
 .important-button {
     border: none;
     background-color: var(--base-color-orange);
-    color: var(--base-color-white);
+    color: var(--base-on-accent);
     border-radius: var(--base-border-radius-x3);
     font-size: var(--base-button-large-font-size);
     font-weight: var(--base-bold-font-weight);
@@ -153,23 +180,6 @@ a {
     fill: var(--base-color-orange);  
 }
  
-@media (prefers-color-scheme: dark) {
-    
-    :root {  
-        --base-text-color: var(--base-color-white);
-        --base-background-color:var(--base-color-dark-grey);
-        --base-color-light-orange:var(--base-color-dark-grey);
-        --base-color-grey-light:var(--base-color-grey);
-        --base-grey-text-color: var(--base-color-white);
-        --base-color-shadow: var(--base-color-white);
-        --base-color-blue: #16353d;
-        --base-background-color-profile: #333;
-        --base-color-deactivaded-grey: #ffffff9c;
-        --base-color-orange: orange;
-        
-    }
-}
-
 @media (max-width: 570px) {
     :root {
         --base-size: 6px;

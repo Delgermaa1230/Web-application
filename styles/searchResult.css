@@ -18,6 +18,10 @@ body {
     padding: var(--base-size-x3) var(--base-size-x10) var(--base-size-x10) var(--base-size-x10);
     background: linear-gradient(180deg, var(--base-background-color) 40%, var(--base-color-light-orange) 70%);
 }
+@media (max-width: 650px) {
+    .main { padding-bottom: 110px; }
+    .search-bar-bottom { background: var(--base-color-white); box-shadow: 0 6px 24px #90580522; }
+}
 
 /*filter*/
 .filterMenu {
@@ -68,7 +72,7 @@ body {
     background-color: var(--base-color-orange);
     font-weight: normal;
     cursor: pointer;
-    color: var(--base-text-color);
+    color: var(--base-on-accent);
     border: solid 0.3px var(--base-color-grey);
 }
 
@@ -103,7 +107,7 @@ body {
 
 .tutors-box {
     display: grid;
-    grid-template-columns: 22% 22% 22% 22%;
+    grid-template-columns: repeat(4, minmax(0, 22%));
     grid-template-rows: auto;
     justify-content: space-between;
     align-items: stretch;
@@ -186,8 +190,7 @@ body {
 
 @media (max-width: 900px) {
     .tutors-box {
-        display: grid;
-        grid-template-columns: 46% 46%;
+        grid-template-columns: repeat(2, minmax(0, 46%));
         gap: var(--base-size-x2);
         grid-template-rows: auto;
     }
@@ -201,6 +204,6 @@ body {
 
 @media (max-width: 470px) {
     .main {
-        padding: 0 var(--base-size-x4) var(--base-size-x4) var(--base-size-x4);
+        padding: 0 var(--base-size-x2) var(--base-size-x4);
     }
 }

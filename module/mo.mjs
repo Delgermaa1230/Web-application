@@ -6,13 +6,11 @@ import Mostudent from './mostudent.mjs';
 import Mofeedback from './mofeedback.mjs';
 import Molesson from './molesson.mjs';
 
-const client = new pg.Client({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'webapp',
-  password: 'root',
-  port: 5432,
-});
+if (!process.env.DATABASE_URL) {
+  throw new Error('DATABASE_URL must be set before starting the API');
+}
+
+const client = new pg.Client({ connectionString: process.env.DATABASE_URL });
 
 client.connect()
   .then(() => console.log("PostgreSQL өгөгдлийн сан руу холбогдлоо"))
